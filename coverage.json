@@ -1,0 +1,709 @@
+{
+  "chapters": 50,
+  "quiz_questions": 99,
+  "pdf_files": 18,
+  "pdf_pages": 956,
+  "ppt_files": 32,
+  "ppt_text_blocks": 1710,
+  "pka_files": 9,
+  "source_files_total": 59,
+  "scope": "Thai topic-based translated explanations and tutoring; not a line-by-line translation of every slide. PDF page images preserved. PPT text only; PKA internal content not verified.",
+  "sources": [
+    {
+      "id": "351-01",
+      "group": "351",
+      "file": "351 Slide TH/Chapter_1_V6.1_MIT9.pdf",
+      "title": "351 บท 1: Internet, Delay, Throughput และ Protocol Stack",
+      "related": [
+        "K1",
+        "01",
+        "02",
+        "03",
+        "07",
+        "08",
+        "31"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 81
+    },
+    {
+      "id": "351-02",
+      "group": "351",
+      "file": "351 Slide TH/Chapter_2_V6.1_MIT9.pdf",
+      "title": "351 บท 2: Application Layer, Web, DNS, P2P และ Socket",
+      "related": [
+        "K2",
+        "25",
+        "26",
+        "27",
+        "23"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 111
+    },
+    {
+      "id": "351-03",
+      "group": "351",
+      "file": "351 Slide TH/Chapter_3_V6.0_MIT9.pdf",
+      "title": "351 บท 3: Reliable Transfer และ TCP แบบทำโจทย์",
+      "related": [
+        "K3",
+        "11",
+        "23",
+        "24"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 110
+    },
+    {
+      "id": "351-04",
+      "group": "351",
+      "file": "351 Slide TH/Chapter_4_V6.0_MIT9.pdf",
+      "title": "351 บท 4: Network Layer, Subnet และ Routing",
+      "related": [
+        "K4",
+        "19",
+        "20",
+        "21",
+        "22",
+        "SUB"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 146
+    },
+    {
+      "id": "351-05",
+      "group": "351",
+      "file": "351 Slide TH/Chapter_5_V6.01_MIT9.pdf",
+      "title": "351 บท 5: Link Layer, LAN, MPLS และเส้นทางเปิดเว็บ",
+      "related": [
+        "K5",
+        "10",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 97
+    },
+    {
+      "id": "subnet-examples",
+      "group": "subnet",
+      "file": "351 Slide TH/ตัวอย่างหาSubnet.pdf",
+      "title": "ตัวอย่างหา Subnet — เฉลยพร้อมตรวจค่าคลาดเคลื่อน",
+      "related": [
+        "SUB",
+        "19"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 5
+    },
+    {
+      "id": "subnet-scans",
+      "group": "subnet",
+      "file": "351 Slide TH/subnetting.pdf",
+      "title": "Subnetting — เอกสารภาพ 4 สไลด์ต่อหน้า",
+      "related": [
+        "SUB",
+        "19"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 5
+    },
+    {
+      "id": "network-01",
+      "group": "network",
+      "file": "Network/10112010_Network_Chapter1.pdf",
+      "title": "Network บท 1 — พื้นฐานการสื่อสารข้อมูล",
+      "related": [
+        "01"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 12
+    },
+    {
+      "id": "network-02",
+      "group": "network",
+      "file": "Network/10112010_network_chapter2.pdf",
+      "title": "Network บท 2 — แบบจำลองเครือข่าย",
+      "related": [
+        "02"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 57
+    },
+    {
+      "id": "network-03",
+      "group": "network",
+      "file": "Network/09122010_Network_Chapter3.pdf",
+      "title": "Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย",
+      "related": [
+        "01",
+        "08",
+        "15"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 55
+    },
+    {
+      "id": "network-04",
+      "group": "network",
+      "file": "Network/28082010_network_chapter4.pdf",
+      "title": "Network บท 4 — ข้อมูลและสัญญาณ",
+      "related": [
+        "03",
+        "04",
+        "05"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 43
+    },
+    {
+      "id": "network-05",
+      "group": "network",
+      "file": "Network/02092010_Network_Chapter5.pdf",
+      "title": "Network บท 5 — การส่งผ่านข้อมูลดิจิทัลและ Interface",
+      "related": [
+        "04",
+        "N5"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 54
+    },
+    {
+      "id": "network-06",
+      "group": "network",
+      "file": "Network/26012011_Network_Chapter6.pdf",
+      "title": "Network บท 6 — สื่อกลางส่งข้อมูล",
+      "related": [
+        "07"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 51
+    },
+    {
+      "id": "network-07",
+      "group": "network",
+      "file": "Network/28092010_Network_Chapter7.pdf",
+      "title": "Network บท 7 — การตรวจจับข้อผิดพลาดและ Flow/Error Control",
+      "related": [
+        "10",
+        "11"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 31
+    },
+    {
+      "id": "network-08",
+      "group": "network",
+      "file": "Network/02102010_Network_Chapter8.pdf",
+      "title": "Network บท 8 — เครือข่าย LAN ไร้สาย",
+      "related": [
+        "14"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 18
+    },
+    {
+      "id": "network-09",
+      "group": "network",
+      "file": "Network/09102010_Network_Chapter9.pdf",
+      "title": "Network บท 9 — TCP/IP และ Subnet",
+      "related": [
+        "19",
+        "20",
+        "21",
+        "SUB"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 40
+    },
+    {
+      "id": "network-10",
+      "group": "network",
+      "file": "Network/16102010_Network_Chapter10.pdf",
+      "title": "Network บท 10 — โปรโตคอล Transport และ Application",
+      "related": [
+        "23",
+        "25",
+        "26",
+        "27"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 14
+    },
+    {
+      "id": "network-11",
+      "group": "network",
+      "file": "Network/14102010_Network_Chapter11.pdf",
+      "title": "Network บท 11 — ความปลอดภัยบนเครือข่าย",
+      "related": [
+        "31",
+        "32"
+      ],
+      "kind": "pdf",
+      "extracted_blocks": 26
+    },
+    {
+      "id": "dcn-01",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch01.ppt",
+      "title": "Data Communication 1 — บทนำการสื่อสารข้อมูลและเครือข่าย",
+      "related": [
+        "01"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 19
+    },
+    {
+      "id": "dcn-02",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch02.ppt",
+      "title": "Data Communication 2 — แบบจำลองเครือข่าย OSI และ TCP/IP",
+      "related": [
+        "02"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 43
+    },
+    {
+      "id": "dcn-03",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch03.ppt",
+      "title": "Data Communication 3 — ข้อมูล สัญญาณ และข้อจำกัดของช่องสื่อสาร",
+      "related": [
+        "03"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 117
+    },
+    {
+      "id": "dcn-04",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch04.ppt",
+      "title": "Data Communication 4 — การส่งข้อมูลดิจิทัลและการแปลงสัญญาณ",
+      "related": [
+        "04"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 72
+    },
+    {
+      "id": "dcn-05",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch05.ppt",
+      "title": "Data Communication 5 — การส่งแบบแอนะล็อกและ Modulation",
+      "related": [
+        "05"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 37
+    },
+    {
+      "id": "dcn-06",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch06.ppt",
+      "title": "Data Communication 6 — Multiplexing และ Spread Spectrum",
+      "related": [
+        "06"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 59
+    },
+    {
+      "id": "dcn-07",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch07.ppt",
+      "title": "Data Communication 7 — สื่อกลางส่งข้อมูล",
+      "related": [
+        "07"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 32
+    },
+    {
+      "id": "dcn-08",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch08.ppt",
+      "title": "Data Communication 8 — Switching และการส่งผ่านเครือข่าย",
+      "related": [
+        "08"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 47
+    },
+    {
+      "id": "dcn-09",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch09.ppt",
+      "title": "Data Communication 9 — เครือข่ายโทรศัพท์ DSL และ Cable",
+      "related": [
+        "09"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 38
+    },
+    {
+      "id": "dcn-10",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch10.ppt",
+      "title": "Data Communication 10 — การตรวจจับและแก้ไขข้อผิดพลาด",
+      "related": [
+        "10"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 94
+    },
+    {
+      "id": "dcn-11",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch11.ppt",
+      "title": "Data Communication 11 — Data Link Control และ Reliable Transfer",
+      "related": [
+        "11"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 104
+    },
+    {
+      "id": "dcn-12",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch12.ppt",
+      "title": "Data Communication 12 — Multiple Access และการแชร์สื่อ",
+      "related": [
+        "12"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 55
+    },
+    {
+      "id": "dcn-13",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch13.ppt",
+      "title": "Data Communication 13 — Ethernet และเครือข่าย LAN แบบสาย",
+      "related": [
+        "13"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 41
+    },
+    {
+      "id": "dcn-14",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch14.ppt",
+      "title": "Data Communication 14 — Wireless LAN และ Bluetooth",
+      "related": [
+        "14"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 35
+    },
+    {
+      "id": "dcn-15",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch15.ppt",
+      "title": "Data Communication 15 — อุปกรณ์เชื่อม LAN, Backbone และ VLAN",
+      "related": [
+        "15"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 31
+    },
+    {
+      "id": "dcn-16",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch16.ppt",
+      "title": "Data Communication 16 — เครือข่ายเซลลูลาร์และดาวเทียม",
+      "related": [
+        "16"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 38
+    },
+    {
+      "id": "dcn-17",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch17.ppt",
+      "title": "Data Communication 17 — SONET และ SDH",
+      "related": [
+        "17"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 51
+    },
+    {
+      "id": "dcn-18",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch18.ppt",
+      "title": "Data Communication 18 — Frame Relay และ ATM",
+      "related": [
+        "18"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 39
+    },
+    {
+      "id": "dcn-19",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch19.ppt",
+      "title": "Data Communication 19 — IPv4, IPv6, CIDR และการแบ่ง Subnet",
+      "related": [
+        "19"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 60
+    },
+    {
+      "id": "dcn-20",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch20.ppt",
+      "title": "Data Communication 20 — IP Datagram, Fragmentation, NAT และ IPv6",
+      "related": [
+        "20"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 53
+    },
+    {
+      "id": "dcn-21",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch21.ppt",
+      "title": "Data Communication 21 — ARP, DHCP, ICMP และ Multicast Membership",
+      "related": [
+        "21"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 56
+    },
+    {
+      "id": "dcn-22",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch22.ppt",
+      "title": "Data Communication 22 — Forwarding และ Routing Algorithms",
+      "related": [
+        "22"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 84
+    },
+    {
+      "id": "dcn-23",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch23.ppt",
+      "title": "Data Communication 23 — UDP, TCP และ SCTP",
+      "related": [
+        "23"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 90
+    },
+    {
+      "id": "dcn-24",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch24.ppt",
+      "title": "Data Communication 24 — Congestion Control และ Quality of Service",
+      "related": [
+        "24"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 49
+    },
+    {
+      "id": "dcn-25",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch25.ppt",
+      "title": "Data Communication 25 — Domain Name System: DNS",
+      "related": [
+        "25"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 30
+    },
+    {
+      "id": "dcn-26",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch26.ppt",
+      "title": "Data Communication 26 — Remote Login, E-mail และ FTP",
+      "related": [
+        "26"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 56
+    },
+    {
+      "id": "dcn-27",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch27.ppt",
+      "title": "Data Communication 27 — World Wide Web และ HTTP",
+      "related": [
+        "27"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 37
+    },
+    {
+      "id": "dcn-28",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch28.ppt",
+      "title": "Data Communication 28 — Network Management และ SNMP",
+      "related": [
+        "28"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 40
+    },
+    {
+      "id": "dcn-29",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch29.ppt",
+      "title": "Data Communication 29 — Multimedia, Streaming และ Real-time Traffic",
+      "related": [
+        "29"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 53
+    },
+    {
+      "id": "dcn-30",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch30.ppt",
+      "title": "Data Communication 30 — Cryptography: การเข้ารหัสลับ",
+      "related": [
+        "30"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 55
+    },
+    {
+      "id": "dcn-31",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch31.ppt",
+      "title": "Data Communication 31 — Network Security: บริการและกลไก",
+      "related": [
+        "31"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 50
+    },
+    {
+      "id": "dcn-32",
+      "group": "dcn",
+      "file": "DataCommunication_and_Networking/ch32.ppt",
+      "title": "Data Communication 32 — IPsec, TLS, PGP, VPN และ Firewall",
+      "related": [
+        "32"
+      ],
+      "kind": "ppt",
+      "extracted_blocks": 45
+    },
+    {
+      "id": "pka-lab1",
+      "group": "lab",
+      "file": "PKA/5.2.2.2 Packet Tracer - Routers Segment Broadcast Domains.pka",
+      "title": "5.2.2.2 — Router แบ่ง Broadcast Domains",
+      "related": [
+        "LAB0",
+        "LAB1"
+      ],
+      "kind": "pka",
+      "extracted_blocks": 0
+    },
+    {
+      "id": "pka-lab2",
+      "group": "lab",
+      "file": "PKA/5.3.7.4 Packet Tracer - Router Packet Forwarding.pka",
+      "title": "5.3.7.4 — Router Packet Forwarding",
+      "related": [
+        "LAB0",
+        "LAB2"
+      ],
+      "kind": "pka",
+      "extracted_blocks": 0
+    },
+    {
+      "id": "pka-lab3",
+      "group": "lab",
+      "file": "PKA/5.4.3.2 Packet Tracer - Observing Dynamic Routing Protocol Updates.pka",
+      "title": "5.4.3.2 — สังเกต Dynamic Routing Updates",
+      "related": [
+        "LAB0",
+        "LAB3"
+      ],
+      "kind": "pka",
+      "extracted_blocks": 0
+    },
+    {
+      "id": "pka-lab4",
+      "group": "lab",
+      "file": "PKA/5.5.2.2 Packet Tracer - Examining a Route.pka",
+      "title": "5.5.2.2 — Examining a Route",
+      "related": [
+        "LAB0",
+        "LAB4"
+      ],
+      "kind": "pka",
+      "extracted_blocks": 0
+    },
+    {
+      "id": "pka-lab5",
+      "group": "lab",
+      "file": "PKA/8.1.2.11 Packet Tracer - Connect to a Wireless Router and Configure Basic Settings - ITExamAnswers.pka",
+      "title": "8.1.2.11 — ต่อ Wireless Router และตั้งค่าพื้นฐาน",
+      "related": [
+        "LAB0",
+        "LAB5"
+      ],
+      "kind": "pka",
+      "extracted_blocks": 0
+    },
+    {
+      "id": "pka-lab6",
+      "group": "lab",
+      "file": "PKA/8.1.2.13 Packet Tracer - Connect Wireless Computers to a Wireless Router - ITExamAnswers.pka",
+      "title": "8.1.2.13 — ต่อคอมพิวเตอร์ไร้สายเข้ากับ Router",
+      "related": [
+        "LAB0",
+        "LAB6"
+      ],
+      "kind": "pka",
+      "extracted_blocks": 0
+    },
+    {
+      "id": "pka-lab7",
+      "group": "lab",
+      "file": "PKA/8.1.2.15 Packet Tracer - Test a Wireless Connection - ITExamAnswers.pka",
+      "title": "8.1.2.15 — ทดสอบการเชื่อมต่อไร้สาย",
+      "related": [
+        "LAB0",
+        "LAB7"
+      ],
+      "kind": "pka",
+      "extracted_blocks": 0
+    },
+    {
+      "id": "pka-lab8",
+      "group": "lab",
+      "file": "PKA/11_2_3_Packet_Tracer_Configure_DHCP_on_a_Wireless_Router.pka",
+      "title": "11.2.3 — ตั้ง DHCP บน Wireless Router",
+      "related": [
+        "LAB0",
+        "LAB8"
+      ],
+      "kind": "pka",
+      "extracted_blocks": 0
+    },
+    {
+      "id": "pka-lab9",
+      "group": "lab",
+      "file": "PKA/16.2.2 Packet Tracer - Configure and Verify a Site-to-Site IPsec VPN using CLI.pka",
+      "title": "16.2.2 — Site-to-Site IPsec VPN ด้วย CLI",
+      "related": [
+        "LAB0",
+        "LAB9"
+      ],
+      "kind": "pka",
+      "extracted_blocks": 0
+    }
+  ]
+}

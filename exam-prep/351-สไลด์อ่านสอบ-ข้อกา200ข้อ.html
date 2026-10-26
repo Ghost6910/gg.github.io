@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>351 • สไลด์อ่านสอบและข้อกา 200 ข้อ</title>
+<style>
+:root{--bg:#eef2f6;--ink:#15243b;--muted:#52617a;--brand:#1746a2;--line:#d5dfeb;--green:#126145;--red:#a12332}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,'Noto Sans Thai',sans-serif;line-height:1.75}button,select,input{font:inherit}button,a,select,input{touch-action:manipulation}button{cursor:pointer;border:1px solid var(--line);border-radius:10px;background:white;color:var(--ink);padding:9px 15px}button:hover{border-color:var(--brand)}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #e89c27;outline-offset:3px}button.primary{background:var(--brand);color:white;border-color:var(--brand)}button[disabled]{opacity:.45;cursor:default}.top{background:#10213f;color:white;padding:24px max(20px,calc((100vw - 1150px)/2))}.eyebrow{color:#82dcca;letter-spacing:2px;font-size:13px}h1{font-size:clamp(25px,4vw,40px);line-height:1.4;margin:8px 0}h2{line-height:1.5}h3{margin:0 0 10px}.top p{max-width:880px;color:#d4dfef;margin-bottom:0}.nav{display:flex;gap:8px;flex-wrap:wrap;padding:12px 20px;position:sticky;top:0;background:#eef2f6f5;backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid var(--line)}.nav button[aria-selected=true]{background:#1746a2;color:white}.wrap{max-width:1190px;margin:auto;padding:22px 20px 70px}.panel[hidden]{display:none}.box,.question,.chaptercard{background:white;border:1px solid var(--line);border-radius:15px;padding:23px;margin-bottom:18px}.note{border-left:4px solid #d59125;background:#fff6e6;padding:14px 18px;border-radius:6px;color:#634c22}.muted{color:var(--muted)}.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:15px 0}select,input[type=search]{padding:9px;border:1px solid var(--line);border-radius:9px;background:white;max-width:100%}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}.cardlink{text-align:left;width:100%;height:100%;padding:20px;background:white;border-radius:13px}.cardlink strong{display:block;font-size:18px}.tag{font-size:12px;letter-spacing:.3px;color:var(--brand);font-weight:bold}.panel:fullscreen{background:var(--bg);overflow:auto;padding:20px}.slide{min-height:510px;background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 12px 35px #1734550d}.slidehead{padding:16px 30px;background:#10213f;color:#88e2cf;font-size:14px}.slidebody{padding:24px 38px}.slide h2{font-size:clamp(25px,3vw,34px);margin:0 0 20px}.slide li{font-size:clamp(18px,2vw,23px);margin:12px 0}.slide ul{padding-left:27px}.takeaway{background:#e8f5f0;padding:13px 18px;border-radius:10px;color:#174f3c;font-size:18px}.progress{height:5px;background:#d6e1f0}.progress span{display:block;background:#13a38c;height:100%}.diagram{display:flex;gap:5px;flex-wrap:wrap;margin:16px 0}.diagram span{border:1px solid #b4c8df;background:#edf4fc;border-radius:8px;padding:8px 13px}.opts{display:grid;gap:8px;margin-top:12px}.opt{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:9px;padding:12px;cursor:pointer}.opt:hover{background:#f1f6fc}.opt input{margin-top:7px;accent-color:var(--brand)}.opt.correct{background:#e6f5ec;border-color:#308b5d}.opt.wrong{background:#ffeded;border-color:#c85c64}.explain{padding:15px;background:#f2f6fa;border-radius:8px;margin-top:13px}.explain[hidden]{display:none}.qtitle{font-size:18px;margin:5px 0}.score{padding:20px;background:#e4edf9;border:1px solid #b5c9e8;border-radius:12px;margin:15px 0}.score:empty{display:none}.stat{font-weight:bold;font-size:22px}.allslide{break-inside:avoid}.allslide li{margin:9px 0}.answers-print{display:none}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid var(--line);padding:9px;text-align:left}a{color:var(--brand)}.footer{font-size:13px;color:var(--muted);margin-top:30px}.small{font-size:14px}#timer{font-variant-numeric:tabular-nums;font-weight:bold}.badge{display:inline-block;background:#e7eef9;border-radius:20px;padding:3px 12px;color:var(--brand);font-size:13px}details{margin:12px 0}summary{cursor:pointer;font-weight:bold}.qactions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}@media(max-width:600px){.wrap{padding:16px 12px 40px}.slidebody{padding:20px}.slidehead{padding:13px 20px}.slide{min-height:540px}.box,.question{padding:17px}.nav{padding:8px;gap:5px}.nav button{font-size:14px;padding:8px 10px}.slide li{font-size:18px}}@media print{@page{size:A4;margin:16mm}body{background:white;color:black;font-size:11pt}.top{padding:0;color:black;background:white}.top p{color:black}.eyebrow{color:black}.nav,.tools,.noprint,.qactions,.footer{display:none!important}.wrap{padding:0;max-width:none}.panel[hidden]{display:none!important}.question,.box,.chaptercard{border:1px solid #bbb;box-shadow:none;border-radius:0;break-inside:avoid;padding:12px;margin:12px 0}.allslide{break-before:page;border:0;padding:10px 0}.allslide h2{font-size:23pt}.allslide li{font-size:16pt;margin:16px 0}.allslide .takeaway{font-size:14pt}.slide{box-shadow:none;min-height:0}.slidehead{color:black;background:white}.opt{border:0;padding:3px 7px}.opts{gap:0}.score{background:white}.answers-print{display:block;break-before:page}.explain{background:white}.print-hide-explain .explain{display:none!important}.print-hide-explain .opt.correct,.print-hide-explain .opt.wrong{background:white;border:0}.print-hide-explain input{appearance:none;width:12px;height:12px;border:1px solid black;border-radius:50%}a{color:black;text-decoration:none}.note{background:white;color:black}}
+
+.reading{font-size:18px;line-height:1.95}.reading h2{font-size:29px;line-height:1.55;border-bottom:2px solid #d8e6f2;padding-bottom:15px;margin:0 0 26px}.reading h3{font-size:22px;color:#164a83;line-height:1.6;margin:32px 0 12px}.reading p{max-width:84ch;margin:16px 0}.reading strong{color:#163f6b}.reading article{background:white;border:1px solid #d5dfeb;border-radius:14px;padding:clamp(20px,4vw,46px);margin:24px 0;scroll-margin-top:100px}.reading pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#10213f;color:#e7f2ff;padding:20px;border-radius:10px;font-size:15px;line-height:1.75}.reading code{font-family:Consolas,monospace;overflow-wrap:anywhere}.reading :not(pre)>code{background:#edf2f8;padding:2px 5px;border-radius:4px}.reading table{font-size:16px;line-height:1.8;min-width:550px}.reading .table-scroll{overflow-x:auto;margin:20px 0}.reading th{background:#eaf1fa}.reading td{vertical-align:top}.reading li{margin:10px 0}.reading blockquote{border-left:4px solid #188674;margin-left:0;padding-left:20px}.reading-toc{columns:2;column-gap:30px;padding-left:24px}.reading-toc li{break-inside:avoid;margin:9px 0}.reading article[hidden]{display:none}.reading-tools{background:#edf3fa;border:1px solid #cbd9ec;padding:15px;border-radius:12px}.reading-empty{padding:20px;background:#fff6e6}.reading a{overflow-wrap:anywhere}.reader-toplink{font-size:14px}.reading[style]{--reader-font:18px}.reading{font-size:var(--reader-font,18px)}
+@media(max-width:650px){.reading{font-size:17px}.reading h2{font-size:24px}.reading h3{font-size:20px}.reading-toc{columns:1}.reading pre{font-size:13px}.reading article{padding:20px 16px}.reading p{line-height:1.95}}
+@media print{.reading-tools,.reading-toc-box,.reader-toplink{display:none!important}.reading{font-size:12pt;line-height:1.8}.reading h2{font-size:20pt;break-after:avoid}.reading h3{font-size:15pt;break-after:avoid}.reading article{break-before:page;break-inside:auto;border:0;padding:0;margin:0}.reading article[hidden]{display:none!important}.reading pre{color:black;background:#f3f3f3;border:1px solid #bbb;font-size:10pt;break-inside:avoid}.reading table{font-size:10pt;min-width:0}.reading tr{break-inside:avoid}.reading .table-scroll{overflow:visible}.reading p,.reading li{orphans:3;widows:3}}
+</style></head><body>
+<header class="top"><div class="eyebrow">351 / EXAM STUDY KIT</div><h1>อ่านให้เข้าใจ แล้วฝึกกาจนคล่อง</h1><p>บทอ่านละเอียด 10 บท • สไลด์สรุป 48 หน้า • ข้อสอบปรนัย 4 ตัวเลือก 200 ข้อ • เฉลยพร้อมเหตุผล • จำลองสอบ 120 ข้อ • เปิดใช้แบบออฟไลน์</p></header>
+<nav class="nav" aria-label="เมนูหลัก"><button data-tab="home" aria-selected="true">เริ่มอ่าน</button><button data-tab="detailed" aria-selected="false">บทอ่านละเอียด</button><button data-tab="slides" aria-selected="false">สไลด์</button><button data-tab="all" aria-selected="false">อ่านทุกหน้า / พิมพ์</button><button data-tab="quiz" aria-selected="false">ฝึกข้อกา 200 ข้อ</button><button data-tab="mock" aria-selected="false">จำลองสอบ 120 ข้อ</button></nav>
+<main class="wrap">
+<section id="home" class="panel"><div class="box"><span class="badge">ขอบเขตจากภาพที่ส่งมา</span><h2>ครบหัวข้อเครือข่าย + Cloud + Wireless + Cisco</h2><p>Internet Protocol Stack and OSI Model, Application Layer Services, Routing, Link Layer Services, LAN Cabling, Principle of Cloud Computing และ Cloud Computing and Services รวมถึงผังเครือข่าย Wireless และ Cisco จากภาพที่สอง</p><p class="note">ภาพระบุยอดสอบ 120 ข้อ แต่จำนวนย่อยอ่านได้ไม่ครบและยังจับคู่ทุกหัวข้อไม่ได้ ชุดนี้จึงเป็นข้อสอบฝึกที่แต่งขึ้น ไม่ใช่ข้อสอบจริงหรือการยืนยันสัดส่วนจากอาจารย์ คำว่า “web_q 30” ในภาพยังตีความไม่ได้ชัด จึงครอบคลุม Web/HTTP และพื้นฐานเครือข่ายไว้ให้</p><p>เริ่มจากสไลด์ → ฝึกหมวดที่เพิ่งอ่าน → ตรวจเหตุผลของข้อผิด → ทำชุดจำลอง 120 ข้อ หากเวลาน้อย เริ่ม Cloud, Wireless, Routing/Subnet และ Link Layer แล้วทวนตาราง port กับคำสั่ง Cisco</p><div class="tools"><button class="primary" onclick="tab('detailed')">เปิดบทอ่านละเอียด</button><button id="startSlides">เปิดสไลด์หน้าแรก</button><button id="startQuiz">เริ่มฝึกข้อกา</button></div></div><div id="chapters" class="grid"></div><div class="box" style="margin-top:20px"><h2>แหล่งอ้างอิงและขอบเขต</h2><p>เรียบเรียงประกอบจากเอกสารเรียนไทยในโฟลเดอร์นี้ โดยเฉพาะบท 02, 07, 11–15, 19–23, 25–27, K1–K5, SUB และ LAB1–LAB9 เสริม Cloud ด้วย NIST และตรวจหลักเลือกเส้นทางกับเอกสาร Cisco ไม่มีเอกสาร Cloud ของอาจารย์อยู่ในชุดที่อ่าน จึงใช้หลักพื้นฐานทั่วไป</p><ul id="sources"></ul><p class="small muted">เนื้อหาส่วนเสริม เช่น Cloud และคำสั่ง IOS เป็นแนวทบทวน ไม่ใช่การรับรองคำสั่งของอุปกรณ์ทุกโมเดล ลิงก์อ้างอิงออนไลน์ต้องใช้ Internet ส่วนสไลด์และข้อสอบใช้ได้ออฟไลน์ทั้งหมด ลิงก์เอกสารเดิมต้องเก็บโครงสร้างโฟลเดอร์ไว้</p></div></section>
+<section id="detailed" class="panel" hidden><div class="reading" id="reading"><div class="box" id="reading-top"><h1>บทอ่านละเอียด: เครือข่ายและ Cloud สำหรับเตรียมสอบ 351</h1>
+<p>เอกสารนี้ขยายจากหัวข้อในภาพและเอกสารเรียนในโฟลเดอร์เดิม เป้าหมายคือให้อ่านแล้วอธิบายเหตุผลได้ ไม่ต้องอาศัยการจำชื่อเพียงอย่างเดียว คำอังกฤษเก็บไว้เพราะข้อสอบอาจใช้ศัพท์เหล่านั้นโดยตรง ส่วนรายละเอียด Cloud เป็นพื้นฐานทั่วไป เนื่องจากยังไม่มีเอกสาร Cloud ของอาจารย์ในชุดที่อ่าน</p>
+<p><strong>วิธีอ่าน:</strong> อ่านคำอธิบายให้เห็นภาพ → ทำตัวอย่างด้วยตัวเองก่อนดูวิธี → ทวนจุดหลอก → ไปทำข้อกาในหมวดเดียวกัน ข้อสอบฝึกเป็นข้อที่แต่งขึ้น ไม่ใช่ข้อสอบจริง และสัดส่วนในโหมดจำลองไม่ได้ยืนยันจากอาจารย์</p></div><div class="box reading-toc-box"><h2>เลือกบทที่อยากเข้าใจก่อน</h2><ol class="reading-toc"><li><a data-read-jump href="#read-ch-0">1. Internet Protocol Stack และ OSI: ส่งข้อมูลหนึ่งครั้ง ใครทำอะไรบ้าง</a></li><li><a data-read-jump href="#read-ch-1">2. Application Layer: เว็บ DNS DHCP และ TCP/UDP</a></li><li><a data-read-jump href="#read-ch-2">3. Routing, Subnet และผังเครือข่าย</a></li><li><a data-read-jump href="#read-ch-3">4. Link Layer และ LAN: frame เดินทางในวงอย่างไร</a></li><li><a data-read-jump href="#read-ch-4">5. LAN Cabling: ไม่ใช่แค่จำสีสาย</a></li><li><a data-read-jump href="#read-ch-5">6. Cloud Computing: เช่าความสามารถแบบไหน ใครต้องดูแลอะไร</a></li><li><a data-read-jump href="#read-ch-6">7. Wireless: เชื่อมชื่อ Wi-Fi ได้ ทำไมยังใช้ Internet ไม่ได้</a></li><li><a data-read-jump href="#read-ch-7">8. Cisco และ Packet Tracer: เข้าใจคำสั่งผ่านเครือข่ายตัวอย่าง</a></li><li><a data-read-jump href="#read-ch-8">9. เชื่อมทุกบท: เปิด HTTPS จากโน้ตบุ๊กผ่าน Wi-Fi หนึ่งครั้ง</a></li><li><a data-read-jump href="#read-ch-9">10. ทวนก่อนทำข้อกา: แปลคำเทคนิคให้เป็นเหตุผล</a></li><li><a data-read-jump href="#read-ch-10">แหล่งอ่านประกอบ</a></li></ol></div><div class="tools reading-tools noprint"><label>เลือกบท <select data-read-select><option value="all">ทุกบท</option><option value="0">1. Internet Protocol Stack และ OSI: ส่งข้อมูลหนึ่งครั้ง ใครทำอะไรบ้าง</option><option value="1">2. Application Layer: เว็บ DNS DHCP และ TCP/UDP</option><option value="2">3. Routing, Subnet และผังเครือข่าย</option><option value="3">4. Link Layer และ LAN: frame เดินทางในวงอย่างไร</option><option value="4">5. LAN Cabling: ไม่ใช่แค่จำสีสาย</option><option value="5">6. Cloud Computing: เช่าความสามารถแบบไหน ใครต้องดูแลอะไร</option><option value="6">7. Wireless: เชื่อมชื่อ Wi-Fi ได้ ทำไมยังใช้ Internet ไม่ได้</option><option value="7">8. Cisco และ Packet Tracer: เข้าใจคำสั่งผ่านเครือข่ายตัวอย่าง</option><option value="8">9. เชื่อมทุกบท: เปิด HTTPS จากโน้ตบุ๊กผ่าน Wi-Fi หนึ่งครั้ง</option><option value="9">10. ทวนก่อนทำข้อกา: แปลคำเทคนิคให้เป็นเหตุผล</option><option value="10">แหล่งอ่านประกอบ</option></select></label><label>ค้นหา <input type="search" data-read-search placeholder="เช่น ACK, subnet, RPO"></label><button data-read-reset>แสดงทุกบท</button><button data-read-smaller aria-label="ลดขนาดเนื้อหา">ก−</button><button data-read-larger aria-label="เพิ่มขนาดเนื้อหา">ก+</button><button data-read-print>พิมพ์ / บันทึก PDF</button><span data-read-status role="status"></span></div><p class="reading-empty" data-read-empty hidden>ไม่พบบทที่ตรงกับการค้นหา ลองเปลี่ยนคำหรือกดแสดงทุกบท</p><article id="read-ch-0" data-read-index="0"><h2>1. Internet Protocol Stack และ OSI: ส่งข้อมูลหนึ่งครั้ง ใครทำอะไรบ้าง</h2><h3>1.1 เริ่มจากเรื่องใกล้ตัว: กดเปิดเว็บหนึ่งหน้า</h3>
+<p>เมื่อพิมพ์ชื่อเว็บแล้วกด Enter คอมพิวเตอร์ไม่ได้โยน “หน้าเว็บ” ลงสายตรง ๆ แอปต้องสร้างข้อความขอข้อมูล ระบบต้องรู้ว่าจะส่งให้โปรแกรมไหนบนเครื่องปลายทาง จะข้ามเครือข่ายทางใด และจะส่งสัญญาณบนสายหรือคลื่นอย่างไร งานเหล่านี้ต่างกัน จึงแบ่งเป็นชั้น หรือ <strong>Layer</strong></p>
+<p>นึกถึงการส่งพัสดุ คนเขียนจดหมายไม่จำเป็นต้องขับรถส่งเอง และคนขับรถไม่จำเป็นต้องอ่านเนื้อหาจดหมาย แต่ทุกฝ่ายต้องทำตามกติกาที่เข้ากันได้ เครือข่ายก็แยกหน้าที่ลักษณะนี้ การเปรียบเทียบช่วยเห็นภาพ แต่กลไกจริงต้องดู header, address และ protocol ของแต่ละชั้น</p>
+<p><strong>Protocol</strong> คือกติกาว่าข้อความหน้าตาอย่างไร ส่งเมื่อใด รับแล้วต้องทำอะไร เช่น HTTP กำหนด request/response ส่วน TCP กำหนดการนับ byte การตอบรับและการส่งซ้ำ การต่อสายถูกจึงยังไม่พอ หากคู่สื่อสารใช้กติกาไม่ตรงกัน</p>
+<h3>1.2 OSI ทั้ง 7 ชั้น แบบเข้าใจหน้าที่</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>ชั้น</th>
+<th>คิดเป็นภาษาคน</th>
+<th>คำเทคนิคและตัวอย่าง</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 Application</td>
+<td>แอปจะคุยเรื่องอะไรกับอีกฝั่ง</td>
+<td>HTTP, DNS, SMTP เป็น protocol ระดับแอป</td>
+</tr>
+<tr>
+<td>6 Presentation</td>
+<td>จัดรูปข้อมูลให้ตีความตรงกัน</td>
+<td>การแทนข้อมูล การบีบอัด การเข้ารหัสในเชิงแบบจำลอง</td>
+</tr>
+<tr>
+<td>5 Session</td>
+<td>จัดการบทสนทนาที่กำลังคุยกัน</td>
+<td>สร้าง ดูแล และยุติ session ตามหน้าที่ของแบบจำลอง</td>
+</tr>
+<tr>
+<td>4 Transport</td>
+<td>ส่งข้อมูลให้ถูกโปรแกรม และจัดคุณสมบัติการส่ง</td>
+<td>TCP, UDP และ port number</td>
+</tr>
+<tr>
+<td>3 Network</td>
+<td>พาข้อมูลข้ามหลายเครือข่าย</td>
+<td>IP, packet forwarding และ routing</td>
+</tr>
+<tr>
+<td>2 Data Link</td>
+<td>ส่งข้อมูลไปอีกฝั่งของลิงก์หรือภายใน LAN ตามเทคโนโลยี</td>
+<td>Ethernet frame, MAC address, medium access</td>
+</tr>
+<tr>
+<td>1 Physical</td>
+<td>เปลี่ยนบิตให้เป็นสิ่งที่เดินทางผ่านสื่อได้</td>
+<td>สัญญาณไฟฟ้า แสง คลื่นวิทยุ หัวต่อและการส่งบิต</td>
+</tr>
+</tbody>
+</table></div>
+<p>ชั้น Application ไม่ใช่ชื่อเรียกโปรแกรมทุกชนิดบนคอมพิวเตอร์ แต่เป็นหน้าที่และ protocol สำหรับการสื่อสารของแอป ส่วนการวาง TLS ไว้ชั้นใดแบบตายตัวอาจทำให้สับสน เพราะ protocol จริงไม่ได้เข้ากล่อง OSI ได้สมบูรณ์ทุกตัว ใช้แบบจำลองเพื่อเข้าใจหน้าที่ แล้วดูสถาปัตยกรรมจริงประกอบ</p>
+<h3>1.3 แล้ว TCP/IP ทำไมมีทั้ง 4 และ 5 ชั้น</h3>
+<p>Internet stack แบบที่ใช้สอนบ่อยมี 5 ชั้น คือ Application → Transport → Network → Link → Physical แต่ตำราที่เรียก TCP/IP แบบ 4 ชั้นรวม Link และ Physical เป็น Network access ส่วนหน้าที่ OSI ชั้น 5–7 มักถูกรวมอยู่ฝั่ง Application จึงไม่มีความขัดแย้งถ้าตำราหนึ่งบอก 4 อีกเล่มบอก 5 ต้องอ่านว่าข้อสอบถามแบบจำลองใด</p>
+<h3>1.4 Encapsulation: หุ้มข้อมูลเป็นชั้น ๆ</h3>
+<p>สมมติ browser มีข้อความ HTTP ระบบจะใส่ TCP header เพื่อระบุ port และข้อมูลควบคุม จากนั้นใส่ IP header เพื่อระบุ IP ต้นทาง/ปลายทาง แล้วหุ้มเป็น Ethernet frame เพื่อส่งบนลิงก์ สุดท้าย Physical เปลี่ยนบิตเป็นสัญญาณ ฝั่งรับทำย้อนกลับ เรียก <strong>Decapsulation</strong></p>
+<pre><code class="language-text">ข้อมูลแอป
+→ [TCP header | ข้อมูลแอป]                         segment
+→ [IP header | TCP header | ข้อมูลแอป]             packet
+→ [Ethernet header | IP packet | FCS]              frame
+→ สัญญาณบนสื่อ                                    bits/signals
+</code></pre>
+<p>UDP มักเรียกหน่วยข้อมูลว่า UDP datagram ส่วน IP ก็ใช้คำว่า datagram ได้เช่นกัน ต้องดูบริบท ไม่ใช่เห็นคำว่า datagram แล้วสรุปว่า UDP เท่านั้น</p>
+<h3>1.5 MAC, IP และ Port ต่างกันตรงไหน</h3>
+<p><strong>MAC</strong> ใช้ตัดสินใจส่งบนลิงก์ Ethernet/Wi-Fi ตามเทคโนโลยีนั้น <strong>IP</strong> ใช้ระบุปลายทางในเชิงเครือข่ายและส่งข้ามเครือข่าย <strong>Port</strong> ช่วยเลือกบริการหรือ process บนเครื่องปลายทาง ตัวอย่างเช่น ไปเครื่อง 203.0.113.10 แล้วติดต่อ TCP port 443 เพื่อใช้บริการ HTTPS</p>
+<p>อย่าท่องว่า MAC คือที่อยู่ “เปลี่ยนไม่ได้” เพราะอุปกรณ์และซอฟต์แวร์อาจเปลี่ยนหรือสุ่ม MAC ได้ และอย่าท่องว่า IP คือที่อยู่ถาวรของคนหนึ่งคน เพราะ IP อาจเปลี่ยน แชร์ผ่าน NAT หรือเป็นหลาย address ต่อ interface</p>
+<p>เมื่อส่งไปเว็บที่อยู่นอก subnet เครื่องเราส่ง <strong>IP packet ถึงเว็บเซิร์ฟเวอร์ แต่ Ethernet frame แรกถึง gateway</strong> Router ถอด frame เดิม ลด TTL แล้วหุ้ม frame ใหม่สำหรับลิงก์ถัดไป หากไม่มี NAT หรือการแปลงอื่น IP ต้นทาง/ปลายทางโดยทั่วไปคงเดิม ขณะที่ MAC เปลี่ยนตามลิงก์</p>
+<h3>1.6 Delay กับ Throughput: ช้าเพราะอะไร</h3>
+<ul>
+<li><strong>Processing delay:</strong> เวลาตรวจและประมวลผลข้อมูลที่อุปกรณ์</li>
+<li><strong>Queueing delay:</strong> เวลารอคิวก่อนส่งต่อ เปลี่ยนตามโหลดและคิว</li>
+<li><strong>Transmission delay = L/R:</strong> เวลาที่ใช้ผลักบิตทั้งหมดลงลิงก์ L ต้องเป็นบิต และ R เป็นบิตต่อวินาที</li>
+<li><strong>Propagation delay = d/v:</strong> เวลาที่สัญญาณเดินทางผ่านระยะ d ด้วยความเร็ว v</li>
+</ul>
+<p><strong>ตัวอย่าง:</strong> frame 1,500 bytes บนลิงก์ 10 Mb/s ใช้ transmission delay = 1,500×8 / 10,000,000 = 0.0012 วินาที = <strong>1.2 ms</strong> โดยตัวอย่างนี้ไม่นับ overhead นอกขนาดที่กำหนด ส่วนระยะ 2,000 km ที่ความเร็วสัญญาณ 200,000 km/s มี propagation delay = 0.01 วินาที = <strong>10 ms</strong></p>
+<p>เพิ่ม bandwidth ช่วยลด transmission delay แต่ไม่ได้ทำให้ระยะทางสั้นลง ส่วน throughput คืออัตราที่ส่งข้อมูลได้จริง หากผ่านลิงก์ 100 → 20 → 50 Mb/s แบบอนุกรม เพดานตามแบบจำลองง่าย ๆ คือ 20 Mb/s ก่อนคิด traffic อื่นและ overhead ไม่ใช่ 170 Mb/s</p>
+<p><strong>จุดหลอก:</strong> bit ต่างจาก byte; ms ต่างจากวินาที; ความเร็วลิงก์ไม่เท่ากับ throughput แอป; IP ปลายทางไม่เท่ากับ MAC next hop; TCP/IP ไม่ได้มีจำนวนชั้นเดียวในทุกตำรา</p><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article><article id="read-ch-1" data-read-index="1"><h2>2. Application Layer: เว็บ DNS DHCP และ TCP/UDP</h2><h3>2.1 แอปไม่ได้คุยกับ “ทั้งเครื่อง” แบบไม่มีปลายทางย่อย</h3>
+<p>เครื่องเดียวเปิด browser, อีเมล และโปรแกรมคุยพร้อมกันได้ ระบบต้องแยกข้อมูลให้ถูก process การสื่อสารจึงเกี่ยวข้องกับ <strong>socket</strong> และ port IP บอกว่าจะไป interface/เครื่องใด ส่วน port ช่วยบอกว่าจะส่งให้บริการใดในบริบทของ transport protocol</p>
+<p>TCP และ UDP มีพื้นที่หมายเลข port แยกกัน TCP 53 กับ UDP 53 จึงไม่ใช่ socket เดียวกัน การระบุ connection TCP ยังใช้คู่ IP/port ของทั้งสองฝั่งร่วมกัน ไม่ใช่ดู destination port ตัวเดียวแล้วแยกทุก connection ได้</p>
+<h3>2.2 TCP: ส่งให้ครบ เรียงให้ถูก แต่ไม่ได้เข้าใจข้อความแอปแทนเรา</h3>
+<p>TCP ให้บริการ <strong>reliable, ordered byte stream</strong> หากข้อมูลหายสามารถส่งซ้ำ และส่ง byte ให้แอปตามลำดับ แต่ไม่ได้รับประกันว่าการเรียกส่งข้อมูลสองครั้งจะทำให้ฝั่งรับอ่านได้สองก้อนตรงขนาดเดิม แอปต้องออกแบบขอบเขตข้อความเอง เช่น ระบุความยาวหรือใช้ delimiter</p>
+<p>TCP เปิด connection ด้วย <strong>SYN → SYN-ACK → ACK</strong> ส่วนการส่งข้อมูลใช้ sequence number, acknowledgment และ timer ช่วยติดตาม สิ่งที่ ACK บอกโดยหลักคือ “byte ถัดไปที่ฉันต้องการคือหมายเลขนี้”</p>
+<p><strong>ตัวอย่าง:</strong> ส่ง Seq=1000 ขนาด 200 bytes จะครอบคลุม byte 1000–1199 หากรับครบต่อเนื่อง ผู้รับตอบ <strong>ACK=1200</strong> ไม่ใช่ 1199 และไม่ใช่ 1 ถ้าส่วนที่เริ่ม 1200 หาย แต่ส่วน 1400 มาถึง cumulative ACK อาจยังชี้ 1200 เพราะข้อมูลก่อนหน้ายังไม่ครบ</p>
+<p><strong>Flow control</strong> ช่วยไม่ให้ส่งเร็วเกิน buffer ของผู้รับ ส่วน <strong>Congestion control</strong> ช่วยปรับอัตราส่งตามความแออัดของเครือข่าย สองเรื่องนี้แก้คนละปัญหา แม้อาจมีผลต่อปริมาณข้อมูลค้างส่งเหมือนกัน</p>
+<h3>2.3 UDP: กลไกน้อย ไม่รับประกันด้วยตัวมันเอง</h3>
+<p>UDP ส่งเป็น datagram ไม่มี three-way handshake และไม่มี reliability, การจัดลำดับ หรือ congestion control ที่ UDP จัดให้เอง จึงมี header และกลไกน้อยกว่า TCP แต่ไม่ควรสรุปว่า “UDP เร็วกว่าเสมอ” หรือ “แอปบน UDP ส่งแบบเชื่อถือไม่ได้ตลอดไป” เพราะแอปสามารถสร้างการตอบรับ การส่งซ้ำ และกลไกควบคุมของตัวเองได้ เช่น QUIC ใช้ UDP เป็นฐาน</p>
+<p>งานเสียง/วิดีโอบางแบบให้ความสำคัญกับเวลามากกว่าการรอข้อมูลเก่าครบ แต่ก็ยังต้องออกแบบการรับมือ loss และ congestion ไม่ใช่ส่งได้ไม่จำกัด</p>
+<h3>2.4 DNS: รู้ชื่อแล้วต้องหา address ก่อน</h3>
+<p>DNS เป็นระบบข้อมูลชื่อแบบลำดับชั้น ไม่ใช่เว็บเซิร์ฟเวอร์ Browser หรือระบบปฏิบัติการมักถาม resolver และใช้ cache ถ้ามีคำตอบที่ยังใช้ได้ Resolver อาจไปถาม root, TLD และ authoritative server ตามความจำเป็น</p>
+<p>|Record|ใช้เก็บอะไร|ข้อควรจำ|
+|A|IPv4 ของชื่อ|หนึ่งชื่ออาจมีหลาย address|
+|AAAA|IPv6 ของชื่อ|AAAA ไม่ใช่ A จำนวนสี่รายการ|
+|CNAME|ชื่อแฝงที่อ้างไปอีกชื่อ|ไม่ได้เก็บ IP โดยตรง|
+|MX|Mail exchanger ของโดเมน|ใช้สำหรับเส้นทางการรับอีเมล|
+|NS|Nameserver ของ zone|เกี่ยวกับผู้ให้คำตอบ DNS ของส่วนชื่อนั้น|</p>
+<p><strong>DNS TTL</strong> เป็นอายุการเก็บคำตอบใน cache ไม่ใช่ IP TTL ที่ router ลดทุก hop DNS ใช้ UDP และ TCP port 53 ตามกรณี จึงผิดถ้าบอกว่าใช้ UDP เท่านั้น</p>
+<h3>2.5 DHCP: ขอข้อมูลตั้งค่าเครือข่ายอัตโนมัติ</h3>
+<p>DHCPv4 มักสอนด้วย DORA: <strong>Discover</strong> ถามหาบริการ → <strong>Offer</strong> เสนอค่า → <strong>Request</strong> ขอใช้ข้อเสนอ → <strong>ACK</strong> ยืนยันการเช่า อาจได้ IP, subnet mask, default gateway และ DNS server พร้อมระยะเวลา lease Server ใช้ UDP 67 ส่วน client ใช้ UDP 68</p>
+<p>ต้องแยกหน้าที่: DHCP แจก configuration ส่วน DNS ตอบข้อมูลชื่อ หากได้ IP แล้วแต่ DNS ผิด อาจ ping address ได้แต่เปิดด้วยชื่อไม่ได้ และถ้าเครื่องได้ IPv4 link-local 169.254.x.x ในระบบที่รองรับ อาจเป็นเพราะยังไม่ได้ DHCP lease ไม่ใช่หลักฐานว่า Internet พร้อม</p>
+<h3>2.6 HTTP, HTTPS และสถานะที่ควรรู้</h3>
+<p>HTTP แลกเปลี่ยน <strong>request/response</strong> Client ขอทรัพยากร Server ตอบ status, header และอาจมี body <strong>GET</strong> ขอ representation ของทรัพยากร ส่วน <strong>POST</strong> ส่งข้อมูลให้ปลายทางประมวลผลตามความหมายของ resource การใช้ POST ไม่ได้เข้ารหัสข้อมูลให้เอง</p>
+<p>|Status|ภาษาคน|จำให้ถูก|
+|200 OK|คำขอสำเร็จตามความหมายของ method|ต้องดู body/บริการด้วย ไม่ใช่รับรองข้อมูลทุกอย่างถูก|
+|301 Moved Permanently|ย้ายถาวร|มักมีตำแหน่งใหม่ให้ไปต่อ|
+|403 Forbidden|server ปฏิเสธสิทธิ์เข้าถึง|ไม่เหมือน 404|
+|404 Not Found|ไม่พบทรัพยากรที่ขอ|ไม่ได้แปลว่าเครื่อง server ไม่มีไฟเลี้ยง|
+|500 Internal Server Error|server มีข้อผิดพลาดภายใน|เป็นปัญหาฝั่ง server ตามสถานะ|</p>
+<p>HTTP เป็น <strong>stateless</strong> ในเชิง protocol แต่เว็บยังทำระบบล็อกอินได้โดยใช้ cookie, token หรือ session ที่แอปออกแบบ Cookie อาจใช้เก็บตัวระบุ session ไม่จำเป็นต้องเก็บรหัสผ่าน และไม่ใช่การเข้ารหัส</p>
+<p>HTTPS ใช้ TLS ปกป้องการสื่อสาร เช่น ความลับและความครบถ้วน พร้อมการตรวจตัวตนตาม certificate และกระบวนการยืนยัน จึงต้องตรวจชื่อโดเมนและความน่าเชื่อถือของ certificate ด้วย แต่เว็บหลอกลวงก็มี HTTPS ได้ การเข้ารหัสไม่ได้รับประกันว่าเจ้าของเว็บพูดความจริง</p>
+<h3>2.7 ตาราง Port ที่ควรทวน</h3>
+<p>|บริการ|Port โดยทั่วไป|ใช้ทำอะไร|
+|HTTP|TCP 80|เว็บไม่ใช้ TLS|
+|HTTPS|TCP 443; HTTP/3 ใช้ UDP 443|เว็บที่ปกป้องด้วย TLS; HTTP/3 ทำงานผ่าน QUIC|
+|DNS|UDP/TCP 53|ข้อมูลชื่อ|
+|DHCPv4|UDP server 67 / client 68|แจก network configuration|
+|SSH / Telnet|TCP 22 / 23|remote terminal; SSH เข้ารหัส ส่วน Telnet ไม่เข้ารหัสเอง|
+|SMTP|TCP 25|ส่ง/ถ่ายทอดเมลระหว่าง server ตามบริบท; submission มีพอร์ตอื่น|
+|POP3 / IMAP|TCP 110 / 143|รับเมล / จัดการ mailbox; แบบ TLS มีพอร์ตอื่น|
+|FTP control|TCP 21|ช่องควบคุม FTP; ช่องข้อมูลขึ้นกับ active/passive|</p>
+<p>ตัวเลขเหล่านี้เป็นค่าโดยทั่วไป ไม่ใช่การรับประกันว่าผู้ดูแลเปลี่ยนไม่ได้ และอย่าสับสน FTP กับ SFTP ซึ่งเป็นคนละ protocol โดย SFTP ใช้ผ่าน SSH</p>
+<p><strong>จุดหลอก:</strong> DNS ไม่แจก IP แบบ DHCP; ping ผ่านไม่รับรอง HTTP; TCP นับ byte; UDP ไม่ได้ห้ามแอปสร้าง reliability; HTTPS ไม่รับประกันความซื่อสัตย์ของเว็บ</p><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article><article id="read-ch-2" data-read-index="2"><h2>3. Routing, Subnet และผังเครือข่าย</h2><h3>3.1 Routing กับ Forwarding: วางแผนกับลงมือส่ง</h3>
+<p><strong>Routing</strong> เป็นกระบวนการสร้างหรือเรียนรู้เส้นทาง เช่น ผู้ดูแลตั้ง static route หรือ router แลกเปลี่ยนข้อมูลด้วย OSPF ส่วน <strong>Forwarding</strong> คือเมื่อ packet มาถึงแล้ว จะส่งออก interface ไหนและให้ next hop ใด โดยอาศัยเส้นทางที่ติดตั้งแล้ว</p>
+<p>นึกถึงการทำตารางรถกับการส่งรถจริง ตารางต้องมีก่อนจึงรู้ว่ารถที่มาถึงควรไปทางไหน Router ไม่จำเป็นต้องเริ่มคำนวณ topology ทั้งโลกใหม่กับทุก packet</p>
+<h3>3.2 IPv4 / Prefix / Mask ต้องอ่านให้เป็น</h3>
+<p>IPv4 มี 32 บิต แบ่งเขียนเป็น 4 octets เช่น 192.168.1.70 Prefix <code>/26</code> หมายถึง 26 บิตแรกเป็น network part เหลือ 6 บิตสำหรับ host part Mask จึงเป็น 255.255.255.192 เพราะ octet สุดท้ายคือ 11000000</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Mask</th>
+<th>จำนวน address ทั้งหมด</th>
+<th>Usable hosts ของ subnet IPv4 ปกติ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/24</td>
+<td>255.255.255.0</td>
+<td>256</td>
+<td>254</td>
+</tr>
+<tr>
+<td>/25</td>
+<td>255.255.255.128</td>
+<td>128</td>
+<td>126</td>
+</tr>
+<tr>
+<td>/26</td>
+<td>255.255.255.192</td>
+<td>64</td>
+<td>62</td>
+</tr>
+<tr>
+<td>/27</td>
+<td>255.255.255.224</td>
+<td>32</td>
+<td>30</td>
+</tr>
+<tr>
+<td>/28</td>
+<td>255.255.255.240</td>
+<td>16</td>
+<td>14</td>
+</tr>
+<tr>
+<td>/29</td>
+<td>255.255.255.248</td>
+<td>8</td>
+<td>6</td>
+</tr>
+<tr>
+<td>/30</td>
+<td>255.255.255.252</td>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<p>สูตรจำนวน address คือ <strong>2^(32−prefix)</strong> ส่วน usable ของ subnet แบบทั่วไปลบ 2 เพราะสงวน network address กับ directed broadcast address อย่าใช้สูตรลบ 2 กับทุกกรณี: /31 สำหรับ point-to-point มีข้อยกเว้น และ /32 แทน address เดี่ยว</p>
+<h3>3.3 ทำโจทย์ Subnet ทีละขั้น: 192.168.1.70/26</h3>
+<ol>
+<li><code>/26</code> ทำให้ octet สุดท้ายของ mask เป็น 192</li>
+<li>Block size = 256−192 = <strong>64</strong> จึงมีช่วง 0–63, 64–127, 128–191, 192–255</li>
+<li>เลข 70 อยู่ช่วง <strong>64–127</strong> จึงได้ network = <strong>192.168.1.64</strong></li>
+<li>ค่าสุดท้ายของช่วงคือ broadcast = <strong>192.168.1.127</strong></li>
+<li>ใช้งาน host ปกติได้ <strong>192.168.1.65–126</strong> รวม <strong>62 เครื่อง</strong></li>
+</ol>
+<p>ที่บอกว่า <code>/26</code> กระโดดทีละ 64 ใน octet สุดท้ายเป็นวิธีลัดสำหรับกรณีนี้ ถ้าโจทย์ใช้ /20 ต้องคิดที่ octet ที่สาม ไม่เอาวิธีจำ octet สุดท้ายไปแทนตรง ๆ หลักทั่วไปคือ <strong>Network = IP AND subnet mask</strong></p>
+<h3>3.4 ต้องการ 50 เครื่อง เลือก subnet เท่าไร</h3>
+<p>หา host bits h ที่ทำให้ <strong>2^h−2 ≥ 50</strong> ถ้า h=5 ได้ 30 ไม่พอ ถ้า h=6 ได้ 62 พอ จึงใช้ prefix 32−6 = <strong>/26</strong> คำว่า “เล็กที่สุดที่พอ” หมายถึงเลือก block ที่ไม่ใหญ่เกินจำเป็น ไม่ใช่เลือก prefix ตัวเลขน้อยที่สุด</p>
+<p>หากแบ่ง 192.168.1.0/24 เป็น /26 จะเพิ่ม network bits 2 บิต ได้ <strong>4 subnets</strong> แต่ละ subnet มี 64 address และ 62 usable hosts อย่าสับสนจำนวน subnet กับจำนวน host</p>
+<h3>3.5 เครื่องตัดสินว่าอีกเครื่องอยู่ subnet เดียวกันได้อย่างไร</h3>
+<p>Host นำ IP ตนเอง AND mask แล้วเปรียบเทียบกับ IP ปลายทาง AND mask ตาม routing configuration ของตน ถ้าเป็นปลายทาง on-link ก็ส่งตรงผ่านลิงก์ เช่น ARP หา MAC ของเครื่องนั้นใน IPv4 ถ้าต้องผ่าน gateway จะ resolve MAC ของ gateway แทน</p>
+<p>ตัวอย่าง A=192.168.1.70/26 กับ B=192.168.1.90 อยู่ช่วง 64–127 เหมือนกัน แต่ C=192.168.1.140 อยู่ช่วง 128–191 จึงเป็นอีก subnet แม้สาม octets แรกจะเหมือนกัน คำว่า “192.168.1 เหมือนกันจึงวงเดียวกัน” ผิดถ้าไม่ดู mask</p>
+<p>Default gateway โดยทั่วไปต้องมี address ที่ host เข้าถึงบนลิงก์ของตนได้ การตั้ง gateway เป็น address ของเว็บ server ระยะไกลจึงไม่ทำให้เครื่องข้ามเครือข่ายได้เอง</p>
+<h3>3.6 เลือก Route: Longest Prefix, AD และ Metric คนละขั้น</h3>
+<p><strong>ตอน forwarding:</strong> เทียบ IP ปลายทางกับ prefix ที่ติดตั้งใน routing table แล้วเลือก <strong>Longest Prefix Match</strong> คือ match บิตต้นได้ยาวที่สุด เช่นปลายทาง 10.1.2.5 match ทั้ง 10.0.0.0/8 และ 10.1.2.0/24 ให้เลือก /24 เพราะจำเพาะกว่า</p>
+<p><strong>ตอนพิจารณาติดตั้ง route ไป prefix เดียวกันจากต่างแหล่ง:</strong> Cisco ใช้ <strong>Administrative Distance — AD</strong> เป็นค่าความน่าเชื่อถือของแหล่ง route โดยทั่วไปค่าน้อยได้รับเลือกก่อน ตัวอย่าง connected 0, static 1, OSPF 110, RIP 120 เป็นค่าเริ่มต้นที่ตั้งเปลี่ยนได้</p>
+<p><strong>ภายใน routing protocol:</strong> ใช้ <strong>Metric</strong> ตามกติกาของ protocol เพื่อเปรียบเทียบเส้นทาง เช่น RIP ใช้ hop count, OSPF ใช้ cost ไม่ควรเอา metric คนละ protocol มาเทียบเลขตรง ๆ แล้วสรุปว่าใครดีกว่า</p>
+<p><strong>โจทย์หลอก:</strong> ในตารางมี /0 ค่า AD 1 กับ /24 ค่า AD 110 และปลายทาง match ทั้งคู่ การ forwarding เลือก <strong>/24</strong> ไม่ใช่ /0 เพราะ AD ไม่ได้เอามาข้ามกติกา longest prefix ระหว่าง prefix ต่างกัน</p>
+<h3>3.7 Static, Dynamic และ Default Route</h3>
+<p>Static route ผู้ดูแลกำหนดเอง เหมาะกับเส้นทางที่เรียบง่ายหรือมีเงื่อนไขที่ต้องการกำหนดชัด แต่เมื่อ topology เปลี่ยนอาจต้องแก้เอง Dynamic routing เช่น OSPF/RIP ช่วยเรียนรู้และปรับเส้นทางตามกลไกของ protocol แต่มีการตั้งค่า การแลกเปลี่ยนข้อมูล และเวลา convergence</p>
+<p><strong>Default route = 0.0.0.0/0</strong> เป็นทางเลือกเมื่อไม่มี route ที่จำเพาะกว่า ไม่ได้แปลว่าถ้ามี default แล้วจะเข้าถึงทุกปลายทางได้แน่นอน เพราะ next hop, เส้นทางถัดไป, route ขากลับ หรือ policy อาจมีปัญหา</p>
+<p>RIP เป็น distance-vector ใช้ hop count และมอง 16 hops ว่า unreachable ส่วน OSPF เป็น link-state ใช้ฐานข้อมูล link state และคำนวณเส้นทางตาม cost ต้องอ่าน scope และการตั้งค่าจริงประกอบ</p>
+<h3>3.8 อ่านผังเครือข่ายให้ถูกก่อนแตะคำสั่ง</h3>
+<pre><code class="language-text">PC-A —— Switch-A —— R1 —— R2 —— Switch-B —— PC-B
+       LAN A           Transit link          LAN B
+    192.168.1.0/24    10.0.0.0/30       192.168.2.0/24
+</code></pre>
+<p>แต่ละช่วงที่คั่นด้วย router เป็นคนละเครือข่ายตามการออกแบบนี้ Switch ไม่ได้สร้าง subnet ใหม่ทุกพอร์ต ส่วน interface ของ router ที่อยู่แต่ละฝั่งต้องมี address ที่ตรงกับวงนั้น หาก A จะคุย B ต้องมี gateway ของ A, route ที่ R1 ไป LAN B, การเชื่อมต่อระหว่าง router และเส้นทางตอบกลับจาก B/R2 ไป LAN A ครบ</p>
+<p>|Topology|มองภาพอย่างไร|ข้อพิจารณา|
+|Star|ทุกโหนดต่อจุดกลาง|สายปลายทางขาดกระทบโหนดนั้น แต่ศูนย์กลางล่มกระทบวง|
+|Bus|ใช้ backbone ร่วม|ปัญหาสื่อร่วมอาจกระทบหลายโหนด|
+|Ring|โหนดเชื่อมเป็นวง|การรับมือสายขาดขึ้นกับระบบและวงสำรอง|
+|Full mesh|ทุกคู่มีลิงก์ตรง|เส้นทางสำรองมาก แต่ใช้ลิงก์ n(n−1)/2 เส้น|</p>
+<p>Full mesh 5 โหนดใช้ 5×4/2 = <strong>10 ลิงก์</strong> หาร 2 เพราะลิงก์ A–B กับ B–A นับเป็นลิงก์คู่เดียวตามโจทย์ลิงก์สองทิศทาง อย่าสับสน <strong>physical topology</strong> การต่อจริง กับ <strong>logical topology</strong> เส้นทางหรือการใช้สื่อเชิงตรรกะ</p>
+<p><strong>จุดหลอก:</strong> ไม่ดู mask; ใช้ network/broadcast เป็น host; AD ชนะ prefix ยาวกว่า; ตั้งเฉพาะ route ขาไป; คิดว่าทุก switch port คือ subnet ใหม่</p><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article><article id="read-ch-3" data-read-index="3"><h2>4. Link Layer และ LAN: frame เดินทางในวงอย่างไร</h2><h3>4.1 Link Layer รับช่วงไหนของงาน</h3>
+<p>ถ้า Network สนใจว่าจะพา packet ไปเครือข่ายปลายทางอย่างไร Link Layer สนใจว่าบนลิงก์นี้จะส่งข้อมูลถึงอีกฝั่งด้วยกติกาอะไร เช่น วางขอบเขต frame ใช้ address แบบไหน ตรวจความผิดพลาดอย่างไร และหลายอุปกรณ์จะแชร์สื่อกันอย่างไร</p>
+<p>บริการขึ้นกับเทคโนโลยี ไม่ใช่ทุก Link Layer มี reliability แบบเดียวกัน Ethernet ตรวจ FCS แล้วทิ้ง frame ที่ผิดโดยทั่วไป แต่ไม่ได้มี ACK/ส่งซ้ำข้อมูลปกติแบบเดียวกับ Wi-Fi unicast การที่ TCP ส่งซ้ำปลายทางได้ก็เป็นอีกชั้นหนึ่ง</p>
+<h3>4.2 Ethernet Frame มีอะไรบ้าง</h3>
+<p>มองโครงสร้างหลักเป็น <strong>Destination MAC → Source MAC → Type/Length → Payload → FCS</strong> โดยมีรายละเอียดการส่งบนสื่อเพิ่มเติม เช่น preamble/SFD และ inter-frame gap ที่ต้องแยกจากการนับขนาด frame ในบางโจทย์</p>
+<p>Destination บอกให้ใคร Source บอกมาจากใคร Type ช่วยบอก protocol ข้างใน เช่น IPv4 ส่วน <strong>FCS — Frame Check Sequence</strong> ใช้ค่าตรวจ CRC เพื่อช่วยตรวจความผิดพลาด ไม่ใช่รหัสลับหรือกลไกยืนยันว่าผู้ส่งเป็นคนดี</p>
+<p>MAC แบบ Ethernet ทั่วไปมี 48 บิต เช่น <code>00:11:22:33:44:55</code> มี 6 octets แสดงด้วยเลขฐานสิบหก อย่าสับสนกับ IPv4 32 บิตหรือ IPv6 128 บิต</p>
+<h3>4.3 Switch เรียนรู้จาก source แต่ส่งโดยดู destination</h3>
+<p>สมมติ A ต่อ port 1, B ต่อ port 2 และ MAC table ยังว่าง เมื่อ A ส่ง frame มาหา B Switch จะจำก่อนว่า “MAC ของ A อยู่ทาง port 1” โดยดู <strong>source MAC กับพอร์ตรับ</strong> จากนั้นค้น <strong>destination MAC ของ B</strong> หากยังไม่รู้ จะส่งสำเนาไปพอร์ตอื่นภายใน VLAN เดียวกัน ยกเว้นพอร์ตรับ เรียก unknown-unicast flooding</p>
+<p>เมื่อ B ตอบกลับ Switch เรียนรู้ MAC ของ B ทาง port 2 ตอนนี้รู้ A แล้ว จึงส่งกลับเฉพาะ port 1 การเรียนรู้ไม่ต้องให้ผู้ดูแลกรอก MAC ทุกเครื่องด้วยตนเองตามปกติ และรายการอาจหมดอายุเมื่อไม่ได้ใช้งาน</p>
+<p>|กรณีที่ switch พบ|พฤติกรรมทั่วไปใน VLAN|
+|Known unicast ปลายทางอยู่อีกพอร์ต|ส่งไปพอร์ตที่เรียนรู้|
+|Known unicast ปลายทางอยู่พอร์ตเดียวกับที่รับ|ไม่ส่งย้อนกลับพอร์ตนั้น|
+|Unknown unicast|Flood ยกเว้นพอร์ตรับ|
+|Broadcast|Flood ตามขอบเขต VLAN ยกเว้นพอร์ตรับ|</p>
+<p>Broadcast MAC คือ <strong>FF:FF:FF:FF:FF:FF</strong> อย่าเอาไปปนกับ IPv4 limited broadcast 255.255.255.255 ซึ่งอยู่คนละชั้น</p>
+<h3>4.4 Collision Domain ต่างจาก Broadcast Domain</h3>
+<p><strong>Collision domain</strong> คือขอบเขตที่การส่งบนสื่อร่วมอาจชนกันได้ Hub แบบเก่าทำให้เครื่องหลายพอร์ตแชร์สื่อและ collision domain ส่วน switch แยกเป็นลิงก์ตามพอร์ต และเมื่อเป็น switched full-duplex จะไม่มีการชนแบบ shared half-duplex ตามการทำงานปกติ</p>
+<p><strong>Broadcast domain</strong> คือขอบเขตที่ broadcast ชั้น 2 ถูกกระจายไปถึง Switch ที่ยังอยู่ VLAN เดียวกันไม่ได้แยก broadcast domain ให้ทุกพอร์ต ส่วน <strong>แต่ละ VLAN เป็นคนละ broadcast domain</strong> และ router ไม่ส่งต่อ broadcast ชั้น 2 แบบปกติข้าม interface</p>
+<p>ตัวอย่าง switch 8 พอร์ต ใช้ 4 พอร์ตใน VLAN 10 และ 4 พอร์ตใน VLAN 20 มี broadcast domains ตาม VLAN <strong>2 วง</strong> ภายใต้การตั้งค่านี้ อย่าตอบ 8 โดยเอาจำนวนพอร์ตมาแทน</p>
+<h3>4.5 CSMA/CD กับ CSMA/CA จำจากเหตุผล</h3>
+<p>Ethernet แบบเก่าที่ใช้สื่อร่วมและ half-duplex ต้องรับมือหลายเครื่องส่งพร้อมกัน จึงใช้ <strong>CSMA/CD — Carrier Sense Multiple Access with Collision Detection</strong> ฟังสื่อก่อนส่ง ตรวจ collision แล้วรอแบบ backoff เพื่อส่งใหม่ แต่ <strong>Ethernet full-duplex ไม่ต้องใช้ CSMA/CD</strong> ในการทำงานปกติ</p>
+<p>Wi-Fi ใช้ <strong>CSMA/CA — Collision Avoidance</strong> เพราะเครื่องไร้สายไม่สามารถพึ่งการฟังขณะส่งเพื่อรู้ collision แบบสื่อสายร่วมได้เหมือนกัน จึงมีกลไกลดโอกาสชน เช่น ฟังช่อง สุ่ม backoff และ ACK ตามชนิด frame คำว่า avoid ไม่ได้แปลว่าจะไม่มี collision เลย</p>
+<h3>4.6 CRC, Parity และการส่งซ้ำเป็นคนละกลไก</h3>
+<p>Parity แบบหนึ่งบิตช่วยตรวจความผิดพลาดบางรูปแบบ แต่เมื่อพลิกบิตเป็นจำนวนคู่ parity อาจยังเหมือนเดิม <strong>CRC</strong> มองชุดบิตเป็น polynomial และหาค่าเศษตาม generator ที่กำหนด ผู้รับตรวจความสอดคล้องจากค่าที่ส่งมา ความสามารถตรวจขึ้นกับ generator และรูปแบบ error จึงไม่ควรตอบว่า CRC ตรวจทุกกรณีได้ 100%</p>
+<p><strong>Error detection</strong> คือรู้ว่ามีความผิดปกติตามความสามารถของรหัส <strong>Error correction</strong> คือกู้ข้อมูลจากความซ้ำซ้อนที่ออกแบบมา <strong>Retransmission</strong> คือขอหรือจัดให้ส่งซ้ำเมื่อผิด/หาย สามอย่างนี้ไม่ใช่คำเดียวกัน</p>
+<p>ใน Stop-and-Wait ผู้ส่งส่งหนึ่งหน่วยแล้วรอ ACK หาก ACK หายอาจส่งข้อมูลเดิมซ้ำ จึงต้องมี sequence number ช่วยแยกว่าเป็นข้อมูลใหม่หรือ duplicate ถ้าเพิ่ม pipeline จะส่งหลายหน่วยค้างได้ แต่ต้องออกแบบ window และพื้นที่ sequence ให้เหมาะสม</p>
+<h3>4.7 VLAN, Trunk และ STP</h3>
+<p>VLAN แบ่งวงเชิงตรรกะแม้ใช้ switch ตัวเดียวกัน Port แบบ access มักรับส่งของ VLAN ที่กำหนดสำหรับเครื่องปลายทาง ส่วน <strong>trunk</strong> ขนส่งได้หลาย VLAN บนลิงก์เดียว โดย <strong>802.1Q tag</strong> ช่วยระบุ VLAN ตามกติกาและการตั้งค่า เช่น traffic ของ native VLAN อาจไม่ติด tag ในบางบริบท</p>
+<p>เครื่องคนละ VLAN จะคุย IP กันต้องมี <strong>Inter-VLAN routing</strong> ผ่าน router หรือ layer-3 switch ไม่ใช่แค่ลาก trunk แล้วทุก VLAN จะคุยกันเอง</p>
+<p>การต่อ switch หลายเส้นเป็นวงทำให้มีเส้นทางสำรอง แต่ถ้าปล่อย loop ชั้น 2 อาจเกิด broadcast storm และ MAC table สลับไปมา <strong>STP — Spanning Tree Protocol</strong> ช่วยเลือก topology ที่ไม่วน โดยบล็อกบางเส้นทางไว้ตามกระบวนการ ไม่ได้แปลว่าต้องถอดสายสำรองทิ้ง</p>
+<p><strong>จุดหลอก:</strong> switch เรียนรู้จาก source ไม่ใช่ destination; unknown unicast ไม่ได้ flood ข้ามทุก VLAN; VLAN ต้อง route เพื่อข้ามวง; CRC ไม่แก้ทุกบิต; full-duplex Ethernet ไม่ใช้ CD ตามปกติ</p><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article><article id="read-ch-4" data-read-index="4"><h2>5. LAN Cabling: ไม่ใช่แค่จำสีสาย</h2><h3>5.1 ทำไมต้องเป็นคู่บิดเกลียว</h3>
+<p>คู่สายส่งสัญญาณแบบ differential โดยพิจารณาความต่างระหว่างตัวนำ การบิดเกลียวทำให้สภาพการรับรบกวนของสองเส้นใกล้เคียงกันและช่วยลด crosstalk ระหว่างคู่ จึงสำคัญว่าเส้นไหนเป็นคู่กับเส้นไหน ไม่ใช่มีทองแดงครบแปดเส้นแล้วถือว่าใช้แทนกันได้</p>
+<p><strong>UTP</strong> ไม่มีชิลด์ ส่วน <strong>STP</strong> มีโครงสร้างชิลด์ตามชนิดสาย ชิลด์ต้องติดตั้งและต่อกราวด์ตามระบบอย่างถูกต้อง จึงไม่ควรสรุปว่าเอาสายมีชิลด์มาเสียบแบบใดก็ชนะ UTP ทุกกรณี สาย Ethernet twisted pair ทั่วไปมี <strong>4 คู่ รวม 8 เส้น</strong> และหัว 8P8C ที่มักเรียก RJ-45</p>
+<h3>5.2 T568A กับ T568B: จดตารางให้เห็น pin</h3>
+<p>ลำดับนี้เป็นเลข pin 1–8 ตามมาตรฐาน <strong>ต้องดูทิศหัวและทิศหน้าสัมผัสให้ถูกก่อนนับ</strong> การพลิกหัวแล้วอ่านซ้ายไปขวาอาจได้ลำดับกลับกัน แม้ท่องสีถูก</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>T568A</th>
+<th>T568B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ขาวเขียว</td>
+<td>ขาวส้ม</td>
+</tr>
+<tr>
+<td>2</td>
+<td>เขียว</td>
+<td>ส้ม</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ขาวส้ม</td>
+<td>ขาวเขียว</td>
+</tr>
+<tr>
+<td>4</td>
+<td>น้ำเงิน</td>
+<td>น้ำเงิน</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ขาวน้ำเงิน</td>
+<td>ขาวน้ำเงิน</td>
+</tr>
+<tr>
+<td>6</td>
+<td>ส้ม</td>
+<td>เขียว</td>
+</tr>
+<tr>
+<td>7</td>
+<td>ขาวน้ำตาล</td>
+<td>ขาวน้ำตาล</td>
+</tr>
+<tr>
+<td>8</td>
+<td>น้ำตาล</td>
+<td>น้ำตาล</td>
+</tr>
+</tbody>
+</table></div>
+<p>วิธีจำคือ A กับ B สลับ <strong>คู่เขียวกับคู่ส้ม</strong> ส่วนคู่สีน้ำเงินและน้ำตาลอยู่ที่เดิม สังเกตว่าคู่หนึ่งอาจไม่ได้อยู่ pin ติดกัน เช่นคู่ที่ใช้ pin 3 และ 6 จึงต้องรักษาการเข้าคู่ตามมาตรฐาน</p>
+<h3>5.3 สายตรง สายไขว้ และ Auto MDI-X</h3>
+<p><strong>Straight-through</strong> ใช้มาตรฐานเดียวกันสองปลาย เช่น B–B หรือ A–A ส่วน <strong>crossover แบบที่สอนกับ 10/100BASE-TX</strong> ใช้ A–B เพื่อไขว้คู่ส่ง/รับตามบริบทนั้น คำว่าคนละมาตรฐานสองปลายไม่ได้หมายความว่าเสียทุกกรณี ต้องดูว่าเจตนาทำสายแบบไหน</p>
+<p>ตามกฎเดิมเมื่อไม่มี Auto MDI-X: PC–switch ใช้สายตรง ส่วน switch–switch แบบ 10/100 ใช้สายไขว้ อุปกรณ์ที่รองรับ <strong>Auto MDI-X</strong> สามารถจัดการคู่ส่ง/รับให้อัตโนมัติ จึงอย่าใช้กฎเก่าไปตอบแบบเหมารวมกับอุปกรณ์ทุกรุ่น</p>
+<p>สาย <strong>rollover/console</strong> ใช้บริบทการเข้าจัดการอุปกรณ์ ไม่ใช่เอาไปแทนสาย Ethernet ปกติได้เพราะหัวหน้าตาคล้ายกัน และ 1000BASE-T ใช้ครบ <strong>4 คู่</strong> จึงไม่ควรยกแผนผังคู่ส่ง/รับของ 100BASE-TX ไปอธิบายทุกเทคโนโลยี</p>
+<h3>5.4 Category, ระยะ และความเร็ว</h3>
+<p>|ตัวอย่างสาย/ลิงก์|จำอะไร|เงื่อนไขที่ห้ามลืม|
+|Cat5e กับ 1000BASE-T|รองรับ 1 Gb/s ที่ channel ได้มาตรฐานถึง 100 m|หัวต่อ การติดตั้งและอุปกรณ์ต้องรองรับด้วย|
+|Cat6A กับ 10GBASE-T|รองรับ 10 Gb/s ที่ 100 m ตามมาตรฐาน channel|Transceiver/port บางรุ่นอาจมีข้อจำกัดเฉพาะ|
+|Cat6 กับ 10GBASE-T|ระยะและ crosstalk เป็นเงื่อนไขสำคัญ|อย่าเหมารวมว่าได้ 100 m ทุกการติดตั้ง|
+|Fiber optic|ใช้แสงและทน EMI ในตัวกลาง|ชนิด fiber ความยาวคลื่น และ transceiver ต้องเข้ากัน|</p>
+<p>Channel ทองแดง LAN แบบทั่วไปยาวรวม <strong>100 m</strong> โดยส่วน <strong>permanent link มัก 90 m</strong> และเผื่อ patch cords รวม 10 m นี่ไม่ใช่ค่าระยะของ Ethernet ทุกชนิด เพราะ fiber และมาตรฐานอื่นมีข้อกำหนดต่างกัน</p>
+<p>ความเร็วใช้งานจริงต้องพอดีกันทั้งสาย หัวต่อ NIC, switch port, การเจรจาความเร็ว และเส้นทางอื่น การเปลี่ยนสายเป็น Cat6A อย่างเดียวไม่ได้ทำให้พอร์ต 1 Gb/s กลายเป็น 10 Gb/s</p>
+<h3>5.5 Fiber ต่างจากทองแดงอย่างไร</h3>
+<p>Fiber ใช้แสง ไม่รับ EMI ในตัวกลางเหมือนสายไฟฟ้า และเหมาะกับหลายงานระยะไกล <strong>Single-mode</strong> ใช้การส่งโหมดหลักตามโครงสร้าง เหมาะกับระยะไกลในหลายระบบ ส่วน <strong>multimode</strong> รองรับหลายโหมดแสงและมีข้อจำกัด modal dispersion ระยะจริงขึ้นกับมาตรฐาน อัตราส่ง ชนิด fiber และ optics</p>
+<p>ต้องเลือกหัวต่อ/สาย/โมดูลให้ตรง ไม่ใช่เห็นว่าเป็น fiber เหมือนกันแล้วต่อได้เสมอ อีกทั้งแสงในใยแก้วไม่ทำให้ latency เป็นศูนย์ เพราะยังมี propagation และเวลาประมวลผล</p>
+<h3>5.6 อาการสายเสียที่ข้อสอบชอบถาม</h3>
+<ul>
+<li><strong>Open:</strong> ตัวนำขาดหรือหน้าสัมผัสไม่ถึงกัน</li>
+<li><strong>Short:</strong> ตัวนำที่ไม่ควรแตะกันกลับลัดวงจร</li>
+<li><strong>Miswire:</strong> ต่อ pin ผิดตำแหน่ง</li>
+<li><strong>Split pair:</strong> pin อาจต่อถึงกัน แต่หยิบตัวนำคนละคู่มาจับคู่ ทำให้คุณภาพสัญญาณผิด</li>
+</ul>
+<p>เครื่องทดสอบ continuity แบบง่ายอาจบอกเพียงว่า pin ต่อถึงกัน ไม่ได้ยืนยันประสิทธิภาพทุกความถี่หรือการจับคู่ถูกทั้งหมด การตรวจคุณภาพตามมาตรฐานต้องใช้เครื่องมือที่วัดได้เหมาะกับงาน</p>
+<p><strong>PoE — Power over Ethernet</strong> ส่งไฟร่วมกับข้อมูลให้อุปกรณ์ที่รองรับ เช่น AP และ IP phone แต่ต้องดูมาตรฐาน กำลังไฟและ power budget ของสวิตช์ด้วย ไม่ใช่มีสาย LAN แล้วจ่ายไฟให้อุปกรณ์ทุกชนิดได้</p>
+<p><strong>จุดหลอก:</strong> หัวถูกสีแต่ split pair ยังมีปัญหา; Link LED ไม่รับรอง IP/DNS; สายใหม่ไม่เพิ่มความเร็วพอร์ตเกินที่รองรับ; 100 m เป็นเงื่อนไขของ channel ที่กำลังพูดถึง</p><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article><article id="read-ch-5" data-read-index="5"><h2>6. Cloud Computing: เช่าความสามารถแบบไหน ใครต้องดูแลอะไร</h2><h3>6.1 Cloud ไม่ใช่แค่ “ฝากไฟล์ไว้บน Internet”</h3>
+<p>Cloud คือรูปแบบบริการที่ผู้ใช้ขอและใช้งานทรัพยากรคอมพิวเตอร์ผ่านเครือข่ายได้สะดวก ผู้ให้บริการมีทรัพยากรรวมและจัดสรรตามความต้องการ ทรัพยากรอาจเป็นเครื่องเสมือน storage, database, platform หรือแอปสำเร็จรูป ไม่ได้จำกัดแค่พื้นที่ฝากไฟล์</p>
+<p>นึกถึงการใช้ไฟฟ้า เราต้องการกำลังไฟ ไม่จำเป็นต้องสร้างโรงไฟฟ้าทุกครั้ง แต่การเปรียบเทียบนี้ไม่ได้หมายความว่า cloud ใช้งานแล้วคิดเงินรูปแบบเดียวทุกเจ้า หรือไม่ต้องดูแลอะไรเลย ต้องอ่านขอบเขตบริการและสัญญา</p>
+<h3>6.2 คุณลักษณะหลัก 5 อย่างของ NIST</h3>
+<p><strong>On-demand self-service:</strong> ผู้ใช้จัดสรรทรัพยากรได้เองตามบริการ เช่นสร้าง VM ผ่านหน้าเว็บหรือ API โดยไม่ต้องให้เจ้าหน้าที่ทำทุกครั้ง คำว่า self-service ไม่ได้แปลว่าไม่ต้องมีสิทธิ์หรือไม่ต้องผ่านนโยบายองค์กร</p>
+<p><strong>Broad network access:</strong> เข้าถึงผ่านเครือข่ายด้วยกลไกมาตรฐาน จาก client ที่รองรับ ไม่ได้แปลว่าทุกทรัพยากรต้องเปิด public Internet เสมอ Private cloud ก็เข้าถึงผ่านเครือข่ายได้</p>
+<p><strong>Resource pooling:</strong> ผู้ให้บริการรวมทรัพยากรไว้เป็น pool แล้วจัดสรรให้หลายผู้ใช้หรือผู้เช่า โดยมีการแยกตามการออกแบบ ไม่ใช่ทุกคนแชร์บัญชีเดียวกันหรือมองเห็นข้อมูลกันได้</p>
+<p><strong>Rapid elasticity:</strong> เพิ่มและลดทรัพยากรได้รวดเร็วตามความต้องการ เช่นเพิ่มจำนวนเครื่องช่วงลงทะเบียน แล้วลดเมื่อหมดช่วงงาน ความสามารถนี้ต้องมีการออกแบบและขอบเขตบริการรองรับ</p>
+<p><strong>Measured service:</strong> ระบบวัดและรายงานปริมาณการใช้ เช่นเวลาประมวลผล พื้นที่หรือ bandwidth ช่วยให้ติดตามและควบคุมได้ ไม่ได้กำหนดว่าต้องคิดเงินนาทีละเท่าไร หรือถูกกว่าเสมอ</p>
+<p>จำสั้น ๆ ว่า <strong>ขอเอง — เข้าผ่านเครือข่าย — ใช้ pool — ยืดหด — วัดการใช้</strong> การมี VM เพียงตัวเดียวในห้อง server ยังพิสูจน์คุณลักษณะเหล่านี้ไม่ครบ</p>
+<h3>6.3 IaaS, PaaS และ SaaS: ต่างกันที่ส่วนที่บริการจัดให้</h3>
+<p><strong>IaaS — Infrastructure as a Service:</strong> ได้พื้นฐานอย่าง VM, network และ storage ผู้ให้บริการดูแลโครงสร้างพื้นฐานตามข้อตกลง ส่วนลูกค้ามักดูแล guest OS, patches ฝั่งตน แอปและข้อมูล เหมาะเมื่ออยากควบคุมเครื่องมาก แต่ต้องมีความสามารถดูแลระบบ</p>
+<p><strong>PaaS — Platform as a Service:</strong> ผู้ให้บริการดูแล platform/runtime ตามขอบเขตที่เสนอ ลูกค้าเน้น deploy โค้ด จัดข้อมูลและตั้งค่าของแอป ลดภาระดูแล OS แต่มีข้อจำกัดด้านภาษา runtime และวิธี deploy ที่ต้องยอมรับ</p>
+<p><strong>SaaS — Software as a Service:</strong> ใช้แอปสำเร็จรูปเป็นบริการ เช่นแอปเอกสารออนไลน์ในบริบทที่ให้เป็นบริการ ผู้ใช้ไม่ต้องดูแล OS ของระบบแอปนั้น แต่ยังต้องจัดสิทธิ์บัญชี ตั้งค่าการแชร์ และจัดการข้อมูลตามหน้าที่ของตน</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>สิ่งที่ถาม</th>
+<th>IaaS โดยทั่วไป</th>
+<th>PaaS โดยทั่วไป</th>
+<th>SaaS โดยทั่วไป</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ลูกค้าได้อะไร</td>
+<td>โครงสร้างพื้นฐานเสมือน</td>
+<td>สภาพแวดล้อมรันแอป</td>
+<td>แอปพร้อมใช้</td>
+</tr>
+<tr>
+<td>Guest OS ของบริการนั้น</td>
+<td>ลูกค้าดูแล</td>
+<td>ผู้ให้บริการดูแลตามขอบเขต</td>
+<td>ผู้ให้บริการดูแล</td>
+</tr>
+<tr>
+<td>โค้ดของแอปลูกค้า</td>
+<td>ลูกค้าจัดการ</td>
+<td>ลูกค้าจัดการ</td>
+<td>ผู้ให้บริการจัดแอปหลักให้</td>
+</tr>
+<tr>
+<td>สิทธิ์บัญชีและข้อมูลฝั่งผู้ใช้</td>
+<td>ยังมีหน้าที่</td>
+<td>ยังมีหน้าที่</td>
+<td>ยังมีหน้าที่</td>
+</tr>
+</tbody>
+</table></div>
+<p>ขอบเขตจริงอาจต่างตามบริการ จึงควรตอบจาก <strong>สิ่งที่ลูกค้าต้องจัดการในโจทย์</strong> ไม่ใช่จำแค่ชื่อแบรนด์ว่าแบรนด์นี้เป็น IaaS เท่านั้น</p>
+<h3>6.4 Public, Private, Community และ Hybrid</h3>
+<p><strong>Public cloud</strong> เปิดให้สาธารณะสมัครใช้ตามบริการ ส่วน <strong>private cloud</strong> จัดไว้ให้ใช้งานเฉพาะองค์กรหนึ่ง Private ไม่ได้บังคับว่าต้องอยู่ในตึกบริษัทหรือดูแลเองทั้งหมด และ public ไม่ได้แปลว่าใครก็อ่านข้อมูลของลูกค้าได้</p>
+<p><strong>Community cloud</strong> ใช้ร่วมโดยกลุ่มองค์กรที่มีข้อกำหนดหรือความต้องการร่วมกัน ส่วน <strong>hybrid cloud</strong> เป็นการประกอบ cloud ที่ยังแยกกันตั้งแต่สองโครงสร้าง โดยเชื่อมด้วยเทคโนโลยีที่รองรับการใช้งานหรือการเคลื่อนย้ายข้อมูล/แอปตามการออกแบบ การมี server เก่าเชื่อม Internet เพียงอย่างเดียวไม่พอให้สรุปว่าเป็น hybrid cloud ตามนิยามครบ</p>
+<p><strong>Multi-cloud</strong> หมายถึงการใช้ cloud หลายผู้ให้บริการตามบริบท ไม่จำเป็นต้องเท่ากับ hybrid ทุกกรณี และไม่ได้อยู่ในชุด deployment models หลัก 4 แบบของนิยาม NIST ที่ใช้ทวนนี้</p>
+<h3>6.5 Scalability, Elasticity และ Load Balancer</h3>
+<p><strong>Scalability</strong> คือความสามารถรองรับงานที่มากขึ้นด้วยการปรับทรัพยากร <strong>Scale up / vertical scaling</strong> เพิ่มความสามารถเครื่องเดิม เช่น CPU/RAM ส่วน <strong>scale out / horizontal scaling</strong> เพิ่มจำนวนเครื่อง</p>
+<p><strong>Elasticity</strong> เน้นปรับให้เข้ากับความต้องการที่ขึ้นลง ไม่ใช่ขยายอย่างเดียว <strong>Load balancer</strong> กระจายคำขอไป backend ส่วน <strong>auto scaling</strong> ปรับทรัพยากรตามนโยบาย ทั้งสองเกี่ยวข้องกัน แต่ไม่ได้ทำหน้าที่แทนกัน</p>
+<p>ตัวอย่างร้านออนไลน์มี 2 instances ปกติ ช่วงโปรโมชันเพิ่มเป็น 8 แล้วลดเหลือ 2 เมื่อจบ เป็นภาพของ elasticity ส่วนแอปจะ scale out ได้ดีต้องจัดการ session, shared data, database และคอขวดด้วย การเพิ่มเว็บเซิร์ฟเวอร์ไม่ช่วยเต็มที่ถ้า database เป็นคอขวดอยู่</p>
+<h3>6.6 VM, Container และ Serverless อย่าเอามาปนกัน</h3>
+<p><strong>VM</strong> จำลองเครื่องให้มี guest OS ของตนเองบน virtualization layer ส่วน <strong>container</strong> โดยทั่วไปแยกแอปและ dependencies โดยแชร์ kernel ของ host ตามสถาปัตยกรรม จึงต่างกันที่ชั้นการแยกและรูปแบบจัดการ ไม่ใช่ container เป็น VM ที่แค่เปลี่ยนชื่อ</p>
+<p><strong>Serverless</strong> หมายถึงผู้ใช้ไม่ต้องจัดการ server ในแบบเดิมสำหรับบริการนั้น เช่นส่งฟังก์ชันให้ระบบรันตาม event ยังมี server จริงอยู่เบื้องหลัง และลูกค้ายังต้องดูแลโค้ด สิทธิ์ ข้อมูลและการตั้งค่า ไม่ใช่ทำอะไรก็ฟรีหรือขยายได้ไม่จำกัด</p>
+<h3>6.7 Storage, Backup, Availability และ Disaster Recovery</h3>
+<p><strong>Object storage</strong> เก็บเป็น object พร้อม identifier/metadata และเข้าถึงผ่าน API ตามบริการ <strong>Block storage</strong> ให้ block ที่ประกอบเป็น volume สำหรับระบบ <strong>File storage</strong> ให้การเข้าถึงไฟล์ผ่าน interface/protocol ของบริการ เลือกให้ตรงวิธีใช้งาน ไม่ใช่ storage ทุกแบบแทนกันโดยไม่มีผล</p>
+<p><strong>Replication</strong> ทำสำเนาข้อมูลเพื่อวัตถุประสงค์เช่นความพร้อมใช้ แต่หากลบไฟล์ผิด ระบบอาจ replicate การลบด้วย <strong>Backup</strong> เน้นสำเนาสำหรับกู้คืนตามนโยบาย ต้องมี retention, การป้องกันสำเนา และทดสอบ restore ไม่ใช่มีคำว่า backup ในหน้าจอแล้วรับรองกู้ได้</p>
+<p><strong>RPO — Recovery Point Objective:</strong> ยอมสูญข้อมูลย้อนหลังได้กี่นาที/ชั่วโมง <strong>RTO — Recovery Time Objective:</strong> ตั้งเป้าให้กู้บริการกลับภายในเวลาเท่าไร ถ้าสำรองทุก 24 ชั่วโมงแบบไม่มีวิธีเก็บเพิ่ม ก็ไม่ควรอ้างว่ารองรับ RPO 5 นาทีได้โดยอัตโนมัติ</p>
+<p><strong>SLA</strong> ระบุระดับบริการ วิธีวัด เงื่อนไข ข้อยกเว้นและการชดเชย ไม่ได้รับประกันว่าไม่มี downtime ทุกกรณี หากใช้แบบจำลองเดือน 30 วัน SLA 99.9% จะมีช่วงไม่พร้อมใช้ตามสัดส่วน 0.1%×30×24×60 = <strong>43.2 นาที</strong> แต่การนับจริงต้องอิงสัญญา ไม่ใช่เอาตัวเลขนี้ไปแทนทุก SLA</p>
+<h3>6.8 ต้นทุนและ Shared Responsibility</h3>
+<p><strong>Shared responsibility</strong> หมายถึงผู้ให้บริการกับลูกค้ามีหน้าที่ต่างส่วนตามบริการ เช่น IaaS ลูกค้ามักต้อง patch guest OS แต่ SaaS ไม่ได้ให้ลูกค้าเข้าไป patch OS ของระบบแอปเอง อย่างไรก็ดี การกำหนดสิทธิ์บัญชีและการแชร์ข้อมูลฝั่งลูกค้ายังสำคัญ</p>
+<p>ใช้ <strong>least privilege</strong> ให้สิทธิ์เท่าที่จำเป็น ใช้ MFA ตามการรองรับ แยกข้อมูลลับและจัดการ key ให้เหมาะสม การเข้ารหัสไม่ได้ช่วยถ้าตั้งสิทธิ์ให้ผู้ไม่เกี่ยวข้องอ่านข้อมูลโดยตรงได้</p>
+<p>ค่าใช้จ่ายอาจเกิดจาก compute, storage, snapshot, API requests และ data egress ตามรูปแบบราคา ทรัพยากรที่เปิดทิ้งอาจคิดเงินแม้ไม่มีคนใช้เว็บ และ budget alert โดยทั่วไปเป็นการเตือน ไม่ใช่กลไกหยุดค่าใช้จ่ายทุกประเภทโดยอัตโนมัติ ต้องออกแบบมาตรการคุมให้ตรงบริการ</p>
+<p><strong>จุดหลอก:</strong> cloud ไม่ใช่ VM ทุกตัว; public ไม่ได้แปลว่าข้อมูลเปิดสาธารณะ; SaaS ไม่ได้ลบหน้าที่ผู้ใช้ทั้งหมด; replication ไม่แทน backup; serverless ยังมี server; measured service ไม่ได้แปลว่าถูกกว่าเสมอ</p><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article><article id="read-ch-6" data-read-index="6"><h2>7. Wireless: เชื่อมชื่อ Wi-Fi ได้ ทำไมยังใช้ Internet ไม่ได้</h2><h3>7.1 แยก AP ออกจาก Wireless Router ก่อน</h3>
+<p><strong>Access Point — AP</strong> เชื่อม client ไร้สายเข้าระบบลิงก์ ไม่จำเป็นต้องเป็น router หรือ DHCP server ส่วน <strong>wireless router บ้าน</strong> มักรวม AP, Ethernet switch, IP router, DHCP และ NAT ในกล่องเดียว เวลาโจทย์บอกว่า “ตั้งค่า wireless router” ต้องดูว่ากำลังตั้งหน้าที่ใด</p>
+<p><strong>SSID</strong> คือชื่อ WLAN ที่เห็นตอนเลือกเครือข่าย ส่วน <strong>BSSID</strong> ระบุ Basic Service Set โดยทั่วไปสัมพันธ์กับ MAC ของ AP radio ตามการใช้งาน ระบบหลาย AP อาจใช้ SSID เดียวกันได้ ชื่อเหมือนกันไม่ได้แปลว่าเชื่อมวิทยุตัวเดียวกัน</p>
+<p><strong>Infrastructure mode</strong> ให้ client ติดต่อผ่าน AP ส่วน <strong>ad hoc</strong> ตามแนวคิด WLAN ให้สถานีสื่อสารโดยไม่ใช้ AP ในโหมดนั้น การสื่อสารแบบ mesh เป็นอีกบริบทที่ต้องดู protocol และการออกแบบ ไม่ใช่เห็นไม่มีสายแล้วเรียก ad hoc ทั้งหมด</p>
+<h3>7.2 Wi-Fi ต้องแชร์ airtime</h3>
+<p>Wi-Fi อยู่ในตระกูล <strong>IEEE 802.11</strong> ใช้สื่อวิทยุที่หลายสถานีแบ่งเวลากัน สถานีต้องฟังช่อง รอและสุ่ม backoff ตามกลไก CSMA/CA การส่งข้อมูลยังมี overhead, ACK ตามชนิด frame และการส่งซ้ำเมื่อจำเป็น</p>
+<p>ดังนั้นตัวเลข PHY rate ที่เห็น เช่นอัตราเชื่อมต่อที่อุปกรณ์รายงาน ไม่เท่ากับ throughput แอปที่รับประกัน เมื่อมี client มากขึ้น ทุกคนอาจแย่ง airtime ร่วมกัน ไม่ใช่ทุกเครื่องได้ความเร็วเต็มตามโฆษณาพร้อมกัน</p>
+<p>Client ที่อยู่ไกลหรือสภาพสัญญาณไม่ดีอาจใช้อัตราส่งต่ำและมี retransmission ทำให้กิน airtime มากกว่าข้อมูลจำนวนเท่ากันที่ส่งในสภาพดี ผลกระทบจึงไม่ได้ขึ้นกับจำนวนคนอย่างเดียว ต้องดูรูปแบบ traffic และคุณภาพลิงก์ด้วย</p>
+<h3>7.3 Hidden Node และ RTS/CTS</h3>
+<p>สมมติ A กับ C อยู่คนละมุม ได้ยิน AP แต่ไม่ได้ยินกันเอง A ฟังแล้วคิดว่าว่าง C ก็คิดว่าว่าง จึงส่งพร้อมกันจนชนที่ AP ปัญหานี้คือ <strong>hidden node</strong> ไม่ใช่การซ่อน SSID</p>
+<p><strong>RTS/CTS</strong> ช่วยประกาศการจองสื่อให้สถานีที่ได้ยินทราบช่วงเวลาใช้งาน จึงลดผลปัญหาได้บางกรณี แต่เพิ่ม overhead และไม่ใช่วิธีแก้ทุกปัญหา Wi-Fi การเลือกใช้ต้องดูขนาด frame และสภาพแวดล้อม</p>
+<h3>7.4 2.4 GHz, 5 GHz และการวาง Channel</h3>
+<p>2.4 GHz มักมีลักษณะครอบคลุมและผ่านสิ่งกีดขวางได้ดีกว่า 5 GHz เมื่อเทียบภายใต้เงื่อนไขที่เหมาะสม แต่ย่านนี้มักแออัด ส่วน 5 GHz มีตัวเลือกช่องให้วางแผนมากกว่าในหลายบริบท ระยะจริงยังขึ้นกับกำลังส่ง เสาอากาศ วัสดุกำแพงและ noise จึงไม่ควรใช้ความถี่อย่างเดียวฟันธงระยะ</p>
+<p>สำหรับ 2.4 GHz แบบ channel width 20 MHz นิยมวาง <strong>channel 1, 6, 11</strong> เพื่อลดการทับซ้อนของช่องใกล้กัน การวาง AP ใกล้กันที่ช่อง 1 กับ 2 ไม่ได้แปลว่าแยกกันดีเพราะเลขต่างกัน ส่วนช่องและกำลังส่งที่ใช้ได้ต้องตรงกฎของประเทศและอุปกรณ์</p>
+<p>เพิ่ม channel width อาจเพิ่มอัตราส่งสูงสุด แต่กินสเปกตรัมมากขึ้นและอาจเพิ่มปัญหาการรบกวน จึงไม่ใช่กว้างที่สุดแล้วดีที่สุดเสมอ ในห้องที่มี AP หนาแน่น การจัดช่องและกำลังส่งอย่างมีข้อมูลอาจสำคัญกว่าการตั้งแรงสุดทุกตัว</p>
+<h3>7.5 RSSI, dBm และ SNR อ่านอย่างไร</h3>
+<p><strong>RSSI</strong> สื่อถึงระดับสัญญาณรับตามวิธีรายงานของอุปกรณ์ หากเปรียบเทียบกำลังรับแบบ dBm ในบริบทเดียวกัน <strong>−50 dBm แรงกว่า −80 dBm</strong> เพราะติดลบน้อยกว่า อย่าดูเพียงตัวเลข 80 มากกว่า 50 แล้วสรุปผิด</p>
+<p><strong>SNR — Signal-to-Noise Ratio</strong> เปรียบเทียบสัญญาณกับ noise ในหน่วย dB สามารถหาผลต่างจากกำลัง dBm ได้ ตัวอย่างสัญญาณ −60 dBm และ noise −90 dBm → SNR = <strong>30 dB</strong> ไม่ใช่ −150 dB SNR ที่ดีช่วยให้แยกสัญญาณและรองรับ modulation ที่เหมาะสมขึ้น แต่ throughput ยังขึ้นกับปัจจัยอื่น</p>
+<p>สัญญาณแรงไม่ได้ยืนยันว่าเร็วเสมอ ถ้าช่องแออัด Internet backhaul ช้า หรือ server ปลายทางช้า ก็ยังใช้งานช้าได้</p>
+<h3>7.6 ความปลอดภัย: รหัสแต่ละชนิดไม่เหมือนกัน</h3>
+<p><strong>WEP</strong> และ <strong>WPA/TKIP</strong> เป็นกลไกเก่าที่ควรหลีกเลี่ยง ใช้รูปแบบเช่น WPA2-AES/CCMP หรือ WPA3 ตามการรองรับและข้อกำหนดของระบบ <strong>Personal</strong> มักใช้รหัสร่วมตามโหมด ส่วน <strong>Enterprise</strong> มักใช้ 802.1X/EAP ร่วมระบบยืนยันตัวตน เช่น RADIUS ตามสถาปัตยกรรม</p>
+<p>อย่าสับสน <strong>รหัสเข้า Wi-Fi</strong> กับ <strong>รหัส admin ของ router</strong> รหัสแรกให้ client เชื่อม WLAN ส่วนรหัสหลังให้แก้การตั้งค่าอุปกรณ์ การเปลี่ยนอันเดียวไม่ได้เปลี่ยนอีกอันโดยอัตโนมัติ</p>
+<p>ซ่อน SSID ไม่ใช่การเข้ารหัส และ MAC filtering ไม่แทนระบบยืนยันตัวตนที่เหมาะสม เพราะ MAC อาจถูกปลอมได้ ส่วนเว็บที่ใช้ HTTPS ปกป้อง traffic แอประดับหนึ่งก็ยังไม่แทนการดูแล WLAN ทั้งระบบ</p>
+<h3>7.7 Roaming และการตรวจปัญหาเป็นลำดับ</h3>
+<p><strong>Roaming</strong> คือการย้ายการเชื่อมต่อระหว่าง AP ตามการตัดสินใจของ client และความสามารถระบบ การตั้ง SSID เหมือนกันเฉย ๆ ไม่ได้ยืนยันว่าโทรศัพท์หรือวิดีโอจะต่อเนื่องไม่มีสะดุด ต้องดู coverage, authentication และบริการเครือข่ายประกอบ</p>
+<p>เมื่อเชื่อมแล้ว Internet ไม่ได้ ให้ไล่เป็นขั้น:</p>
+<ol>
+<li>NIC/radio เปิดหรือไม่ และ client เห็น SSID ที่ถูกหรือไม่</li>
+<li>Security mode/key ตรงกันหรือไม่ และ association สำเร็จหรือไม่</li>
+<li>ได้ IP, mask, gateway และ DNS ที่ถูกหรือไม่</li>
+<li>ติดต่อ gateway ได้หรือไม่ โดยคำนึงว่า ICMP อาจถูกจำกัด</li>
+<li>Routing, NAT และ WAN ของ router ใช้งานหรือไม่</li>
+<li>DNS resolve ชื่อได้หรือไม่ และบริการเว็บปลายทางพร้อมหรือไม่</li>
+</ol>
+<p><strong>จุดหลอก:</strong> เห็น SSID ไม่เท่ากับผ่าน authentication; ผ่าน authentication ไม่เท่ากับได้ DHCP; ได้ DHCP ไม่เท่ากับออก Internet; ซ่อนชื่อไม่ใช่เข้ารหัส; throughput ไม่เท่ากับ PHY rate</p><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article><article id="read-ch-7" data-read-index="7"><h2>8. Cisco และ Packet Tracer: เข้าใจคำสั่งผ่านเครือข่ายตัวอย่าง</h2><h3>8.1 อ่าน Prompt ก่อนพิมพ์</h3>
+<p>IOS แบ่งโหมดเพื่อแยกคำสั่งตรวจสอบและตั้งค่า คำสั่งถูกแต่พิมพ์ผิดโหมดก็ใช้งานไม่ได้ เช่น <code>ip address</code> สำหรับ interface ไม่ได้พิมพ์ที่ user EXEC แล้วจะตั้งค่าได้เอง</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt ตัวอย่าง</th>
+<th>โหมด</th>
+<th>ใช้ทำอะไร</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1&gt;</td>
+<td>User EXEC</td>
+<td>คำสั่งใช้งาน/ตรวจสอบพื้นฐานตามสิทธิ์</td>
+</tr>
+<tr>
+<td>R1#</td>
+<td>Privileged EXEC</td>
+<td>ตรวจสอบเพิ่มเติม บันทึก และเข้าโหมดตั้งค่า</td>
+</tr>
+<tr>
+<td>R1(config)#</td>
+<td>Global configuration</td>
+<td>ตั้งค่าระดับระบบ</td>
+</tr>
+<tr>
+<td>R1(config-if)#</td>
+<td>Interface configuration</td>
+<td>ตั้งค่า interface ที่เลือก</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>enable</code> เข้า privileged EXEC, <code>configure terminal</code> เข้า global configuration, <code>interface ...</code> เลือก interface, <code>exit</code> กลับหนึ่งระดับ ส่วน <code>end</code> หรือ Ctrl+Z กลับ privileged EXEC ชื่อ interface และรายละเอียดคำสั่งขึ้นกับรุ่น/ซอฟต์แวร์ ตัวอย่างนี้เป็นแนว Cisco IOS ไม่ใช่คำสั่งสากลของอุปกรณ์ทุกยี่ห้อ</p>
+<h3>8.2 วางแผน IP สำหรับ 2 LAN และ 2 Router</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>อุปกรณ์/Interface</th>
+<th>IP/Prefix</th>
+<th>Gateway ของ host</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC-A</td>
+<td>192.168.1.10/24</td>
+<td>192.168.1.1</td>
+</tr>
+<tr>
+<td>R1 G0/0 ฝั่ง LAN A</td>
+<td>192.168.1.1/24</td>
+<td>ไม่ตั้งแบบ host ในตารางนี้</td>
+</tr>
+<tr>
+<td>R1 G0/1 ฝั่ง R2</td>
+<td>10.0.0.1/30</td>
+<td>ใช้ routing table</td>
+</tr>
+<tr>
+<td>R2 G0/1 ฝั่ง R1</td>
+<td>10.0.0.2/30</td>
+<td>ใช้ routing table</td>
+</tr>
+<tr>
+<td>R2 G0/0 ฝั่ง LAN B</td>
+<td>192.168.2.1/24</td>
+<td>ใช้ routing table</td>
+</tr>
+<tr>
+<td>PC-B</td>
+<td>192.168.2.10/24</td>
+<td>192.168.2.1</td>
+</tr>
+</tbody>
+</table></div>
+<p>เครือข่าย 10.0.0.0/30 มี usable .1 กับ .2 และ broadcast .3 ใช้เป็นวงเชื่อม router ในตัวอย่าง ส่วน PC สองฝั่งอยู่คนละ /24 อย่าใช้ IP เดียวกันซ้ำระหว่าง interface โดยไม่มีการออกแบบเฉพาะ</p>
+<h3>8.3 ตั้ง R1 แบบทีละขั้น</h3>
+<pre><code class="language-text">R1&gt; enable
+R1# configure terminal
+R1(config)# interface gigabitEthernet0/0
+R1(config-if)# ip address 192.168.1.1 255.255.255.0
+R1(config-if)# no shutdown
+R1(config-if)# exit
+R1(config)# interface gigabitEthernet0/1
+R1(config-if)# ip address 10.0.0.1 255.255.255.252
+R1(config-if)# no shutdown
+R1(config-if)# exit
+R1(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2
+R1(config)# end
+R1# show ip interface brief
+R1# show ip route
+R1# copy running-config startup-config
+</code></pre>
+<p>บรรทัด <code>ip route</code> อ่านว่า “ถ้าจะไปเครือข่าย 192.168.2.0/24 ให้ส่งไป next hop 10.0.0.2” <strong>next hop ไม่ใช่ IP ของ PC-B</strong> แต่คือ router ถัดไปที่เข้าถึงได้ R1 รู้ LAN A กับ transit link จากการเชื่อมตรงเมื่อ interface พร้อมใช้งาน จึงเพิ่ม static route สำหรับ LAN B ที่ไม่ได้เชื่อมตรง</p>
+<p>ชื่อ interface ในไฟล์กิจกรรมอาจเป็น G0/0/0 หรือชื่ออื่น ต้องใช้ของอุปกรณ์จริง ไม่คัดลอกชื่อ G0/0 ทั้งที่ไม่มีพอร์ตนั้น</p>
+<h3>8.4 ตั้ง R2 และอย่าลืมเส้นทางกลับ</h3>
+<pre><code class="language-text">R2&gt; enable
+R2# configure terminal
+R2(config)# interface gigabitEthernet0/0
+R2(config-if)# ip address 192.168.2.1 255.255.255.0
+R2(config-if)# no shutdown
+R2(config-if)# exit
+R2(config)# interface gigabitEthernet0/1
+R2(config-if)# ip address 10.0.0.2 255.255.255.252
+R2(config-if)# no shutdown
+R2(config-if)# exit
+R2(config)# ip route 192.168.1.0 255.255.255.0 10.0.0.1
+R2(config)# end
+R2# copy running-config startup-config
+</code></pre>
+<p>ถ้า R1 มี route ไป LAN B แต่ R2 ไม่มี route กลับ LAN A packet ขออาจไปถึง แต่คำตอบกลับไม่ถึงต้นทาง จึงยัง ping ไม่สำเร็จ กรณีนี้แสดงว่าการทดสอบแบบ request/reply ต้องมีเส้นทางทั้งสองทิศ รวมถึงไม่มี ACL/policy บล็อก</p>
+<p>ตัวอย่างนี้ไม่ต้องทำ NAT เพื่อให้สอง private LAN คุยกันภายใน topology เพราะ routing ภายในกับการแปลง address เป็นคนละหน้าที่</p>
+<h3>8.5 อ่าน show ip route ให้เข้าใจ</h3>
+<pre><code class="language-text">C  10.0.0.0/30 is directly connected, GigabitEthernet0/1
+S  192.168.2.0/24 [1/0] via 10.0.0.2
+</code></pre>
+<p><code>C</code> คือ connected ส่วน <code>S</code> คือ static รูป <code>[1/0]</code> ในตัวอย่างอ่านเป็น <strong>[AD/metric]</strong> ไม่ใช่ [hop count/port] และ <code>via</code> ระบุ next hop ส่วน <code>L</code> ที่อาจเห็นบน IOS คือ local route ของ address interface ตนเอง โดยรายละเอียดรายการขึ้นกับรุ่นและสถานะ</p>
+<p>รหัสอื่นที่ควรจำคือ <code>O</code> สำหรับ OSPF และ <code>R</code> สำหรับ RIP อย่าคิดว่า route ทุกบรรทัดคือ static เพราะมี address เหมือนกัน</p>
+<h3>8.6 คำสั่งตรวจสอบกับ Running/Startup Config</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>คำสั่ง</th>
+<th>ใช้ตอบคำถามอะไร</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show ip interface brief</td>
+<td>Interface มี IP ใด และ status/protocol เป็นอย่างไร</td>
+</tr>
+<tr>
+<td>show ip route</td>
+<td>มี route ไปเครือข่ายนี้หรือไม่ ใช้ next hop อะไร</td>
+</tr>
+<tr>
+<td>show running-config</td>
+<td>ขณะนี้ตั้งค่าใช้งานไว้อย่างไร</td>
+</tr>
+<tr>
+<td>show startup-config</td>
+<td>มี config อะไรเก็บไว้สำหรับเริ่มระบบ</td>
+</tr>
+<tr>
+<td>show mac address-table</td>
+<td>Switch เรียนรู้ MAC ไหนใน VLAN/port ใด</td>
+</tr>
+<tr>
+<td>ping</td>
+<td>มีการตอบ ICMP จากเป้าหมายหรือไม่ ตาม policy และสภาพเส้นทาง</td>
+</tr>
+<tr>
+<td>traceroute</td>
+<td>เห็นการตอบกลับระหว่างทางอย่างไรตามวิธี probe และ policy</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Running-config</strong> คือการตั้งค่าที่ใช้อยู่ ส่วน <strong>startup-config</strong> คือข้อมูลที่เก็บไว้สำหรับเริ่มระบบ คำสั่ง <code>copy running-config startup-config</code> คัดลอกจากปัจจุบันไปเก็บ การสลับต้นทาง/ปลายทางเป็นคนละการกระทำ และพิมพ์ <code>show running-config</code> ไม่ได้บันทึกให้เอง</p>
+<h3>8.7 Up/Down กับวิธีตรวจอย่างมีหลักฐาน</h3>
+<p><code>administratively down</code> โดยทั่วไปบอกว่า interface ถูกปิดทาง configuration ควรตรวจ <code>shutdown/no shutdown</code> ส่วน physical หรือ line protocol down ต้องดูชนิดลิงก์ สาย peer และการตั้งค่าที่เกี่ยวข้อง อย่าสรุปจากคำว่า down ว่า DNS ผิด</p>
+<p>เริ่มทดสอบจาก PC ไป gateway ของตน → router ถึง router บน transit → ไป LAN ปลายทาง → ทดสอบบริการแอป หากขั้นไหนไม่ผ่าน ให้ตรวจจุดนั้นก่อน ไม่ลบ config ทั้งหมดเพื่อเริ่มใหม่โดยยังไม่รู้เหตุ</p>
+<p>Packet Tracer <strong>Simulation mode</strong> ช่วยดูเหตุการณ์ ARP, ICMP และ protocol อื่นตามการจำลอง ใน ping ครั้งแรกบางสถานการณ์มีเวลารอ ARP จึงควรดู event และทดสอบซ้ำเพื่อวิเคราะห์ ไม่ใช้ความล้มเหลวครั้งเดียวสรุปทุกอย่าง <strong>Check Results</strong> ตรวจตามเกณฑ์ไฟล์กิจกรรม แต่ไม่ได้แทนการอธิบาย packet flow และเนื้อหานี้ไม่ใช่เฉลย topology ภายใน PKA ทุกไฟล์</p>
+<p><strong>จุดหลอก:</strong> คำสั่งผิดโหมด; ลืม no shutdown; ไม่บันทึก config; ชี้ next hop ผิด; มี route ขาเดียว; คิดว่า private LAN ต้องใช้ NAT ถึงจะ route หากันได้</p><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article><article id="read-ch-8" data-read-index="8"><h2>9. เชื่อมทุกบท: เปิด HTTPS จากโน้ตบุ๊กผ่าน Wi-Fi หนึ่งครั้ง</h2><h3>9.1 สมมติข้อมูลเริ่มต้น</h3>
+<p>Notebook เชื่อม SSID <code>STUDY</code> กับ wireless router ได้ IP 192.168.10.20/24, gateway 192.168.10.1 และมี DNS server ที่ใช้งานได้ สมมติชื่อ <code>portal.example</code> resolve ไป 203.0.113.10 ตัวเลขปลายทางนี้ใช้เพื่ออธิบายเอกสาร ไม่ใช่เซิร์ฟเวอร์สาธารณะที่ให้ทดลองจริง</p>
+<h3>9.2 ขั้นที่หนึ่ง: เชื่อมไร้สายและได้ Configuration</h3>
+<p>Notebook ต้องผ่านการเชื่อมและ security ของ WLAN ตามโหมดก่อน แล้วจึงใช้ IP configuration เช่นที่ได้จาก DHCP ข้อมูลสองส่วนนี้คนละเรื่อง รหัส Wi-Fi ถูกไม่ได้ทำให้ DNS ถูกอัตโนมัติ และ IP ที่อยู่คนละวงกับ gateway อาจทำให้ส่งต่อไม่ได้ตามการตั้งค่าปกติ</p>
+<h3>9.3 ขั้นที่สอง: หาปลายทางด้วย DNS</h3>
+<p>Browser/ระบบตรวจ cache และถาม resolver ตามความจำเป็น เมื่อได้ A record 203.0.113.10 จึงมี address สำหรับการเชื่อมต่อไปบริการนั้น DNS ไม่ได้ส่งหน้า HTML กลับมาให้แทนเว็บ server</p>
+<h3>9.4 ขั้นที่สาม: เลือก Next Hop และสร้าง Frame</h3>
+<p>Notebook เห็นว่าปลายทางไม่อยู่ใน 192.168.10.0/24 จึงใช้ route ผ่าน gateway 192.168.10.1 ถ้ายังไม่รู้ MAC จะใช้ ARP resolve gateway <strong>IP ปลายทางของ packet เป็น 203.0.113.10 แต่ MAC receiver/next-hop ของการส่งบนลิงก์ต้องสัมพันธ์กับ AP/gateway ตามโครงสร้าง Wi-Fi และการ bridge</strong></p>
+<p>รายละเอียด address fields ของ 802.11 ต่างจาก Ethernet และอาจมีหลาย MAC fields จึงไม่ควรยัดภาพ Ethernet สอง MAC ลงทุก Wi-Fi frame ตรง ๆ หลักที่ต้องจำคือยังส่งถึง next hop บนลิงก์ ไม่ได้รู้ MAC ของเว็บ server ข้าม Internet มาใช้บน LAN</p>
+<h3>9.5 ขั้นที่สี่: Routing และอาจมี NAT</h3>
+<p>Router ส่งต่อโดยใช้ routing table และ longest prefix match หาก router บ้านตั้ง NAT/PAT สำหรับออก WAN จะเปลี่ยน address/port ตาม mapping ที่กำหนด IP ต้นทางที่ server เห็นจึงอาจเป็น address ฝั่ง NAT ไม่ใช่ 192.168.10.20 ส่วนรายละเอียด MAC เปลี่ยนตามลิงก์และ TTL ลดเมื่อผ่าน router</p>
+<h3>9.6 ขั้นที่ห้า: ตั้งการเชื่อมต่อ ปกป้องข้อมูล แล้วขอเว็บ</h3>
+<p>ในกรณี HTTPS บน TCP ทั่วไป client เชื่อม TCP ไป port 443 ด้วย handshake แล้วทำ TLS ตาม protocol ตรวจ certificate และสร้างบริบทปกป้องข้อมูล จึงแลกเปลี่ยน HTTP ภายในช่องทางนั้น ส่วน HTTP/3 ใช้ QUIC บน UDP จึงไม่ควรเหมาว่าเว็บทุกครั้งต้องมี TCP handshake</p>
+<p>Server อาจตอบ 200, 404 หรือสถานะอื่น Browser อ่าน HTML และอาจต้องขอ CSS, JavaScript และรูปอีกหลายรายการ การเปิดเว็บหนึ่งหน้าอาจไม่ใช่ request เดียวหรือ connection เดียว</p>
+<h3>9.7 ถ้า Server อยู่ Cloud เรื่องไหนยังเหมือนเดิม</h3>
+<p>Client ยังต้องมีการเชื่อมลิงก์ IP, route, DNS และ transport/app protocol ตามบริการ ฝั่ง cloud อาจมี load balancer กระจายไปหลาย instances มี storage/database แยกส่วน หรือ auto scaling เพิ่ม backend แต่คำว่า cloud ไม่ได้ยกเลิกหลักเครือข่ายเหล่านี้</p>
+<p>ปัญหาหน้าเว็บช้าอาจอยู่ที่ airtime ของ Wi-Fi, WAN, routing, TLS, backend หรือ database จึงต้องวัดว่าช้าตรงไหน แค่เพิ่ม VM ไม่ได้แก้ทุกคอขวด</p>
+<h3>9.8 ตารางไล่อาการก่อนเดาสาเหตุ</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>อาการ</th>
+<th>สิ่งที่ควรตรวจต้น ๆ</th>
+<th>สิ่งที่ยังสรุปไม่ได้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ไม่เห็น SSID</td>
+<td>Radio, coverage, ย่านที่รองรับ, การตั้ง AP</td>
+<td>ยังไม่ใช่ปัญหา DNS</td>
+</tr>
+<tr>
+<td>เห็น SSID แต่เข้าไม่ได้</td>
+<td>Key, security mode, authentication/policy</td>
+<td>ยังไม่ยืนยันว่า gateway ผิด</td>
+</tr>
+<tr>
+<td>เชื่อมแล้วมี 169.254.x.x</td>
+<td>DHCP และ IP configuration ในระบบที่ใช้ link-local</td>
+<td>ยังไม่ยืนยันว่า AP เสีย</td>
+</tr>
+<tr>
+<td>IP ถูกแต่ gateway ไม่ตอบ</td>
+<td>ลิงก์ subnet/mask, interface, ARP และ ICMP policy</td>
+<td>Ping ไม่ตอบไม่พิสูจน์ว่าปิดเครื่องเสมอ</td>
+</tr>
+<tr>
+<td>เข้า IP ได้แต่ชื่อไม่ได้</td>
+<td>DNS และชื่อที่ใช้ รวมถึงเงื่อนไขของบริการเว็บ</td>
+<td>ไม่ใช่หลักฐานว่าสายเสีย</td>
+</tr>
+<tr>
+<td>Ping ได้แต่เว็บไม่ได้</td>
+<td>Port, TLS, firewall, HTTP และ server</td>
+<td>ICMP ผ่านไม่รับรอง HTTPS</td>
+</tr>
+<tr>
+<td>เว็บช้าเฉพาะตอนคนเยอะ</td>
+<td>Airtime, bandwidth, queue, server load และคอขวด</td>
+<td>ยังเลือกไม่ได้ว่าต้องซื้อ AP หรือ VM เพิ่ม</td>
+</tr>
+</tbody>
+</table></div><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article><article id="read-ch-9" data-read-index="9"><h2>10. ทวนก่อนทำข้อกา: แปลคำเทคนิคให้เป็นเหตุผล</h2><div class="table-scroll"><table>
+<thead>
+<tr>
+<th>ศัพท์</th>
+<th>ให้นึกว่า</th>
+<th>อย่าสับสนกับ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bandwidth/link rate</td>
+<td>ความสามารถหรืออัตราของลิงก์ตามบริบท</td>
+<td>Throughput แอปที่ได้จริง</td>
+</tr>
+<tr>
+<td>Latency/Delay</td>
+<td>เวลาหน่วง</td>
+<td>จำนวนบิตต่อวินาที</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>ความแปรปรวนของ delay</td>
+<td>Delay เฉลี่ยเพียงค่าเดียว</td>
+</tr>
+<tr>
+<td>Frame / Packet / Segment</td>
+<td>หน่วยข้อมูลในชั้นที่ต่างกัน</td>
+<td>ใช้ชื่อแทนกันโดยไม่ดูบริบท</td>
+</tr>
+<tr>
+<td>Gateway</td>
+<td>ทางออกไป route ถัดไปของ host ตามการตั้งค่า</td>
+<td>DNS server โดยอัตโนมัติ</td>
+</tr>
+<tr>
+<td>MAC table</td>
+<td>Switch จำว่า MAC อยู่พอร์ตไหน</td>
+<td>Routing table ที่จับคู่ prefix กับ next hop</td>
+</tr>
+<tr>
+<td>ARP cache</td>
+<td>การจับคู่ IPv4 กับ MAC บนลิงก์</td>
+<td>DNS cache ที่เก็บข้อมูลชื่อ</td>
+</tr>
+<tr>
+<td>Prefix length</td>
+<td>จำนวนบิต network ต้น address</td>
+<td>จำนวน usable hosts โดยตรง</td>
+</tr>
+<tr>
+<td>AD</td>
+<td>ความน่าเชื่อถือแหล่ง route ไป prefix เดียวกัน</td>
+<td>Longest prefix สำหรับ forwarding</td>
+</tr>
+<tr>
+<td>Metric</td>
+<td>ค่าตามกติกาของ routing protocol</td>
+<td>เลขข้าม protocol ที่เทียบได้ตรง ๆ เสมอ</td>
+</tr>
+<tr>
+<td>CRC/FCS</td>
+<td>การตรวจความผิดพลาดตามรหัส</td>
+<td>การเข้ารหัสลับหรือแก้ทุก error</td>
+</tr>
+<tr>
+<td>VLAN</td>
+<td>ขอบเขต broadcast เชิงตรรกะ</td>
+<td>Subnet ที่เกิดอัตโนมัติจากทุกพอร์ต</td>
+</tr>
+<tr>
+<td>SSID</td>
+<td>ชื่อ WLAN</td>
+<td>รหัส Wi-Fi หรือ BSSID</td>
+</tr>
+<tr>
+<td>Elasticity</td>
+<td>ปรับทรัพยากรตามโหลดที่ขึ้นลง</td>
+<td>เพิ่มขนาดครั้งเดียวแล้วไม่ลด</td>
+</tr>
+<tr>
+<td>SLA</td>
+<td>ข้อตกลงระดับบริการตามเงื่อนไข</td>
+<td>คำรับรองว่าไม่มีวันล่ม</td>
+</tr>
+<tr>
+<td>RPO / RTO</td>
+<td>ยอมเสียข้อมูลย้อนหลัง / เวลากู้บริการ</td>
+<td>ค่าเดียวกันที่เรียกคนละชื่อ</td>
+</tr>
+</tbody>
+</table></div>
+<h3>ลองตอบด้วยเหตุผลก่อนดูเฉลย</h3>
+<p><strong>1. เครื่อง A=192.168.5.100/27 มี network กับ broadcast อะไร?</strong> ช่วงเพิ่มทีละ 32 คือ 0, 32, 64, 96, 128 ... เลข 100 อยู่ 96–127 ดังนั้น network = 192.168.5.96, broadcast = 192.168.5.127 และ usable = .97–.126 รวม 30 hosts</p>
+<p><strong>2. ในตารางมี 172.16.0.0/16 AD 1 และ 172.16.8.0/24 AD 110 ส่งไป 172.16.8.20 เลือกอะไร?</strong> เลือก /24 เพราะกำลัง forwarding จาก route ที่ติดตั้งแล้ว ต้อง longest prefix ก่อน ไม่เอา AD ข้าม prefix มาชนะ</p>
+<p><strong>3. Switch รับ frame จาก MAC A ไป MAC B ที่ไม่รู้จัก ทำอะไรก่อน?</strong> เรียนรู้ source A กับพอร์ตขาเข้า แล้ว flood unknown unicast ตาม VLAN ยกเว้นพอร์ตรับ ไม่เอา B ไปจำว่าอยู่พอร์ตรับ</p>
+<p><strong>4. ใช้ SaaS แล้วลูกค้าต้องสนใจสิทธิ์แชร์เอกสารหรือไม่?</strong> ต้องสนใจ เพราะผู้ให้บริการดูแลระบบแอปไม่ได้แปลว่าแก้สิทธิ์แชร์ที่ลูกค้ากำหนดผิดให้ทุกกรณี</p>
+<p><strong>5. เพิ่ม AP โดยตั้ง channel เดียวกันและกำลังส่งสูงสุดทุกตัวช่วยให้เร็วขึ้นแน่นอนหรือไม่?</strong> ไม่แน่นอน เพราะอาจเพิ่ม contention และ interference ต้องดู coverage, airtime และแผน channel จากสภาพจริง</p>
+<p><strong>6. R1 มี route ไป LAN B แล้ว แต่ PC-A ping PC-B ไม่ผ่าน จะดูอะไรต่อ?</strong> ตรวจ gateway ทั้งสอง PC, route กลับที่ R2, interface/link และ policy ที่เกี่ยวข้อง packet ไปถึงปลายทางยังต้องมี reply กลับถึงต้นทาง</p>
+<h3>วิธีทำข้อสอบที่ช่วยลดพลาด</h3>
+<p>อ่านว่าถาม <strong>ชั้นไหน</strong> และ <strong>อยู่ขั้นตอนไหน</strong> ก่อน เช่น กำลังสร้าง routing table หรือกำลังส่ง packet ตรวจเงื่อนไขสำคัญ เช่น full-duplex, ไม่มี Auto MDI-X, subnet ปกติ หรือไม่มี NAT จากนั้นคำนวณด้วยหน่วยที่ตรงกัน และระวังคำว่า “เสมอ”, “ทุกกรณี”, “ทั้งหมด” ซึ่งมักลบข้อยกเว้นที่มีผลต่อคำตอบ</p>
+<p>ถ้าผิด ให้จดเหตุผลเป็นประโยค เช่น “ใช้ AD ไปชนะ prefix ที่จำเพาะกว่า” จะช่วยแก้ความเข้าใจได้มากกว่าจดเพียง “ข้อ 15 ตอบ ค” แล้วท่องตัวอักษร</p><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article><article id="read-ch-10" data-read-index="10"><h2>แหล่งอ่านประกอบ</h2><ul>
+<li><a href="../index.html">เอกสารเรียนไทยเดิมและลิงก์ต้นฉบับในโฟลเดอร์นี้</a>: บท 02, 07, 10–15, 19–23, 25–27, K1–K5, SUB และ LAB1–LAB9 เป็นฐานของส่วนเครือข่าย</li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/145/final">NIST SP 800-145: The NIST Definition of Cloud Computing</a>: นิยาม cloud คุณลักษณะหลัก service models และ deployment models</li>
+<li><a href="https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/15986-admin-distance.html">Cisco: Understand Administrative Distance</a>: ความหมาย AD และการแยกจาก longest prefix match</li>
+<li><a href="https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8651-21.html">Cisco: Configure Route Selection for Routers</a>: หลักเลือก route</li>
+<li><a href="https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6000-series-switches/21268-132.html">Cisco: Cable and Connector Guide</a>: สายและหัวต่อ Ethernet</li>
+<li><a href="https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/at-a-glance-c45-743937.html">Cisco: 10GBASE-T Connectivity</a>: ตัวอย่างเงื่อนไขสายและอุปกรณ์สำหรับ 10GBASE-T</li>
+<li>
+<p><a href="https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/wlan/configuration/15-mt/wl-15-mt-book.pdf">Cisco: Wireless LAN Configuration Guide</a>: กลไกและการตั้งค่า WLAN รวม WPA2/AES-CCMP ตามรุ่นเอกสาร</p>
+</li>
+<li>
+<p><a href="https://learn.microsoft.com/en-us/virtualization/windowscontainers/about/index">Microsoft Learn: About containers</a>: เปรียบเทียบ container กับ VM และ OS/kernel</p>
+</li>
+<li><a href="https://aws.amazon.com/serverless/">AWS: Serverless</a>: บทบาทการจัดการ server ในบริการ serverless</li>
+<li><a href="https://www.flukenetworks.com/knowledge-base/application-or-standards-articles-copper/differences-between-wiring-codes-t568a-vs">Fluke Networks: T568A vs T568B</a>: การจัดคู่สายและ pin</li>
+<li><a href="https://www.cisco.com/c/en/us/td/docs/wireless/technology/mesh/7-4/design/guide/mesh74.pdf">Cisco: Wireless Mesh Design Guide</a>: address fields ของ 802.11</li>
+</ul>
+<p>เนื้อหานี้เป็นคำอธิบายเรียบเรียงเพื่อการเรียน ไม่ใช่คำแปลตรงทุกบรรทัดหรือการยืนยันแนวข้อสอบของอาจารย์ ลิงก์ภายนอกใช้ Internet แต่บทอ่านนี้อ่านได้ออฟไลน์</p><p class="reader-toplink"><a data-read-jump href="#reading-top">กลับสารบัญ ↑</a></p></article></div></section>
+<section id="slides" class="panel" hidden><div class="tools"><label>เลือกหมวด <select id="slideCat"></select></label><span id="slideNum" aria-live="polite"></span><button id="fullscreen">เต็มจอ</button></div><div id="slideHost"></div><div class="tools"><button id="prev">← ก่อนหน้า</button><button class="primary" id="next">ถัดไป →</button><span class="muted small">ใช้ปุ่มลูกศร ← → บนคีย์บอร์ดได้</span></div></section>
+<section id="all" class="panel" hidden><div class="tools"><label>หมวด <select id="allCat"></select></label><button class="primary" id="printSlides">พิมพ์ / บันทึก PDF</button></div><div id="allHost"></div></section>
+<section id="quiz" class="panel" hidden><div class="box"><h2>ฝึกข้อกา 200 ข้อ</h2><p>เลือกคำตอบ ก ข ค ง ได้ข้อเดียวต่อข้อ กดตรวจทีละข้อหรือส่งตรวจทั้งชุดที่แสดง ทุกข้อมีคำตอบที่ถูกที่สุดเพียงข้อเดียว</p><div class="tools"><label>หมวด <select id="quizCat"></select></label><label>ค้นหา <input type="search" id="search" placeholder="เช่น subnet, DNS, Cloud"></label><button id="checkQuiz" class="primary">ตรวจชุดที่แสดง</button><button id="resetQuiz">ล้างคำตอบฝึกทั้งหมด</button></div><div class="tools"><label><input type="checkbox" id="printKeys"> พิมพ์พร้อมเฉลยท้ายชุด</label><button id="printQuiz">พิมพ์ข้อสอบ / บันทึก PDF</button><span id="quizCount" class="muted"></span></div><p class="small muted">คำตอบฝึกบันทึกในเบราว์เซอร์นี้เมื่ออนุญาต localStorage; ชุดจำลองแยกคำตอบออกจากโหมดฝึก</p><div id="quizScore" class="score" aria-live="polite"></div></div><div id="quizHost"></div><div id="quizKeys" class="answers-print"></div></section>
+<section id="mock" class="panel" hidden><div class="box"><h2>จำลองสอบ 120 ข้อ</h2><p>สุ่มจากคลัง 200 ข้อโดยไม่ซ้ำ ภายในแต่ละหมวดและสลับลำดับข้อ เฉลยจะเปิดหลังส่งตรวจ ไม่มีการสมมติเวลาสอบของอาจารย์</p><p class="note">สัดส่วนฝึกที่จัดไว้: OSI 10, Application 20, Routing/ผัง 15, Link 10, สาย LAN 10, Cloud 20, Wireless 20, Cisco 15 รวม 120 ข้อ ไม่ใช่สัดส่วนสอบที่ยืนยันจากภาพ</p><div class="tools"><button id="newMock" class="primary">เริ่มชุดใหม่ 120 ข้อ</button><button id="submitMock" disabled>ส่งตรวจชุดจำลอง</button><span id="timer" aria-live="off"></span><span id="mockDone" class="muted"></span></div><p class="small muted">กดเริ่มชุดใหม่อีกครั้งเพื่อล้างชุดจำลองเดิม ชุดจำลองเก็บเฉพาะระหว่างเปิดหน้านี้ รีเฟรชแล้วต้องเริ่มใหม่</p><div id="mockScore" class="score" aria-live="polite"></div></div><div id="mockHost"><p class="muted">กด “เริ่มชุดใหม่” เมื่อพร้อม แล้วทำให้ครบก่อนส่งตรวจ</p></div></section>
+<p class="footer">สร้างเพื่อทบทวนตามหัวข้อในภาพ • ข้อสอบตัวอย่างไม่ใช่ข้อสอบจริง • ใช้เมนูพิมพ์ของเบราว์เซอร์เพื่อบันทึก PDF ภาษาไทย</p></main>
+<script id="dataset" type="application/json">{"sections": [{"name": "OSI และ Internet Stack", "slides": [["ภาพรวมเส้นทางข้อมูล", ["แอปสร้างข้อมูล → Transport → Network → Link → Physical", "ฝั่งรับถอดส่วนหุ้มย้อนลำดับจนถึงแอป", "จำด้วยการเปิดเว็บ: HTTP → TCP → IP → Ethernet/Wi-Fi → สื่อ"], "แต่ละชั้นใช้บริการของชั้นล่าง และให้บริการชั้นบน"], ["OSI 7 ชั้น จำจากบนลงล่าง", ["7 Application: บริการให้แอป เช่น HTTP, DNS", "6 Presentation: รูปแบบข้อมูล การเข้ารหัส การบีบอัด", "5 Session: จัดการบทสนทนา • 4 Transport: สื่อสารระหว่าง process", "3 Network: IP และ routing • 2 Data Link: frame/MAC • 1 Physical: bit/สัญญาณ"], "ชื่อชั้นกับหน้าที่ต้องจับคู่ได้ ไม่ใช่จำลำดับอย่างเดียว"], ["TCP/IP เทียบกับ OSI", ["Internet stack แบบ 5 ชั้น: Application, Transport, Network, Link, Physical", "TCP/IP แบบ 4 ชั้นรวม Link + Physical เป็น Network access", "OSI ชั้น 5–7 มักรวมอยู่ใน Application ของ TCP/IP"], "ข้อสอบถามจำนวนชั้น ต้องดูว่าใช้แบบจำลอง 4, 5 หรือ 7 ชั้น"], ["ชื่อข้อมูลและที่อยู่", ["TCP segment / UDP datagram → IP packet → Link frame → bits", "Port ระบุบริการ/process • IP ระบุ interface ในเชิงเครือข่าย • MAC ใช้ส่งบนลิงก์", "Switch Ethernet โดยทั่วไปทำงานชั้น 2 • Router ชั้น 3 • Repeater ชั้น 1"], "อุปกรณ์จริงอาจทำหลายชั้น ให้ตอบตามหน้าที่ที่โจทย์ระบุ"], ["Delay และ Throughput", ["Transmission delay = L/R โดย L เป็นบิต และ R เป็นบิตต่อวินาที", "Propagation delay = ระยะทาง/ความเร็วสัญญาณ", "End-to-end delay รวม processing + queueing + transmission + propagation", "Throughput ถูกจำกัดด้วยคอขวด ไม่ใช่ผลบวกความเร็วทุกลิงก์"], "1,500 bytes บน 10 Mb/s → 12,000/10,000,000 = 1.2 ms"], ["Encapsulation ข้าม Router", ["ในกรณีไม่ใช้ NAT: IP ต้นทางและปลายทางโดยทั่วไปคงเดิม", "Router ลด TTL และสร้าง frame ใหม่บนลิงก์ขาออก", "MAC ต้นทาง/ปลายทางเปลี่ยนตามลิงก์ ไม่ได้ใช้ MAC ของเว็บเซิร์ฟเวอร์ตลอดทาง"], "แยกปลายทาง IP ออกจาก next-hop MAC เสมอ"]], "questions": [{"q": "OSI ชั้นใดรับผิดชอบ routing เป็นหลัก", "options": ["Transport", "Presentation", "Network", "Physical"], "explain": "Network ใช้ที่อยู่เชิงตรรกะและเลือกทางข้ามเครือข่าย", "cat": "OSI และ Internet Stack", "id": 1, "answer": 2}, {"q": "การส่งบิตเป็นสัญญาณบนสายตรงกับชั้นใด", "options": ["Application", "Physical", "Session", "Network"], "explain": "Physical จัดการสัญญาณและสื่อส่งข้อมูล", "cat": "OSI และ Internet Stack", "id": 2, "answer": 1}, {"q": "MAC address เกี่ยวข้องโดยตรงกับชั้นใด", "options": ["Transport", "Data Link", "Session", "Application"], "explain": "Ethernet frame ใช้ MAC ในชั้น Data Link", "cat": "OSI และ Internet Stack", "id": 3, "answer": 1}, {"q": "Port number ใช้ระบุสิ่งใดเป็นหลัก", "options": ["หมายเลขสาย LAN", "ความยาวคลื่นแสง", "บริการหรือ process ปลายทาง", "ตำแหน่งในตู้ rack"], "explain": "Transport ใช้ port เพื่อส่งข้อมูลให้ process ที่เหมาะสม", "cat": "OSI และ Internet Stack", "id": 4, "answer": 2}, {"q": "HTTP อยู่ในชั้นใดของ Internet stack", "options": ["Link", "Application", "Physical", "Network"], "explain": "HTTP กำหนดการแลกเปลี่ยนข้อความของเว็บ", "cat": "OSI และ Internet Stack", "id": 5, "answer": 1}, {"q": "TCP อยู่ชั้นใด", "options": ["Transport", "Application", "Data Link", "Physical"], "explain": "TCP ให้บริการ byte stream ระหว่าง process", "cat": "OSI และ Internet Stack", "id": 6, "answer": 0}, {"q": "IP อยู่ชั้นใด", "options": ["Network", "Session", "Physical", "Presentation"], "explain": "IP ส่ง packet ระหว่างเครือข่าย", "cat": "OSI และ Internet Stack", "id": 7, "answer": 0}, {"q": "หน่วยข้อมูลของ Ethernet เรียกว่าอะไร", "options": ["TCP segment", "HTTP cookie", "Frame", "DNS zone"], "explain": "Ethernet เป็นเทคโนโลยีชั้นลิงก์ หน่วยข้อมูลคือ frame", "cat": "OSI และ Internet Stack", "id": 8, "answer": 2}, {"q": "Encapsulation หมายถึงอะไร", "options": ["ลบทุก header ก่อนส่ง", "แปลง IP เป็นชื่อโดเมนเท่านั้น", "เลือกช่อง Wi-Fi อัตโนมัติ", "เพิ่มข้อมูลควบคุมแต่ละชั้นหุ้มข้อมูล"], "explain": "การหุ้มข้อมูลเพิ่ม header และบางชั้นมี trailer", "cat": "OSI และ Internet Stack", "id": 9, "answer": 3}, {"q": "Decapsulation เกิดอย่างไรที่ผู้รับ", "options": ["เพิ่ม header ซ้ำทุกชั้น", "เปลี่ยนทุก frame เป็น broadcast", "ลบ payload ทั้งหมด", "ถอดข้อมูลควบคุมจากชั้นล่างขึ้นชั้นบน"], "explain": "ผู้รับตรวจและถอดส่วนหุ้มย้อนลำดับการส่ง", "cat": "OSI และ Internet Stack", "id": 10, "answer": 3}, {"q": "OSI ชั้นใดเกี่ยวกับรูปแบบข้อมูลตามแบบจำลอง", "options": ["Network", "Physical", "Presentation", "Data Link"], "explain": "Presentation ครอบคลุมการแทนข้อมูล บีบอัด และเข้ารหัสในเชิงแบบจำลอง", "cat": "OSI และ Internet Stack", "id": 11, "answer": 2}, {"q": "OSI ชั้นใดจัดการบทสนทนา", "options": ["Physical", "Network", "Session", "Data Link"], "explain": "Session เป็นชั้นที่ 5", "cat": "OSI และ Internet Stack", "id": 12, "answer": 2}, {"q": "ข้อใดเรียง Internet stack จากบนลงล่างถูกต้อง", "options": ["Application Transport Network Link Physical", "Physical Link Application Transport Network", "Network Application Physical Link Transport", "Transport Application Link Physical Network"], "explain": "ข้อมูลลงตามลำดับก่อนถูกส่งเป็นสัญญาณ", "cat": "OSI และ Internet Stack", "id": 13, "answer": 0}, {"q": "แบบ TCP/IP 4 ชั้นรวมชั้นใดของแบบ 5 ชั้น", "options": ["Application กับ Network", "Transport กับ Physical", "Network กับ Application", "Link กับ Physical"], "explain": "แบบ 4 ชั้นใช้ Network access รวมหน้าที่ลิงก์และสื่อ", "cat": "OSI และ Internet Stack", "id": 14, "answer": 3}, {"q": "อุปกรณ์ใดส่งต่อโดยดู IP ปลายทางเป็นหลัก", "options": ["Repeater", "Hub แบบดั้งเดิม", "Patch panel", "Router"], "explain": "Router ใช้ routing table ส่งต่อ packet", "cat": "OSI และ Internet Stack", "id": 15, "answer": 3}, {"q": "Ethernet switch ทั่วไปเลือกพอร์ตส่งต่อจากอะไร", "options": ["MAC ปลายทาง", "HTTP method", "ชื่อผู้ใช้เว็บ", "TCP window เท่านั้น"], "explain": "Switch ชั้น 2 ใช้ MAC table", "cat": "OSI และ Internet Stack", "id": 16, "answer": 0}, {"q": "Repeater ทำงานหลักที่ชั้นใด", "options": ["Application", "Transport", "Session", "Physical"], "explain": "Repeater ฟื้นสัญญาณเพื่อส่งต่อ", "cat": "OSI และ Internet Stack", "id": 17, "answer": 3}, {"q": "ข้อมูล 1000 bytes ส่งที่ 1 Mb/s ใช้ transmission delay เท่าไร", "options": ["1 ms", "8 ms", "1000 ms", "0.008 ms"], "explain": "1000 คูณ 8 หาร 1000000 วินาที เท่ากับ 8 ms", "cat": "OSI และ Internet Stack", "id": 18, "answer": 1}, {"q": "ลิงก์ยาว 2000 km สัญญาณเร็ว 200000 km/s มี propagation delay เท่าไร", "options": ["1 ms", "100 ms", "10 ms", "1000 ms"], "explain": "2000/200000 เท่ากับ 0.01 วินาที", "cat": "OSI และ Internet Stack", "id": 19, "answer": 2}, {"q": "ลิงก์ต่ออนุกรม 100 20 50 Mb/s คอขวดตามอุดมคติคือเท่าไร", "options": ["170 Mb/s", "100 Mb/s", "50 Mb/s", "20 Mb/s"], "explain": "อัตราส่งต่อเนื่องถูกจำกัดด้วยลิงก์ช้าที่สุด", "cat": "OSI และ Internet Stack", "id": 20, "answer": 3}, {"q": "เวลารอคิวใน router จัดเป็น delay ชนิดใด", "options": ["Propagation", "Queueing", "Encoding เท่านั้น", "Session"], "explain": "Queueing เปลี่ยนตามปริมาณจราจรและคิว", "cat": "OSI และ Internet Stack", "id": 21, "answer": 1}, {"q": "ข้าม router โดยไม่ใช้ NAT ที่อยู่ใดโดยทั่วไปยังคงเดิม", "options": ["IP ต้นทางและปลายทาง", "MAC ของทุก frame", "TTL", "Ethernet FCS"], "explain": "Router เปลี่ยน frame และลด TTL แต่ไม่ได้ทำ NAT ตามเงื่อนไข", "cat": "OSI และ Internet Stack", "id": 22, "answer": 0}, {"q": "TTL ของ IPv4 มีหน้าที่หลักใด", "options": ["จำกัดการวนของ packet", "กำหนดความยาวสาย", "เข้ารหัส payload", "กำหนด port เว็บ"], "explain": "Router ลด TTL และทิ้ง packet เมื่อหมด", "cat": "OSI และ Internet Stack", "id": 23, "answer": 0}, {"q": "Protocol หมายถึงข้อใด", "options": ["กติกาของรูปแบบและการแลกเปลี่ยนข้อความ", "ยี่ห้ออุปกรณ์เท่านั้น", "ชนิดสายไฟเท่านั้น", "ความเร็วซีพียู"], "explain": "คู่สื่อสารต้องเข้าใจกติกาตรงกัน", "cat": "OSI และ Internet Stack", "id": 24, "answer": 0}, {"q": "การเพิ่มอัตราส่ง R โดยคง L เท่าเดิมทำให้สิ่งใดลดลงโดยตรง", "options": ["ระยะทางลิงก์", "Transmission delay", "Propagation speed", "จำนวนชั้น OSI"], "explain": "จากสูตร L/R เมื่อ R เพิ่ม เวลาผลักบิตลงลิงก์ลดลง", "cat": "OSI และ Internet Stack", "id": 25, "answer": 1}]}, {"name": "Application และ Web", "slides": [["TCP กับ UDP", ["TCP: reliable byte stream เรียงลำดับ มี flow/congestion control", "UDP: ไม่ตั้ง connection และไม่รับประกันการส่งถึง/ลำดับด้วยตัวมันเอง", "TCP handshake: SYN → SYN-ACK → ACK", "TCP นับ sequence ตาม byte ไม่ใช่จำนวน segment"], "Seq=1000 ส่ง payload 200 bytes ครบต่อเนื่อง → ACK=1200"], ["Web และ HTTP", ["Client ส่ง request → server ส่ง response", "GET ขอ representation • POST ส่งข้อมูลให้ประมวลผล", "200 สำเร็จ • 301 ย้ายถาวร • 404 ไม่พบ • 500 server error", "HTTPS คือ HTTP ที่ได้รับการปกป้องด้วย TLS; ตรวจ certificate และชื่อโดเมน"], "HTTPS ไม่ใช่หลักฐานว่าเนื้อหาของเว็บไซต์เชื่อถือได้เสมอ"], ["DNS และ DHCP", ["DNS แปลงชื่อเป็นข้อมูล เช่น A=IPv4, AAAA=IPv6, MX=mail server", "Cache ช่วยลด delay/โหลด; TTL ของ DNS ระบุอายุ cache", "DHCP แจก IP, mask, gateway, DNS; DORA = Discover Offer Request ACK"], "DNS ช่วยรู้ปลายทาง แต่ไม่ได้ส่งหน้าเว็บให้เรา"], ["Port ที่ควรจำ", ["HTTP TCP 80 • HTTPS โดยทั่วไป TCP 443; HTTP/3 ใช้ QUIC บน UDP 443", "DNS UDP/TCP 53 • DHCPv4 server UDP 67 / client UDP 68", "SSH TCP 22 • Telnet TCP 23 • SMTP TCP 25", "POP3 TCP 110 • IMAP TCP 143 • FTP control TCP 21"], "Port เป็นค่าที่ใช้โดยทั่วไป ผู้ดูแลเปลี่ยนการตั้งค่าได้"], ["Email และรูปแบบระบบ", ["SMTP: ส่ง/ถ่ายทอดอีเมล • IMAP: จัดการ mailbox บน server • POP3: รับเมล", "Client-server มี server ให้บริการ; P2P โหนดทำหน้าที่ได้ทั้งรับและให้", "Cookie เป็นข้อมูลประกอบสถานะที่ browser ส่งกลับตามขอบเขตที่กำหนด"], "HTTP เป็น stateless แต่แอปสร้าง session ด้วย cookie/token ได้"], ["ไล่เหตุเปิดเว็บไม่ได้", ["ตรวจ Link/Wi-Fi → IP/mask → gateway → เส้นทาง → DNS → บริการเว็บ", "เข้า IP ได้แต่ชื่อไม่ได้: ตรวจ DNS; ping ไม่ผ่านอาจเป็นเพราะ ICMP ถูกบล็อก", "Ping ผ่านยืนยันการตอบ ICMP ไม่ได้ยืนยันว่า TCP 443 หรือ HTTP ใช้งานได้"], "ทดสอบเป็นชั้นและใช้หลักฐาน ไม่ด่วนสรุปจากอาการเดียว"]], "questions": [{"q": "โปรโตคอลใดให้ reliable byte stream", "options": ["TCP", "UDP", "IP", "ARP"], "explain": "TCP ส่งซ้ำและเรียง byte ให้แอป", "cat": "Application และ Web", "id": 26, "answer": 0}, {"q": "UDP มีคุณสมบัติใด", "options": ["รับประกันไม่มีข้อมูลหาย", "ไม่รับประกันการส่งถึงด้วยตัวมันเอง", "มี handshake แบบ TCP ทุกครั้ง", "เรียงข้อมูลให้เสมอ"], "explain": "แอปที่ใช้ UDP สามารถเพิ่ม reliability ของตนเองได้", "cat": "Application และ Web", "id": 27, "answer": 1}, {"q": "TCP handshake ที่ถูกต้องคืออะไร", "options": ["ACK FIN SYN", "GET POST ACK", "SYN SYN-ACK ACK", "Discover Offer ACK"], "explain": "TCP ตั้ง connection ด้วย three-way handshake", "cat": "Application และ Web", "id": 28, "answer": 2}, {"q": "TCP Seq 500 ส่งข้อมูล 100 bytes ครบ ผู้รับคาดหวัง ACK ใด", "options": ["501", "100", "600", "599"], "explain": "ACK ระบุหมายเลข byte ถัดไปที่คาดหวัง", "cat": "Application และ Web", "id": 29, "answer": 2}, {"q": "HTTP GET ใช้ทำอะไรโดยหลัก", "options": ["แจก IP อัตโนมัติ", "หา MAC ของ gateway", "เลือกเส้นทาง OSPF", "ขอ representation ของทรัพยากร"], "explain": "GET เป็น method สำหรับดึง representation", "cat": "Application และ Web", "id": 30, "answer": 3}, {"q": "HTTP 404 หมายถึงอะไร", "options": ["สำเร็จเสมอ", "ไม่พบทรัพยากรที่ร้องขอ", "ย้ายถาวร", "DNS cache หมดอายุ"], "explain": "404 เป็นสถานะ Not Found", "cat": "Application และ Web", "id": 31, "answer": 1}, {"q": "HTTP 500 หมายถึงอะไร", "options": ["พบทรัพยากร", "ต้องเปลี่ยนสาย LAN", "ข้อผิดพลาดภายใน server", "client ได้ IP ใหม่"], "explain": "500 เป็นสถานะฝั่ง server", "cat": "Application และ Web", "id": 32, "answer": 2}, {"q": "HTTPS เพิ่มสิ่งใดให้ HTTP", "options": ["การรับประกันเนื้อหาถูกต้องทุกเรื่อง", "การปกป้องการสื่อสารด้วย TLS", "การแจก IP", "การแทน routing table"], "explain": "TLS ให้การเข้ารหัส ความครบถ้วน และการยืนยันตัวตนตามการตรวจสอบ", "cat": "Application และ Web", "id": 33, "answer": 1}, {"q": "DNS A record เก็บอะไร", "options": ["IPv4 address", "IPv6 address", "MAC ของ switch", "หมายเลข VLAN"], "explain": "A จับคู่ชื่อกับ IPv4", "cat": "Application และ Web", "id": 34, "answer": 0}, {"q": "DNS AAAA record เก็บอะไร", "options": ["IPv4 address", "รหัสผ่านอีเมล", "TCP sequence", "IPv6 address"], "explain": "AAAA ใช้ที่อยู่ IPv6", "cat": "Application และ Web", "id": 35, "answer": 3}, {"q": "DNS MX record ใช้ระบุอะไร", "options": ["Subnet mask", "Mail server ของโดเมน", "Default VLAN", "ลำดับสายสี"], "explain": "MX ระบุ mail exchanger", "cat": "Application และ Web", "id": 36, "answer": 1}, {"q": "DNS ใช้ port มาตรฐานใด", "options": ["80", "53", "22", "67"], "explain": "DNS ใช้ทั้ง UDP และ TCP port 53 ตามกรณี", "cat": "Application และ Web", "id": 37, "answer": 1}, {"q": "HTTP ปกติใช้ TCP port ใดโดยทั่วไป", "options": ["80", "443", "25", "23"], "explain": "80 เป็นพอร์ตมาตรฐานของ HTTP แบบไม่ใช้ TLS", "cat": "Application และ Web", "id": 38, "answer": 0}, {"q": "HTTPS โดยทั่วไปใช้ port ใด", "options": ["443", "110", "68", "21"], "explain": "HTTPS โดยทั่วไปใช้ TCP 443 และ HTTP/3 ใช้ UDP 443", "cat": "Application และ Web", "id": 39, "answer": 0}, {"q": "SSH ใช้ TCP port ใดโดยทั่วไป", "options": ["23", "53", "143", "22"], "explain": "SSH ใช้พอร์ต 22 และเข้ารหัส session", "cat": "Application และ Web", "id": 40, "answer": 3}, {"q": "เหตุใด Telnet จึงไม่เหมาะกับการส่งรหัสผ่านบนเครือข่ายที่ไม่เชื่อถือ", "options": ["ใช้ได้แค่ใยแก้ว", "ไม่มี client", "ไม่เข้ารหัสการสื่อสารโดยตัวมันเอง", "ต้องใช้ IPv6 เท่านั้น"], "explain": "Telnet ส่งข้อมูลแบบ plaintext ควรเลือก SSH เมื่อเหมาะสม", "cat": "Application และ Web", "id": 41, "answer": 2}, {"q": "SMTP มีหน้าที่หลักใด", "options": ["ส่งและถ่ายทอดอีเมล", "แปลงชื่อโดเมน", "แจก MAC address", "เลือกช่องสัญญาณ"], "explain": "SMTP ใช้ส่งเมลระหว่าง client/server และระหว่าง server", "cat": "Application และ Web", "id": 42, "answer": 0}, {"q": "IMAP เหมาะกับกรณีใด", "options": ["จัดการ mailbox จากหลายอุปกรณ์บน server", "คำนวณ subnet mask", "ทำ Ethernet CRC", "แจก route OSPF"], "explain": "IMAP คงข้อมูลและสถานะ mailbox ที่ server", "cat": "Application และ Web", "id": 43, "answer": 0}, {"q": "FTP control connection โดยทั่วไปใช้ TCP port ใด", "options": ["21", "20", "80", "25"], "explain": "Port 21 ใช้ควบคุม ส่วนช่องข้อมูลขึ้นกับโหมด", "cat": "Application และ Web", "id": 44, "answer": 0}, {"q": "DHCPv4 เรียงขั้นตอนหลักอย่างไร", "options": ["ACK Request Offer Discover", "Discover Offer Request ACK", "SYN SYN-ACK ACK FIN", "GET DNS POST ACK"], "explain": "ลำดับ DORA ใช้ขอและยืนยันการเช่า IP", "cat": "Application และ Web", "id": 45, "answer": 1}, {"q": "DHCPv4 server รับข้อความที่ UDP port ใด", "options": ["68", "53", "22", "67"], "explain": "Server ใช้ 67 ส่วน client ใช้ 68", "cat": "Application และ Web", "id": 46, "answer": 3}, {"q": "HTTP cookie ช่วยทำอะไร", "options": ["แทน subnet mask", "เข้ารหัสสายไฟ", "ประกอบการติดตามสถานะของแอป", "เพิ่มกำลังส่ง AP"], "explain": "Cookie ช่วยเชื่อม request กับสถานะหรือ session ตามที่แอปออกแบบ", "cat": "Application และ Web", "id": 47, "answer": 2}, {"q": "เข้าเว็บไซต์ด้วย IP ได้แต่ใช้ชื่อไม่ได้ ควรตรวจอะไรเป็นลำดับต้น", "options": ["สีสายทั้งแปดเส้นเท่านั้น", "ขนาดจอ", "DNS configuration", "ชื่อ VLAN อย่างเดียว"], "explain": "อาการชี้ไปที่การ resolve ชื่อ แม้ต้องพิจารณาการตั้งค่าเว็บร่วมด้วย", "cat": "Application และ Web", "id": 48, "answer": 2}, {"q": "Ping server ผ่านแต่เปิดเว็บไม่ได้ ข้อใดถูกต้อง", "options": ["HTTP ต้องปกติแน่นอน", "DNS ถูกเสมอ", "สายขาดแน่นอน", "ต้องตรวจพอร์ตและบริการเว็บต่อ"], "explain": "ICMP ตอบไม่ได้ยืนยันว่า TCP หรือ HTTP พร้อมให้บริการ", "cat": "Application และ Web", "id": 49, "answer": 3}, {"q": "HTTP 301 หมายถึงอะไร", "options": ["ไม่พบทรัพยากร", "server error ภายใน", "ย้ายทรัพยากรอย่างถาวร", "ยืนยัน DHCP lease"], "explain": "301 เป็นสถานะ Moved Permanently", "cat": "Application และ Web", "id": 50, "answer": 2}]}, {"name": "Routing และ Subnet", "slides": [["Forwarding กับ Routing", ["Routing สร้าง/เรียนรู้เส้นทาง • Forwarding ส่ง packet ตามตาราง", "Static route ตั้งเอง; Dynamic route เรียนรู้ด้วย protocol", "Default route IPv4 = 0.0.0.0/0 ใช้เมื่อไม่มี prefix ที่จำเพาะกว่า"], "Router เลือก longest prefix match จาก route ที่ติดตั้งแล้ว"], ["เลือก Route อย่าสลับขั้นตอน", ["ตอนสร้าง routing table: เส้นทางไป prefix เดียวกันจากต่างแหล่งเปรียบเทียบ AD", "ภายใน protocol ใช้ metric ตามกติกาของ protocol", "ตอนส่ง packet: เลือก prefix ที่ match ยาวที่สุด; /24 ชนะ /16", "Cisco ค่าเริ่มต้นตัวอย่าง: connected 0, static 1, OSPF 110, RIP 120"], "อย่าใช้ AD ของ /0 มาชนะ /24 ในการ forwarding"], ["IPv4 และ Prefix", ["IPv4 32 bits; /n คือจำนวนบิตส่วน network", "จำนวน address = 2^(32−n); subnet IPv4 ปกติมี usable host = จำนวนทั้งหมด−2", "/24 = 255.255.255.0 • /26 = 255.255.255.192 • /27 = 255.255.255.224", "ข้อยกเว้น /31 point-to-point และ /32 ไม่ใช้สูตร host−2 แบบทั่วไป"], "Network = IP AND mask; broadcast คือ host bits เป็น 1 ทั้งหมด"], ["ตัวอย่าง Subnet /26", ["192.168.1.70/26: block size 64 → ช่วง 64–127", "Network 192.168.1.64 • Broadcast 192.168.1.127", "Usable 192.168.1.65–126 มี 62 hosts", "ต้องรองรับ 50 hosts → /26 พอ; /27 มีเพียง 30"], "นับจำนวน address ทั้งหมดกับ usable hosts แยกกัน"], ["Routing Protocol และ Gateway", ["RIP: distance vector ใช้ hop count; OSPF: link state ใช้ cost", "Default gateway เป็น router interface ใน subnet ของ host โดยทั่วไป", "ARP หา MAC ของ next hop บนลิงก์ IPv4; NAT แปลงที่อยู่ตามกฎ", "Private IPv4: 10/8, 172.16/12, 192.168/16"], "ปลายทางต่าง subnet ให้ส่ง frame ไป gateway ไม่ใช่ ARP หาเว็บ server ที่อยู่นอก LAN"], ["อ่านผังเครือข่าย", ["Star มีจุดศูนย์กลาง • Bus ใช้ backbone ร่วม • Ring เชื่อมเป็นวง", "Full mesh n โหนด ใช้ n(n−1)/2 ลิงก์ เมื่อแต่ละคู่เชื่อมกันโดยตรง", "Router แบ่ง broadcast domain; VLAN แยก broadcast domain เชิงตรรกะ", "ตรวจ IP/mask แต่ละ interface และ route ไป-กลับก่อนสรุปว่า ping ได้"], "4 โหนด full mesh → 4×3/2 = 6 ลิงก์"]], "questions": [{"q": "Routing ต่างจาก forwarding อย่างไร", "options": ["Routing คือเข้ารหัส ส่วน forwarding คือ DNS", "ทั้งคู่เป็นการต่อสายเท่านั้น", "Forwarding ใช้ได้เฉพาะ Wi-Fi", "Routing หาเส้นทาง ส่วน forwarding ส่งตามตาราง"], "explain": "Control plane สร้างเส้นทางและ data plane ส่ง packet", "cat": "Routing และ Subnet", "id": 51, "answer": 3}, {"q": "มี route 10.0.0.0/8 และ 10.1.2.0/24 ปลายทาง 10.1.2.5 เลือกอะไร", "options": ["10.1.2.0/24", "10.0.0.0/8", "ต้องทิ้งเสมอ", "เลือกแบบสุ่ม"], "explain": "/24 match ยาวกว่า /8", "cat": "Routing และ Subnet", "id": 52, "answer": 0}, {"q": "Default route IPv4 เขียนอย่างไร", "options": ["255.255.255.255/32", "0.0.0.0/0", "127.0.0.1/8", "224.0.0.0/4"], "explain": "/0 match ได้ทุกปลายทางแต่จำเพาะน้อยที่สุด", "cat": "Routing และ Subnet", "id": 53, "answer": 1}, {"q": "Static route หมายถึงอะไร", "options": ["เส้นทางที่ RIP เรียนรู้เท่านั้น", "สายที่ไม่มีสัญญาณ", "ARP entry ทุกชนิด", "เส้นทางที่ผู้ดูแลกำหนดเอง"], "explain": "Static route ตั้งค่าโดยผู้ดูแล", "cat": "Routing และ Subnet", "id": 54, "answer": 3}, {"q": "OSPF จัดเป็น routing แบบใด", "options": ["Distance vector แบบ RIP", "Application proxy", "Physical encoding", "Link state"], "explain": "OSPF ใช้ข้อมูล link state เพื่อคำนวณเส้นทาง", "cat": "Routing และ Subnet", "id": 55, "answer": 3}, {"q": "RIP ใช้ metric หลักใด", "options": ["กำลังแสง", "Hop count", "หมายเลข port", "ชื่อเครื่อง"], "explain": "RIP นับ hop และกำหนด 16 เป็น unreachable", "cat": "Routing และ Subnet", "id": 56, "answer": 1}, {"q": "Cisco default AD ของ static route ทั่วไปคือเท่าไร", "options": ["0", "1", "110", "120"], "explain": "Connected เป็น 0 และ static ปกติเป็น 1", "cat": "Routing และ Subnet", "id": 57, "answer": 1}, {"q": "AD ใช้เปรียบเทียบกรณีใด", "options": ["ความยาวสีสาย", "HTTP status ต่างชนิด", "ความยาวรหัสผ่าน", "ต่างแหล่ง route ไปยัง prefix เดียวกัน"], "explain": "AD ใช้ความน่าเชื่อถือแหล่ง route ไม่แทน longest prefix match", "cat": "Routing และ Subnet", "id": 58, "answer": 3}, {"q": "IPv4 มีความยาวเท่าไร", "options": ["48 bits", "32 bits", "64 bits", "128 bits"], "explain": "IPv4 มี 4 octets รวม 32 bits", "cat": "Routing และ Subnet", "id": 59, "answer": 1}, {"q": "/24 ตรงกับ mask ใด", "options": ["255.255.255.0", "255.255.0.0", "255.255.255.192", "255.0.0.0"], "explain": "24 บิตแรกเป็น 1 เหลือ host 8 บิต", "cat": "Routing และ Subnet", "id": 60, "answer": 0}, {"q": "/26 มี usable hosts ใน subnet IPv4 ปกติกี่เครื่อง", "options": ["62", "64", "30", "126"], "explain": "2 ยกกำลัง 6 ลบ network และ broadcast เหลือ 62", "cat": "Routing และ Subnet", "id": 61, "answer": 0}, {"q": "/27 มี address ทั้งหมดกี่ค่า", "options": ["30", "64", "32", "16"], "explain": "32 ลบ 27 เหลือ 5 host bits จึงมี 32 ค่า", "cat": "Routing และ Subnet", "id": 62, "answer": 2}, {"q": "192.168.1.70/26 มี network address ใด", "options": ["192.168.1.0", "192.168.1.70", "192.168.1.128", "192.168.1.64"], "explain": "ช่วง /26 เพิ่มครั้งละ 64 และ 70 อยู่ช่วง 64–127", "cat": "Routing และ Subnet", "id": 63, "answer": 3}, {"q": "Broadcast ของ 192.168.1.70/26 คืออะไร", "options": ["192.168.1.127", "192.168.1.63", "192.168.1.255", "192.168.1.64"], "explain": "บิต host เป็น 1 ทั้งหมดจึงเป็นปลายช่วง 127", "cat": "Routing และ Subnet", "id": 64, "answer": 0}, {"q": "Subnet IPv4 ปกติที่เล็กที่สุดสำหรับ 50 hosts คืออะไร", "options": ["/27", "/26", "/28", "/29"], "explain": "/26 มี 62 usable ส่วน /27 มี 30", "cat": "Routing และ Subnet", "id": 65, "answer": 1}, {"q": "ข้อใดเป็น private IPv4", "options": ["172.20.1.1", "172.40.1.1", "8.8.8.8", "1.1.1.1"], "explain": "172.16.0.0 ถึง 172.31.255.255 เป็น private", "cat": "Routing และ Subnet", "id": 66, "answer": 0}, {"q": "เครื่องจะส่งไปต่าง subnet โดยทั่วไปต้องส่ง frame ให้ใคร", "options": ["DNS server เสมอ", "ทุกเครื่องในโลก", "Default gateway", "DHCP server เสมอ"], "explain": "Gateway รับ packet เพื่อ route ต่อไป", "cat": "Routing และ Subnet", "id": 67, "answer": 2}, {"q": "ARP ใน IPv4 ใช้ทำอะไร", "options": ["หา port ของ HTTP", "หา MAC ของ next hop บนลิงก์", "แจก subnet mask", "เข้ารหัส packet"], "explain": "ARP resolve IPv4 เป็น MAC ใน broadcast domain", "cat": "Routing และ Subnet", "id": 68, "answer": 1}, {"q": "Router ช่วยแบ่งสิ่งใดโดยทั่วไป", "options": ["อักขระใน URL", "TCP payload เป็นตัวอักษร", "DNS zone เสมอ", "Broadcast domain"], "explain": "Router ไม่ส่งต่อ layer-2 broadcast ข้าม interface ตามปกติ", "cat": "Routing และ Subnet", "id": 69, "answer": 3}, {"q": "Full mesh 5 โหนดต้องใช้ลิงก์ตรงระหว่างคู่กี่เส้น", "options": ["5", "10", "20", "25"], "explain": "5 คูณ 4 หาร 2 เท่ากับ 10", "cat": "Routing และ Subnet", "id": 70, "answer": 1}, {"q": "Topology ที่มีอุปกรณ์กลางเชื่อมทุกโหนดคืออะไร", "options": ["Bus", "Ring", "Linear chain", "Star"], "explain": "Star มีศูนย์กลาง เช่น switch", "cat": "Routing และ Subnet", "id": 71, "answer": 3}, {"q": "Topology แบบ bus พึ่งพาสิ่งใดร่วมกัน", "options": ["Router แยกทุกคู่", "เส้นใยสองวงเสมอ", "Cloud region", "Backbone หลัก"], "explain": "Bus ใช้สื่อหลักร่วมกัน", "cat": "Routing และ Subnet", "id": 72, "answer": 3}, {"q": "NAT ทำหน้าที่ใด", "options": ["แจกชื่อ SSID", "แก้ไขสีสาย", "แปลงที่อยู่ IP ตามกฎ", "แทนที่ DNS ทุกกรณี"], "explain": "NAT เปลี่ยนที่อยู่ และ PAT แปลง port ร่วมด้วยได้", "cat": "Routing และ Subnet", "id": 73, "answer": 2}, {"q": "192.168.10.33/27 อยู่ช่วง usable ใด", "options": ["192.168.10.1–30", "192.168.10.33–62", "192.168.10.65–94", "192.168.10.32–63"], "explain": "Network คือ 32 broadcast 63 จึงใช้ host 33–62", "cat": "Routing และ Subnet", "id": 74, "answer": 1}, {"q": "มี /24 ที่ AD 110 และ /0 ที่ AD 1 ติดตั้งแล้ว ปลายทาง match ทั้งคู่เลือกอะไร", "options": ["/0", "AD เฉลี่ย", "ทิ้งเพราะ AD ต่างกัน", "/24"], "explain": "ตอน forwarding ใช้ longest prefix match จากเส้นทางที่ติดตั้งแล้ว", "cat": "Routing และ Subnet", "id": 75, "answer": 3}]}, {"name": "Link Layer และ LAN", "slides": [["บริการของ Link Layer", ["Framing กำหนดขอบเขต frame • MAC addressing • Medium access", "Error detection เช่น CRC ตรวจความผิดพลาด แต่ไม่ได้แก้ข้อมูลโดยตัวมันเอง", "Reliability ขึ้นกับเทคโนโลยี ไม่ใช่ทุกลิงก์มี ACK/retransmission"], "TCP reliability คนละระดับกับ link-layer reliability"], ["Ethernet Frame และ Switch", ["Frame มี source/destination MAC, type/length, payload และ FCS", "Switch เรียนรู้ source MAC กับพอร์ตขาเข้า", "Known unicast ส่งไปพอร์ตที่เรียนรู้; unknown unicast flood ภายใน VLAN ยกเว้นพอร์ตรับ", "Broadcast MAC = FF:FF:FF:FF:FF:FF"], "การเรียนรู้ดู source; การตัดสินใจส่งต่อดู destination"], ["Collision และ Broadcast Domain", ["Switch แยก collision domain ตามพอร์ต; full-duplex ไม่มี collision ตามปกติ", "Hub แบบเก่าให้หลายเครื่องแชร์ collision domain", "VLAN แต่ละวงเป็น broadcast domain แยกกัน; ต้อง route เพื่อข้าม VLAN", "Trunk พา traffic หลาย VLAN; 802.1Q ใช้ tag ระบุ VLAN"], "Switch ทั้งตัวไม่จำเป็นต้องมี broadcast domain เดียว หากแบ่ง VLAN"], ["Medium Access และ Duplex", ["Ethernet แบบ shared half-duplex เดิมใช้ CSMA/CD", "Ethernet switched full-duplex ไม่ต้องใช้ CSMA/CD", "Wi-Fi ใช้ CSMA/CA เพราะตรวจ collision ระหว่างส่งได้ยาก", "Half-duplex ผลัดกันส่ง • Full-duplex ส่งและรับพร้อมกัน"], "CD = detect; CA = avoid"], ["Error Detection และการวนลูป", ["Parity ตรวจข้อผิดพลาดบางรูปแบบ • CRC ใช้ตรวจความผิดพลาดแบบ polynomial", "FCS ผิด → โดยทั่วไปทิ้ง frame ไม่ใช่แก้ทุกบิตให้เอง", "STP สร้าง topology ที่ไม่เกิด loop ใน LAN ที่มีเส้นทางซ้ำ", "Loop อาจทำให้ broadcast storm และ MAC table ไม่นิ่ง"], "STP บล็อกบางเส้นทางเพื่อคงเส้นสำรองโดยไม่เกิด loop"], ["ARP ข้าม Subnet: ภาพจำ", ["Host A → Switch → Router → Switch → Server", "A ส่ง IP ถึง server แต่ MAC ปลายทางของ frame แรกคือ gateway", "Router ถอด frame และสร้าง frame สำหรับลิงก์ถัดไป", "Frame ขาออกมี MAC ต้นทางของ interface router บนลิงก์นั้น"], "ทุก hop ใช้ link addressing ตามบริบทลิงก์ ไม่ใช่ end-to-end MAC"]], "questions": [{"q": "หน้าที่หลักของ framing คืออะไร", "options": ["หา DNS server", "เข้ารหัสอีเมล", "กำหนดขอบเขตหน่วยข้อมูลบนลิงก์", "กำหนด route BGP"], "explain": "Framing แยกข้อมูลเป็น frame ที่ผู้รับตีความได้", "cat": "Link Layer และ LAN", "id": 76, "answer": 2}, {"q": "Ethernet switch เรียนรู้ MAC table จากข้อมูลใด", "options": ["Destination IP และ DNS", "HTTP cookie", "Source MAC และพอร์ตรับ", "ชื่อ SSID"], "explain": "Source MAC บอกว่าเครื่องต้นทางอยู่ทางพอร์ตใด", "cat": "Link Layer และ LAN", "id": 77, "answer": 2}, {"q": "Known unicast ที่พอร์ตปลายทางต่างจากพอร์ตรับควรถูกส่งอย่างไร", "options": ["ส่งทุกพอร์ตทุก VLAN", "ส่งออกพอร์ตที่ MAC table ระบุ", "ส่งกลับพอร์ตรับเสมอ", "ทิ้งเสมอ"], "explain": "Switch ใช้ destination MAC ค้นพอร์ตที่เรียนรู้", "cat": "Link Layer และ LAN", "id": 78, "answer": 1}, {"q": "Unknown unicast ถูกจัดการโดย switch ทั่วไปอย่างไร", "options": ["Route ออกทุกเครือข่าย", "Flood ใน VLAN เดียวกันยกเว้นพอร์ตรับ", "ส่งไป DNS เท่านั้น", "แก้ MAC เป็น IP"], "explain": "ยังไม่รู้พอร์ตจึงกระจายเฉพาะขอบเขต VLAN", "cat": "Link Layer และ LAN", "id": 79, "answer": 1}, {"q": "Ethernet broadcast MAC คือข้อใด", "options": ["00:00:00:00:00:00", "127.0.0.1", "255.255.255.0", "FF:FF:FF:FF:FF:FF"], "explain": "MAC broadcast มีทั้ง 48 บิตเป็น 1", "cat": "Link Layer และ LAN", "id": 80, "answer": 3}, {"q": "MAC address Ethernet โดยทั่วไปยาวเท่าไร", "options": ["32 bits", "48 bits", "16 bits", "128 bits"], "explain": "EUI-48 มี 6 octets", "cat": "Link Layer และ LAN", "id": 81, "answer": 1}, {"q": "FCS ใน Ethernet ใช้ทำอะไร", "options": ["เลือก default route", "แจก IP", "ตรวจความผิดพลาดของ frame", "เก็บรหัสผ่าน"], "explain": "FCS เก็บค่าตรวจ CRC", "cat": "Link Layer และ LAN", "id": 82, "answer": 2}, {"q": "CRC ที่ตรวจพบความผิดพลาดทำอะไรได้โดยตรง", "options": ["แก้ทุกบิตได้เสมอ", "รับรองไม่ถูกโจมตี", "ระบุว่า frame ผิดพลาดตามความสามารถการตรวจ", "คำนวณ subnet ให้"], "explain": "CRC เป็น error detection ไม่ใช่กลไกแก้บิตทั่วไป", "cat": "Link Layer และ LAN", "id": 83, "answer": 2}, {"q": "Ethernet switched full-duplex ใช้ CSMA/CD หรือไม่", "options": ["ใช้ตรวจ collision ทุก frame", "ใช้แทน DNS", "ไม่ใช้ในการทำงาน full-duplex ปกติ", "ใช้เฉพาะพอร์ต 443"], "explain": "ไม่มีการแย่งสื่อร่วมแบบ half-duplex", "cat": "Link Layer และ LAN", "id": 84, "answer": 2}, {"q": "Ethernet shared half-duplex แบบเดิมใช้วิธีใด", "options": ["CSMA/CA", "OSPF", "CSMA/CD", "DORA"], "explain": "CSMA/CD ตรวจ collision บนสื่อร่วม", "cat": "Link Layer และ LAN", "id": 85, "answer": 2}, {"q": "Wi-Fi ใช้แนวทางใดเข้าถึงสื่อ", "options": ["CSMA/CD แบบ Ethernet เดิม", "CSMA/CA", "SMTP", "NAT"], "explain": "Wi-Fi ลดโอกาสชนด้วยการฟังสื่อและ backoff", "cat": "Link Layer และ LAN", "id": 86, "answer": 1}, {"q": "Hub แบบดั้งเดิมทำให้พอร์ตอยู่ในอะไร", "options": ["คนละ broadcast domain เสมอ", "คนละ IP subnet เสมอ", "คนละ DNS zone", "Collision domain ร่วมกัน"], "explain": "Hub กระจายสัญญาณและทุกเครื่องแชร์สื่อ", "cat": "Link Layer และ LAN", "id": 87, "answer": 3}, {"q": "Switch ช่วยแยก collision domain อย่างไร", "options": ["ทั้งตัวยังแชร์เหมือน hub เสมอ", "โดยทั่วไปแยกตามพอร์ต", "แยกตาม URL", "แยกตาม DNS cache"], "explain": "แต่ละพอร์ตเป็นลิงก์แยก", "cat": "Link Layer และ LAN", "id": 88, "answer": 1}, {"q": "VLAN ใช้แบ่งอะไรเป็นหลัก", "options": ["ความยาวบิต TCP", "กำลังแสง", "Broadcast domain เชิงตรรกะ", "HTTP method"], "explain": "แต่ละ VLAN แยกการกระจาย broadcast", "cat": "Link Layer และ LAN", "id": 89, "answer": 2}, {"q": "เครื่องต่าง VLAN ต้องใช้อะไรสื่อสาร IP ข้ามกัน", "options": ["Hub เพียงอย่างเดียว", "สาย crossover เพียงอย่างเดียว", "Routing ระหว่าง VLAN", "เปลี่ยนชื่อเครื่อง"], "explain": "ต้องมีอุปกรณ์หรือฟังก์ชันชั้น 3", "cat": "Link Layer และ LAN", "id": 90, "answer": 2}, {"q": "Trunk link มีหน้าที่อะไร", "options": ["ขยายกำลังคลื่นเท่านั้น", "ขนส่ง traffic ได้หลาย VLAN", "แจก DHCP ทุกครั้ง", "แปลง IPv4 เป็น IPv6 เสมอ"], "explain": "Trunk รวมหลาย VLAN บนลิงก์เดียว", "cat": "Link Layer และ LAN", "id": 91, "answer": 1}, {"q": "802.1Q เกี่ยวข้องกับอะไร", "options": ["VLAN tagging", "DNS caching", "HTTP encryption", "กำหนดชื่อ SSID"], "explain": "802.1Q กำหนด tag เพื่อระบุ VLAN", "cat": "Link Layer และ LAN", "id": 92, "answer": 0}, {"q": "STP มีวัตถุประสงค์หลักใด", "options": ["เพิ่ม port TCP", "แจก IPv6", "เข้ารหัส Wi-Fi", "ป้องกัน loop ชั้น 2"], "explain": "STP เลือก topology ที่ไม่เกิด loop", "cat": "Link Layer และ LAN", "id": 93, "answer": 3}, {"q": "Layer-2 loop อาจทำให้เกิดอะไร", "options": ["Broadcast storm", "DNS TTL เพิ่มเอง", "สายใยแก้วกลายเป็นทองแดง", "TCP port เปลี่ยนทุกเครื่อง"], "explain": "Frame วนและถูกทำสำเนาส่งต่อเพิ่มได้", "cat": "Link Layer และ LAN", "id": 94, "answer": 0}, {"q": "Full-duplex หมายถึงอะไร", "options": ["ส่งได้ทิศเดียว", "ผลัดกันส่งเท่านั้น", "ส่งได้เฉพาะ broadcast", "ส่งและรับพร้อมกันได้"], "explain": "Full-duplex ใช้การส่งทั้งสองทิศพร้อมกัน", "cat": "Link Layer และ LAN", "id": 95, "answer": 3}, {"q": "Half-duplex หมายถึงอะไร", "options": ["รับพร้อมส่งเสมอ", "มีสายครึ่งเส้น", "ใช้ได้เฉพาะแสง", "สื่อสารสองทิศแต่ผลัดกัน"], "explain": "ตัวอย่างเชิงหลักการคือวิทยุกดพูด", "cat": "Link Layer และ LAN", "id": 96, "answer": 3}, {"q": "Host ส่ง IP ไป server ต่าง subnet MAC ปลายทาง frame แรกคืออะไร", "options": ["MAC ของ server ระยะไกลเสมอ", "MAC ของ default gateway", "MAC ของ DNS เสมอ", "MAC ศูนย์ทั้งหมด"], "explain": "การส่งบนลิงก์แรกต้องถึง next hop", "cat": "Link Layer และ LAN", "id": 97, "answer": 1}, {"q": "หาก switch รู้ว่าปลายทางอยู่พอร์ตเดียวกับที่รับ frame จะทำอย่างไรโดยทั่วไป", "options": ["Flood ทุก VLAN", "เปลี่ยน IP ปลายทาง", "ไม่ส่ง frame กลับพอร์ตนั้น", "ตั้ง default route ใหม่"], "explain": "ไม่ต้องส่งกลับไปยังส่วนเครือข่ายที่ frame มาจาก", "cat": "Link Layer และ LAN", "id": 98, "answer": 2}, {"q": "ARP request บน Ethernet ปกติส่งแบบใด", "options": ["Unicast ถึงทุก router ในโลก", "Multicast IPv6 เท่านั้น", "Broadcast ใน VLAN", "TCP stream"], "explain": "ผู้ถามยังไม่รู้ MAC ของ IPv4 เป้าหมายจึง broadcast", "cat": "Link Layer และ LAN", "id": 99, "answer": 2}, {"q": "Parity แบบบิตเดียวรับรองตรวจข้อผิดพลาดทุกชนิดหรือไม่", "options": ["ไม่รับรอง โดยเฉพาะจำนวนบิตพลิกเป็นคู่", "รับรองทุกกรณี", "แก้ได้ทุกบิต", "แทน CRC และ TLS ได้ทั้งหมด"], "explain": "Even หรือ odd parity อาจไม่เปลี่ยนเมื่อพลิกจำนวนบิตเป็นคู่", "cat": "Link Layer และ LAN", "id": 100, "answer": 0}]}, {"name": "LAN Cabling", "slides": [["เลือกสื่อให้เหมาะกับงาน", ["UTP: คู่สายบิดเกลียว ไม่มีชิลด์; STP มีชิลด์ ต้องติดตั้งและต่อกราวด์เหมาะสม", "Fiber ส่งด้วยแสง ทน EMI และเหมาะระยะไกล; ยังต้องเลือก transceiver/ชนิด fiber ให้ตรง", "ทองแดงใช้สัญญาณไฟฟ้า; ใยแก้วไม่ได้ใช้หัว RJ-45 ตามปกติ"], "อย่าเลือกจากความเร็วอย่างเดียว ต้องดูระยะ สภาพแวดล้อม และมาตรฐานลิงก์"], ["หัวต่อและคู่สาย", ["สาย Ethernet twisted pair ทั่วไปมี 4 คู่ รวม 8 เส้น", "หัว 8P8C มักเรียก RJ-45 ในการเรียน LAN", "การบิดเกลียวช่วยลดสัญญาณรบกวนและ crosstalk", "อย่าคลายเกลียวปลายสายยาวเกินจำเป็น"], "คู่สายจริงสำคัญกว่าตรวจเพียง pin 1 ถึง pin 8 ตรงกัน"], ["T568A และ T568B", ["ลำดับ pin ตามมาตรฐานเมื่อจัดหัวให้ตรงทิศ; ต้องตรวจทิศหัวก่อนนับ", "T568A: ขาวเขียว เขียว ขาวส้ม น้ำเงิน ขาวน้ำเงิน ส้ม ขาวน้ำตาล น้ำตาล", "T568B: ขาวส้ม ส้ม ขาวเขียว น้ำเงิน ขาวน้ำเงิน เขียว ขาวน้ำตาล น้ำตาล", "A กับ B สลับคู่สีเขียวและส้ม; น้ำเงินและน้ำตาลคงเดิม"], "จำคู่และ pin ด้วย: A pin1 ขาวเขียว; B pin1 ขาวส้ม"], ["Straight-through และ Crossover", ["Straight-through ใช้มาตรฐานเดียวกันสองปลาย เช่น B–B", "Crossover แบบ 10/100 ใช้ A–B สลับคู่ส่ง/รับ", "กฎเดิม PC–switch ใช้ straight; switch–switch ใช้ crossover เมื่อไม่มี Auto MDI-X", "Auto MDI-X ช่วยสลับคู่ให้อัตโนมัติในอุปกรณ์ที่รองรับ"], "กฎแบบเก่าต้องมีเงื่อนไข ไม่มี Auto MDI-X ไม่ใช่ตายตัวกับทุกอุปกรณ์ปัจจุบัน"], ["ระยะและความเร็วที่ชอบถาม", ["1000BASE-T ใช้ครบ 4 คู่; Cat5e รองรับ 1 Gb/s ตาม channel ที่ได้มาตรฐาน", "Channel copper LAN ทั่วไปสูงสุด 100 m รวม patch cord; permanent link ทั่วไป 90 m", "Cat6A รองรับ 10GBASE-T ที่ 100 m ภายใต้เงื่อนไขมาตรฐาน", "10G บน Cat6 ขึ้นกับระยะและ crosstalk จึงไม่ควรเหมารวมว่าได้ 100 m"], "ความเร็วต้องพิจารณาทั้งสาย หัวต่อ ระยะ NIC และ switch"], ["ทดสอบสายและ PoE", ["Open: วงจรขาด • Short: ลัดวงจร • Miswire: ต่อผิด pin • Split pair: จับคู่ผิด", "Continuity tester อย่างเดียวอาจตรวจ split pair หรือคุณภาพ bandwidth ไม่ครบ", "PoE ส่งไฟและข้อมูลบนสาย Ethernet ในระบบที่รองรับ", "ตรวจ Link LED → การเข้าหัว → cable test → speed/duplex → IP configuration"], "ไฟ Link ติดเป็นหลักฐานชั้นล่าง ไม่ใช่ยืนยันว่า routing และแอปถูกต้อง"]], "questions": [{"q": "สาย UTP ต่างจาก STP อย่างไร", "options": ["UTP ใช้แสง ส่วน STP ใช้เสียง", "UTP มีเพียงเส้นเดียว", "UTP ไม่มีชิลด์ ส่วน STP มีชิลด์", "STP ไม่ต้องมีตัวนำ"], "explain": "ทั้งสองเป็น twisted pair แต่ต่างเรื่อง shielding", "cat": "LAN Cabling", "id": 101, "answer": 2}, {"q": "การบิดเกลียวคู่สายช่วยเรื่องใด", "options": ["ลดการรบกวนและ crosstalk", "เพิ่มจำนวน IP", "แทน firewall", "ทำให้สายไม่ต้องมีหัว"], "explain": "การจัดคู่ช่วยลดผลสัญญาณรบกวน", "cat": "LAN Cabling", "id": 102, "answer": 0}, {"q": "สาย twisted pair Ethernet ทั่วไปมีตัวนำกี่เส้น", "options": ["8", "2", "4", "16"], "explain": "มี 4 คู่รวม 8 เส้น", "cat": "LAN Cabling", "id": 103, "answer": 0}, {"q": "หัวสาย LAN ทองแดงที่มักเรียก RJ-45 มีตำแหน่งสัมผัสกี่ตำแหน่ง", "options": ["4", "8", "6", "12"], "explain": "หัว 8P8C มี 8 ตำแหน่งและ 8 หน้าสัมผัส", "cat": "LAN Cabling", "id": 104, "answer": 1}, {"q": "T568B pin 1 เป็นสีใด", "options": ["ขาวเขียว", "น้ำเงิน", "น้ำตาล", "ขาวส้ม"], "explain": "T568B เริ่มขาวส้ม แล้วส้ม", "cat": "LAN Cabling", "id": 105, "answer": 3}, {"q": "T568A pin 1 เป็นสีใด", "options": ["ขาวส้ม", "ขาวน้ำเงิน", "น้ำตาล", "ขาวเขียว"], "explain": "T568A เริ่มขาวเขียว แล้วเขียว", "cat": "LAN Cabling", "id": 106, "answer": 3}, {"q": "T568A และ T568B สลับคู่สีใด", "options": ["น้ำเงินกับน้ำตาล", "เขียวกับส้ม", "น้ำเงินกับเขียว", "ส้มกับน้ำตาล"], "explain": "คู่สีเขียวและส้มสลับตำแหน่ง", "cat": "LAN Cabling", "id": 107, "answer": 1}, {"q": "เข้าหัวแบบ B ทั้งสองปลายเป็นสายใด", "options": ["Crossover แบบ A-B", "Rollover", "Fiber", "Straight-through"], "explain": "มาตรฐานเดียวกันสองปลายเป็น straight-through", "cat": "LAN Cabling", "id": 108, "answer": 3}, {"q": "สาย A-B ตามบทเรียน 10/100 เป็นสายชนิดใด", "options": ["Straight-through", "Coaxial", "Crossover", "Single-mode fiber"], "explain": "A-B สลับคู่ส่งและรับของ 10/100", "cat": "LAN Cabling", "id": 109, "answer": 2}, {"q": "PC ต่อ switch ตามกฎเก่าโดยไม่มี Auto MDI-X ควรใช้สายใด", "options": ["Straight-through", "Crossover", "Rollover", "สายโทรศัพท์ 2 เส้น"], "explain": "อุปกรณ์ต่างบทบาทตามกฎเดิมใช้สายตรง", "cat": "LAN Cabling", "id": 110, "answer": 0}, {"q": "Switch ต่อ switch 10/100 ไม่มี Auto MDI-X ตามกฎเดิมใช้สายใด", "options": ["Straight-through", "Console rollover", "สาย USB เท่านั้น", "Crossover"], "explain": "ต้องไขว้คู่ส่งรับเมื่ออุปกรณ์ไม่สลับเอง", "cat": "LAN Cabling", "id": 111, "answer": 3}, {"q": "Auto MDI-X ช่วยอะไร", "options": ["แจก IP อัตโนมัติ", "ตรวจ DNS", "ปรับการไขว้คู่ส่งรับอัตโนมัติ", "เข้ารหัส Wi-Fi"], "explain": "คุณสมบัตินี้ช่วยลดข้อจำกัดการเลือกสายตรงหรือไขว้", "cat": "LAN Cabling", "id": 112, "answer": 2}, {"q": "1000BASE-T ใช้สายกี่คู่ในการรับส่งข้อมูล", "options": ["4 คู่", "1 คู่", "2 คู่", "3 คู่"], "explain": "Gigabit Ethernet แบบนี้ใช้ทั้งสี่คู่", "cat": "LAN Cabling", "id": 113, "answer": 0}, {"q": "Channel twisted pair LAN ทั่วไปกำหนดระยะรวมเท่าไร", "options": ["10 m", "500 m", "10 km", "100 m"], "explain": "ค่าทั่วไปคือ permanent link 90 m บวก patch cords รวม 10 m", "cat": "LAN Cabling", "id": 114, "answer": 3}, {"q": "Permanent link ทองแดงตามแบบติดตั้งทั่วไปยาวไม่เกินเท่าไร", "options": ["100 m", "150 m", "90 m", "1 km"], "explain": "ส่วนสายถาวรมักจำกัด 90 m เพื่อเผื่อ patch cords", "cat": "LAN Cabling", "id": 115, "answer": 2}, {"q": "Cat5e ที่ติดตั้งได้มาตรฐานรองรับอะไรโดยทั่วไป", "options": ["10 Gb/s ที่ 100 km", "1000BASE-T ที่ channel 100 m", "แสงเท่านั้น", "ไม่มี Ethernet"], "explain": "Cat5e รองรับ Gigabit Ethernet ตามข้อกำหนด channel", "cat": "LAN Cabling", "id": 116, "answer": 1}, {"q": "ตัวเลือกใดเหมาะกับ 10GBASE-T ที่ 100 m ตามมาตรฐานสาย", "options": ["Cat3", "สายโทรศัพท์แบน", "Coaxial TV", "Cat6A"], "explain": "Cat6A ออกแบบรองรับ 10GBASE-T ที่ 100 m", "cat": "LAN Cabling", "id": 117, "answer": 3}, {"q": "Fiber ส่งข้อมูลด้วยอะไร", "options": ["กระแสลม", "เสียงในท่อ", "แสง", "คลื่นบนคู่ทองแดงเสมอ"], "explain": "ใยแก้วใช้สัญญาณแสง", "cat": "LAN Cabling", "id": 118, "answer": 2}, {"q": "สื่อใดทนต่อ EMI ตามตัวกลางได้ดี", "options": ["UTP ทุกกรณีเท่ากัน", "สายทองแดงเปลือย", "Fiber optic", "สายโทรศัพท์ยาวไม่จำกัด"], "explain": "ใยแก้วไม่ใช้สัญญาณไฟฟ้าในตัวกลาง", "cat": "LAN Cabling", "id": 119, "answer": 2}, {"q": "Open circuit ของสายหมายถึงอะไร", "options": ["ตัวนำสองเส้นแตะกัน", "ตัวนำขาดหรือไม่ต่อถึงกัน", "DNS เปิดอยู่", "สายมี bandwidth สูง"], "explain": "วงจร open ไม่ต่อเนื่อง", "cat": "LAN Cabling", "id": 120, "answer": 1}, {"q": "Short circuit ของสายหมายถึงอะไร", "options": ["ตัวนำขาดเพียงอย่างเดียว", "IP ซ้ำเท่านั้น", "ตัวนำสัมผัสกันผิดปกติ", "หัวถูกสีครบ"], "explain": "การลัดวงจรทำให้วงจรที่ควรแยกเชื่อมกัน", "cat": "LAN Cabling", "id": 121, "answer": 2}, {"q": "Split pair หมายถึงอะไร", "options": ["ใช้ใยแก้วสองเส้น", "นำเส้นจากคนละคู่มาจับคู่สัญญาณ", "แยก VLAN", "ใช้สายตรงสองเส้น"], "explain": "Pin อาจต่อถึงกันแต่คู่บิดเกลียวผิด ทำให้ crosstalk สูง", "cat": "LAN Cabling", "id": 122, "answer": 1}, {"q": "PoE ให้ประโยชน์อะไร", "options": ["ส่งไฟพร้อมข้อมูลให้อุปกรณ์ที่รองรับ", "ทำ NAT แทน router", "เข้ารหัสทุก frame", "ยืด copper ได้ไม่จำกัด"], "explain": "เช่นจ่ายไฟให้ AP หรือ IP phone ผ่าน Ethernet", "cat": "LAN Cabling", "id": 123, "answer": 0}, {"q": "ไฟ Link ติดยืนยันเรื่องใดได้เหมาะสมที่สุด", "options": ["DNS ถูกแน่นอน", "มีการเชื่อมต่อระดับลิงก์ตามสถานะอุปกรณ์", "เว็บไซต์ใช้งานได้แน่นอน", "Default route ถูกแน่นอน"], "explain": "ต้องทดสอบ IP และบริการชั้นบนต่อ", "cat": "LAN Cabling", "id": 124, "answer": 1}, {"q": "เหตุใดไม่ควรคลายเกลียวปลายสายมากเกินจำเป็น", "options": ["ทำให้ IPv4 เปลี่ยนเป็น IPv6", "ลดจำนวน port", "ทำให้ DNS หมดอายุ", "ทำให้คุณสมบัติลด crosstalk แย่ลง"], "explain": "การคงรูปคู่เกลียวใกล้หัวช่วยรักษาคุณภาพสัญญาณ", "cat": "LAN Cabling", "id": 125, "answer": 3}]}, {"name": "Cloud Computing", "slides": [["Cloud คืออะไร", ["ใช้ทรัพยากรคอมพิวเตอร์ที่จัดสรรได้ตามต้องการผ่านเครือข่าย", "NIST: on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service", "การมี VM อย่างเดียวไม่ได้ทำให้ระบบมีคุณลักษณะ cloud ครบ"], "จำ 5 คุณลักษณะ: ขอเอง–เข้าผ่านเครือข่าย–ใช้ pool–ยืดหด–วัดการใช้"], ["IaaS / PaaS / SaaS", ["IaaS: ใช้ VM, storage, network; ลูกค้ามักดูแล guest OS และแอป", "PaaS: ผู้ให้บริการดูแล platform/runtime; ลูกค้าเน้นโค้ดและข้อมูล", "SaaS: ใช้แอปสำเร็จรูปผ่านบริการ; ลูกค้ายังต้องจัดการบัญชี สิทธิ์ และข้อมูลตามข้อตกลง"], "ถามว่าใครดูแลอะไร ให้ดูขอบเขตบริการ ไม่ใช่ชื่อผลิตภัณฑ์อย่างเดียว"], ["Deployment Models", ["Public: เปิดให้ใช้งานโดยสาธารณะตามบริการ", "Private: จัดไว้ให้ใช้งานเฉพาะองค์กรหนึ่ง", "Community: ใช้ร่วมโดยองค์กรที่มีข้อกำหนดร่วมกัน", "Hybrid: เชื่อม cloud ตั้งแต่สองโครงสร้างที่แยกกันและรองรับการเคลื่อนย้ายข้อมูล/แอป"], "Public/private เป็นรูปแบบการใช้งาน ไม่ใช่คำตัดสินว่าปลอดภัยหรือไม่ปลอดภัย"], ["Elasticity กับ Scalability", ["Scalability: ความสามารถในการรองรับงานเพิ่มด้วยทรัพยากรที่มากขึ้น", "Elasticity: ปรับเพิ่มและลดทรัพยากรตามความต้องการ", "Scale up: เพิ่มพลังเครื่องเดิม • Scale out: เพิ่มจำนวนเครื่อง", "Load balancer กระจายคำขอ; auto scaling ปรับจำนวน/ขนาดตามกฎ"], "เพิ่มเครื่องโดยไม่ลดเมื่อโหลดหาย ยังไม่แสดงการยืดหดครบ"], ["ความพร้อมใช้และข้อมูล", ["Availability ต้องดู SLA และสถาปัตยกรรม ไม่ใช่เชื่อว่า cloud ไม่เคยล่ม", "Backup เก็บสำเนาสำหรับกู้คืน; replication ช่วยทำสำเนาแต่ไม่แทน backup ทุกกรณี", "RPO: ยอมเสียข้อมูลย้อนหลังเท่าใด • RTO: ต้องกู้บริการภายในเท่าใด", "Object storage เก็บเป็น object; block storage ให้ block สำหรับ volume"], "Replication อาจทำสำเนาความผิดพลาดหรือการลบตามไปด้วย"], ["ต้นทุนและความปลอดภัย", ["Measured service วัดการใช้ทรัพยากร; ค่าใช้จ่ายขึ้นกับ pricing และการใช้งานจริง", "ระวัง VM เปิดทิ้ง storage snapshot และค่าโอนข้อมูลออก", "Shared responsibility: ผู้ให้บริการกับลูกค้ามีหน้าที่ต่างกันตามบริการ", "Least privilege, MFA, encryption, backup และการตรวจสิทธิ์ข้อมูลยังจำเป็น"], "Cloud ไม่ได้รับประกันว่าถูกกว่าเสมอ ต้องวัดและคุมการใช้"]], "questions": [{"q": "ข้อใดเป็นคุณลักษณะ cloud ตาม NIST", "options": ["On-demand self-service", "ต้องติดตั้งเองทุกเครื่อง", "ห้ามใช้เครือข่าย", "ความจุตายตัวเสมอ"], "explain": "ผู้ใช้จัดสรรทรัพยากรได้ตามต้องการโดยไม่ต้องให้เจ้าหน้าที่ทำทุกครั้ง", "cat": "Cloud Computing", "id": 126, "answer": 0}, {"q": "Broad network access หมายถึงอะไร", "options": ["ใช้ได้ในห้องเดียวเท่านั้น", "ต้องมีสาย crossover ทุกเครื่อง", "ห้ามใช้มือถือ", "เข้าถึงบริการผ่านเครือข่ายด้วยกลไกมาตรฐาน"], "explain": "บริการเข้าถึงได้จาก client หลายประเภทตามการรองรับ", "cat": "Cloud Computing", "id": 127, "answer": 3}, {"q": "Resource pooling หมายถึงอะไร", "options": ["รวมทรัพยากรให้บริการผู้ใช้หลายรายตามการจัดสรร", "ทุกคนต้องใช้รหัสผ่านเดียว", "ต้องเก็บข้อมูลในไฟล์เดียว", "ไม่มีการแยกผู้เช่า"], "explain": "ทรัพยากรอยู่ใน pool และจัดให้ผู้ใช้ตามความต้องการ", "cat": "Cloud Computing", "id": 128, "answer": 0}, {"q": "Rapid elasticity เน้นอะไร", "options": ["เพิ่ม IP แบบสุ่ม", "ห้ามลดจำนวนเครื่อง", "เพิ่มและลดทรัพยากรตามความต้องการได้รวดเร็ว", "ใช้ฮาร์ดดิสก์ใหญ่ที่สุดเสมอ"], "explain": "Elasticity สอดคล้องกับโหลดที่ขึ้นลง", "cat": "Cloud Computing", "id": 129, "answer": 2}, {"q": "Measured service หมายถึงอะไร", "options": ["บริการต้องฟรีทุกแบบ", "คิดเงินเท่ากันทุกงาน", "วัดและติดตามปริมาณการใช้บริการ", "วัดความยาวสายเท่านั้น"], "explain": "การวัดช่วยติดตามรายงานและควบคุมการใช้ทรัพยากร", "cat": "Cloud Computing", "id": 130, "answer": 2}, {"q": "โมเดลใดให้ลูกค้าดูแล guest OS ของ VM โดยทั่วไป", "options": ["SaaS", "DNS", "IaaS", "HTTP"], "explain": "IaaS ให้โครงสร้างพื้นฐาน ส่วน guest OS อยู่ในความรับผิดชอบลูกค้าตามบริการ", "cat": "Cloud Computing", "id": 131, "answer": 2}, {"q": "โมเดลใดให้ deploy โค้ดโดยไม่ดูแล OS พื้นฐานเป็นหลัก", "options": ["PaaS", "IaaS แบบ VM ดิบ", "Ethernet", "STP"], "explain": "PaaS จัดการ platform/runtime ให้ตามขอบเขตบริการ", "cat": "Cloud Computing", "id": 132, "answer": 0}, {"q": "การใช้แอปสำเร็จรูปออนไลน์จัดเป็นโมเดลใดโดยทั่วไป", "options": ["IaaS", "Physical layer", "Private IP", "SaaS"], "explain": "SaaS ให้ซอฟต์แวร์ในรูปบริการ", "cat": "Cloud Computing", "id": 133, "answer": 3}, {"q": "Cloud ที่จัดไว้ใช้เฉพาะองค์กรหนึ่งคืออะไร", "options": ["Public cloud", "Community cloud เสมอ", "Private cloud", "Open Wi-Fi"], "explain": "Private cloud ใช้เฉพาะองค์กร แม้ผู้ดูแลหรือสถานที่อาจต่างกัน", "cat": "Cloud Computing", "id": 134, "answer": 2}, {"q": "Cloud ที่เปิดให้สาธารณะสมัครใช้ตามบริการคืออะไร", "options": ["Private cloud", "Public cloud", "VLAN", "Loopback"], "explain": "Public cloud เปิดให้ใช้งานทั่วไปตามเงื่อนไขผู้ให้บริการ", "cat": "Cloud Computing", "id": 135, "answer": 1}, {"q": "องค์กรที่มีข้อกำหนดร่วมกันใช้ cloud ร่วมกันเป็นโมเดลใด", "options": ["Public DNS", "Transport cloud", "Full mesh เสมอ", "Community cloud"], "explain": "Community cloud รองรับกลุ่มองค์กรที่มีข้อกำหนดร่วม", "cat": "Cloud Computing", "id": 136, "answer": 3}, {"q": "การเชื่อม private และ public cloud เพื่อทำงานร่วมกันตรงกับอะไร", "options": ["SaaS เท่านั้น", "Hybrid cloud", "Single host", "Rollover"], "explain": "Hybrid ประกอบ cloud แยกกันที่เชื่อมด้วยเทคโนโลยีรองรับการใช้ร่วม", "cat": "Cloud Computing", "id": 137, "answer": 1}, {"q": "เพิ่ม RAM ให้เครื่องเดิมเป็นการ scale แบบใด", "options": ["Scale out", "Scale in", "Scale up", "Broadcast"], "explain": "Vertical scaling เพิ่มความสามารถเครื่องเดิม", "cat": "Cloud Computing", "id": 138, "answer": 2}, {"q": "เพิ่มจำนวน VM หลายเครื่องเป็นการ scale แบบใด", "options": ["Scale up", "Scale out", "Scale down", "Subnetting"], "explain": "Horizontal scaling เพิ่มจำนวน instance", "cat": "Cloud Computing", "id": 139, "answer": 1}, {"q": "Load balancer ทำหน้าที่ใด", "options": ["กระจายคำขอไปหลาย backend", "รับรองข้อมูลไม่มีวันหาย", "แทน DNS ทุกกรณี", "ทำสาย LAN ให้ยาวไม่จำกัด"], "explain": "ช่วยกระจายโหลดและอาจตรวจสุขภาพ backend", "cat": "Cloud Computing", "id": 140, "answer": 0}, {"q": "Auto scaling ใช้ทำอะไร", "options": ["เข้ารหัสทุกไฟล์อัตโนมัติเสมอ", "แก้ source code ให้ถูกทุกครั้ง", "ปรับทรัพยากรอัตโนมัติตามกฎหรือโหลด", "ป้องกันค่าใช้จ่ายได้ทั้งหมด"], "explain": "ต้องกำหนดนโยบาย ขอบเขต และเฝ้าดูต้นทุน", "cat": "Cloud Computing", "id": 141, "answer": 2}, {"q": "มี VM ในห้อง server เพียงอย่างเดียวพิสูจน์ว่าเป็น cloud ครบหรือไม่", "options": ["พอเสมอ", "เป็น SaaS เสมอ", "ยังไม่พอ ต้องดูคุณลักษณะบริการ", "เป็น public เสมอ"], "explain": "Virtualization เป็นเทคโนโลยีหนึ่ง แต่ไม่เท่ากับคุณลักษณะ cloud ครบ", "cat": "Cloud Computing", "id": 142, "answer": 2}, {"q": "Shared responsibility หมายถึงอะไร", "options": ["ผู้ให้บริการและลูกค้ารับผิดชอบต่างส่วนตามบริการ", "ผู้ให้บริการดูแลทุกอย่างเสมอ", "ลูกค้าไม่ต้องดูแลบัญชี", "ไม่ต้องมี backup"], "explain": "ขอบเขตต่างกันตาม IaaS PaaS SaaS และข้อตกลง", "cat": "Cloud Computing", "id": 143, "answer": 0}, {"q": "Least privilege คืออะไร", "options": ["ให้ admin ทุกคน", "เปิด storage สาธารณะทั้งหมด", "ใช้บัญชีเดียวทั้งองค์กร", "ให้สิทธิ์เท่าที่จำเป็นต่อหน้าที่"], "explain": "ลดสิทธิ์ส่วนเกินเพื่อลดผลกระทบและความเสี่ยง", "cat": "Cloud Computing", "id": 144, "answer": 3}, {"q": "RPO ใช้บอกอะไร", "options": ["เวลากู้ระบบทั้งหมดเท่านั้น", "ความเร็ว CPU", "ความยาวสาย", "ปริมาณเวลาข้อมูลย้อนหลังที่ยอมสูญเสียได้"], "explain": "RPO เป็นเป้าหมายการยอมเสียข้อมูลตามช่วงเวลา", "cat": "Cloud Computing", "id": 145, "answer": 3}, {"q": "RTO ใช้บอกอะไร", "options": ["ระยะเวลาที่ตั้งเป้ากู้บริการกลับมา", "จำนวน byte ใน frame", "อายุ DNS cache", "จำนวน VLAN"], "explain": "RTO เป็นเป้าหมายเวลากู้ระบบหลังหยุดชะงัก", "cat": "Cloud Computing", "id": 146, "answer": 0}, {"q": "เหตุใด replication ไม่แทน backup ทุกกรณี", "options": ["Replication ไม่คัดลอกข้อมูล", "Backup ใช้เครือข่ายไม่ได้", "ทั้งคู่เป็น DNS", "การลบหรือข้อมูลเสียอาจถูกทำสำเนาตาม"], "explain": "ต้องมีสำเนาที่กู้ย้อนหลังได้ตามนโยบายและทดสอบการกู้", "cat": "Cloud Computing", "id": 147, "answer": 3}, {"q": "Object storage จัดเก็บข้อมูลแบบใด", "options": ["เฉพาะ sector ให้ OS เสมอ", "Object พร้อม identifier และ metadata", "เฉพาะค่า MAC", "เฉพาะ TCP connection"], "explain": "Object storage เข้าถึงผ่าน API หรือกลไกบริการที่กำหนด", "cat": "Cloud Computing", "id": 148, "answer": 1}, {"q": "ข้อใดทำให้ค่า cloud เพิ่มโดยไม่จำเป็น", "options": ["เปิดทรัพยากรทิ้งแม้ไม่มีงาน", "กำหนด budget alert", "ลบทรัพยากรที่ไม่ใช้ตามนโยบาย", "เลือกขนาดให้พอดีโหลด"], "explain": "ทรัพยากรที่คิดเงินอาจมีค่าใช้จ่ายแม้ไม่มีผู้ใช้แอป", "cat": "Cloud Computing", "id": 149, "answer": 0}, {"q": "SLA ด้าน availability หมายถึงอะไร", "options": ["รับรองไม่มี downtime ทุกกรณี", "สำเนา backup ทุกนาทีเสมอ", "รหัสผ่านของ server", "ข้อตกลงระดับบริการตามนิยามและเงื่อนไข"], "explain": "ต้องอ่านนิยาม วิธีวัด ข้อยกเว้น และการชดเชยในข้อตกลง", "cat": "Cloud Computing", "id": 150, "answer": 3}]}, {"name": "Wireless", "slides": [["Wi-Fi และบทบาทอุปกรณ์", ["IEEE 802.11 คือ WLAN; IEEE 802.3 คือ Ethernet", "AP เชื่อม client ไร้สายเข้าลิงก์เครือข่าย; ไม่จำเป็นต้องทำ routing/DHCP", "Wireless router บ้านมักรวม AP + switch + router + NAT + DHCP", "SSID คือชื่อเครือข่าย; BSSID ระบุ BSS โดยทั่วไปสัมพันธ์กับ MAC ของ AP radio"], "อย่าเหมาว่า AP ทุกตัวเป็น default gateway"], ["โหมดและการเข้าถึงสื่อ", ["Infrastructure: client ติดต่อผ่าน AP • Ad hoc: สื่อสารโดยไม่ใช้ AP ตามรูปแบบนั้น", "CSMA/CA ฟังช่องสัญญาณ สุ่ม backoff และใช้ ACK ตามชนิด frame", "Hidden node: client ได้ยิน AP แต่ไม่ได้ยินกันเอง", "RTS/CTS ช่วยลดผล hidden node ได้บางกรณี แต่มี overhead"], "Wi-Fi แบ่งเวลาใช้สื่อ ความเร็วโฆษณาไม่ใช่ throughput ที่รับประกัน"], ["ย่านและ Channel", ["2.4 GHz มักไปได้ไกล/ทะลุสิ่งกีดขวางได้ดีกว่าในเงื่อนไขเทียบกัน แต่แออัด", "5 GHz มีช่องให้จัดสรรมากกว่าในหลายบริบท; ระยะขึ้นกับกำลังส่ง วัสดุ และสภาพแวดล้อม", "2.4 GHz แบบ 20 MHz นิยมวางช่อง 1, 6, 11 เพื่อลดการทับซ้อน", "Channel ที่อนุญาตและกำลังส่งขึ้นกับประเทศ/ข้อกำหนดอุปกรณ์"], "เพิ่ม channel width อาจเพิ่มอัตราส่งสูงสุด แต่กินสเปกตรัมและเพิ่มโอกาสรบกวน"], ["Security ที่ต้องแยก", ["WEP และ WPA/TKIP เป็นแบบเก่าที่ควรหลีกเลี่ยง; WPA2-AES/CCMP หรือ WPA3 ตามการรองรับ", "Personal ใช้รหัสร่วม; Enterprise มักใช้ 802.1X/EAP กับระบบยืนยันตัวตน", "ซ่อน SSID หรือ MAC filtering ไม่ใช่การเข้ารหัสและไม่แทน security ที่เหมาะสม", "เปลี่ยนรหัสผู้ดูแล และอย่าสับสน admin password กับรหัสเข้า Wi-Fi"], "การเชื่อม SSID สำเร็จยังไม่รับประกันว่าได้ IP และออก Internet ได้"], ["Signal และ Throughput", ["RSSI แบบ dBm: −50 dBm แรงกว่า −80 dBm", "SNR = signal เทียบ noise; SNR สูงมักช่วยรองรับ modulation ที่สูงขึ้น", "ระยะ กำแพง การรบกวน จำนวน client และ airtime กระทบ throughput", "Roaming คือย้ายการเชื่อมต่อระหว่าง AP; ต้องมีการออกแบบ coverage/บริการรองรับ"], "สัญญาณแรงอาจยังช้า หากช่องแออัดหรือ backhaul เป็นคอขวด"], ["ลำดับตรวจ Wi-Fi", ["ตรวจ radio/NIC → SSID → security/key → association", "ตรวจ DHCP/IP/mask/gateway/DNS → ping gateway → ทดสอบบริการ", "IPv4 169.254.x.x มักเป็น link-local เมื่อไม่ได้ lease ในระบบที่รองรับ", "ตรวจฝั่ง WAN และ NAT ของ wireless router เมื่อ LAN ได้แต่ Internet ไม่ได้"], "แยกปัญหาการเชื่อมไร้สาย ออกจากปัญหา IP/DNS/WAN"]], "questions": [{"q": "Wi-Fi WLAN ใช้มาตรฐานตระกูลใด", "options": ["IEEE 802.11", "IEEE 802.3", "IEEE 802.1Q เท่านั้น", "RS-232"], "explain": "802.11 เป็นตระกูลมาตรฐาน WLAN", "cat": "Wireless", "id": 151, "answer": 0}, {"q": "SSID คืออะไร", "options": ["รหัสผ่าน admin เสมอ", "ชื่อเครือข่ายไร้สาย", "IP ของ DNS", "Subnet mask"], "explain": "SSID ใช้ระบุชื่อ WLAN ที่ client เลือกเชื่อม", "cat": "Wireless", "id": 152, "answer": 1}, {"q": "AP มีหน้าที่หลักใด", "options": ["เชื่อม client ไร้สายเข้าระบบลิงก์", "เป็น router เสมอ", "เป็น DNS root เสมอ", "จ่าย public IP เสมอ"], "explain": "AP ไม่จำเป็นต้องมี NAT routing หรือ DHCP", "cat": "Wireless", "id": 153, "answer": 0}, {"q": "Wireless router สำหรับบ้านมักรวมอะไร", "options": ["เฉพาะ repeater อย่างเดียว", "AP switch router NAT และ DHCP", "เฉพาะ mail server", "เฉพาะสาย console"], "explain": "กล่องเดียวรวมหลายหน้าที่ แต่ยังต้องแยกแนวคิด", "cat": "Wireless", "id": 154, "answer": 1}, {"q": "Infrastructure mode ใช้อะไรเป็นศูนย์กลางการเข้าถึง", "options": ["DNS record", "สาย console", "FTP control", "Access point"], "explain": "Client เชื่อมผ่าน AP", "cat": "Wireless", "id": 155, "answer": 3}, {"q": "Ad hoc mode ตามแนวคิด WLAN คืออะไร", "options": ["ต้องผ่าน public cloud เสมอ", "ใช้สาย LAN เท่านั้น", "อุปกรณ์สื่อสารกันโดยไม่ผ่าน AP ในโหมดนั้น", "ใช้แต่ router ชั้น 3"], "explain": "ต่างจาก infrastructure ที่มี AP", "cat": "Wireless", "id": 156, "answer": 2}, {"q": "CSMA/CA มุ่งทำอะไร", "options": ["ตรวจ collision ระหว่างส่งเหมือนสายร่วมได้เสมอ", "แปลง DNS", "ลดโอกาสชนก่อนส่ง", "จัดสรร public IP"], "explain": "ใช้ฟังสื่อและ backoff รวมกลไกที่เกี่ยวข้อง", "cat": "Wireless", "id": 157, "answer": 2}, {"q": "Hidden node เกิดจากอะไร", "options": ["ปิดชื่อ SSID เท่านั้น", "Client ได้ยิน AP แต่ไม่ได้ยินกันเอง", "DNS ไม่มี AAAA", "สาย fiber สั้นเกินไป"], "explain": "Client อาจส่งชนกันที่ AP แม้ฟังแล้วคิดว่าช่องว่าง", "cat": "Wireless", "id": 158, "answer": 1}, {"q": "RTS/CTS ช่วยลดปัญหาใดบางกรณี", "options": ["IP ซ้ำทุกชนิด", "Hidden node", "DNS poisoning ทุกกรณี", "สาย LAN ขาด"], "explain": "การจองสื่อช่วยให้สถานีอื่นทราบช่วงใช้งาน แต่มี overhead", "cat": "Wireless", "id": 159, "answer": 1}, {"q": "ชุด channel 2.4 GHz ที่นิยมสำหรับ 20 MHz คืออะไร", "options": ["1 2 3", "3 4 5", "1 6 11", "8 9 10"], "explain": "ชุด 1 6 11 ลดการทับซ้อนตามการจัดช่องทั่วไป", "cat": "Wireless", "id": 160, "answer": 2}, {"q": "ข้อใดอธิบาย 2.4 GHz เทียบ 5 GHz ได้เหมาะสม", "options": ["เร็วกว่าเสมอทุกสถานการณ์", "มักครอบคลุมและผ่านสิ่งกีดขวางได้ดีกว่าเมื่อเงื่อนไขเทียบกัน", "ไม่มีการรบกวน", "ใช้ได้ช่องเดียวทั่วโลก"], "explain": "การแพร่คลื่นยังขึ้นกับกำลังส่ง เสาอากาศและสิ่งแวดล้อม", "cat": "Wireless", "id": 161, "answer": 1}, {"q": "การเพิ่ม channel width มีผลแลกเปลี่ยนใด", "options": ["ลดการใช้สเปกตรัมเสมอ", "อาจเพิ่มอัตราส่งแต่ใช้สเปกตรัมมากขึ้น", "ทำให้ไม่มี noise", "รับประกันระยะเพิ่มสองเท่า"], "explain": "ช่องกว้างใช้ความถี่มากขึ้นและอาจรับการรบกวนมากขึ้น", "cat": "Wireless", "id": 162, "answer": 1}, {"q": "มาตรฐานความปลอดภัยใดเก่าและไม่ควรเลือก", "options": ["WPA3", "WPA2-AES", "WEP", "802.1X ร่วม EAP ที่เหมาะสม"], "explain": "WEP มีจุดอ่อนทางการเข้ารหัสที่ทราบกัน", "cat": "Wireless", "id": 163, "answer": 2}, {"q": "WPA2 แบบ AES ใช้กลไกข้อมูลใดโดยทั่วไป", "options": ["CCMP", "WEP เท่านั้น", "Telnet", "FTP"], "explain": "AES-CCMP เป็นวิธีที่ใช้กับ WPA2 ตามบริบทนี้", "cat": "Wireless", "id": 164, "answer": 0}, {"q": "Enterprise Wi-Fi มักใช้กลไกใด", "options": ["HTTP 404", "ARP เพียงอย่างเดียว", "NAT เพียงอย่างเดียว", "802.1X/EAP"], "explain": "Enterprise ใช้การยืนยันตัวตนรายผู้ใช้หรืออุปกรณ์ตามระบบ", "cat": "Wireless", "id": 165, "answer": 3}, {"q": "การซ่อน SSID เพียงอย่างเดียวปลอดภัยเพียงพอหรือไม่", "options": ["พอและแทน WPA ได้", "ป้องกันดักฟังได้ทั้งหมด", "ทำให้ไม่ต้องมีรหัส admin", "ไม่พอ และไม่ใช่การเข้ารหัส"], "explain": "ชื่อเครือข่ายยังอาจค้นพบได้จาก traffic", "cat": "Wireless", "id": 166, "answer": 3}, {"q": "MAC filtering มีข้อจำกัดสำคัญใด", "options": ["เพิ่มความลับเทียบเท่า TLS เสมอ", "ทำให้ไม่ต้องใช้ WPA", "ป้องกันการโจมตีทุกแบบ", "MAC อาจถูกปลอมและไม่เข้ารหัสข้อมูล"], "explain": "ใช้เป็นส่วนประกอบได้แต่ไม่แทนการยืนยันตัวตนและเข้ารหัส", "cat": "Wireless", "id": 167, "answer": 3}, {"q": "ค่า RSSI ใดแรงกว่าเมื่อวัดแบบเดียวกัน", "options": ["-80 dBm", "-90 dBm", "-50 dBm", "-100 dBm"], "explain": "ค่าที่ติดลบน้อยกว่าหมายถึงกำลังรับสูงกว่า", "cat": "Wireless", "id": 168, "answer": 2}, {"q": "SNR สูงโดยทั่วไปสื่อถึงอะไร", "options": ["Noise สูงกว่าสัญญาณเสมอ", "สัญญาณเด่นกว่า noise มากขึ้น", "DNS ตอบเร็วแน่นอน", "ไม่มี client อื่น"], "explain": "SNR คืออัตราส่วนสัญญาณต่อสัญญาณรบกวน", "cat": "Wireless", "id": 169, "answer": 1}, {"q": "PHY rate ของ Wi-Fi เท่ากับ throughput แอปเสมอหรือไม่", "options": ["ไม่เท่า เพราะมี overhead และการแบ่ง airtime", "เท่าเสมอ", "มากกว่าได้ไม่จำกัดเสมอ", "ไม่เกี่ยวกับสื่อเลย"], "explain": "ACK การรอส่ง การส่งซ้ำ และ protocol ลดอัตราข้อมูลแอป", "cat": "Wireless", "id": 170, "answer": 0}, {"q": "Roaming หมายถึงอะไร", "options": ["ย้ายการเชื่อมต่อระหว่าง AP", "เปลี่ยนสายเป็น fiber", "แปลง HTTP เป็น DNS", "เพิ่ม VLAN ทุก packet"], "explain": "การเคลื่อนที่และการออกแบบเครือข่ายกำหนดความต่อเนื่องของบริการ", "cat": "Wireless", "id": 171, "answer": 0}, {"q": "เชื่อม SSID ได้แต่มี 169.254.x.x ควรตรวจอะไร", "options": ["ขนาดหน้าจอ", "ลำดับ OSI ชั้น 7 อย่างเดียว", "ชื่อไฟล์รูป", "DHCP และการตั้งค่า IP"], "explain": "ที่อยู่ link-local มักชี้ว่าไม่ได้ DHCP lease ในระบบที่รองรับ", "cat": "Wireless", "id": 172, "answer": 3}, {"q": "พิมพ์รหัส Wi-Fi ถูกแล้วออก Internet ไม่ได้ ข้อใดถูกต้อง", "options": ["ยังต้องตรวจ IP gateway DNS และ WAN", "Internet ต้องใช้ได้แน่นอน", "AP เสียแน่นอน", "ต้องเปลี่ยน MAC ทันที"], "explain": "การยืนยันตัวตนสำเร็จไม่ยืนยันบริการชั้นบน", "cat": "Wireless", "id": 173, "answer": 0}, {"q": "BSSID โดยทั่วไปใช้ระบุอะไร", "options": ["BSS โดยสัมพันธ์กับ MAC ของ AP radio", "รหัสผ่าน cloud", "Subnet mask", "HTTP method"], "explain": "SSID เป็นชื่อ ส่วน BSSID ระบุชุดบริการพื้นฐาน", "cat": "Wireless", "id": 174, "answer": 0}, {"q": "ข้อใดช่วยลดปัญหา Wi-Fi ช้าในห้องที่ AP หลายตัวใช้ช่องทับซ้อน", "options": ["เพิ่มกำลังส่งทุกตัวสูงสุดเสมอ", "ซ่อน SSID อย่างเดียว", "เปลี่ยน DNS อย่างเดียวเสมอ", "วาง channel และ airtime ใหม่ตามการสำรวจ"], "explain": "ต้องจัดช่องและ coverage จากการสำรวจ ไม่เพิ่มกำลังส่งโดยไม่มีข้อมูล", "cat": "Wireless", "id": 175, "answer": 3}]}, {"name": "Cisco และ Packet Tracer", "slides": [["โหมดคำสั่ง IOS", ["Router> คือ user EXEC; enable → Router# privileged EXEC", "configure terminal → Router(config)# global configuration", "interface g0/0 → Router(config-if)#; ชื่อ interface ขึ้นกับรุ่น", "exit กลับหนึ่งระดับ; end หรือ Ctrl+Z กลับ privileged EXEC"], "คำสั่งต้องใช้ในโหมดที่ถูกต้อง ไม่ใช่ใส่ทุกคำสั่งที่ prompt เดียว"], ["ตั้งค่า Interface: ตัวอย่าง", ["enable → configure terminal → interface g0/0", "ip address 192.168.10.1 255.255.255.0", "no shutdown → end", "show ip interface brief ตรวจ IP และสถานะ interface"], "นี่เป็นตัวอย่าง IOS; เลือก interface และ IP ให้ตรง topology จริง"], ["อ่านคำสั่งตรวจสอบ", ["show ip interface brief: สรุป IP และ up/down", "show ip route: routing table; C=connected, L=local, S=static, O=OSPF, R=RIP ตาม IOS", "show running-config: config ปัจจุบัน • show startup-config: config สำหรับเริ่มระบบ", "show mac address-table: MAC table ของ switch"], "administratively down มักต้องตรวจ shutdown/no shutdown"], ["Static Route และการบันทึก", ["ตัวอย่าง: ip route 192.168.20.0 255.255.255.0 10.0.0.2", "Default route: ip route 0.0.0.0 0.0.0.0 10.0.0.2", "Next-hop ต้องเข้าถึงได้ และปลายทางต้องมี route กลับด้วย", "copy running-config startup-config เก็บ config เพื่อใช้หลัง reboot"], "ping ไปได้ต้องมีเส้นทางตอบกลับและไม่มีนโยบายที่บล็อก"], ["การทดสอบใน Packet Tracer", ["Realtime ดูการทำงานทั่วไป; Simulation ดูเหตุการณ์ protocol ทีละขั้น", "เริ่มจาก ping gateway แล้วจึง ping ข้าม subnet และทดสอบบริการ", "ตรวจ link, IP/mask, gateway, route ไป-กลับ, ACL และบริการตามลำดับ", "Check Results เทียบ rubric ของกิจกรรม แต่ไม่แทนการเข้าใจเหตุการณ์"], "ไม่ใช่เฉลยไฟล์ PKA ที่ยังไม่ได้ตรวจ topology จริง"], ["อ่านผังแบบลงมือทำ", ["เขียนตาราง Device / Interface / IP / Mask / Gateway ก่อนตั้งค่า", "แยกแต่ละ LAN/VLAN และวงเชื่อม router เป็นคนละ subnet", "ตรวจว่าสายต่อ interface ถูกและ interface เปิดใช้งาน", "เมื่อทดสอบล้มเหลว ใช้หลักฐานชี้ว่าหยุดที่ hop หรือชั้นใด"], "ลองวาด 2 LAN ผ่าน 2 router แล้วใส่ static route ทั้งขาไปและขากลับ"]], "questions": [{"q": "Prompt Router> แสดงโหมดใดโดยทั่วไป", "options": ["User EXEC", "Global configuration", "Interface configuration", "ROMMON เสมอ"], "explain": "เครื่องหมาย > เป็น user EXEC ใน IOS ตามปกติ", "cat": "Cisco และ Packet Tracer", "id": 176, "answer": 0}, {"q": "คำสั่งใดเข้า privileged EXEC จาก user EXEC", "options": ["configure terminal", "no shutdown", "ip route", "enable"], "explain": "enable เปลี่ยนจาก > เป็น # เมื่อผ่านเงื่อนไขการยืนยันตัวตน", "cat": "Cisco และ Packet Tracer", "id": 177, "answer": 3}, {"q": "Prompt Router# โดยทั่วไปเป็นโหมดใด", "options": ["Interface configuration", "Line configuration", "Privileged EXEC", "DHCP pool configuration"], "explain": "Privileged EXEC ใช้คำสั่งตรวจสอบและเข้าตั้งค่าได้", "cat": "Cisco และ Packet Tracer", "id": 178, "answer": 2}, {"q": "คำสั่งใดเข้า global configuration จาก privileged EXEC", "options": ["configure terminal", "show ip route", "ping", "copy startup-config running-config"], "explain": "configure terminal เข้าสู่โหมด (config)#", "cat": "Cisco และ Packet Tracer", "id": 179, "answer": 0}, {"q": "คำสั่ง interface g0/0 ใช้ทำอะไร", "options": ["เปิด DNS", "เข้าโหมดตั้งค่า interface นั้น", "บันทึก config", "ลบ route ทุกเส้น"], "explain": "ชื่อ interface จริงขึ้นกับรุ่นอุปกรณ์", "cat": "Cisco และ Packet Tracer", "id": 180, "answer": 1}, {"q": "คำสั่ง ip address 192.168.1.1 255.255.255.0 ใน interface mode ทำอะไร", "options": ["กำหนด DNS A record", "กำหนด IPv4 และ mask", "สร้าง VLAN tag ทุกพอร์ต", "กำหนด SSID"], "explain": "ตั้งที่อยู่บน interface ที่กำลังเลือก", "cat": "Cisco และ Packet Tracer", "id": 181, "answer": 1}, {"q": "คำสั่งใดเปิด interface ที่ถูก shutdown", "options": ["shutdown", "disable dns", "erase startup-config", "no shutdown"], "explain": "no shutdown ยกเลิกการปิด interface ทางการตั้งค่า", "cat": "Cisco และ Packet Tracer", "id": 182, "answer": 3}, {"q": "สถานะ administratively down มักหมายถึงอะไร", "options": ["Interface ถูกปิดด้วยการตั้งค่า", "DNS server ล่มแน่นอน", "สายขาดแน่นอน", "OSPF เลือกเส้นผิดเสมอ"], "explain": "ตรวจ shutdown และการเปิดใช้งาน interface", "cat": "Cisco และ Packet Tracer", "id": 183, "answer": 0}, {"q": "คำสั่งใดสรุป IP และสถานะ interface", "options": ["show ip interface brief", "show clock", "show users", "show version เท่านั้น"], "explain": "แสดงรายการ interface IP และ status/protocol", "cat": "Cisco และ Packet Tracer", "id": 184, "answer": 0}, {"q": "คำสั่งใดดู routing table", "options": ["show mac address-table", "show vlan brief", "show clock", "show ip route"], "explain": "routing table แสดง prefix next hop และแหล่ง route", "cat": "Cisco และ Packet Tracer", "id": 185, "answer": 3}, {"q": "รหัส C ใน show ip route บน IOS โดยทั่วไปหมายถึงอะไร", "options": ["Connected", "Cloud", "CRC failed", "Console password"], "explain": "C เป็นเครือข่ายที่เชื่อมตรงและติดตั้งตามสถานะ interface", "cat": "Cisco และ Packet Tracer", "id": 186, "answer": 0}, {"q": "รหัส O ใน show ip route โดยทั่วไปมาจากอะไร", "options": ["HTTP", "OSPF", "DHCP", "ARP"], "explain": "O แสดง route จาก OSPF", "cat": "Cisco และ Packet Tracer", "id": 187, "answer": 1}, {"q": "คำสั่งใดดูการตั้งค่าที่ใช้อยู่ปัจจุบัน", "options": ["show startup-config", "show running-config", "show clock", "show arp เท่านั้น"], "explain": "running-config คือ configuration ที่กำลังใช้งาน", "cat": "Cisco และ Packet Tracer", "id": 188, "answer": 1}, {"q": "คำสั่งใดดู configuration ที่ใช้ตอนเริ่มระบบ", "options": ["show running-config", "show interfaces เท่านั้น", "show mac address-table", "show startup-config"], "explain": "startup-config เป็นข้อมูลที่เก็บไว้สำหรับเริ่มระบบ", "cat": "Cisco และ Packet Tracer", "id": 189, "answer": 3}, {"q": "คำสั่งใดบันทึก config ปัจจุบันเพื่อใช้หลัง reboot", "options": ["copy running-config startup-config", "copy startup-config running-config", "show running-config", "reload โดยไม่บันทึก"], "explain": "คัดลอก configuration ปัจจุบันไปยัง startup configuration", "cat": "Cisco และ Packet Tracer", "id": 190, "answer": 0}, {"q": "คำสั่งใดตั้ง default route ผ่าน 10.0.0.2", "options": ["ip route 255.255.255.255 255.255.255.255 10.0.0.2", "ip address 0.0.0.0 10.0.0.2", "ip route 0.0.0.0 0.0.0.0 10.0.0.2", "show ip route 10.0.0.2"], "explain": "ปลายทางและ mask เป็นศูนย์ระบุ default route", "cat": "Cisco และ Packet Tracer", "id": 191, "answer": 2}, {"q": "ip route 192.168.20.0 255.255.255.0 10.0.0.2 ระบุ next hop ใด", "options": ["10.0.0.2", "192.168.20.0", "255.255.255.0", "0.0.0.0"], "explain": "อาร์กิวเมนต์สุดท้ายในตัวอย่างนี้คือ next-hop IP", "cat": "Cisco และ Packet Tracer", "id": 192, "answer": 0}, {"q": "คำสั่ง exit ในโหมดตั้งค่าทั่วไปทำอะไร", "options": ["บันทึก config เสมอ", "กลับหนึ่งระดับ", "ลบ interface", "reboot ทันที"], "explain": "exit ออกจากโหมดย่อยกลับสู่โหมดก่อนหน้า", "cat": "Cisco และ Packet Tracer", "id": 193, "answer": 1}, {"q": "คำสั่ง end จาก configuration mode ทำอะไร", "options": ["ปิด router", "ลบ startup-config", "กลับ privileged EXEC", "เข้า interface แรก"], "explain": "end กลับ prompt # โดยไม่ต้อง exit ทีละระดับ", "cat": "Cisco และ Packet Tracer", "id": 194, "answer": 2}, {"q": "คำสั่งใดดู MAC table ของ switch IOS ตามปกติ", "options": ["show ip route", "show clock", "show mac address-table", "show startup-config เท่านั้น"], "explain": "แสดง MAC ที่เรียนรู้และพอร์ตใน VLAN ที่เกี่ยวข้อง", "cat": "Cisco และ Packet Tracer", "id": 195, "answer": 2}, {"q": "Ping ข้าม router ต้องมีเงื่อนไขใดนอกเหนือจากเส้นทางขาไป", "options": ["ต้องใช้ VLAN 1 ทุกวง", "ต้องเป็นสาย crossover ทุกเส้น", "มีเส้นทางขากลับและไม่มีนโยบายบล็อก", "ต้องใช้ public IP ทุกเครื่อง"], "explain": "ICMP echo reply ต้องกลับถึงต้นทางด้วย", "cat": "Cisco และ Packet Tracer", "id": 196, "answer": 2}, {"q": "Packet Tracer Simulation mode ช่วยเรื่องใด", "options": ["รับรอง network จริงเหมือนทุกประการ", "ดูเหตุการณ์ protocol และ packet ทีละขั้น", "แก้ config ให้ถูกอัตโนมัติทุกครั้ง", "ยกเลิก subnet mask"], "explain": "ใช้สังเกตการแลกเปลี่ยน protocol ในแบบจำลอง", "cat": "Cisco และ Packet Tracer", "id": 197, "answer": 1}, {"q": "PC ping gateway ไม่ผ่าน ควรตรวจอะไรก่อนเหมาะสมที่สุด", "options": ["Link IP mask gateway และ interface ฝั่ง LAN", "เปลี่ยน cloud provider", "ลบทุก route ทันที", "ตั้ง HTTP cookie"], "explain": "เริ่มตรวจชั้นใกล้ตัวก่อนวิเคราะห์เส้นทางไกล", "cat": "Cisco และ Packet Tracer", "id": 198, "answer": 0}, {"q": "IP interface เป็น up แต่ line protocol down ควรทำอย่างไร", "options": ["ตรวจลิงก์และการตั้งค่าชั้นล่างตามชนิด interface", "สรุปว่า DNS ผิดทันที", "สรุปว่าเว็บถูกบล็อกทันที", "เปลี่ยน SSID เสมอ"], "explain": "สถานะ physical กับ line protocol ช่วยแยกปัญหา แต่ต้องดูชนิดลิงก์", "cat": "Cisco และ Packet Tracer", "id": 199, "answer": 0}, {"q": "เหตุใดควรทำตาราง IP ก่อนตั้ง topology", "options": ["เพื่อไม่ต้องทดสอบ", "เพื่อไม่ต้องใช้ mask", "ทำให้ router เลือก OSPF เอง", "ลด IP ซ้ำและช่วยตรวจ subnet กับ gateway"], "explain": "แผน addressing ช่วยให้ตั้งค่าและไล่ปัญหาอย่างเป็นระบบ", "cat": "Cisco และ Packet Tracer", "id": 200, "answer": 3}]}], "sources": [["เอกสารไทยในโฟลเดอร์: OSI, TCP/IP, Application, Link, Subnet และ Packet Tracer", "../index.html"], ["NIST SP 800-145: The NIST Definition of Cloud Computing", "https://csrc.nist.gov/pubs/sp/800/145/final"], ["Cisco: Understand Administrative Distance", "https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/15986-admin-distance.html"], ["Cisco: LAN cabling and connector guide", "https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6000-series-switches/21268-132.html"], ["Cisco: 10GBASE-T cabling guidance", "https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/at-a-glance-c45-743937.html"], ["Cisco: Wireless LAN Configuration Guide — WPA2/AES-CCMP", "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/wlan/configuration/15-mt/wl-15-mt-book.pdf"], ["Cisco: Configure Route Selection for Routers", "https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8651-21.html"]]}</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('dataset').textContent), S=DATA.sections, Q=S.flatMap(s=>s.questions), letters=['ก','ข','ค','ง'];
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const SL=S.flatMap((s,cat)=>s.slides.map((v,j)=>({cat,j,title:v[0],bullets:v[1],key:v[2]})));
+let active='home',si=0,answers={},checked=new Set(),mock=[],ma={},submitted=false,start=0,finish=0;
+try{const saved=JSON.parse(localStorage.getItem('351-exam-answers-v1')||'{}');if(saved&&typeof saved==='object')for(const q of Q)if(Number.isInteger(saved[q.id])&&saved[q.id]>=0&&saved[q.id]<4)answers[q.id]=saved[q.id]}catch(e){}
+function save(){try{localStorage.setItem('351-exam-answers-v1',JSON.stringify(answers))}catch(e){}}
+function tab(id){active=id;document.querySelectorAll('.panel').forEach(el=>el.hidden=el.id!==id);document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===id)));window.scrollTo(0,0)}
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>tab(b.dataset.tab));
+function options(el,all){el.innerHTML=(all?'<option value="-1">ทุกหมวด</option>':'')+S.map((s,i)=>`<option value="${i}">${esc(s.name)}</option>`).join('')}
+options($('#slideCat'),false);['allCat','quizCat'].forEach(id=>options($('#'+id),true));
+$('#chapters').innerHTML=S.map((s,i)=>`<button class="cardlink" data-chapter="${i}"><span class="tag">บท ${String(i+1).padStart(2,'0')} / 6 สไลด์</span><strong>${esc(s.name)}</strong><span class="muted">ข้อ ${i*25+1}–${i*25+25} • 25 ข้อ</span></button>`).join('');
+$('#chapters').onclick=e=>{const b=e.target.closest('[data-chapter]');if(b){si=+b.dataset.chapter*6;renderSlide();tab('slides')}};
+$('#sources').innerHTML=DATA.sources.map(s=>`<li><a href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])}</a></li>`).join('');
+function topology(s){if(s.title!=='อ่านผังเครือข่าย')return '';return `<svg viewBox="0 0 760 125" role="img" aria-label="ตัวอย่างสอง LAN ผ่าน router สองตัว แต่ละช่วงใช้ subnet แยกกัน" style="width:100%;max-height:125px"><g stroke="#577699" stroke-width="3"><path d="M110 45H270M330 45H490M550 45H690"/></g><g fill="#e8f0fb" stroke="#1746a2" stroke-width="2"><rect x="20" y="20" width="110" height="50" rx="9"/><rect x="260" y="20" width="80" height="50" rx="9"/><rect x="480" y="20" width="80" height="50" rx="9"/><rect x="650" y="20" width="100" height="50" rx="9"/></g><g font-family="Tahoma,sans-serif" font-size="16" text-anchor="middle" fill="#15243b"><text x="75" y="52">LAN A</text><text x="300" y="52">R1</text><text x="520" y="52">R2</text><text x="700" y="52">LAN B</text><text x="160" y="100">192.168.1.0/24</text><text x="410" y="100">10.0.0.0/30</text><text x="650" y="100">192.168.2.0/24</text></g></svg>`}
+function bullets(s){return topology(s)+`<ul>${s.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ul>`}
+function renderSlide(){const s=SL[si];$('#slideCat').value=s.cat;$('#slideNum').textContent=`หน้า ${si+1} / ${SL.length}`;$('#prev').disabled=si===0;$('#next').disabled=si===SL.length-1;$('#slideHost').innerHTML=`<article class="slide"><div class="slidehead">${esc(S[s.cat].name)} • ${s.j+1}/6</div><div class="slidebody"><h2>${esc(s.title)}</h2>${si===0?'<div class="diagram"><span>Application</span><span>↓ Transport</span><span>↓ Network</span><span>↓ Link</span><span>↓ Physical</span></div>':''}${bullets(s)}<p class="takeaway"><strong>จำก่อนสอบ:</strong> ${esc(s.key)}</p></div><div class="progress"><span style="width:${(si+1)/SL.length*100}%"></span></div></article>`}
+$('#prev').onclick=()=>{if(si>0){si--;renderSlide()}};$('#next').onclick=()=>{if(si<SL.length-1){si++;renderSlide()}};$('#slideCat').onchange=()=>{si=+$('#slideCat').value*6;renderSlide()};
+document.addEventListener('keydown',e=>{if(active!=='slides'||/INPUT|SELECT|TEXTAREA|BUTTON/.test(e.target.tagName))return;if(e.key==='ArrowRight'){$('#next').click();e.preventDefault()}if(e.key==='ArrowLeft'){$('#prev').click();e.preventDefault()}});
+$('#fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('#slides').requestFullscreen()}catch(e){$('#fullscreen').textContent='ใช้เมนูเต็มจอของเบราว์เซอร์'}};
+function renderAll(){let cat=+$('#allCat').value;$('#allHost').innerHTML=SL.map((s,i)=>({s,i})).filter(x=>cat<0||x.s.cat===cat).map(({s,i})=>`<article class="chaptercard allslide"><span class="tag">${esc(S[s.cat].name)} • หน้า ${i+1}/48</span><h2>${esc(s.title)}</h2>${bullets(s)}<p class="takeaway"><strong>จำก่อนสอบ:</strong> ${esc(s.key)}</p></article>`).join('')}
+$('#allCat').onchange=renderAll;$('#printSlides').onclick=()=>window.print();$('#startSlides').onclick=()=>{si=0;renderSlide();tab('slides')};$('#startQuiz').onclick=()=>tab('quiz');
+function selectedQuestions(){let cat=+$('#quizCat').value,term=$('#search').value.trim().toLocaleLowerCase();return Q.filter(q=>(cat<0||q.cat===S[cat].name)&&(!term||(q.q+' '+q.options.join(' ')+' '+q.cat).toLocaleLowerCase().includes(term)))}
+function question(q,mode,n){let state=mode==='quiz'?answers:ma,reveal=mode==='quiz'?checked.has(q.id):submitted,chosen=state[q.id];return `<article class="question" id="${mode}-q${q.id}"><span class="tag">${mode==='mock'?'ลำดับ '+n+' • ':''}ข้อ ${q.id} / ${esc(q.cat)}</span><h3 class="qtitle">${esc(q.q)}</h3><div class="opts" role="radiogroup" aria-label="ข้อ ${q.id}">${q.options.map((o,k)=>`<label class="opt ${reveal&&k===q.answer?'correct':''} ${reveal&&chosen===k&&k!==q.answer?'wrong':''}"><input type="radio" name="${mode}-${q.id}" value="${k}" data-id="${q.id}" data-mode="${mode}" ${chosen===k?'checked':''} ${mode==='mock'&&submitted?'disabled':''}><span><strong>${letters[k]}.</strong> ${esc(o)}${reveal&&k===q.answer?' ✓ คำตอบถูก':''}${reveal&&chosen===k&&k!==q.answer?' ✕ ที่เลือก':''}</span></label>`).join('')}</div>${mode==='quiz'?`<div class="qactions noprint"><button data-check="${q.id}">ตรวจข้อนี้ / ดูเฉลย</button></div>`:''}<div class="explain" ${reveal?'':'hidden'}><strong>${chosen===undefined?'ยังไม่ได้ตอบ':chosen===q.answer?'ตอบถูก':'ตอบผิด'} • เฉลย ${letters[q.answer]}</strong><br>${esc(q.explain)}</div></article>`}
+function renderQuiz(){let rows=selectedQuestions();$('#quizHost').innerHTML=rows.length?rows.map(q=>question(q,'quiz')).join(''):'<p>ไม่พบข้อที่ตรงกับการค้นหา</p>';$('#quizCount').textContent=`แสดง ${rows.length} / 200 ข้อ`;$('#quizKeys').innerHTML='<h2>เฉลยพร้อมเหตุผล</h2>'+rows.map(q=>`<p><strong>${q.id}. ${letters[q.answer]}</strong> — ${esc(q.explain)}</p>`).join('');$('#quizScore').innerHTML=''}
+function score(rows,state){let done=rows.filter(q=>state[q.id]!==undefined).length,correct=rows.filter(q=>state[q.id]===q.answer).length;return `<div class="stat">${correct} / ${rows.length} คะแนน (${rows.length?Math.round(correct/rows.length*100):0}%)</div><p>ตอบแล้ว ${done} ข้อ • ถูก ${correct} • ผิด ${done-correct} • ยังไม่ตอบ ${rows.length-done}</p>`}
+$('#quizCat').onchange=renderQuiz;$('#search').oninput=renderQuiz;
+$('#quizHost').onclick=e=>{const b=e.target.closest('[data-check]');if(!b)return;let id=+b.dataset.check;checked.add(id);const el=$('#quiz-q'+id);el.outerHTML=question(Q[id-1],'quiz');$('#quizScore').innerHTML=''};
+document.addEventListener('change',e=>{const t=e.target;if(!t.matches('input[data-mode]'))return;let id=+t.dataset.id;if(t.dataset.mode==='quiz'){answers[id]=+t.value;checked.delete(id);save();const y=window.scrollY;$('#quiz-q'+id).outerHTML=question(Q[id-1],'quiz');$('#quizScore').innerHTML='';window.scrollTo(0,y)}else{ma[id]=+t.value;updateTimer()}});
+$('#checkQuiz').onclick=()=>{const rows=selectedQuestions();rows.forEach(q=>checked.add(q.id));renderQuiz();$('#quizScore').innerHTML=score(rows,answers);$('#quizScore').scrollIntoView({block:'center',behavior:'smooth'})};
+$('#resetQuiz').onclick=()=>{answers={};checked.clear();save();renderQuiz()};
+function printMode(){document.body.classList.toggle('print-hide-explain',!$('#printKeys').checked);$('#quizKeys').style.display=$('#printKeys').checked?'':'none'}
+$('#printQuiz').onclick=()=>{printMode();window.print()};window.addEventListener('beforeprint',printMode);
+function shuffled(a){const b=[...a];for(let i=b.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b}
+$('#newMock').onclick=()=>{const counts=[10,20,15,10,10,20,20,15];mock=shuffled(S.flatMap((s,i)=>shuffled(s.questions).slice(0,counts[i])));ma={};submitted=false;start=Date.now();finish=0;$('#mockScore').innerHTML='';$('#mockHost').innerHTML=mock.map((q,i)=>question(q,'mock',i+1)).join('');$('#submitMock').disabled=false;$('#submitMock').textContent='ส่งตรวจชุดจำลอง';updateTimer()};
+$('#submitMock').onclick=()=>{if(!mock.length||submitted)return;submitted=true;finish=Date.now();$('#mockHost').innerHTML=mock.map((q,i)=>question(q,'mock',i+1)).join('');$('#mockScore').innerHTML=score(mock,ma)+'<table><thead><tr><th>หมวด</th><th>ถูก / ทั้งหมด</th></tr></thead><tbody>'+S.map(s=>{let rows=mock.filter(q=>q.cat===s.name);return `<tr><td>${esc(s.name)}</td><td>${rows.filter(q=>ma[q.id]===q.answer).length} / ${rows.length}</td></tr>`}).join('')+'</tbody></table><p>อ่านเหตุผลข้อผิด แล้วกลับไปทวนสไลด์ของหมวดที่คะแนนต่ำก่อนเริ่มรอบใหม่</p>';$('#submitMock').disabled=true;$('#submitMock').textContent='ตรวจแล้ว';updateTimer();$('#mockScore').scrollIntoView({block:'start',behavior:'smooth'})};
+function updateTimer(){if(!start)return;let sec=Math.floor(((finish||Date.now())-start)/1000);$('#timer').textContent=`เวลาที่ใช้ ${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}`;$('#mockDone').textContent=`ตอบแล้ว ${Object.keys(ma).length} / 120 ข้อ`}
+setInterval(updateTimer,1000);renderSlide();renderAll();renderQuiz();
+</script><script>
+(()=>{const root=document.getElementById('reading');if(!root)return;
+const query=root.querySelector('[data-read-search]'),select=root.querySelector('[data-read-select]'),articles=[...root.querySelectorAll('article[data-read-index]')],status=root.querySelector('[data-read-status]');
+function filter(){let n=0,term=query.value.trim().toLocaleLowerCase();articles.forEach(a=>{a.hidden=(select.value!=='all'&&a.dataset.readIndex!==select.value)||(term&&!a.textContent.toLocaleLowerCase().includes(term));if(!a.hidden)n++});status.textContent=`แสดง ${n} / ${articles.length} บท`;root.querySelector('[data-read-empty]').hidden=n>0}
+query.addEventListener('input',filter);select.addEventListener('change',filter);
+root.querySelector('[data-read-reset]').onclick=()=>{query.value='';select.value='all';filter()};
+root.querySelector('[data-read-print]').onclick=()=>window.print();let font=18;
+root.querySelector('[data-read-larger]').onclick=()=>{font=Math.min(26,font+1);root.style.setProperty('--reader-font',font+'px')};root.querySelector('[data-read-smaller]').onclick=()=>{font=Math.max(15,font-1);root.style.setProperty('--reader-font',font+'px')};
+root.querySelectorAll('[data-read-jump]').forEach(link=>link.addEventListener('click',()=>{query.value='';select.value='all';filter()}));filter();
+})();
+</script></body></html>

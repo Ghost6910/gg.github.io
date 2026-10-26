@@ -1,0 +1,3158 @@
+{
+  "sections": [
+    {
+      "name": "OSI และ Internet Stack",
+      "slides": [
+        [
+          "ภาพรวมเส้นทางข้อมูล",
+          [
+            "แอปสร้างข้อมูล → Transport → Network → Link → Physical",
+            "ฝั่งรับถอดส่วนหุ้มย้อนลำดับจนถึงแอป",
+            "จำด้วยการเปิดเว็บ: HTTP → TCP → IP → Ethernet/Wi-Fi → สื่อ"
+          ],
+          "แต่ละชั้นใช้บริการของชั้นล่าง และให้บริการชั้นบน"
+        ],
+        [
+          "OSI 7 ชั้น จำจากบนลงล่าง",
+          [
+            "7 Application: บริการให้แอป เช่น HTTP, DNS",
+            "6 Presentation: รูปแบบข้อมูล การเข้ารหัส การบีบอัด",
+            "5 Session: จัดการบทสนทนา • 4 Transport: สื่อสารระหว่าง process",
+            "3 Network: IP และ routing • 2 Data Link: frame/MAC • 1 Physical: bit/สัญญาณ"
+          ],
+          "ชื่อชั้นกับหน้าที่ต้องจับคู่ได้ ไม่ใช่จำลำดับอย่างเดียว"
+        ],
+        [
+          "TCP/IP เทียบกับ OSI",
+          [
+            "Internet stack แบบ 5 ชั้น: Application, Transport, Network, Link, Physical",
+            "TCP/IP แบบ 4 ชั้นรวม Link + Physical เป็น Network access",
+            "OSI ชั้น 5–7 มักรวมอยู่ใน Application ของ TCP/IP"
+          ],
+          "ข้อสอบถามจำนวนชั้น ต้องดูว่าใช้แบบจำลอง 4, 5 หรือ 7 ชั้น"
+        ],
+        [
+          "ชื่อข้อมูลและที่อยู่",
+          [
+            "TCP segment / UDP datagram → IP packet → Link frame → bits",
+            "Port ระบุบริการ/process • IP ระบุ interface ในเชิงเครือข่าย • MAC ใช้ส่งบนลิงก์",
+            "Switch Ethernet โดยทั่วไปทำงานชั้น 2 • Router ชั้น 3 • Repeater ชั้น 1"
+          ],
+          "อุปกรณ์จริงอาจทำหลายชั้น ให้ตอบตามหน้าที่ที่โจทย์ระบุ"
+        ],
+        [
+          "Delay และ Throughput",
+          [
+            "Transmission delay = L/R โดย L เป็นบิต และ R เป็นบิตต่อวินาที",
+            "Propagation delay = ระยะทาง/ความเร็วสัญญาณ",
+            "End-to-end delay รวม processing + queueing + transmission + propagation",
+            "Throughput ถูกจำกัดด้วยคอขวด ไม่ใช่ผลบวกความเร็วทุกลิงก์"
+          ],
+          "1,500 bytes บน 10 Mb/s → 12,000/10,000,000 = 1.2 ms"
+        ],
+        [
+          "Encapsulation ข้าม Router",
+          [
+            "ในกรณีไม่ใช้ NAT: IP ต้นทางและปลายทางโดยทั่วไปคงเดิม",
+            "Router ลด TTL และสร้าง frame ใหม่บนลิงก์ขาออก",
+            "MAC ต้นทาง/ปลายทางเปลี่ยนตามลิงก์ ไม่ได้ใช้ MAC ของเว็บเซิร์ฟเวอร์ตลอดทาง"
+          ],
+          "แยกปลายทาง IP ออกจาก next-hop MAC เสมอ"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "OSI ชั้นใดรับผิดชอบ routing เป็นหลัก",
+          "options": [
+            "Transport",
+            "Presentation",
+            "Network",
+            "Physical"
+          ],
+          "explain": "Network ใช้ที่อยู่เชิงตรรกะและเลือกทางข้ามเครือข่าย",
+          "cat": "OSI และ Internet Stack",
+          "id": 1,
+          "answer": 2
+        },
+        {
+          "q": "การส่งบิตเป็นสัญญาณบนสายตรงกับชั้นใด",
+          "options": [
+            "Application",
+            "Physical",
+            "Session",
+            "Network"
+          ],
+          "explain": "Physical จัดการสัญญาณและสื่อส่งข้อมูล",
+          "cat": "OSI และ Internet Stack",
+          "id": 2,
+          "answer": 1
+        },
+        {
+          "q": "MAC address เกี่ยวข้องโดยตรงกับชั้นใด",
+          "options": [
+            "Transport",
+            "Data Link",
+            "Session",
+            "Application"
+          ],
+          "explain": "Ethernet frame ใช้ MAC ในชั้น Data Link",
+          "cat": "OSI และ Internet Stack",
+          "id": 3,
+          "answer": 1
+        },
+        {
+          "q": "Port number ใช้ระบุสิ่งใดเป็นหลัก",
+          "options": [
+            "หมายเลขสาย LAN",
+            "ความยาวคลื่นแสง",
+            "บริการหรือ process ปลายทาง",
+            "ตำแหน่งในตู้ rack"
+          ],
+          "explain": "Transport ใช้ port เพื่อส่งข้อมูลให้ process ที่เหมาะสม",
+          "cat": "OSI และ Internet Stack",
+          "id": 4,
+          "answer": 2
+        },
+        {
+          "q": "HTTP อยู่ในชั้นใดของ Internet stack",
+          "options": [
+            "Link",
+            "Application",
+            "Physical",
+            "Network"
+          ],
+          "explain": "HTTP กำหนดการแลกเปลี่ยนข้อความของเว็บ",
+          "cat": "OSI และ Internet Stack",
+          "id": 5,
+          "answer": 1
+        },
+        {
+          "q": "TCP อยู่ชั้นใด",
+          "options": [
+            "Transport",
+            "Application",
+            "Data Link",
+            "Physical"
+          ],
+          "explain": "TCP ให้บริการ byte stream ระหว่าง process",
+          "cat": "OSI และ Internet Stack",
+          "id": 6,
+          "answer": 0
+        },
+        {
+          "q": "IP อยู่ชั้นใด",
+          "options": [
+            "Network",
+            "Session",
+            "Physical",
+            "Presentation"
+          ],
+          "explain": "IP ส่ง packet ระหว่างเครือข่าย",
+          "cat": "OSI และ Internet Stack",
+          "id": 7,
+          "answer": 0
+        },
+        {
+          "q": "หน่วยข้อมูลของ Ethernet เรียกว่าอะไร",
+          "options": [
+            "TCP segment",
+            "HTTP cookie",
+            "Frame",
+            "DNS zone"
+          ],
+          "explain": "Ethernet เป็นเทคโนโลยีชั้นลิงก์ หน่วยข้อมูลคือ frame",
+          "cat": "OSI และ Internet Stack",
+          "id": 8,
+          "answer": 2
+        },
+        {
+          "q": "Encapsulation หมายถึงอะไร",
+          "options": [
+            "ลบทุก header ก่อนส่ง",
+            "แปลง IP เป็นชื่อโดเมนเท่านั้น",
+            "เลือกช่อง Wi-Fi อัตโนมัติ",
+            "เพิ่มข้อมูลควบคุมแต่ละชั้นหุ้มข้อมูล"
+          ],
+          "explain": "การหุ้มข้อมูลเพิ่ม header และบางชั้นมี trailer",
+          "cat": "OSI และ Internet Stack",
+          "id": 9,
+          "answer": 3
+        },
+        {
+          "q": "Decapsulation เกิดอย่างไรที่ผู้รับ",
+          "options": [
+            "เพิ่ม header ซ้ำทุกชั้น",
+            "เปลี่ยนทุก frame เป็น broadcast",
+            "ลบ payload ทั้งหมด",
+            "ถอดข้อมูลควบคุมจากชั้นล่างขึ้นชั้นบน"
+          ],
+          "explain": "ผู้รับตรวจและถอดส่วนหุ้มย้อนลำดับการส่ง",
+          "cat": "OSI และ Internet Stack",
+          "id": 10,
+          "answer": 3
+        },
+        {
+          "q": "OSI ชั้นใดเกี่ยวกับรูปแบบข้อมูลตามแบบจำลอง",
+          "options": [
+            "Network",
+            "Physical",
+            "Presentation",
+            "Data Link"
+          ],
+          "explain": "Presentation ครอบคลุมการแทนข้อมูล บีบอัด และเข้ารหัสในเชิงแบบจำลอง",
+          "cat": "OSI และ Internet Stack",
+          "id": 11,
+          "answer": 2
+        },
+        {
+          "q": "OSI ชั้นใดจัดการบทสนทนา",
+          "options": [
+            "Physical",
+            "Network",
+            "Session",
+            "Data Link"
+          ],
+          "explain": "Session เป็นชั้นที่ 5",
+          "cat": "OSI และ Internet Stack",
+          "id": 12,
+          "answer": 2
+        },
+        {
+          "q": "ข้อใดเรียง Internet stack จากบนลงล่างถูกต้อง",
+          "options": [
+            "Application Transport Network Link Physical",
+            "Physical Link Application Transport Network",
+            "Network Application Physical Link Transport",
+            "Transport Application Link Physical Network"
+          ],
+          "explain": "ข้อมูลลงตามลำดับก่อนถูกส่งเป็นสัญญาณ",
+          "cat": "OSI และ Internet Stack",
+          "id": 13,
+          "answer": 0
+        },
+        {
+          "q": "แบบ TCP/IP 4 ชั้นรวมชั้นใดของแบบ 5 ชั้น",
+          "options": [
+            "Application กับ Network",
+            "Transport กับ Physical",
+            "Network กับ Application",
+            "Link กับ Physical"
+          ],
+          "explain": "แบบ 4 ชั้นใช้ Network access รวมหน้าที่ลิงก์และสื่อ",
+          "cat": "OSI และ Internet Stack",
+          "id": 14,
+          "answer": 3
+        },
+        {
+          "q": "อุปกรณ์ใดส่งต่อโดยดู IP ปลายทางเป็นหลัก",
+          "options": [
+            "Repeater",
+            "Hub แบบดั้งเดิม",
+            "Patch panel",
+            "Router"
+          ],
+          "explain": "Router ใช้ routing table ส่งต่อ packet",
+          "cat": "OSI และ Internet Stack",
+          "id": 15,
+          "answer": 3
+        },
+        {
+          "q": "Ethernet switch ทั่วไปเลือกพอร์ตส่งต่อจากอะไร",
+          "options": [
+            "MAC ปลายทาง",
+            "HTTP method",
+            "ชื่อผู้ใช้เว็บ",
+            "TCP window เท่านั้น"
+          ],
+          "explain": "Switch ชั้น 2 ใช้ MAC table",
+          "cat": "OSI และ Internet Stack",
+          "id": 16,
+          "answer": 0
+        },
+        {
+          "q": "Repeater ทำงานหลักที่ชั้นใด",
+          "options": [
+            "Application",
+            "Transport",
+            "Session",
+            "Physical"
+          ],
+          "explain": "Repeater ฟื้นสัญญาณเพื่อส่งต่อ",
+          "cat": "OSI และ Internet Stack",
+          "id": 17,
+          "answer": 3
+        },
+        {
+          "q": "ข้อมูล 1000 bytes ส่งที่ 1 Mb/s ใช้ transmission delay เท่าไร",
+          "options": [
+            "1 ms",
+            "8 ms",
+            "1000 ms",
+            "0.008 ms"
+          ],
+          "explain": "1000 คูณ 8 หาร 1000000 วินาที เท่ากับ 8 ms",
+          "cat": "OSI และ Internet Stack",
+          "id": 18,
+          "answer": 1
+        },
+        {
+          "q": "ลิงก์ยาว 2000 km สัญญาณเร็ว 200000 km/s มี propagation delay เท่าไร",
+          "options": [
+            "1 ms",
+            "100 ms",
+            "10 ms",
+            "1000 ms"
+          ],
+          "explain": "2000/200000 เท่ากับ 0.01 วินาที",
+          "cat": "OSI และ Internet Stack",
+          "id": 19,
+          "answer": 2
+        },
+        {
+          "q": "ลิงก์ต่ออนุกรม 100 20 50 Mb/s คอขวดตามอุดมคติคือเท่าไร",
+          "options": [
+            "170 Mb/s",
+            "100 Mb/s",
+            "50 Mb/s",
+            "20 Mb/s"
+          ],
+          "explain": "อัตราส่งต่อเนื่องถูกจำกัดด้วยลิงก์ช้าที่สุด",
+          "cat": "OSI และ Internet Stack",
+          "id": 20,
+          "answer": 3
+        },
+        {
+          "q": "เวลารอคิวใน router จัดเป็น delay ชนิดใด",
+          "options": [
+            "Propagation",
+            "Queueing",
+            "Encoding เท่านั้น",
+            "Session"
+          ],
+          "explain": "Queueing เปลี่ยนตามปริมาณจราจรและคิว",
+          "cat": "OSI และ Internet Stack",
+          "id": 21,
+          "answer": 1
+        },
+        {
+          "q": "ข้าม router โดยไม่ใช้ NAT ที่อยู่ใดโดยทั่วไปยังคงเดิม",
+          "options": [
+            "IP ต้นทางและปลายทาง",
+            "MAC ของทุก frame",
+            "TTL",
+            "Ethernet FCS"
+          ],
+          "explain": "Router เปลี่ยน frame และลด TTL แต่ไม่ได้ทำ NAT ตามเงื่อนไข",
+          "cat": "OSI และ Internet Stack",
+          "id": 22,
+          "answer": 0
+        },
+        {
+          "q": "TTL ของ IPv4 มีหน้าที่หลักใด",
+          "options": [
+            "จำกัดการวนของ packet",
+            "กำหนดความยาวสาย",
+            "เข้ารหัส payload",
+            "กำหนด port เว็บ"
+          ],
+          "explain": "Router ลด TTL และทิ้ง packet เมื่อหมด",
+          "cat": "OSI และ Internet Stack",
+          "id": 23,
+          "answer": 0
+        },
+        {
+          "q": "Protocol หมายถึงข้อใด",
+          "options": [
+            "กติกาของรูปแบบและการแลกเปลี่ยนข้อความ",
+            "ยี่ห้ออุปกรณ์เท่านั้น",
+            "ชนิดสายไฟเท่านั้น",
+            "ความเร็วซีพียู"
+          ],
+          "explain": "คู่สื่อสารต้องเข้าใจกติกาตรงกัน",
+          "cat": "OSI และ Internet Stack",
+          "id": 24,
+          "answer": 0
+        },
+        {
+          "q": "การเพิ่มอัตราส่ง R โดยคง L เท่าเดิมทำให้สิ่งใดลดลงโดยตรง",
+          "options": [
+            "ระยะทางลิงก์",
+            "Transmission delay",
+            "Propagation speed",
+            "จำนวนชั้น OSI"
+          ],
+          "explain": "จากสูตร L/R เมื่อ R เพิ่ม เวลาผลักบิตลงลิงก์ลดลง",
+          "cat": "OSI และ Internet Stack",
+          "id": 25,
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "name": "Application และ Web",
+      "slides": [
+        [
+          "TCP กับ UDP",
+          [
+            "TCP: reliable byte stream เรียงลำดับ มี flow/congestion control",
+            "UDP: ไม่ตั้ง connection และไม่รับประกันการส่งถึง/ลำดับด้วยตัวมันเอง",
+            "TCP handshake: SYN → SYN-ACK → ACK",
+            "TCP นับ sequence ตาม byte ไม่ใช่จำนวน segment"
+          ],
+          "Seq=1000 ส่ง payload 200 bytes ครบต่อเนื่อง → ACK=1200"
+        ],
+        [
+          "Web และ HTTP",
+          [
+            "Client ส่ง request → server ส่ง response",
+            "GET ขอ representation • POST ส่งข้อมูลให้ประมวลผล",
+            "200 สำเร็จ • 301 ย้ายถาวร • 404 ไม่พบ • 500 server error",
+            "HTTPS คือ HTTP ที่ได้รับการปกป้องด้วย TLS; ตรวจ certificate และชื่อโดเมน"
+          ],
+          "HTTPS ไม่ใช่หลักฐานว่าเนื้อหาของเว็บไซต์เชื่อถือได้เสมอ"
+        ],
+        [
+          "DNS และ DHCP",
+          [
+            "DNS แปลงชื่อเป็นข้อมูล เช่น A=IPv4, AAAA=IPv6, MX=mail server",
+            "Cache ช่วยลด delay/โหลด; TTL ของ DNS ระบุอายุ cache",
+            "DHCP แจก IP, mask, gateway, DNS; DORA = Discover Offer Request ACK"
+          ],
+          "DNS ช่วยรู้ปลายทาง แต่ไม่ได้ส่งหน้าเว็บให้เรา"
+        ],
+        [
+          "Port ที่ควรจำ",
+          [
+            "HTTP TCP 80 • HTTPS โดยทั่วไป TCP 443; HTTP/3 ใช้ QUIC บน UDP 443",
+            "DNS UDP/TCP 53 • DHCPv4 server UDP 67 / client UDP 68",
+            "SSH TCP 22 • Telnet TCP 23 • SMTP TCP 25",
+            "POP3 TCP 110 • IMAP TCP 143 • FTP control TCP 21"
+          ],
+          "Port เป็นค่าที่ใช้โดยทั่วไป ผู้ดูแลเปลี่ยนการตั้งค่าได้"
+        ],
+        [
+          "Email และรูปแบบระบบ",
+          [
+            "SMTP: ส่ง/ถ่ายทอดอีเมล • IMAP: จัดการ mailbox บน server • POP3: รับเมล",
+            "Client-server มี server ให้บริการ; P2P โหนดทำหน้าที่ได้ทั้งรับและให้",
+            "Cookie เป็นข้อมูลประกอบสถานะที่ browser ส่งกลับตามขอบเขตที่กำหนด"
+          ],
+          "HTTP เป็น stateless แต่แอปสร้าง session ด้วย cookie/token ได้"
+        ],
+        [
+          "ไล่เหตุเปิดเว็บไม่ได้",
+          [
+            "ตรวจ Link/Wi-Fi → IP/mask → gateway → เส้นทาง → DNS → บริการเว็บ",
+            "เข้า IP ได้แต่ชื่อไม่ได้: ตรวจ DNS; ping ไม่ผ่านอาจเป็นเพราะ ICMP ถูกบล็อก",
+            "Ping ผ่านยืนยันการตอบ ICMP ไม่ได้ยืนยันว่า TCP 443 หรือ HTTP ใช้งานได้"
+          ],
+          "ทดสอบเป็นชั้นและใช้หลักฐาน ไม่ด่วนสรุปจากอาการเดียว"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "โปรโตคอลใดให้ reliable byte stream",
+          "options": [
+            "TCP",
+            "UDP",
+            "IP",
+            "ARP"
+          ],
+          "explain": "TCP ส่งซ้ำและเรียง byte ให้แอป",
+          "cat": "Application และ Web",
+          "id": 26,
+          "answer": 0
+        },
+        {
+          "q": "UDP มีคุณสมบัติใด",
+          "options": [
+            "รับประกันไม่มีข้อมูลหาย",
+            "ไม่รับประกันการส่งถึงด้วยตัวมันเอง",
+            "มี handshake แบบ TCP ทุกครั้ง",
+            "เรียงข้อมูลให้เสมอ"
+          ],
+          "explain": "แอปที่ใช้ UDP สามารถเพิ่ม reliability ของตนเองได้",
+          "cat": "Application และ Web",
+          "id": 27,
+          "answer": 1
+        },
+        {
+          "q": "TCP handshake ที่ถูกต้องคืออะไร",
+          "options": [
+            "ACK FIN SYN",
+            "GET POST ACK",
+            "SYN SYN-ACK ACK",
+            "Discover Offer ACK"
+          ],
+          "explain": "TCP ตั้ง connection ด้วย three-way handshake",
+          "cat": "Application และ Web",
+          "id": 28,
+          "answer": 2
+        },
+        {
+          "q": "TCP Seq 500 ส่งข้อมูล 100 bytes ครบ ผู้รับคาดหวัง ACK ใด",
+          "options": [
+            "501",
+            "100",
+            "600",
+            "599"
+          ],
+          "explain": "ACK ระบุหมายเลข byte ถัดไปที่คาดหวัง",
+          "cat": "Application และ Web",
+          "id": 29,
+          "answer": 2
+        },
+        {
+          "q": "HTTP GET ใช้ทำอะไรโดยหลัก",
+          "options": [
+            "แจก IP อัตโนมัติ",
+            "หา MAC ของ gateway",
+            "เลือกเส้นทาง OSPF",
+            "ขอ representation ของทรัพยากร"
+          ],
+          "explain": "GET เป็น method สำหรับดึง representation",
+          "cat": "Application และ Web",
+          "id": 30,
+          "answer": 3
+        },
+        {
+          "q": "HTTP 404 หมายถึงอะไร",
+          "options": [
+            "สำเร็จเสมอ",
+            "ไม่พบทรัพยากรที่ร้องขอ",
+            "ย้ายถาวร",
+            "DNS cache หมดอายุ"
+          ],
+          "explain": "404 เป็นสถานะ Not Found",
+          "cat": "Application และ Web",
+          "id": 31,
+          "answer": 1
+        },
+        {
+          "q": "HTTP 500 หมายถึงอะไร",
+          "options": [
+            "พบทรัพยากร",
+            "ต้องเปลี่ยนสาย LAN",
+            "ข้อผิดพลาดภายใน server",
+            "client ได้ IP ใหม่"
+          ],
+          "explain": "500 เป็นสถานะฝั่ง server",
+          "cat": "Application และ Web",
+          "id": 32,
+          "answer": 2
+        },
+        {
+          "q": "HTTPS เพิ่มสิ่งใดให้ HTTP",
+          "options": [
+            "การรับประกันเนื้อหาถูกต้องทุกเรื่อง",
+            "การปกป้องการสื่อสารด้วย TLS",
+            "การแจก IP",
+            "การแทน routing table"
+          ],
+          "explain": "TLS ให้การเข้ารหัส ความครบถ้วน และการยืนยันตัวตนตามการตรวจสอบ",
+          "cat": "Application และ Web",
+          "id": 33,
+          "answer": 1
+        },
+        {
+          "q": "DNS A record เก็บอะไร",
+          "options": [
+            "IPv4 address",
+            "IPv6 address",
+            "MAC ของ switch",
+            "หมายเลข VLAN"
+          ],
+          "explain": "A จับคู่ชื่อกับ IPv4",
+          "cat": "Application และ Web",
+          "id": 34,
+          "answer": 0
+        },
+        {
+          "q": "DNS AAAA record เก็บอะไร",
+          "options": [
+            "IPv4 address",
+            "รหัสผ่านอีเมล",
+            "TCP sequence",
+            "IPv6 address"
+          ],
+          "explain": "AAAA ใช้ที่อยู่ IPv6",
+          "cat": "Application และ Web",
+          "id": 35,
+          "answer": 3
+        },
+        {
+          "q": "DNS MX record ใช้ระบุอะไร",
+          "options": [
+            "Subnet mask",
+            "Mail server ของโดเมน",
+            "Default VLAN",
+            "ลำดับสายสี"
+          ],
+          "explain": "MX ระบุ mail exchanger",
+          "cat": "Application และ Web",
+          "id": 36,
+          "answer": 1
+        },
+        {
+          "q": "DNS ใช้ port มาตรฐานใด",
+          "options": [
+            "80",
+            "53",
+            "22",
+            "67"
+          ],
+          "explain": "DNS ใช้ทั้ง UDP และ TCP port 53 ตามกรณี",
+          "cat": "Application และ Web",
+          "id": 37,
+          "answer": 1
+        },
+        {
+          "q": "HTTP ปกติใช้ TCP port ใดโดยทั่วไป",
+          "options": [
+            "80",
+            "443",
+            "25",
+            "23"
+          ],
+          "explain": "80 เป็นพอร์ตมาตรฐานของ HTTP แบบไม่ใช้ TLS",
+          "cat": "Application และ Web",
+          "id": 38,
+          "answer": 0
+        },
+        {
+          "q": "HTTPS โดยทั่วไปใช้ port ใด",
+          "options": [
+            "443",
+            "110",
+            "68",
+            "21"
+          ],
+          "explain": "HTTPS โดยทั่วไปใช้ TCP 443 และ HTTP/3 ใช้ UDP 443",
+          "cat": "Application และ Web",
+          "id": 39,
+          "answer": 0
+        },
+        {
+          "q": "SSH ใช้ TCP port ใดโดยทั่วไป",
+          "options": [
+            "23",
+            "53",
+            "143",
+            "22"
+          ],
+          "explain": "SSH ใช้พอร์ต 22 และเข้ารหัส session",
+          "cat": "Application และ Web",
+          "id": 40,
+          "answer": 3
+        },
+        {
+          "q": "เหตุใด Telnet จึงไม่เหมาะกับการส่งรหัสผ่านบนเครือข่ายที่ไม่เชื่อถือ",
+          "options": [
+            "ใช้ได้แค่ใยแก้ว",
+            "ไม่มี client",
+            "ไม่เข้ารหัสการสื่อสารโดยตัวมันเอง",
+            "ต้องใช้ IPv6 เท่านั้น"
+          ],
+          "explain": "Telnet ส่งข้อมูลแบบ plaintext ควรเลือก SSH เมื่อเหมาะสม",
+          "cat": "Application และ Web",
+          "id": 41,
+          "answer": 2
+        },
+        {
+          "q": "SMTP มีหน้าที่หลักใด",
+          "options": [
+            "ส่งและถ่ายทอดอีเมล",
+            "แปลงชื่อโดเมน",
+            "แจก MAC address",
+            "เลือกช่องสัญญาณ"
+          ],
+          "explain": "SMTP ใช้ส่งเมลระหว่าง client/server และระหว่าง server",
+          "cat": "Application และ Web",
+          "id": 42,
+          "answer": 0
+        },
+        {
+          "q": "IMAP เหมาะกับกรณีใด",
+          "options": [
+            "จัดการ mailbox จากหลายอุปกรณ์บน server",
+            "คำนวณ subnet mask",
+            "ทำ Ethernet CRC",
+            "แจก route OSPF"
+          ],
+          "explain": "IMAP คงข้อมูลและสถานะ mailbox ที่ server",
+          "cat": "Application และ Web",
+          "id": 43,
+          "answer": 0
+        },
+        {
+          "q": "FTP control connection โดยทั่วไปใช้ TCP port ใด",
+          "options": [
+            "21",
+            "20",
+            "80",
+            "25"
+          ],
+          "explain": "Port 21 ใช้ควบคุม ส่วนช่องข้อมูลขึ้นกับโหมด",
+          "cat": "Application และ Web",
+          "id": 44,
+          "answer": 0
+        },
+        {
+          "q": "DHCPv4 เรียงขั้นตอนหลักอย่างไร",
+          "options": [
+            "ACK Request Offer Discover",
+            "Discover Offer Request ACK",
+            "SYN SYN-ACK ACK FIN",
+            "GET DNS POST ACK"
+          ],
+          "explain": "ลำดับ DORA ใช้ขอและยืนยันการเช่า IP",
+          "cat": "Application และ Web",
+          "id": 45,
+          "answer": 1
+        },
+        {
+          "q": "DHCPv4 server รับข้อความที่ UDP port ใด",
+          "options": [
+            "68",
+            "53",
+            "22",
+            "67"
+          ],
+          "explain": "Server ใช้ 67 ส่วน client ใช้ 68",
+          "cat": "Application และ Web",
+          "id": 46,
+          "answer": 3
+        },
+        {
+          "q": "HTTP cookie ช่วยทำอะไร",
+          "options": [
+            "แทน subnet mask",
+            "เข้ารหัสสายไฟ",
+            "ประกอบการติดตามสถานะของแอป",
+            "เพิ่มกำลังส่ง AP"
+          ],
+          "explain": "Cookie ช่วยเชื่อม request กับสถานะหรือ session ตามที่แอปออกแบบ",
+          "cat": "Application และ Web",
+          "id": 47,
+          "answer": 2
+        },
+        {
+          "q": "เข้าเว็บไซต์ด้วย IP ได้แต่ใช้ชื่อไม่ได้ ควรตรวจอะไรเป็นลำดับต้น",
+          "options": [
+            "สีสายทั้งแปดเส้นเท่านั้น",
+            "ขนาดจอ",
+            "DNS configuration",
+            "ชื่อ VLAN อย่างเดียว"
+          ],
+          "explain": "อาการชี้ไปที่การ resolve ชื่อ แม้ต้องพิจารณาการตั้งค่าเว็บร่วมด้วย",
+          "cat": "Application และ Web",
+          "id": 48,
+          "answer": 2
+        },
+        {
+          "q": "Ping server ผ่านแต่เปิดเว็บไม่ได้ ข้อใดถูกต้อง",
+          "options": [
+            "HTTP ต้องปกติแน่นอน",
+            "DNS ถูกเสมอ",
+            "สายขาดแน่นอน",
+            "ต้องตรวจพอร์ตและบริการเว็บต่อ"
+          ],
+          "explain": "ICMP ตอบไม่ได้ยืนยันว่า TCP หรือ HTTP พร้อมให้บริการ",
+          "cat": "Application และ Web",
+          "id": 49,
+          "answer": 3
+        },
+        {
+          "q": "HTTP 301 หมายถึงอะไร",
+          "options": [
+            "ไม่พบทรัพยากร",
+            "server error ภายใน",
+            "ย้ายทรัพยากรอย่างถาวร",
+            "ยืนยัน DHCP lease"
+          ],
+          "explain": "301 เป็นสถานะ Moved Permanently",
+          "cat": "Application และ Web",
+          "id": 50,
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "name": "Routing และ Subnet",
+      "slides": [
+        [
+          "Forwarding กับ Routing",
+          [
+            "Routing สร้าง/เรียนรู้เส้นทาง • Forwarding ส่ง packet ตามตาราง",
+            "Static route ตั้งเอง; Dynamic route เรียนรู้ด้วย protocol",
+            "Default route IPv4 = 0.0.0.0/0 ใช้เมื่อไม่มี prefix ที่จำเพาะกว่า"
+          ],
+          "Router เลือก longest prefix match จาก route ที่ติดตั้งแล้ว"
+        ],
+        [
+          "เลือก Route อย่าสลับขั้นตอน",
+          [
+            "ตอนสร้าง routing table: เส้นทางไป prefix เดียวกันจากต่างแหล่งเปรียบเทียบ AD",
+            "ภายใน protocol ใช้ metric ตามกติกาของ protocol",
+            "ตอนส่ง packet: เลือก prefix ที่ match ยาวที่สุด; /24 ชนะ /16",
+            "Cisco ค่าเริ่มต้นตัวอย่าง: connected 0, static 1, OSPF 110, RIP 120"
+          ],
+          "อย่าใช้ AD ของ /0 มาชนะ /24 ในการ forwarding"
+        ],
+        [
+          "IPv4 และ Prefix",
+          [
+            "IPv4 32 bits; /n คือจำนวนบิตส่วน network",
+            "จำนวน address = 2^(32−n); subnet IPv4 ปกติมี usable host = จำนวนทั้งหมด−2",
+            "/24 = 255.255.255.0 • /26 = 255.255.255.192 • /27 = 255.255.255.224",
+            "ข้อยกเว้น /31 point-to-point และ /32 ไม่ใช้สูตร host−2 แบบทั่วไป"
+          ],
+          "Network = IP AND mask; broadcast คือ host bits เป็น 1 ทั้งหมด"
+        ],
+        [
+          "ตัวอย่าง Subnet /26",
+          [
+            "192.168.1.70/26: block size 64 → ช่วง 64–127",
+            "Network 192.168.1.64 • Broadcast 192.168.1.127",
+            "Usable 192.168.1.65–126 มี 62 hosts",
+            "ต้องรองรับ 50 hosts → /26 พอ; /27 มีเพียง 30"
+          ],
+          "นับจำนวน address ทั้งหมดกับ usable hosts แยกกัน"
+        ],
+        [
+          "Routing Protocol และ Gateway",
+          [
+            "RIP: distance vector ใช้ hop count; OSPF: link state ใช้ cost",
+            "Default gateway เป็น router interface ใน subnet ของ host โดยทั่วไป",
+            "ARP หา MAC ของ next hop บนลิงก์ IPv4; NAT แปลงที่อยู่ตามกฎ",
+            "Private IPv4: 10/8, 172.16/12, 192.168/16"
+          ],
+          "ปลายทางต่าง subnet ให้ส่ง frame ไป gateway ไม่ใช่ ARP หาเว็บ server ที่อยู่นอก LAN"
+        ],
+        [
+          "อ่านผังเครือข่าย",
+          [
+            "Star มีจุดศูนย์กลาง • Bus ใช้ backbone ร่วม • Ring เชื่อมเป็นวง",
+            "Full mesh n โหนด ใช้ n(n−1)/2 ลิงก์ เมื่อแต่ละคู่เชื่อมกันโดยตรง",
+            "Router แบ่ง broadcast domain; VLAN แยก broadcast domain เชิงตรรกะ",
+            "ตรวจ IP/mask แต่ละ interface และ route ไป-กลับก่อนสรุปว่า ping ได้"
+          ],
+          "4 โหนด full mesh → 4×3/2 = 6 ลิงก์"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "Routing ต่างจาก forwarding อย่างไร",
+          "options": [
+            "Routing คือเข้ารหัส ส่วน forwarding คือ DNS",
+            "ทั้งคู่เป็นการต่อสายเท่านั้น",
+            "Forwarding ใช้ได้เฉพาะ Wi-Fi",
+            "Routing หาเส้นทาง ส่วน forwarding ส่งตามตาราง"
+          ],
+          "explain": "Control plane สร้างเส้นทางและ data plane ส่ง packet",
+          "cat": "Routing และ Subnet",
+          "id": 51,
+          "answer": 3
+        },
+        {
+          "q": "มี route 10.0.0.0/8 และ 10.1.2.0/24 ปลายทาง 10.1.2.5 เลือกอะไร",
+          "options": [
+            "10.1.2.0/24",
+            "10.0.0.0/8",
+            "ต้องทิ้งเสมอ",
+            "เลือกแบบสุ่ม"
+          ],
+          "explain": "/24 match ยาวกว่า /8",
+          "cat": "Routing และ Subnet",
+          "id": 52,
+          "answer": 0
+        },
+        {
+          "q": "Default route IPv4 เขียนอย่างไร",
+          "options": [
+            "255.255.255.255/32",
+            "0.0.0.0/0",
+            "127.0.0.1/8",
+            "224.0.0.0/4"
+          ],
+          "explain": "/0 match ได้ทุกปลายทางแต่จำเพาะน้อยที่สุด",
+          "cat": "Routing และ Subnet",
+          "id": 53,
+          "answer": 1
+        },
+        {
+          "q": "Static route หมายถึงอะไร",
+          "options": [
+            "เส้นทางที่ RIP เรียนรู้เท่านั้น",
+            "สายที่ไม่มีสัญญาณ",
+            "ARP entry ทุกชนิด",
+            "เส้นทางที่ผู้ดูแลกำหนดเอง"
+          ],
+          "explain": "Static route ตั้งค่าโดยผู้ดูแล",
+          "cat": "Routing และ Subnet",
+          "id": 54,
+          "answer": 3
+        },
+        {
+          "q": "OSPF จัดเป็น routing แบบใด",
+          "options": [
+            "Distance vector แบบ RIP",
+            "Application proxy",
+            "Physical encoding",
+            "Link state"
+          ],
+          "explain": "OSPF ใช้ข้อมูล link state เพื่อคำนวณเส้นทาง",
+          "cat": "Routing และ Subnet",
+          "id": 55,
+          "answer": 3
+        },
+        {
+          "q": "RIP ใช้ metric หลักใด",
+          "options": [
+            "กำลังแสง",
+            "Hop count",
+            "หมายเลข port",
+            "ชื่อเครื่อง"
+          ],
+          "explain": "RIP นับ hop และกำหนด 16 เป็น unreachable",
+          "cat": "Routing และ Subnet",
+          "id": 56,
+          "answer": 1
+        },
+        {
+          "q": "Cisco default AD ของ static route ทั่วไปคือเท่าไร",
+          "options": [
+            "0",
+            "1",
+            "110",
+            "120"
+          ],
+          "explain": "Connected เป็น 0 และ static ปกติเป็น 1",
+          "cat": "Routing และ Subnet",
+          "id": 57,
+          "answer": 1
+        },
+        {
+          "q": "AD ใช้เปรียบเทียบกรณีใด",
+          "options": [
+            "ความยาวสีสาย",
+            "HTTP status ต่างชนิด",
+            "ความยาวรหัสผ่าน",
+            "ต่างแหล่ง route ไปยัง prefix เดียวกัน"
+          ],
+          "explain": "AD ใช้ความน่าเชื่อถือแหล่ง route ไม่แทน longest prefix match",
+          "cat": "Routing และ Subnet",
+          "id": 58,
+          "answer": 3
+        },
+        {
+          "q": "IPv4 มีความยาวเท่าไร",
+          "options": [
+            "48 bits",
+            "32 bits",
+            "64 bits",
+            "128 bits"
+          ],
+          "explain": "IPv4 มี 4 octets รวม 32 bits",
+          "cat": "Routing และ Subnet",
+          "id": 59,
+          "answer": 1
+        },
+        {
+          "q": "/24 ตรงกับ mask ใด",
+          "options": [
+            "255.255.255.0",
+            "255.255.0.0",
+            "255.255.255.192",
+            "255.0.0.0"
+          ],
+          "explain": "24 บิตแรกเป็น 1 เหลือ host 8 บิต",
+          "cat": "Routing และ Subnet",
+          "id": 60,
+          "answer": 0
+        },
+        {
+          "q": "/26 มี usable hosts ใน subnet IPv4 ปกติกี่เครื่อง",
+          "options": [
+            "62",
+            "64",
+            "30",
+            "126"
+          ],
+          "explain": "2 ยกกำลัง 6 ลบ network และ broadcast เหลือ 62",
+          "cat": "Routing และ Subnet",
+          "id": 61,
+          "answer": 0
+        },
+        {
+          "q": "/27 มี address ทั้งหมดกี่ค่า",
+          "options": [
+            "30",
+            "64",
+            "32",
+            "16"
+          ],
+          "explain": "32 ลบ 27 เหลือ 5 host bits จึงมี 32 ค่า",
+          "cat": "Routing และ Subnet",
+          "id": 62,
+          "answer": 2
+        },
+        {
+          "q": "192.168.1.70/26 มี network address ใด",
+          "options": [
+            "192.168.1.0",
+            "192.168.1.70",
+            "192.168.1.128",
+            "192.168.1.64"
+          ],
+          "explain": "ช่วง /26 เพิ่มครั้งละ 64 และ 70 อยู่ช่วง 64–127",
+          "cat": "Routing และ Subnet",
+          "id": 63,
+          "answer": 3
+        },
+        {
+          "q": "Broadcast ของ 192.168.1.70/26 คืออะไร",
+          "options": [
+            "192.168.1.127",
+            "192.168.1.63",
+            "192.168.1.255",
+            "192.168.1.64"
+          ],
+          "explain": "บิต host เป็น 1 ทั้งหมดจึงเป็นปลายช่วง 127",
+          "cat": "Routing และ Subnet",
+          "id": 64,
+          "answer": 0
+        },
+        {
+          "q": "Subnet IPv4 ปกติที่เล็กที่สุดสำหรับ 50 hosts คืออะไร",
+          "options": [
+            "/27",
+            "/26",
+            "/28",
+            "/29"
+          ],
+          "explain": "/26 มี 62 usable ส่วน /27 มี 30",
+          "cat": "Routing และ Subnet",
+          "id": 65,
+          "answer": 1
+        },
+        {
+          "q": "ข้อใดเป็น private IPv4",
+          "options": [
+            "172.20.1.1",
+            "172.40.1.1",
+            "8.8.8.8",
+            "1.1.1.1"
+          ],
+          "explain": "172.16.0.0 ถึง 172.31.255.255 เป็น private",
+          "cat": "Routing และ Subnet",
+          "id": 66,
+          "answer": 0
+        },
+        {
+          "q": "เครื่องจะส่งไปต่าง subnet โดยทั่วไปต้องส่ง frame ให้ใคร",
+          "options": [
+            "DNS server เสมอ",
+            "ทุกเครื่องในโลก",
+            "Default gateway",
+            "DHCP server เสมอ"
+          ],
+          "explain": "Gateway รับ packet เพื่อ route ต่อไป",
+          "cat": "Routing และ Subnet",
+          "id": 67,
+          "answer": 2
+        },
+        {
+          "q": "ARP ใน IPv4 ใช้ทำอะไร",
+          "options": [
+            "หา port ของ HTTP",
+            "หา MAC ของ next hop บนลิงก์",
+            "แจก subnet mask",
+            "เข้ารหัส packet"
+          ],
+          "explain": "ARP resolve IPv4 เป็น MAC ใน broadcast domain",
+          "cat": "Routing และ Subnet",
+          "id": 68,
+          "answer": 1
+        },
+        {
+          "q": "Router ช่วยแบ่งสิ่งใดโดยทั่วไป",
+          "options": [
+            "อักขระใน URL",
+            "TCP payload เป็นตัวอักษร",
+            "DNS zone เสมอ",
+            "Broadcast domain"
+          ],
+          "explain": "Router ไม่ส่งต่อ layer-2 broadcast ข้าม interface ตามปกติ",
+          "cat": "Routing และ Subnet",
+          "id": 69,
+          "answer": 3
+        },
+        {
+          "q": "Full mesh 5 โหนดต้องใช้ลิงก์ตรงระหว่างคู่กี่เส้น",
+          "options": [
+            "5",
+            "10",
+            "20",
+            "25"
+          ],
+          "explain": "5 คูณ 4 หาร 2 เท่ากับ 10",
+          "cat": "Routing และ Subnet",
+          "id": 70,
+          "answer": 1
+        },
+        {
+          "q": "Topology ที่มีอุปกรณ์กลางเชื่อมทุกโหนดคืออะไร",
+          "options": [
+            "Bus",
+            "Ring",
+            "Linear chain",
+            "Star"
+          ],
+          "explain": "Star มีศูนย์กลาง เช่น switch",
+          "cat": "Routing และ Subnet",
+          "id": 71,
+          "answer": 3
+        },
+        {
+          "q": "Topology แบบ bus พึ่งพาสิ่งใดร่วมกัน",
+          "options": [
+            "Router แยกทุกคู่",
+            "เส้นใยสองวงเสมอ",
+            "Cloud region",
+            "Backbone หลัก"
+          ],
+          "explain": "Bus ใช้สื่อหลักร่วมกัน",
+          "cat": "Routing และ Subnet",
+          "id": 72,
+          "answer": 3
+        },
+        {
+          "q": "NAT ทำหน้าที่ใด",
+          "options": [
+            "แจกชื่อ SSID",
+            "แก้ไขสีสาย",
+            "แปลงที่อยู่ IP ตามกฎ",
+            "แทนที่ DNS ทุกกรณี"
+          ],
+          "explain": "NAT เปลี่ยนที่อยู่ และ PAT แปลง port ร่วมด้วยได้",
+          "cat": "Routing และ Subnet",
+          "id": 73,
+          "answer": 2
+        },
+        {
+          "q": "192.168.10.33/27 อยู่ช่วง usable ใด",
+          "options": [
+            "192.168.10.1–30",
+            "192.168.10.33–62",
+            "192.168.10.65–94",
+            "192.168.10.32–63"
+          ],
+          "explain": "Network คือ 32 broadcast 63 จึงใช้ host 33–62",
+          "cat": "Routing และ Subnet",
+          "id": 74,
+          "answer": 1
+        },
+        {
+          "q": "มี /24 ที่ AD 110 และ /0 ที่ AD 1 ติดตั้งแล้ว ปลายทาง match ทั้งคู่เลือกอะไร",
+          "options": [
+            "/0",
+            "AD เฉลี่ย",
+            "ทิ้งเพราะ AD ต่างกัน",
+            "/24"
+          ],
+          "explain": "ตอน forwarding ใช้ longest prefix match จากเส้นทางที่ติดตั้งแล้ว",
+          "cat": "Routing และ Subnet",
+          "id": 75,
+          "answer": 3
+        }
+      ]
+    },
+    {
+      "name": "Link Layer และ LAN",
+      "slides": [
+        [
+          "บริการของ Link Layer",
+          [
+            "Framing กำหนดขอบเขต frame • MAC addressing • Medium access",
+            "Error detection เช่น CRC ตรวจความผิดพลาด แต่ไม่ได้แก้ข้อมูลโดยตัวมันเอง",
+            "Reliability ขึ้นกับเทคโนโลยี ไม่ใช่ทุกลิงก์มี ACK/retransmission"
+          ],
+          "TCP reliability คนละระดับกับ link-layer reliability"
+        ],
+        [
+          "Ethernet Frame และ Switch",
+          [
+            "Frame มี source/destination MAC, type/length, payload และ FCS",
+            "Switch เรียนรู้ source MAC กับพอร์ตขาเข้า",
+            "Known unicast ส่งไปพอร์ตที่เรียนรู้; unknown unicast flood ภายใน VLAN ยกเว้นพอร์ตรับ",
+            "Broadcast MAC = FF:FF:FF:FF:FF:FF"
+          ],
+          "การเรียนรู้ดู source; การตัดสินใจส่งต่อดู destination"
+        ],
+        [
+          "Collision และ Broadcast Domain",
+          [
+            "Switch แยก collision domain ตามพอร์ต; full-duplex ไม่มี collision ตามปกติ",
+            "Hub แบบเก่าให้หลายเครื่องแชร์ collision domain",
+            "VLAN แต่ละวงเป็น broadcast domain แยกกัน; ต้อง route เพื่อข้าม VLAN",
+            "Trunk พา traffic หลาย VLAN; 802.1Q ใช้ tag ระบุ VLAN"
+          ],
+          "Switch ทั้งตัวไม่จำเป็นต้องมี broadcast domain เดียว หากแบ่ง VLAN"
+        ],
+        [
+          "Medium Access และ Duplex",
+          [
+            "Ethernet แบบ shared half-duplex เดิมใช้ CSMA/CD",
+            "Ethernet switched full-duplex ไม่ต้องใช้ CSMA/CD",
+            "Wi-Fi ใช้ CSMA/CA เพราะตรวจ collision ระหว่างส่งได้ยาก",
+            "Half-duplex ผลัดกันส่ง • Full-duplex ส่งและรับพร้อมกัน"
+          ],
+          "CD = detect; CA = avoid"
+        ],
+        [
+          "Error Detection และการวนลูป",
+          [
+            "Parity ตรวจข้อผิดพลาดบางรูปแบบ • CRC ใช้ตรวจความผิดพลาดแบบ polynomial",
+            "FCS ผิด → โดยทั่วไปทิ้ง frame ไม่ใช่แก้ทุกบิตให้เอง",
+            "STP สร้าง topology ที่ไม่เกิด loop ใน LAN ที่มีเส้นทางซ้ำ",
+            "Loop อาจทำให้ broadcast storm และ MAC table ไม่นิ่ง"
+          ],
+          "STP บล็อกบางเส้นทางเพื่อคงเส้นสำรองโดยไม่เกิด loop"
+        ],
+        [
+          "ARP ข้าม Subnet: ภาพจำ",
+          [
+            "Host A → Switch → Router → Switch → Server",
+            "A ส่ง IP ถึง server แต่ MAC ปลายทางของ frame แรกคือ gateway",
+            "Router ถอด frame และสร้าง frame สำหรับลิงก์ถัดไป",
+            "Frame ขาออกมี MAC ต้นทางของ interface router บนลิงก์นั้น"
+          ],
+          "ทุก hop ใช้ link addressing ตามบริบทลิงก์ ไม่ใช่ end-to-end MAC"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "หน้าที่หลักของ framing คืออะไร",
+          "options": [
+            "หา DNS server",
+            "เข้ารหัสอีเมล",
+            "กำหนดขอบเขตหน่วยข้อมูลบนลิงก์",
+            "กำหนด route BGP"
+          ],
+          "explain": "Framing แยกข้อมูลเป็น frame ที่ผู้รับตีความได้",
+          "cat": "Link Layer และ LAN",
+          "id": 76,
+          "answer": 2
+        },
+        {
+          "q": "Ethernet switch เรียนรู้ MAC table จากข้อมูลใด",
+          "options": [
+            "Destination IP และ DNS",
+            "HTTP cookie",
+            "Source MAC และพอร์ตรับ",
+            "ชื่อ SSID"
+          ],
+          "explain": "Source MAC บอกว่าเครื่องต้นทางอยู่ทางพอร์ตใด",
+          "cat": "Link Layer และ LAN",
+          "id": 77,
+          "answer": 2
+        },
+        {
+          "q": "Known unicast ที่พอร์ตปลายทางต่างจากพอร์ตรับควรถูกส่งอย่างไร",
+          "options": [
+            "ส่งทุกพอร์ตทุก VLAN",
+            "ส่งออกพอร์ตที่ MAC table ระบุ",
+            "ส่งกลับพอร์ตรับเสมอ",
+            "ทิ้งเสมอ"
+          ],
+          "explain": "Switch ใช้ destination MAC ค้นพอร์ตที่เรียนรู้",
+          "cat": "Link Layer และ LAN",
+          "id": 78,
+          "answer": 1
+        },
+        {
+          "q": "Unknown unicast ถูกจัดการโดย switch ทั่วไปอย่างไร",
+          "options": [
+            "Route ออกทุกเครือข่าย",
+            "Flood ใน VLAN เดียวกันยกเว้นพอร์ตรับ",
+            "ส่งไป DNS เท่านั้น",
+            "แก้ MAC เป็น IP"
+          ],
+          "explain": "ยังไม่รู้พอร์ตจึงกระจายเฉพาะขอบเขต VLAN",
+          "cat": "Link Layer และ LAN",
+          "id": 79,
+          "answer": 1
+        },
+        {
+          "q": "Ethernet broadcast MAC คือข้อใด",
+          "options": [
+            "00:00:00:00:00:00",
+            "127.0.0.1",
+            "255.255.255.0",
+            "FF:FF:FF:FF:FF:FF"
+          ],
+          "explain": "MAC broadcast มีทั้ง 48 บิตเป็น 1",
+          "cat": "Link Layer และ LAN",
+          "id": 80,
+          "answer": 3
+        },
+        {
+          "q": "MAC address Ethernet โดยทั่วไปยาวเท่าไร",
+          "options": [
+            "32 bits",
+            "48 bits",
+            "16 bits",
+            "128 bits"
+          ],
+          "explain": "EUI-48 มี 6 octets",
+          "cat": "Link Layer และ LAN",
+          "id": 81,
+          "answer": 1
+        },
+        {
+          "q": "FCS ใน Ethernet ใช้ทำอะไร",
+          "options": [
+            "เลือก default route",
+            "แจก IP",
+            "ตรวจความผิดพลาดของ frame",
+            "เก็บรหัสผ่าน"
+          ],
+          "explain": "FCS เก็บค่าตรวจ CRC",
+          "cat": "Link Layer และ LAN",
+          "id": 82,
+          "answer": 2
+        },
+        {
+          "q": "CRC ที่ตรวจพบความผิดพลาดทำอะไรได้โดยตรง",
+          "options": [
+            "แก้ทุกบิตได้เสมอ",
+            "รับรองไม่ถูกโจมตี",
+            "ระบุว่า frame ผิดพลาดตามความสามารถการตรวจ",
+            "คำนวณ subnet ให้"
+          ],
+          "explain": "CRC เป็น error detection ไม่ใช่กลไกแก้บิตทั่วไป",
+          "cat": "Link Layer และ LAN",
+          "id": 83,
+          "answer": 2
+        },
+        {
+          "q": "Ethernet switched full-duplex ใช้ CSMA/CD หรือไม่",
+          "options": [
+            "ใช้ตรวจ collision ทุก frame",
+            "ใช้แทน DNS",
+            "ไม่ใช้ในการทำงาน full-duplex ปกติ",
+            "ใช้เฉพาะพอร์ต 443"
+          ],
+          "explain": "ไม่มีการแย่งสื่อร่วมแบบ half-duplex",
+          "cat": "Link Layer และ LAN",
+          "id": 84,
+          "answer": 2
+        },
+        {
+          "q": "Ethernet shared half-duplex แบบเดิมใช้วิธีใด",
+          "options": [
+            "CSMA/CA",
+            "OSPF",
+            "CSMA/CD",
+            "DORA"
+          ],
+          "explain": "CSMA/CD ตรวจ collision บนสื่อร่วม",
+          "cat": "Link Layer และ LAN",
+          "id": 85,
+          "answer": 2
+        },
+        {
+          "q": "Wi-Fi ใช้แนวทางใดเข้าถึงสื่อ",
+          "options": [
+            "CSMA/CD แบบ Ethernet เดิม",
+            "CSMA/CA",
+            "SMTP",
+            "NAT"
+          ],
+          "explain": "Wi-Fi ลดโอกาสชนด้วยการฟังสื่อและ backoff",
+          "cat": "Link Layer และ LAN",
+          "id": 86,
+          "answer": 1
+        },
+        {
+          "q": "Hub แบบดั้งเดิมทำให้พอร์ตอยู่ในอะไร",
+          "options": [
+            "คนละ broadcast domain เสมอ",
+            "คนละ IP subnet เสมอ",
+            "คนละ DNS zone",
+            "Collision domain ร่วมกัน"
+          ],
+          "explain": "Hub กระจายสัญญาณและทุกเครื่องแชร์สื่อ",
+          "cat": "Link Layer และ LAN",
+          "id": 87,
+          "answer": 3
+        },
+        {
+          "q": "Switch ช่วยแยก collision domain อย่างไร",
+          "options": [
+            "ทั้งตัวยังแชร์เหมือน hub เสมอ",
+            "โดยทั่วไปแยกตามพอร์ต",
+            "แยกตาม URL",
+            "แยกตาม DNS cache"
+          ],
+          "explain": "แต่ละพอร์ตเป็นลิงก์แยก",
+          "cat": "Link Layer และ LAN",
+          "id": 88,
+          "answer": 1
+        },
+        {
+          "q": "VLAN ใช้แบ่งอะไรเป็นหลัก",
+          "options": [
+            "ความยาวบิต TCP",
+            "กำลังแสง",
+            "Broadcast domain เชิงตรรกะ",
+            "HTTP method"
+          ],
+          "explain": "แต่ละ VLAN แยกการกระจาย broadcast",
+          "cat": "Link Layer และ LAN",
+          "id": 89,
+          "answer": 2
+        },
+        {
+          "q": "เครื่องต่าง VLAN ต้องใช้อะไรสื่อสาร IP ข้ามกัน",
+          "options": [
+            "Hub เพียงอย่างเดียว",
+            "สาย crossover เพียงอย่างเดียว",
+            "Routing ระหว่าง VLAN",
+            "เปลี่ยนชื่อเครื่อง"
+          ],
+          "explain": "ต้องมีอุปกรณ์หรือฟังก์ชันชั้น 3",
+          "cat": "Link Layer และ LAN",
+          "id": 90,
+          "answer": 2
+        },
+        {
+          "q": "Trunk link มีหน้าที่อะไร",
+          "options": [
+            "ขยายกำลังคลื่นเท่านั้น",
+            "ขนส่ง traffic ได้หลาย VLAN",
+            "แจก DHCP ทุกครั้ง",
+            "แปลง IPv4 เป็น IPv6 เสมอ"
+          ],
+          "explain": "Trunk รวมหลาย VLAN บนลิงก์เดียว",
+          "cat": "Link Layer และ LAN",
+          "id": 91,
+          "answer": 1
+        },
+        {
+          "q": "802.1Q เกี่ยวข้องกับอะไร",
+          "options": [
+            "VLAN tagging",
+            "DNS caching",
+            "HTTP encryption",
+            "กำหนดชื่อ SSID"
+          ],
+          "explain": "802.1Q กำหนด tag เพื่อระบุ VLAN",
+          "cat": "Link Layer และ LAN",
+          "id": 92,
+          "answer": 0
+        },
+        {
+          "q": "STP มีวัตถุประสงค์หลักใด",
+          "options": [
+            "เพิ่ม port TCP",
+            "แจก IPv6",
+            "เข้ารหัส Wi-Fi",
+            "ป้องกัน loop ชั้น 2"
+          ],
+          "explain": "STP เลือก topology ที่ไม่เกิด loop",
+          "cat": "Link Layer และ LAN",
+          "id": 93,
+          "answer": 3
+        },
+        {
+          "q": "Layer-2 loop อาจทำให้เกิดอะไร",
+          "options": [
+            "Broadcast storm",
+            "DNS TTL เพิ่มเอง",
+            "สายใยแก้วกลายเป็นทองแดง",
+            "TCP port เปลี่ยนทุกเครื่อง"
+          ],
+          "explain": "Frame วนและถูกทำสำเนาส่งต่อเพิ่มได้",
+          "cat": "Link Layer และ LAN",
+          "id": 94,
+          "answer": 0
+        },
+        {
+          "q": "Full-duplex หมายถึงอะไร",
+          "options": [
+            "ส่งได้ทิศเดียว",
+            "ผลัดกันส่งเท่านั้น",
+            "ส่งได้เฉพาะ broadcast",
+            "ส่งและรับพร้อมกันได้"
+          ],
+          "explain": "Full-duplex ใช้การส่งทั้งสองทิศพร้อมกัน",
+          "cat": "Link Layer และ LAN",
+          "id": 95,
+          "answer": 3
+        },
+        {
+          "q": "Half-duplex หมายถึงอะไร",
+          "options": [
+            "รับพร้อมส่งเสมอ",
+            "มีสายครึ่งเส้น",
+            "ใช้ได้เฉพาะแสง",
+            "สื่อสารสองทิศแต่ผลัดกัน"
+          ],
+          "explain": "ตัวอย่างเชิงหลักการคือวิทยุกดพูด",
+          "cat": "Link Layer และ LAN",
+          "id": 96,
+          "answer": 3
+        },
+        {
+          "q": "Host ส่ง IP ไป server ต่าง subnet MAC ปลายทาง frame แรกคืออะไร",
+          "options": [
+            "MAC ของ server ระยะไกลเสมอ",
+            "MAC ของ default gateway",
+            "MAC ของ DNS เสมอ",
+            "MAC ศูนย์ทั้งหมด"
+          ],
+          "explain": "การส่งบนลิงก์แรกต้องถึง next hop",
+          "cat": "Link Layer และ LAN",
+          "id": 97,
+          "answer": 1
+        },
+        {
+          "q": "หาก switch รู้ว่าปลายทางอยู่พอร์ตเดียวกับที่รับ frame จะทำอย่างไรโดยทั่วไป",
+          "options": [
+            "Flood ทุก VLAN",
+            "เปลี่ยน IP ปลายทาง",
+            "ไม่ส่ง frame กลับพอร์ตนั้น",
+            "ตั้ง default route ใหม่"
+          ],
+          "explain": "ไม่ต้องส่งกลับไปยังส่วนเครือข่ายที่ frame มาจาก",
+          "cat": "Link Layer และ LAN",
+          "id": 98,
+          "answer": 2
+        },
+        {
+          "q": "ARP request บน Ethernet ปกติส่งแบบใด",
+          "options": [
+            "Unicast ถึงทุก router ในโลก",
+            "Multicast IPv6 เท่านั้น",
+            "Broadcast ใน VLAN",
+            "TCP stream"
+          ],
+          "explain": "ผู้ถามยังไม่รู้ MAC ของ IPv4 เป้าหมายจึง broadcast",
+          "cat": "Link Layer และ LAN",
+          "id": 99,
+          "answer": 2
+        },
+        {
+          "q": "Parity แบบบิตเดียวรับรองตรวจข้อผิดพลาดทุกชนิดหรือไม่",
+          "options": [
+            "ไม่รับรอง โดยเฉพาะจำนวนบิตพลิกเป็นคู่",
+            "รับรองทุกกรณี",
+            "แก้ได้ทุกบิต",
+            "แทน CRC และ TLS ได้ทั้งหมด"
+          ],
+          "explain": "Even หรือ odd parity อาจไม่เปลี่ยนเมื่อพลิกจำนวนบิตเป็นคู่",
+          "cat": "Link Layer และ LAN",
+          "id": 100,
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "name": "LAN Cabling",
+      "slides": [
+        [
+          "เลือกสื่อให้เหมาะกับงาน",
+          [
+            "UTP: คู่สายบิดเกลียว ไม่มีชิลด์; STP มีชิลด์ ต้องติดตั้งและต่อกราวด์เหมาะสม",
+            "Fiber ส่งด้วยแสง ทน EMI และเหมาะระยะไกล; ยังต้องเลือก transceiver/ชนิด fiber ให้ตรง",
+            "ทองแดงใช้สัญญาณไฟฟ้า; ใยแก้วไม่ได้ใช้หัว RJ-45 ตามปกติ"
+          ],
+          "อย่าเลือกจากความเร็วอย่างเดียว ต้องดูระยะ สภาพแวดล้อม และมาตรฐานลิงก์"
+        ],
+        [
+          "หัวต่อและคู่สาย",
+          [
+            "สาย Ethernet twisted pair ทั่วไปมี 4 คู่ รวม 8 เส้น",
+            "หัว 8P8C มักเรียก RJ-45 ในการเรียน LAN",
+            "การบิดเกลียวช่วยลดสัญญาณรบกวนและ crosstalk",
+            "อย่าคลายเกลียวปลายสายยาวเกินจำเป็น"
+          ],
+          "คู่สายจริงสำคัญกว่าตรวจเพียง pin 1 ถึง pin 8 ตรงกัน"
+        ],
+        [
+          "T568A และ T568B",
+          [
+            "ลำดับ pin ตามมาตรฐานเมื่อจัดหัวให้ตรงทิศ; ต้องตรวจทิศหัวก่อนนับ",
+            "T568A: ขาวเขียว เขียว ขาวส้ม น้ำเงิน ขาวน้ำเงิน ส้ม ขาวน้ำตาล น้ำตาล",
+            "T568B: ขาวส้ม ส้ม ขาวเขียว น้ำเงิน ขาวน้ำเงิน เขียว ขาวน้ำตาล น้ำตาล",
+            "A กับ B สลับคู่สีเขียวและส้ม; น้ำเงินและน้ำตาลคงเดิม"
+          ],
+          "จำคู่และ pin ด้วย: A pin1 ขาวเขียว; B pin1 ขาวส้ม"
+        ],
+        [
+          "Straight-through และ Crossover",
+          [
+            "Straight-through ใช้มาตรฐานเดียวกันสองปลาย เช่น B–B",
+            "Crossover แบบ 10/100 ใช้ A–B สลับคู่ส่ง/รับ",
+            "กฎเดิม PC–switch ใช้ straight; switch–switch ใช้ crossover เมื่อไม่มี Auto MDI-X",
+            "Auto MDI-X ช่วยสลับคู่ให้อัตโนมัติในอุปกรณ์ที่รองรับ"
+          ],
+          "กฎแบบเก่าต้องมีเงื่อนไข ไม่มี Auto MDI-X ไม่ใช่ตายตัวกับทุกอุปกรณ์ปัจจุบัน"
+        ],
+        [
+          "ระยะและความเร็วที่ชอบถาม",
+          [
+            "1000BASE-T ใช้ครบ 4 คู่; Cat5e รองรับ 1 Gb/s ตาม channel ที่ได้มาตรฐาน",
+            "Channel copper LAN ทั่วไปสูงสุด 100 m รวม patch cord; permanent link ทั่วไป 90 m",
+            "Cat6A รองรับ 10GBASE-T ที่ 100 m ภายใต้เงื่อนไขมาตรฐาน",
+            "10G บน Cat6 ขึ้นกับระยะและ crosstalk จึงไม่ควรเหมารวมว่าได้ 100 m"
+          ],
+          "ความเร็วต้องพิจารณาทั้งสาย หัวต่อ ระยะ NIC และ switch"
+        ],
+        [
+          "ทดสอบสายและ PoE",
+          [
+            "Open: วงจรขาด • Short: ลัดวงจร • Miswire: ต่อผิด pin • Split pair: จับคู่ผิด",
+            "Continuity tester อย่างเดียวอาจตรวจ split pair หรือคุณภาพ bandwidth ไม่ครบ",
+            "PoE ส่งไฟและข้อมูลบนสาย Ethernet ในระบบที่รองรับ",
+            "ตรวจ Link LED → การเข้าหัว → cable test → speed/duplex → IP configuration"
+          ],
+          "ไฟ Link ติดเป็นหลักฐานชั้นล่าง ไม่ใช่ยืนยันว่า routing และแอปถูกต้อง"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "สาย UTP ต่างจาก STP อย่างไร",
+          "options": [
+            "UTP ใช้แสง ส่วน STP ใช้เสียง",
+            "UTP มีเพียงเส้นเดียว",
+            "UTP ไม่มีชิลด์ ส่วน STP มีชิลด์",
+            "STP ไม่ต้องมีตัวนำ"
+          ],
+          "explain": "ทั้งสองเป็น twisted pair แต่ต่างเรื่อง shielding",
+          "cat": "LAN Cabling",
+          "id": 101,
+          "answer": 2
+        },
+        {
+          "q": "การบิดเกลียวคู่สายช่วยเรื่องใด",
+          "options": [
+            "ลดการรบกวนและ crosstalk",
+            "เพิ่มจำนวน IP",
+            "แทน firewall",
+            "ทำให้สายไม่ต้องมีหัว"
+          ],
+          "explain": "การจัดคู่ช่วยลดผลสัญญาณรบกวน",
+          "cat": "LAN Cabling",
+          "id": 102,
+          "answer": 0
+        },
+        {
+          "q": "สาย twisted pair Ethernet ทั่วไปมีตัวนำกี่เส้น",
+          "options": [
+            "8",
+            "2",
+            "4",
+            "16"
+          ],
+          "explain": "มี 4 คู่รวม 8 เส้น",
+          "cat": "LAN Cabling",
+          "id": 103,
+          "answer": 0
+        },
+        {
+          "q": "หัวสาย LAN ทองแดงที่มักเรียก RJ-45 มีตำแหน่งสัมผัสกี่ตำแหน่ง",
+          "options": [
+            "4",
+            "8",
+            "6",
+            "12"
+          ],
+          "explain": "หัว 8P8C มี 8 ตำแหน่งและ 8 หน้าสัมผัส",
+          "cat": "LAN Cabling",
+          "id": 104,
+          "answer": 1
+        },
+        {
+          "q": "T568B pin 1 เป็นสีใด",
+          "options": [
+            "ขาวเขียว",
+            "น้ำเงิน",
+            "น้ำตาล",
+            "ขาวส้ม"
+          ],
+          "explain": "T568B เริ่มขาวส้ม แล้วส้ม",
+          "cat": "LAN Cabling",
+          "id": 105,
+          "answer": 3
+        },
+        {
+          "q": "T568A pin 1 เป็นสีใด",
+          "options": [
+            "ขาวส้ม",
+            "ขาวน้ำเงิน",
+            "น้ำตาล",
+            "ขาวเขียว"
+          ],
+          "explain": "T568A เริ่มขาวเขียว แล้วเขียว",
+          "cat": "LAN Cabling",
+          "id": 106,
+          "answer": 3
+        },
+        {
+          "q": "T568A และ T568B สลับคู่สีใด",
+          "options": [
+            "น้ำเงินกับน้ำตาล",
+            "เขียวกับส้ม",
+            "น้ำเงินกับเขียว",
+            "ส้มกับน้ำตาล"
+          ],
+          "explain": "คู่สีเขียวและส้มสลับตำแหน่ง",
+          "cat": "LAN Cabling",
+          "id": 107,
+          "answer": 1
+        },
+        {
+          "q": "เข้าหัวแบบ B ทั้งสองปลายเป็นสายใด",
+          "options": [
+            "Crossover แบบ A-B",
+            "Rollover",
+            "Fiber",
+            "Straight-through"
+          ],
+          "explain": "มาตรฐานเดียวกันสองปลายเป็น straight-through",
+          "cat": "LAN Cabling",
+          "id": 108,
+          "answer": 3
+        },
+        {
+          "q": "สาย A-B ตามบทเรียน 10/100 เป็นสายชนิดใด",
+          "options": [
+            "Straight-through",
+            "Coaxial",
+            "Crossover",
+            "Single-mode fiber"
+          ],
+          "explain": "A-B สลับคู่ส่งและรับของ 10/100",
+          "cat": "LAN Cabling",
+          "id": 109,
+          "answer": 2
+        },
+        {
+          "q": "PC ต่อ switch ตามกฎเก่าโดยไม่มี Auto MDI-X ควรใช้สายใด",
+          "options": [
+            "Straight-through",
+            "Crossover",
+            "Rollover",
+            "สายโทรศัพท์ 2 เส้น"
+          ],
+          "explain": "อุปกรณ์ต่างบทบาทตามกฎเดิมใช้สายตรง",
+          "cat": "LAN Cabling",
+          "id": 110,
+          "answer": 0
+        },
+        {
+          "q": "Switch ต่อ switch 10/100 ไม่มี Auto MDI-X ตามกฎเดิมใช้สายใด",
+          "options": [
+            "Straight-through",
+            "Console rollover",
+            "สาย USB เท่านั้น",
+            "Crossover"
+          ],
+          "explain": "ต้องไขว้คู่ส่งรับเมื่ออุปกรณ์ไม่สลับเอง",
+          "cat": "LAN Cabling",
+          "id": 111,
+          "answer": 3
+        },
+        {
+          "q": "Auto MDI-X ช่วยอะไร",
+          "options": [
+            "แจก IP อัตโนมัติ",
+            "ตรวจ DNS",
+            "ปรับการไขว้คู่ส่งรับอัตโนมัติ",
+            "เข้ารหัส Wi-Fi"
+          ],
+          "explain": "คุณสมบัตินี้ช่วยลดข้อจำกัดการเลือกสายตรงหรือไขว้",
+          "cat": "LAN Cabling",
+          "id": 112,
+          "answer": 2
+        },
+        {
+          "q": "1000BASE-T ใช้สายกี่คู่ในการรับส่งข้อมูล",
+          "options": [
+            "4 คู่",
+            "1 คู่",
+            "2 คู่",
+            "3 คู่"
+          ],
+          "explain": "Gigabit Ethernet แบบนี้ใช้ทั้งสี่คู่",
+          "cat": "LAN Cabling",
+          "id": 113,
+          "answer": 0
+        },
+        {
+          "q": "Channel twisted pair LAN ทั่วไปกำหนดระยะรวมเท่าไร",
+          "options": [
+            "10 m",
+            "500 m",
+            "10 km",
+            "100 m"
+          ],
+          "explain": "ค่าทั่วไปคือ permanent link 90 m บวก patch cords รวม 10 m",
+          "cat": "LAN Cabling",
+          "id": 114,
+          "answer": 3
+        },
+        {
+          "q": "Permanent link ทองแดงตามแบบติดตั้งทั่วไปยาวไม่เกินเท่าไร",
+          "options": [
+            "100 m",
+            "150 m",
+            "90 m",
+            "1 km"
+          ],
+          "explain": "ส่วนสายถาวรมักจำกัด 90 m เพื่อเผื่อ patch cords",
+          "cat": "LAN Cabling",
+          "id": 115,
+          "answer": 2
+        },
+        {
+          "q": "Cat5e ที่ติดตั้งได้มาตรฐานรองรับอะไรโดยทั่วไป",
+          "options": [
+            "10 Gb/s ที่ 100 km",
+            "1000BASE-T ที่ channel 100 m",
+            "แสงเท่านั้น",
+            "ไม่มี Ethernet"
+          ],
+          "explain": "Cat5e รองรับ Gigabit Ethernet ตามข้อกำหนด channel",
+          "cat": "LAN Cabling",
+          "id": 116,
+          "answer": 1
+        },
+        {
+          "q": "ตัวเลือกใดเหมาะกับ 10GBASE-T ที่ 100 m ตามมาตรฐานสาย",
+          "options": [
+            "Cat3",
+            "สายโทรศัพท์แบน",
+            "Coaxial TV",
+            "Cat6A"
+          ],
+          "explain": "Cat6A ออกแบบรองรับ 10GBASE-T ที่ 100 m",
+          "cat": "LAN Cabling",
+          "id": 117,
+          "answer": 3
+        },
+        {
+          "q": "Fiber ส่งข้อมูลด้วยอะไร",
+          "options": [
+            "กระแสลม",
+            "เสียงในท่อ",
+            "แสง",
+            "คลื่นบนคู่ทองแดงเสมอ"
+          ],
+          "explain": "ใยแก้วใช้สัญญาณแสง",
+          "cat": "LAN Cabling",
+          "id": 118,
+          "answer": 2
+        },
+        {
+          "q": "สื่อใดทนต่อ EMI ตามตัวกลางได้ดี",
+          "options": [
+            "UTP ทุกกรณีเท่ากัน",
+            "สายทองแดงเปลือย",
+            "Fiber optic",
+            "สายโทรศัพท์ยาวไม่จำกัด"
+          ],
+          "explain": "ใยแก้วไม่ใช้สัญญาณไฟฟ้าในตัวกลาง",
+          "cat": "LAN Cabling",
+          "id": 119,
+          "answer": 2
+        },
+        {
+          "q": "Open circuit ของสายหมายถึงอะไร",
+          "options": [
+            "ตัวนำสองเส้นแตะกัน",
+            "ตัวนำขาดหรือไม่ต่อถึงกัน",
+            "DNS เปิดอยู่",
+            "สายมี bandwidth สูง"
+          ],
+          "explain": "วงจร open ไม่ต่อเนื่อง",
+          "cat": "LAN Cabling",
+          "id": 120,
+          "answer": 1
+        },
+        {
+          "q": "Short circuit ของสายหมายถึงอะไร",
+          "options": [
+            "ตัวนำขาดเพียงอย่างเดียว",
+            "IP ซ้ำเท่านั้น",
+            "ตัวนำสัมผัสกันผิดปกติ",
+            "หัวถูกสีครบ"
+          ],
+          "explain": "การลัดวงจรทำให้วงจรที่ควรแยกเชื่อมกัน",
+          "cat": "LAN Cabling",
+          "id": 121,
+          "answer": 2
+        },
+        {
+          "q": "Split pair หมายถึงอะไร",
+          "options": [
+            "ใช้ใยแก้วสองเส้น",
+            "นำเส้นจากคนละคู่มาจับคู่สัญญาณ",
+            "แยก VLAN",
+            "ใช้สายตรงสองเส้น"
+          ],
+          "explain": "Pin อาจต่อถึงกันแต่คู่บิดเกลียวผิด ทำให้ crosstalk สูง",
+          "cat": "LAN Cabling",
+          "id": 122,
+          "answer": 1
+        },
+        {
+          "q": "PoE ให้ประโยชน์อะไร",
+          "options": [
+            "ส่งไฟพร้อมข้อมูลให้อุปกรณ์ที่รองรับ",
+            "ทำ NAT แทน router",
+            "เข้ารหัสทุก frame",
+            "ยืด copper ได้ไม่จำกัด"
+          ],
+          "explain": "เช่นจ่ายไฟให้ AP หรือ IP phone ผ่าน Ethernet",
+          "cat": "LAN Cabling",
+          "id": 123,
+          "answer": 0
+        },
+        {
+          "q": "ไฟ Link ติดยืนยันเรื่องใดได้เหมาะสมที่สุด",
+          "options": [
+            "DNS ถูกแน่นอน",
+            "มีการเชื่อมต่อระดับลิงก์ตามสถานะอุปกรณ์",
+            "เว็บไซต์ใช้งานได้แน่นอน",
+            "Default route ถูกแน่นอน"
+          ],
+          "explain": "ต้องทดสอบ IP และบริการชั้นบนต่อ",
+          "cat": "LAN Cabling",
+          "id": 124,
+          "answer": 1
+        },
+        {
+          "q": "เหตุใดไม่ควรคลายเกลียวปลายสายมากเกินจำเป็น",
+          "options": [
+            "ทำให้ IPv4 เปลี่ยนเป็น IPv6",
+            "ลดจำนวน port",
+            "ทำให้ DNS หมดอายุ",
+            "ทำให้คุณสมบัติลด crosstalk แย่ลง"
+          ],
+          "explain": "การคงรูปคู่เกลียวใกล้หัวช่วยรักษาคุณภาพสัญญาณ",
+          "cat": "LAN Cabling",
+          "id": 125,
+          "answer": 3
+        }
+      ]
+    },
+    {
+      "name": "Cloud Computing",
+      "slides": [
+        [
+          "Cloud คืออะไร",
+          [
+            "ใช้ทรัพยากรคอมพิวเตอร์ที่จัดสรรได้ตามต้องการผ่านเครือข่าย",
+            "NIST: on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service",
+            "การมี VM อย่างเดียวไม่ได้ทำให้ระบบมีคุณลักษณะ cloud ครบ"
+          ],
+          "จำ 5 คุณลักษณะ: ขอเอง–เข้าผ่านเครือข่าย–ใช้ pool–ยืดหด–วัดการใช้"
+        ],
+        [
+          "IaaS / PaaS / SaaS",
+          [
+            "IaaS: ใช้ VM, storage, network; ลูกค้ามักดูแล guest OS และแอป",
+            "PaaS: ผู้ให้บริการดูแล platform/runtime; ลูกค้าเน้นโค้ดและข้อมูล",
+            "SaaS: ใช้แอปสำเร็จรูปผ่านบริการ; ลูกค้ายังต้องจัดการบัญชี สิทธิ์ และข้อมูลตามข้อตกลง"
+          ],
+          "ถามว่าใครดูแลอะไร ให้ดูขอบเขตบริการ ไม่ใช่ชื่อผลิตภัณฑ์อย่างเดียว"
+        ],
+        [
+          "Deployment Models",
+          [
+            "Public: เปิดให้ใช้งานโดยสาธารณะตามบริการ",
+            "Private: จัดไว้ให้ใช้งานเฉพาะองค์กรหนึ่ง",
+            "Community: ใช้ร่วมโดยองค์กรที่มีข้อกำหนดร่วมกัน",
+            "Hybrid: เชื่อม cloud ตั้งแต่สองโครงสร้างที่แยกกันและรองรับการเคลื่อนย้ายข้อมูล/แอป"
+          ],
+          "Public/private เป็นรูปแบบการใช้งาน ไม่ใช่คำตัดสินว่าปลอดภัยหรือไม่ปลอดภัย"
+        ],
+        [
+          "Elasticity กับ Scalability",
+          [
+            "Scalability: ความสามารถในการรองรับงานเพิ่มด้วยทรัพยากรที่มากขึ้น",
+            "Elasticity: ปรับเพิ่มและลดทรัพยากรตามความต้องการ",
+            "Scale up: เพิ่มพลังเครื่องเดิม • Scale out: เพิ่มจำนวนเครื่อง",
+            "Load balancer กระจายคำขอ; auto scaling ปรับจำนวน/ขนาดตามกฎ"
+          ],
+          "เพิ่มเครื่องโดยไม่ลดเมื่อโหลดหาย ยังไม่แสดงการยืดหดครบ"
+        ],
+        [
+          "ความพร้อมใช้และข้อมูล",
+          [
+            "Availability ต้องดู SLA และสถาปัตยกรรม ไม่ใช่เชื่อว่า cloud ไม่เคยล่ม",
+            "Backup เก็บสำเนาสำหรับกู้คืน; replication ช่วยทำสำเนาแต่ไม่แทน backup ทุกกรณี",
+            "RPO: ยอมเสียข้อมูลย้อนหลังเท่าใด • RTO: ต้องกู้บริการภายในเท่าใด",
+            "Object storage เก็บเป็น object; block storage ให้ block สำหรับ volume"
+          ],
+          "Replication อาจทำสำเนาความผิดพลาดหรือการลบตามไปด้วย"
+        ],
+        [
+          "ต้นทุนและความปลอดภัย",
+          [
+            "Measured service วัดการใช้ทรัพยากร; ค่าใช้จ่ายขึ้นกับ pricing และการใช้งานจริง",
+            "ระวัง VM เปิดทิ้ง storage snapshot และค่าโอนข้อมูลออก",
+            "Shared responsibility: ผู้ให้บริการกับลูกค้ามีหน้าที่ต่างกันตามบริการ",
+            "Least privilege, MFA, encryption, backup และการตรวจสิทธิ์ข้อมูลยังจำเป็น"
+          ],
+          "Cloud ไม่ได้รับประกันว่าถูกกว่าเสมอ ต้องวัดและคุมการใช้"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "ข้อใดเป็นคุณลักษณะ cloud ตาม NIST",
+          "options": [
+            "On-demand self-service",
+            "ต้องติดตั้งเองทุกเครื่อง",
+            "ห้ามใช้เครือข่าย",
+            "ความจุตายตัวเสมอ"
+          ],
+          "explain": "ผู้ใช้จัดสรรทรัพยากรได้ตามต้องการโดยไม่ต้องให้เจ้าหน้าที่ทำทุกครั้ง",
+          "cat": "Cloud Computing",
+          "id": 126,
+          "answer": 0
+        },
+        {
+          "q": "Broad network access หมายถึงอะไร",
+          "options": [
+            "ใช้ได้ในห้องเดียวเท่านั้น",
+            "ต้องมีสาย crossover ทุกเครื่อง",
+            "ห้ามใช้มือถือ",
+            "เข้าถึงบริการผ่านเครือข่ายด้วยกลไกมาตรฐาน"
+          ],
+          "explain": "บริการเข้าถึงได้จาก client หลายประเภทตามการรองรับ",
+          "cat": "Cloud Computing",
+          "id": 127,
+          "answer": 3
+        },
+        {
+          "q": "Resource pooling หมายถึงอะไร",
+          "options": [
+            "รวมทรัพยากรให้บริการผู้ใช้หลายรายตามการจัดสรร",
+            "ทุกคนต้องใช้รหัสผ่านเดียว",
+            "ต้องเก็บข้อมูลในไฟล์เดียว",
+            "ไม่มีการแยกผู้เช่า"
+          ],
+          "explain": "ทรัพยากรอยู่ใน pool และจัดให้ผู้ใช้ตามความต้องการ",
+          "cat": "Cloud Computing",
+          "id": 128,
+          "answer": 0
+        },
+        {
+          "q": "Rapid elasticity เน้นอะไร",
+          "options": [
+            "เพิ่ม IP แบบสุ่ม",
+            "ห้ามลดจำนวนเครื่อง",
+            "เพิ่มและลดทรัพยากรตามความต้องการได้รวดเร็ว",
+            "ใช้ฮาร์ดดิสก์ใหญ่ที่สุดเสมอ"
+          ],
+          "explain": "Elasticity สอดคล้องกับโหลดที่ขึ้นลง",
+          "cat": "Cloud Computing",
+          "id": 129,
+          "answer": 2
+        },
+        {
+          "q": "Measured service หมายถึงอะไร",
+          "options": [
+            "บริการต้องฟรีทุกแบบ",
+            "คิดเงินเท่ากันทุกงาน",
+            "วัดและติดตามปริมาณการใช้บริการ",
+            "วัดความยาวสายเท่านั้น"
+          ],
+          "explain": "การวัดช่วยติดตามรายงานและควบคุมการใช้ทรัพยากร",
+          "cat": "Cloud Computing",
+          "id": 130,
+          "answer": 2
+        },
+        {
+          "q": "โมเดลใดให้ลูกค้าดูแล guest OS ของ VM โดยทั่วไป",
+          "options": [
+            "SaaS",
+            "DNS",
+            "IaaS",
+            "HTTP"
+          ],
+          "explain": "IaaS ให้โครงสร้างพื้นฐาน ส่วน guest OS อยู่ในความรับผิดชอบลูกค้าตามบริการ",
+          "cat": "Cloud Computing",
+          "id": 131,
+          "answer": 2
+        },
+        {
+          "q": "โมเดลใดให้ deploy โค้ดโดยไม่ดูแล OS พื้นฐานเป็นหลัก",
+          "options": [
+            "PaaS",
+            "IaaS แบบ VM ดิบ",
+            "Ethernet",
+            "STP"
+          ],
+          "explain": "PaaS จัดการ platform/runtime ให้ตามขอบเขตบริการ",
+          "cat": "Cloud Computing",
+          "id": 132,
+          "answer": 0
+        },
+        {
+          "q": "การใช้แอปสำเร็จรูปออนไลน์จัดเป็นโมเดลใดโดยทั่วไป",
+          "options": [
+            "IaaS",
+            "Physical layer",
+            "Private IP",
+            "SaaS"
+          ],
+          "explain": "SaaS ให้ซอฟต์แวร์ในรูปบริการ",
+          "cat": "Cloud Computing",
+          "id": 133,
+          "answer": 3
+        },
+        {
+          "q": "Cloud ที่จัดไว้ใช้เฉพาะองค์กรหนึ่งคืออะไร",
+          "options": [
+            "Public cloud",
+            "Community cloud เสมอ",
+            "Private cloud",
+            "Open Wi-Fi"
+          ],
+          "explain": "Private cloud ใช้เฉพาะองค์กร แม้ผู้ดูแลหรือสถานที่อาจต่างกัน",
+          "cat": "Cloud Computing",
+          "id": 134,
+          "answer": 2
+        },
+        {
+          "q": "Cloud ที่เปิดให้สาธารณะสมัครใช้ตามบริการคืออะไร",
+          "options": [
+            "Private cloud",
+            "Public cloud",
+            "VLAN",
+            "Loopback"
+          ],
+          "explain": "Public cloud เปิดให้ใช้งานทั่วไปตามเงื่อนไขผู้ให้บริการ",
+          "cat": "Cloud Computing",
+          "id": 135,
+          "answer": 1
+        },
+        {
+          "q": "องค์กรที่มีข้อกำหนดร่วมกันใช้ cloud ร่วมกันเป็นโมเดลใด",
+          "options": [
+            "Public DNS",
+            "Transport cloud",
+            "Full mesh เสมอ",
+            "Community cloud"
+          ],
+          "explain": "Community cloud รองรับกลุ่มองค์กรที่มีข้อกำหนดร่วม",
+          "cat": "Cloud Computing",
+          "id": 136,
+          "answer": 3
+        },
+        {
+          "q": "การเชื่อม private และ public cloud เพื่อทำงานร่วมกันตรงกับอะไร",
+          "options": [
+            "SaaS เท่านั้น",
+            "Hybrid cloud",
+            "Single host",
+            "Rollover"
+          ],
+          "explain": "Hybrid ประกอบ cloud แยกกันที่เชื่อมด้วยเทคโนโลยีรองรับการใช้ร่วม",
+          "cat": "Cloud Computing",
+          "id": 137,
+          "answer": 1
+        },
+        {
+          "q": "เพิ่ม RAM ให้เครื่องเดิมเป็นการ scale แบบใด",
+          "options": [
+            "Scale out",
+            "Scale in",
+            "Scale up",
+            "Broadcast"
+          ],
+          "explain": "Vertical scaling เพิ่มความสามารถเครื่องเดิม",
+          "cat": "Cloud Computing",
+          "id": 138,
+          "answer": 2
+        },
+        {
+          "q": "เพิ่มจำนวน VM หลายเครื่องเป็นการ scale แบบใด",
+          "options": [
+            "Scale up",
+            "Scale out",
+            "Scale down",
+            "Subnetting"
+          ],
+          "explain": "Horizontal scaling เพิ่มจำนวน instance",
+          "cat": "Cloud Computing",
+          "id": 139,
+          "answer": 1
+        },
+        {
+          "q": "Load balancer ทำหน้าที่ใด",
+          "options": [
+            "กระจายคำขอไปหลาย backend",
+            "รับรองข้อมูลไม่มีวันหาย",
+            "แทน DNS ทุกกรณี",
+            "ทำสาย LAN ให้ยาวไม่จำกัด"
+          ],
+          "explain": "ช่วยกระจายโหลดและอาจตรวจสุขภาพ backend",
+          "cat": "Cloud Computing",
+          "id": 140,
+          "answer": 0
+        },
+        {
+          "q": "Auto scaling ใช้ทำอะไร",
+          "options": [
+            "เข้ารหัสทุกไฟล์อัตโนมัติเสมอ",
+            "แก้ source code ให้ถูกทุกครั้ง",
+            "ปรับทรัพยากรอัตโนมัติตามกฎหรือโหลด",
+            "ป้องกันค่าใช้จ่ายได้ทั้งหมด"
+          ],
+          "explain": "ต้องกำหนดนโยบาย ขอบเขต และเฝ้าดูต้นทุน",
+          "cat": "Cloud Computing",
+          "id": 141,
+          "answer": 2
+        },
+        {
+          "q": "มี VM ในห้อง server เพียงอย่างเดียวพิสูจน์ว่าเป็น cloud ครบหรือไม่",
+          "options": [
+            "พอเสมอ",
+            "เป็น SaaS เสมอ",
+            "ยังไม่พอ ต้องดูคุณลักษณะบริการ",
+            "เป็น public เสมอ"
+          ],
+          "explain": "Virtualization เป็นเทคโนโลยีหนึ่ง แต่ไม่เท่ากับคุณลักษณะ cloud ครบ",
+          "cat": "Cloud Computing",
+          "id": 142,
+          "answer": 2
+        },
+        {
+          "q": "Shared responsibility หมายถึงอะไร",
+          "options": [
+            "ผู้ให้บริการและลูกค้ารับผิดชอบต่างส่วนตามบริการ",
+            "ผู้ให้บริการดูแลทุกอย่างเสมอ",
+            "ลูกค้าไม่ต้องดูแลบัญชี",
+            "ไม่ต้องมี backup"
+          ],
+          "explain": "ขอบเขตต่างกันตาม IaaS PaaS SaaS และข้อตกลง",
+          "cat": "Cloud Computing",
+          "id": 143,
+          "answer": 0
+        },
+        {
+          "q": "Least privilege คืออะไร",
+          "options": [
+            "ให้ admin ทุกคน",
+            "เปิด storage สาธารณะทั้งหมด",
+            "ใช้บัญชีเดียวทั้งองค์กร",
+            "ให้สิทธิ์เท่าที่จำเป็นต่อหน้าที่"
+          ],
+          "explain": "ลดสิทธิ์ส่วนเกินเพื่อลดผลกระทบและความเสี่ยง",
+          "cat": "Cloud Computing",
+          "id": 144,
+          "answer": 3
+        },
+        {
+          "q": "RPO ใช้บอกอะไร",
+          "options": [
+            "เวลากู้ระบบทั้งหมดเท่านั้น",
+            "ความเร็ว CPU",
+            "ความยาวสาย",
+            "ปริมาณเวลาข้อมูลย้อนหลังที่ยอมสูญเสียได้"
+          ],
+          "explain": "RPO เป็นเป้าหมายการยอมเสียข้อมูลตามช่วงเวลา",
+          "cat": "Cloud Computing",
+          "id": 145,
+          "answer": 3
+        },
+        {
+          "q": "RTO ใช้บอกอะไร",
+          "options": [
+            "ระยะเวลาที่ตั้งเป้ากู้บริการกลับมา",
+            "จำนวน byte ใน frame",
+            "อายุ DNS cache",
+            "จำนวน VLAN"
+          ],
+          "explain": "RTO เป็นเป้าหมายเวลากู้ระบบหลังหยุดชะงัก",
+          "cat": "Cloud Computing",
+          "id": 146,
+          "answer": 0
+        },
+        {
+          "q": "เหตุใด replication ไม่แทน backup ทุกกรณี",
+          "options": [
+            "Replication ไม่คัดลอกข้อมูล",
+            "Backup ใช้เครือข่ายไม่ได้",
+            "ทั้งคู่เป็น DNS",
+            "การลบหรือข้อมูลเสียอาจถูกทำสำเนาตาม"
+          ],
+          "explain": "ต้องมีสำเนาที่กู้ย้อนหลังได้ตามนโยบายและทดสอบการกู้",
+          "cat": "Cloud Computing",
+          "id": 147,
+          "answer": 3
+        },
+        {
+          "q": "Object storage จัดเก็บข้อมูลแบบใด",
+          "options": [
+            "เฉพาะ sector ให้ OS เสมอ",
+            "Object พร้อม identifier และ metadata",
+            "เฉพาะค่า MAC",
+            "เฉพาะ TCP connection"
+          ],
+          "explain": "Object storage เข้าถึงผ่าน API หรือกลไกบริการที่กำหนด",
+          "cat": "Cloud Computing",
+          "id": 148,
+          "answer": 1
+        },
+        {
+          "q": "ข้อใดทำให้ค่า cloud เพิ่มโดยไม่จำเป็น",
+          "options": [
+            "เปิดทรัพยากรทิ้งแม้ไม่มีงาน",
+            "กำหนด budget alert",
+            "ลบทรัพยากรที่ไม่ใช้ตามนโยบาย",
+            "เลือกขนาดให้พอดีโหลด"
+          ],
+          "explain": "ทรัพยากรที่คิดเงินอาจมีค่าใช้จ่ายแม้ไม่มีผู้ใช้แอป",
+          "cat": "Cloud Computing",
+          "id": 149,
+          "answer": 0
+        },
+        {
+          "q": "SLA ด้าน availability หมายถึงอะไร",
+          "options": [
+            "รับรองไม่มี downtime ทุกกรณี",
+            "สำเนา backup ทุกนาทีเสมอ",
+            "รหัสผ่านของ server",
+            "ข้อตกลงระดับบริการตามนิยามและเงื่อนไข"
+          ],
+          "explain": "ต้องอ่านนิยาม วิธีวัด ข้อยกเว้น และการชดเชยในข้อตกลง",
+          "cat": "Cloud Computing",
+          "id": 150,
+          "answer": 3
+        }
+      ]
+    },
+    {
+      "name": "Wireless",
+      "slides": [
+        [
+          "Wi-Fi และบทบาทอุปกรณ์",
+          [
+            "IEEE 802.11 คือ WLAN; IEEE 802.3 คือ Ethernet",
+            "AP เชื่อม client ไร้สายเข้าลิงก์เครือข่าย; ไม่จำเป็นต้องทำ routing/DHCP",
+            "Wireless router บ้านมักรวม AP + switch + router + NAT + DHCP",
+            "SSID คือชื่อเครือข่าย; BSSID ระบุ BSS โดยทั่วไปสัมพันธ์กับ MAC ของ AP radio"
+          ],
+          "อย่าเหมาว่า AP ทุกตัวเป็น default gateway"
+        ],
+        [
+          "โหมดและการเข้าถึงสื่อ",
+          [
+            "Infrastructure: client ติดต่อผ่าน AP • Ad hoc: สื่อสารโดยไม่ใช้ AP ตามรูปแบบนั้น",
+            "CSMA/CA ฟังช่องสัญญาณ สุ่ม backoff และใช้ ACK ตามชนิด frame",
+            "Hidden node: client ได้ยิน AP แต่ไม่ได้ยินกันเอง",
+            "RTS/CTS ช่วยลดผล hidden node ได้บางกรณี แต่มี overhead"
+          ],
+          "Wi-Fi แบ่งเวลาใช้สื่อ ความเร็วโฆษณาไม่ใช่ throughput ที่รับประกัน"
+        ],
+        [
+          "ย่านและ Channel",
+          [
+            "2.4 GHz มักไปได้ไกล/ทะลุสิ่งกีดขวางได้ดีกว่าในเงื่อนไขเทียบกัน แต่แออัด",
+            "5 GHz มีช่องให้จัดสรรมากกว่าในหลายบริบท; ระยะขึ้นกับกำลังส่ง วัสดุ และสภาพแวดล้อม",
+            "2.4 GHz แบบ 20 MHz นิยมวางช่อง 1, 6, 11 เพื่อลดการทับซ้อน",
+            "Channel ที่อนุญาตและกำลังส่งขึ้นกับประเทศ/ข้อกำหนดอุปกรณ์"
+          ],
+          "เพิ่ม channel width อาจเพิ่มอัตราส่งสูงสุด แต่กินสเปกตรัมและเพิ่มโอกาสรบกวน"
+        ],
+        [
+          "Security ที่ต้องแยก",
+          [
+            "WEP และ WPA/TKIP เป็นแบบเก่าที่ควรหลีกเลี่ยง; WPA2-AES/CCMP หรือ WPA3 ตามการรองรับ",
+            "Personal ใช้รหัสร่วม; Enterprise มักใช้ 802.1X/EAP กับระบบยืนยันตัวตน",
+            "ซ่อน SSID หรือ MAC filtering ไม่ใช่การเข้ารหัสและไม่แทน security ที่เหมาะสม",
+            "เปลี่ยนรหัสผู้ดูแล และอย่าสับสน admin password กับรหัสเข้า Wi-Fi"
+          ],
+          "การเชื่อม SSID สำเร็จยังไม่รับประกันว่าได้ IP และออก Internet ได้"
+        ],
+        [
+          "Signal และ Throughput",
+          [
+            "RSSI แบบ dBm: −50 dBm แรงกว่า −80 dBm",
+            "SNR = signal เทียบ noise; SNR สูงมักช่วยรองรับ modulation ที่สูงขึ้น",
+            "ระยะ กำแพง การรบกวน จำนวน client และ airtime กระทบ throughput",
+            "Roaming คือย้ายการเชื่อมต่อระหว่าง AP; ต้องมีการออกแบบ coverage/บริการรองรับ"
+          ],
+          "สัญญาณแรงอาจยังช้า หากช่องแออัดหรือ backhaul เป็นคอขวด"
+        ],
+        [
+          "ลำดับตรวจ Wi-Fi",
+          [
+            "ตรวจ radio/NIC → SSID → security/key → association",
+            "ตรวจ DHCP/IP/mask/gateway/DNS → ping gateway → ทดสอบบริการ",
+            "IPv4 169.254.x.x มักเป็น link-local เมื่อไม่ได้ lease ในระบบที่รองรับ",
+            "ตรวจฝั่ง WAN และ NAT ของ wireless router เมื่อ LAN ได้แต่ Internet ไม่ได้"
+          ],
+          "แยกปัญหาการเชื่อมไร้สาย ออกจากปัญหา IP/DNS/WAN"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "Wi-Fi WLAN ใช้มาตรฐานตระกูลใด",
+          "options": [
+            "IEEE 802.11",
+            "IEEE 802.3",
+            "IEEE 802.1Q เท่านั้น",
+            "RS-232"
+          ],
+          "explain": "802.11 เป็นตระกูลมาตรฐาน WLAN",
+          "cat": "Wireless",
+          "id": 151,
+          "answer": 0
+        },
+        {
+          "q": "SSID คืออะไร",
+          "options": [
+            "รหัสผ่าน admin เสมอ",
+            "ชื่อเครือข่ายไร้สาย",
+            "IP ของ DNS",
+            "Subnet mask"
+          ],
+          "explain": "SSID ใช้ระบุชื่อ WLAN ที่ client เลือกเชื่อม",
+          "cat": "Wireless",
+          "id": 152,
+          "answer": 1
+        },
+        {
+          "q": "AP มีหน้าที่หลักใด",
+          "options": [
+            "เชื่อม client ไร้สายเข้าระบบลิงก์",
+            "เป็น router เสมอ",
+            "เป็น DNS root เสมอ",
+            "จ่าย public IP เสมอ"
+          ],
+          "explain": "AP ไม่จำเป็นต้องมี NAT routing หรือ DHCP",
+          "cat": "Wireless",
+          "id": 153,
+          "answer": 0
+        },
+        {
+          "q": "Wireless router สำหรับบ้านมักรวมอะไร",
+          "options": [
+            "เฉพาะ repeater อย่างเดียว",
+            "AP switch router NAT และ DHCP",
+            "เฉพาะ mail server",
+            "เฉพาะสาย console"
+          ],
+          "explain": "กล่องเดียวรวมหลายหน้าที่ แต่ยังต้องแยกแนวคิด",
+          "cat": "Wireless",
+          "id": 154,
+          "answer": 1
+        },
+        {
+          "q": "Infrastructure mode ใช้อะไรเป็นศูนย์กลางการเข้าถึง",
+          "options": [
+            "DNS record",
+            "สาย console",
+            "FTP control",
+            "Access point"
+          ],
+          "explain": "Client เชื่อมผ่าน AP",
+          "cat": "Wireless",
+          "id": 155,
+          "answer": 3
+        },
+        {
+          "q": "Ad hoc mode ตามแนวคิด WLAN คืออะไร",
+          "options": [
+            "ต้องผ่าน public cloud เสมอ",
+            "ใช้สาย LAN เท่านั้น",
+            "อุปกรณ์สื่อสารกันโดยไม่ผ่าน AP ในโหมดนั้น",
+            "ใช้แต่ router ชั้น 3"
+          ],
+          "explain": "ต่างจาก infrastructure ที่มี AP",
+          "cat": "Wireless",
+          "id": 156,
+          "answer": 2
+        },
+        {
+          "q": "CSMA/CA มุ่งทำอะไร",
+          "options": [
+            "ตรวจ collision ระหว่างส่งเหมือนสายร่วมได้เสมอ",
+            "แปลง DNS",
+            "ลดโอกาสชนก่อนส่ง",
+            "จัดสรร public IP"
+          ],
+          "explain": "ใช้ฟังสื่อและ backoff รวมกลไกที่เกี่ยวข้อง",
+          "cat": "Wireless",
+          "id": 157,
+          "answer": 2
+        },
+        {
+          "q": "Hidden node เกิดจากอะไร",
+          "options": [
+            "ปิดชื่อ SSID เท่านั้น",
+            "Client ได้ยิน AP แต่ไม่ได้ยินกันเอง",
+            "DNS ไม่มี AAAA",
+            "สาย fiber สั้นเกินไป"
+          ],
+          "explain": "Client อาจส่งชนกันที่ AP แม้ฟังแล้วคิดว่าช่องว่าง",
+          "cat": "Wireless",
+          "id": 158,
+          "answer": 1
+        },
+        {
+          "q": "RTS/CTS ช่วยลดปัญหาใดบางกรณี",
+          "options": [
+            "IP ซ้ำทุกชนิด",
+            "Hidden node",
+            "DNS poisoning ทุกกรณี",
+            "สาย LAN ขาด"
+          ],
+          "explain": "การจองสื่อช่วยให้สถานีอื่นทราบช่วงใช้งาน แต่มี overhead",
+          "cat": "Wireless",
+          "id": 159,
+          "answer": 1
+        },
+        {
+          "q": "ชุด channel 2.4 GHz ที่นิยมสำหรับ 20 MHz คืออะไร",
+          "options": [
+            "1 2 3",
+            "3 4 5",
+            "1 6 11",
+            "8 9 10"
+          ],
+          "explain": "ชุด 1 6 11 ลดการทับซ้อนตามการจัดช่องทั่วไป",
+          "cat": "Wireless",
+          "id": 160,
+          "answer": 2
+        },
+        {
+          "q": "ข้อใดอธิบาย 2.4 GHz เทียบ 5 GHz ได้เหมาะสม",
+          "options": [
+            "เร็วกว่าเสมอทุกสถานการณ์",
+            "มักครอบคลุมและผ่านสิ่งกีดขวางได้ดีกว่าเมื่อเงื่อนไขเทียบกัน",
+            "ไม่มีการรบกวน",
+            "ใช้ได้ช่องเดียวทั่วโลก"
+          ],
+          "explain": "การแพร่คลื่นยังขึ้นกับกำลังส่ง เสาอากาศและสิ่งแวดล้อม",
+          "cat": "Wireless",
+          "id": 161,
+          "answer": 1
+        },
+        {
+          "q": "การเพิ่ม channel width มีผลแลกเปลี่ยนใด",
+          "options": [
+            "ลดการใช้สเปกตรัมเสมอ",
+            "อาจเพิ่มอัตราส่งแต่ใช้สเปกตรัมมากขึ้น",
+            "ทำให้ไม่มี noise",
+            "รับประกันระยะเพิ่มสองเท่า"
+          ],
+          "explain": "ช่องกว้างใช้ความถี่มากขึ้นและอาจรับการรบกวนมากขึ้น",
+          "cat": "Wireless",
+          "id": 162,
+          "answer": 1
+        },
+        {
+          "q": "มาตรฐานความปลอดภัยใดเก่าและไม่ควรเลือก",
+          "options": [
+            "WPA3",
+            "WPA2-AES",
+            "WEP",
+            "802.1X ร่วม EAP ที่เหมาะสม"
+          ],
+          "explain": "WEP มีจุดอ่อนทางการเข้ารหัสที่ทราบกัน",
+          "cat": "Wireless",
+          "id": 163,
+          "answer": 2
+        },
+        {
+          "q": "WPA2 แบบ AES ใช้กลไกข้อมูลใดโดยทั่วไป",
+          "options": [
+            "CCMP",
+            "WEP เท่านั้น",
+            "Telnet",
+            "FTP"
+          ],
+          "explain": "AES-CCMP เป็นวิธีที่ใช้กับ WPA2 ตามบริบทนี้",
+          "cat": "Wireless",
+          "id": 164,
+          "answer": 0
+        },
+        {
+          "q": "Enterprise Wi-Fi มักใช้กลไกใด",
+          "options": [
+            "HTTP 404",
+            "ARP เพียงอย่างเดียว",
+            "NAT เพียงอย่างเดียว",
+            "802.1X/EAP"
+          ],
+          "explain": "Enterprise ใช้การยืนยันตัวตนรายผู้ใช้หรืออุปกรณ์ตามระบบ",
+          "cat": "Wireless",
+          "id": 165,
+          "answer": 3
+        },
+        {
+          "q": "การซ่อน SSID เพียงอย่างเดียวปลอดภัยเพียงพอหรือไม่",
+          "options": [
+            "พอและแทน WPA ได้",
+            "ป้องกันดักฟังได้ทั้งหมด",
+            "ทำให้ไม่ต้องมีรหัส admin",
+            "ไม่พอ และไม่ใช่การเข้ารหัส"
+          ],
+          "explain": "ชื่อเครือข่ายยังอาจค้นพบได้จาก traffic",
+          "cat": "Wireless",
+          "id": 166,
+          "answer": 3
+        },
+        {
+          "q": "MAC filtering มีข้อจำกัดสำคัญใด",
+          "options": [
+            "เพิ่มความลับเทียบเท่า TLS เสมอ",
+            "ทำให้ไม่ต้องใช้ WPA",
+            "ป้องกันการโจมตีทุกแบบ",
+            "MAC อาจถูกปลอมและไม่เข้ารหัสข้อมูล"
+          ],
+          "explain": "ใช้เป็นส่วนประกอบได้แต่ไม่แทนการยืนยันตัวตนและเข้ารหัส",
+          "cat": "Wireless",
+          "id": 167,
+          "answer": 3
+        },
+        {
+          "q": "ค่า RSSI ใดแรงกว่าเมื่อวัดแบบเดียวกัน",
+          "options": [
+            "-80 dBm",
+            "-90 dBm",
+            "-50 dBm",
+            "-100 dBm"
+          ],
+          "explain": "ค่าที่ติดลบน้อยกว่าหมายถึงกำลังรับสูงกว่า",
+          "cat": "Wireless",
+          "id": 168,
+          "answer": 2
+        },
+        {
+          "q": "SNR สูงโดยทั่วไปสื่อถึงอะไร",
+          "options": [
+            "Noise สูงกว่าสัญญาณเสมอ",
+            "สัญญาณเด่นกว่า noise มากขึ้น",
+            "DNS ตอบเร็วแน่นอน",
+            "ไม่มี client อื่น"
+          ],
+          "explain": "SNR คืออัตราส่วนสัญญาณต่อสัญญาณรบกวน",
+          "cat": "Wireless",
+          "id": 169,
+          "answer": 1
+        },
+        {
+          "q": "PHY rate ของ Wi-Fi เท่ากับ throughput แอปเสมอหรือไม่",
+          "options": [
+            "ไม่เท่า เพราะมี overhead และการแบ่ง airtime",
+            "เท่าเสมอ",
+            "มากกว่าได้ไม่จำกัดเสมอ",
+            "ไม่เกี่ยวกับสื่อเลย"
+          ],
+          "explain": "ACK การรอส่ง การส่งซ้ำ และ protocol ลดอัตราข้อมูลแอป",
+          "cat": "Wireless",
+          "id": 170,
+          "answer": 0
+        },
+        {
+          "q": "Roaming หมายถึงอะไร",
+          "options": [
+            "ย้ายการเชื่อมต่อระหว่าง AP",
+            "เปลี่ยนสายเป็น fiber",
+            "แปลง HTTP เป็น DNS",
+            "เพิ่ม VLAN ทุก packet"
+          ],
+          "explain": "การเคลื่อนที่และการออกแบบเครือข่ายกำหนดความต่อเนื่องของบริการ",
+          "cat": "Wireless",
+          "id": 171,
+          "answer": 0
+        },
+        {
+          "q": "เชื่อม SSID ได้แต่มี 169.254.x.x ควรตรวจอะไร",
+          "options": [
+            "ขนาดหน้าจอ",
+            "ลำดับ OSI ชั้น 7 อย่างเดียว",
+            "ชื่อไฟล์รูป",
+            "DHCP และการตั้งค่า IP"
+          ],
+          "explain": "ที่อยู่ link-local มักชี้ว่าไม่ได้ DHCP lease ในระบบที่รองรับ",
+          "cat": "Wireless",
+          "id": 172,
+          "answer": 3
+        },
+        {
+          "q": "พิมพ์รหัส Wi-Fi ถูกแล้วออก Internet ไม่ได้ ข้อใดถูกต้อง",
+          "options": [
+            "ยังต้องตรวจ IP gateway DNS และ WAN",
+            "Internet ต้องใช้ได้แน่นอน",
+            "AP เสียแน่นอน",
+            "ต้องเปลี่ยน MAC ทันที"
+          ],
+          "explain": "การยืนยันตัวตนสำเร็จไม่ยืนยันบริการชั้นบน",
+          "cat": "Wireless",
+          "id": 173,
+          "answer": 0
+        },
+        {
+          "q": "BSSID โดยทั่วไปใช้ระบุอะไร",
+          "options": [
+            "BSS โดยสัมพันธ์กับ MAC ของ AP radio",
+            "รหัสผ่าน cloud",
+            "Subnet mask",
+            "HTTP method"
+          ],
+          "explain": "SSID เป็นชื่อ ส่วน BSSID ระบุชุดบริการพื้นฐาน",
+          "cat": "Wireless",
+          "id": 174,
+          "answer": 0
+        },
+        {
+          "q": "ข้อใดช่วยลดปัญหา Wi-Fi ช้าในห้องที่ AP หลายตัวใช้ช่องทับซ้อน",
+          "options": [
+            "เพิ่มกำลังส่งทุกตัวสูงสุดเสมอ",
+            "ซ่อน SSID อย่างเดียว",
+            "เปลี่ยน DNS อย่างเดียวเสมอ",
+            "วาง channel และ airtime ใหม่ตามการสำรวจ"
+          ],
+          "explain": "ต้องจัดช่องและ coverage จากการสำรวจ ไม่เพิ่มกำลังส่งโดยไม่มีข้อมูล",
+          "cat": "Wireless",
+          "id": 175,
+          "answer": 3
+        }
+      ]
+    },
+    {
+      "name": "Cisco และ Packet Tracer",
+      "slides": [
+        [
+          "โหมดคำสั่ง IOS",
+          [
+            "Router> คือ user EXEC; enable → Router# privileged EXEC",
+            "configure terminal → Router(config)# global configuration",
+            "interface g0/0 → Router(config-if)#; ชื่อ interface ขึ้นกับรุ่น",
+            "exit กลับหนึ่งระดับ; end หรือ Ctrl+Z กลับ privileged EXEC"
+          ],
+          "คำสั่งต้องใช้ในโหมดที่ถูกต้อง ไม่ใช่ใส่ทุกคำสั่งที่ prompt เดียว"
+        ],
+        [
+          "ตั้งค่า Interface: ตัวอย่าง",
+          [
+            "enable → configure terminal → interface g0/0",
+            "ip address 192.168.10.1 255.255.255.0",
+            "no shutdown → end",
+            "show ip interface brief ตรวจ IP และสถานะ interface"
+          ],
+          "นี่เป็นตัวอย่าง IOS; เลือก interface และ IP ให้ตรง topology จริง"
+        ],
+        [
+          "อ่านคำสั่งตรวจสอบ",
+          [
+            "show ip interface brief: สรุป IP และ up/down",
+            "show ip route: routing table; C=connected, L=local, S=static, O=OSPF, R=RIP ตาม IOS",
+            "show running-config: config ปัจจุบัน • show startup-config: config สำหรับเริ่มระบบ",
+            "show mac address-table: MAC table ของ switch"
+          ],
+          "administratively down มักต้องตรวจ shutdown/no shutdown"
+        ],
+        [
+          "Static Route และการบันทึก",
+          [
+            "ตัวอย่าง: ip route 192.168.20.0 255.255.255.0 10.0.0.2",
+            "Default route: ip route 0.0.0.0 0.0.0.0 10.0.0.2",
+            "Next-hop ต้องเข้าถึงได้ และปลายทางต้องมี route กลับด้วย",
+            "copy running-config startup-config เก็บ config เพื่อใช้หลัง reboot"
+          ],
+          "ping ไปได้ต้องมีเส้นทางตอบกลับและไม่มีนโยบายที่บล็อก"
+        ],
+        [
+          "การทดสอบใน Packet Tracer",
+          [
+            "Realtime ดูการทำงานทั่วไป; Simulation ดูเหตุการณ์ protocol ทีละขั้น",
+            "เริ่มจาก ping gateway แล้วจึง ping ข้าม subnet และทดสอบบริการ",
+            "ตรวจ link, IP/mask, gateway, route ไป-กลับ, ACL และบริการตามลำดับ",
+            "Check Results เทียบ rubric ของกิจกรรม แต่ไม่แทนการเข้าใจเหตุการณ์"
+          ],
+          "ไม่ใช่เฉลยไฟล์ PKA ที่ยังไม่ได้ตรวจ topology จริง"
+        ],
+        [
+          "อ่านผังแบบลงมือทำ",
+          [
+            "เขียนตาราง Device / Interface / IP / Mask / Gateway ก่อนตั้งค่า",
+            "แยกแต่ละ LAN/VLAN และวงเชื่อม router เป็นคนละ subnet",
+            "ตรวจว่าสายต่อ interface ถูกและ interface เปิดใช้งาน",
+            "เมื่อทดสอบล้มเหลว ใช้หลักฐานชี้ว่าหยุดที่ hop หรือชั้นใด"
+          ],
+          "ลองวาด 2 LAN ผ่าน 2 router แล้วใส่ static route ทั้งขาไปและขากลับ"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "Prompt Router> แสดงโหมดใดโดยทั่วไป",
+          "options": [
+            "User EXEC",
+            "Global configuration",
+            "Interface configuration",
+            "ROMMON เสมอ"
+          ],
+          "explain": "เครื่องหมาย > เป็น user EXEC ใน IOS ตามปกติ",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 176,
+          "answer": 0
+        },
+        {
+          "q": "คำสั่งใดเข้า privileged EXEC จาก user EXEC",
+          "options": [
+            "configure terminal",
+            "no shutdown",
+            "ip route",
+            "enable"
+          ],
+          "explain": "enable เปลี่ยนจาก > เป็น # เมื่อผ่านเงื่อนไขการยืนยันตัวตน",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 177,
+          "answer": 3
+        },
+        {
+          "q": "Prompt Router# โดยทั่วไปเป็นโหมดใด",
+          "options": [
+            "Interface configuration",
+            "Line configuration",
+            "Privileged EXEC",
+            "DHCP pool configuration"
+          ],
+          "explain": "Privileged EXEC ใช้คำสั่งตรวจสอบและเข้าตั้งค่าได้",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 178,
+          "answer": 2
+        },
+        {
+          "q": "คำสั่งใดเข้า global configuration จาก privileged EXEC",
+          "options": [
+            "configure terminal",
+            "show ip route",
+            "ping",
+            "copy startup-config running-config"
+          ],
+          "explain": "configure terminal เข้าสู่โหมด (config)#",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 179,
+          "answer": 0
+        },
+        {
+          "q": "คำสั่ง interface g0/0 ใช้ทำอะไร",
+          "options": [
+            "เปิด DNS",
+            "เข้าโหมดตั้งค่า interface นั้น",
+            "บันทึก config",
+            "ลบ route ทุกเส้น"
+          ],
+          "explain": "ชื่อ interface จริงขึ้นกับรุ่นอุปกรณ์",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 180,
+          "answer": 1
+        },
+        {
+          "q": "คำสั่ง ip address 192.168.1.1 255.255.255.0 ใน interface mode ทำอะไร",
+          "options": [
+            "กำหนด DNS A record",
+            "กำหนด IPv4 และ mask",
+            "สร้าง VLAN tag ทุกพอร์ต",
+            "กำหนด SSID"
+          ],
+          "explain": "ตั้งที่อยู่บน interface ที่กำลังเลือก",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 181,
+          "answer": 1
+        },
+        {
+          "q": "คำสั่งใดเปิด interface ที่ถูก shutdown",
+          "options": [
+            "shutdown",
+            "disable dns",
+            "erase startup-config",
+            "no shutdown"
+          ],
+          "explain": "no shutdown ยกเลิกการปิด interface ทางการตั้งค่า",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 182,
+          "answer": 3
+        },
+        {
+          "q": "สถานะ administratively down มักหมายถึงอะไร",
+          "options": [
+            "Interface ถูกปิดด้วยการตั้งค่า",
+            "DNS server ล่มแน่นอน",
+            "สายขาดแน่นอน",
+            "OSPF เลือกเส้นผิดเสมอ"
+          ],
+          "explain": "ตรวจ shutdown และการเปิดใช้งาน interface",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 183,
+          "answer": 0
+        },
+        {
+          "q": "คำสั่งใดสรุป IP และสถานะ interface",
+          "options": [
+            "show ip interface brief",
+            "show clock",
+            "show users",
+            "show version เท่านั้น"
+          ],
+          "explain": "แสดงรายการ interface IP และ status/protocol",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 184,
+          "answer": 0
+        },
+        {
+          "q": "คำสั่งใดดู routing table",
+          "options": [
+            "show mac address-table",
+            "show vlan brief",
+            "show clock",
+            "show ip route"
+          ],
+          "explain": "routing table แสดง prefix next hop และแหล่ง route",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 185,
+          "answer": 3
+        },
+        {
+          "q": "รหัส C ใน show ip route บน IOS โดยทั่วไปหมายถึงอะไร",
+          "options": [
+            "Connected",
+            "Cloud",
+            "CRC failed",
+            "Console password"
+          ],
+          "explain": "C เป็นเครือข่ายที่เชื่อมตรงและติดตั้งตามสถานะ interface",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 186,
+          "answer": 0
+        },
+        {
+          "q": "รหัส O ใน show ip route โดยทั่วไปมาจากอะไร",
+          "options": [
+            "HTTP",
+            "OSPF",
+            "DHCP",
+            "ARP"
+          ],
+          "explain": "O แสดง route จาก OSPF",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 187,
+          "answer": 1
+        },
+        {
+          "q": "คำสั่งใดดูการตั้งค่าที่ใช้อยู่ปัจจุบัน",
+          "options": [
+            "show startup-config",
+            "show running-config",
+            "show clock",
+            "show arp เท่านั้น"
+          ],
+          "explain": "running-config คือ configuration ที่กำลังใช้งาน",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 188,
+          "answer": 1
+        },
+        {
+          "q": "คำสั่งใดดู configuration ที่ใช้ตอนเริ่มระบบ",
+          "options": [
+            "show running-config",
+            "show interfaces เท่านั้น",
+            "show mac address-table",
+            "show startup-config"
+          ],
+          "explain": "startup-config เป็นข้อมูลที่เก็บไว้สำหรับเริ่มระบบ",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 189,
+          "answer": 3
+        },
+        {
+          "q": "คำสั่งใดบันทึก config ปัจจุบันเพื่อใช้หลัง reboot",
+          "options": [
+            "copy running-config startup-config",
+            "copy startup-config running-config",
+            "show running-config",
+            "reload โดยไม่บันทึก"
+          ],
+          "explain": "คัดลอก configuration ปัจจุบันไปยัง startup configuration",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 190,
+          "answer": 0
+        },
+        {
+          "q": "คำสั่งใดตั้ง default route ผ่าน 10.0.0.2",
+          "options": [
+            "ip route 255.255.255.255 255.255.255.255 10.0.0.2",
+            "ip address 0.0.0.0 10.0.0.2",
+            "ip route 0.0.0.0 0.0.0.0 10.0.0.2",
+            "show ip route 10.0.0.2"
+          ],
+          "explain": "ปลายทางและ mask เป็นศูนย์ระบุ default route",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 191,
+          "answer": 2
+        },
+        {
+          "q": "ip route 192.168.20.0 255.255.255.0 10.0.0.2 ระบุ next hop ใด",
+          "options": [
+            "10.0.0.2",
+            "192.168.20.0",
+            "255.255.255.0",
+            "0.0.0.0"
+          ],
+          "explain": "อาร์กิวเมนต์สุดท้ายในตัวอย่างนี้คือ next-hop IP",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 192,
+          "answer": 0
+        },
+        {
+          "q": "คำสั่ง exit ในโหมดตั้งค่าทั่วไปทำอะไร",
+          "options": [
+            "บันทึก config เสมอ",
+            "กลับหนึ่งระดับ",
+            "ลบ interface",
+            "reboot ทันที"
+          ],
+          "explain": "exit ออกจากโหมดย่อยกลับสู่โหมดก่อนหน้า",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 193,
+          "answer": 1
+        },
+        {
+          "q": "คำสั่ง end จาก configuration mode ทำอะไร",
+          "options": [
+            "ปิด router",
+            "ลบ startup-config",
+            "กลับ privileged EXEC",
+            "เข้า interface แรก"
+          ],
+          "explain": "end กลับ prompt # โดยไม่ต้อง exit ทีละระดับ",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 194,
+          "answer": 2
+        },
+        {
+          "q": "คำสั่งใดดู MAC table ของ switch IOS ตามปกติ",
+          "options": [
+            "show ip route",
+            "show clock",
+            "show mac address-table",
+            "show startup-config เท่านั้น"
+          ],
+          "explain": "แสดง MAC ที่เรียนรู้และพอร์ตใน VLAN ที่เกี่ยวข้อง",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 195,
+          "answer": 2
+        },
+        {
+          "q": "Ping ข้าม router ต้องมีเงื่อนไขใดนอกเหนือจากเส้นทางขาไป",
+          "options": [
+            "ต้องใช้ VLAN 1 ทุกวง",
+            "ต้องเป็นสาย crossover ทุกเส้น",
+            "มีเส้นทางขากลับและไม่มีนโยบายบล็อก",
+            "ต้องใช้ public IP ทุกเครื่อง"
+          ],
+          "explain": "ICMP echo reply ต้องกลับถึงต้นทางด้วย",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 196,
+          "answer": 2
+        },
+        {
+          "q": "Packet Tracer Simulation mode ช่วยเรื่องใด",
+          "options": [
+            "รับรอง network จริงเหมือนทุกประการ",
+            "ดูเหตุการณ์ protocol และ packet ทีละขั้น",
+            "แก้ config ให้ถูกอัตโนมัติทุกครั้ง",
+            "ยกเลิก subnet mask"
+          ],
+          "explain": "ใช้สังเกตการแลกเปลี่ยน protocol ในแบบจำลอง",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 197,
+          "answer": 1
+        },
+        {
+          "q": "PC ping gateway ไม่ผ่าน ควรตรวจอะไรก่อนเหมาะสมที่สุด",
+          "options": [
+            "Link IP mask gateway และ interface ฝั่ง LAN",
+            "เปลี่ยน cloud provider",
+            "ลบทุก route ทันที",
+            "ตั้ง HTTP cookie"
+          ],
+          "explain": "เริ่มตรวจชั้นใกล้ตัวก่อนวิเคราะห์เส้นทางไกล",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 198,
+          "answer": 0
+        },
+        {
+          "q": "IP interface เป็น up แต่ line protocol down ควรทำอย่างไร",
+          "options": [
+            "ตรวจลิงก์และการตั้งค่าชั้นล่างตามชนิด interface",
+            "สรุปว่า DNS ผิดทันที",
+            "สรุปว่าเว็บถูกบล็อกทันที",
+            "เปลี่ยน SSID เสมอ"
+          ],
+          "explain": "สถานะ physical กับ line protocol ช่วยแยกปัญหา แต่ต้องดูชนิดลิงก์",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 199,
+          "answer": 0
+        },
+        {
+          "q": "เหตุใดควรทำตาราง IP ก่อนตั้ง topology",
+          "options": [
+            "เพื่อไม่ต้องทดสอบ",
+            "เพื่อไม่ต้องใช้ mask",
+            "ทำให้ router เลือก OSPF เอง",
+            "ลด IP ซ้ำและช่วยตรวจ subnet กับ gateway"
+          ],
+          "explain": "แผน addressing ช่วยให้ตั้งค่าและไล่ปัญหาอย่างเป็นระบบ",
+          "cat": "Cisco และ Packet Tracer",
+          "id": 200,
+          "answer": 3
+        }
+      ]
+    }
+  ],
+  "sources": [
+    [
+      "เอกสารไทยในโฟลเดอร์: OSI, TCP/IP, Application, Link, Subnet และ Packet Tracer",
+      "../index.html"
+    ],
+    [
+      "NIST SP 800-145: The NIST Definition of Cloud Computing",
+      "https://csrc.nist.gov/pubs/sp/800/145/final"
+    ],
+    [
+      "Cisco: Understand Administrative Distance",
+      "https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/15986-admin-distance.html"
+    ],
+    [
+      "Cisco: LAN cabling and connector guide",
+      "https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6000-series-switches/21268-132.html"
+    ],
+    [
+      "Cisco: 10GBASE-T cabling guidance",
+      "https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/at-a-glance-c45-743937.html"
+    ],
+    [
+      "Cisco: Wireless LAN Configuration Guide — WPA2/AES-CCMP",
+      "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/wlan/configuration/15-mt/wl-15-mt-book.pdf"
+    ],
+    [
+      "Cisco: Configure Route Selection for Routers",
+      "https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8651-21.html"
+    ]
+  ]
+}

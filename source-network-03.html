@@ -1,0 +1,499 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="เอกสารอ่าน 351 ภาษาไทย แปลเรียบเรียง ติว สรุป สูตร แบบฝึก พร้อมต้นฉบับออฟไลน์"><title>Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย</title><style>:root{color-scheme:light;--paper:#fff;--bg:#f3f6fa;--ink:#19283b;--muted:#536579;--line:#dbe3ec;--accent:#245ea6;--soft:#eaf2fb;--head:#203e64;--good:#145f4b;--size:17px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:150px}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,"Noto Sans Thai",sans-serif;font-size:var(--size);line-height:1.9}body.dark{color-scheme:dark;--paper:#192637;--bg:#101a28;--ink:#e2ebf5;--muted:#b1bfd0;--line:#35485f;--accent:#9cc7ff;--soft:#233b56;--head:#234a78;--good:#8ad7b8}a{color:var(--accent)}button,input,select{font:inherit;color:inherit}button,select,input{border:1px solid var(--line);border-radius:7px;padding:7px 11px;background:var(--paper)}button{cursor:pointer}button:hover,a.tile:hover{border-color:var(--accent)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d99420;outline-offset:3px}header,main,.wrap{max-width:1100px;margin:auto}header{padding:38px 26px 24px}h1{font-size:2em;line-height:1.5;margin:8px 0 18px}h2,h3,h4{line-height:1.65}h2{font-size:1.5em}h3{font-size:1.16em}h4{font-size:1em}p{margin:0 0 1em}.eyebrow,.muted,.note{color:var(--muted);font-size:.87em}.eyebrow{letter-spacing:.06em}.banner{background:var(--soft);border-left:4px solid var(--accent);padding:15px 20px;border-radius:5px;margin:15px 0}.toolbar{position:sticky;top:0;z-index:10;background:var(--paper);border-block:1px solid var(--line);padding:10px 20px}.tools{max-width:1100px;margin:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}.tools input[type=search]{flex:1;min-width:180px}.tools select{max-width:300px}.tools small{color:var(--muted)}main{padding:0 24px 70px}.catalog,.card,.slide{background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:24px 28px;margin:17px 0}.catalog>h2{margin-top:0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:10px}.tile{border:1px solid var(--line);padding:12px 16px;border-radius:7px;text-decoration:none;background:var(--paper);display:block}.tile small{display:block;color:var(--muted)}.chapter{margin:34px 0}.chapter-title{background:var(--head);color:#fff;border-radius:9px;padding:19px 24px}.chapter-title h2{margin:0}.chapter-title a{color:#d4e7ff}.chapter-title p{font-size:.85em;margin:8px 0 0}.chapter-title .read{float:right;font-size:.8em;background:transparent;border-color:#86a7ca;color:#fff;margin:0 0 8px 12px}.read[aria-pressed=true]{background:#d9f2e6;color:#164b3c}.card>h3,.slide>h2{margin-top:0;border-bottom:2px solid var(--soft);padding-bottom:10px}.card:target,.chapter:target .chapter-title,.slide:target{outline:3px solid #c99539;outline-offset:4px}ul,ol{padding-left:1.6em}li{margin:.4em 0}table{border-collapse:collapse;width:100%;font-size:.9em;line-height:1.65;margin:14px 0}th,td{border:1px solid var(--line);text-align:left;padding:10px 12px;vertical-align:top;overflow-wrap:anywhere}th{background:var(--soft)}.table-scroll{overflow-x:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--soft);padding:16px;border-radius:7px;font-size:.87em;line-height:1.7;tab-size:2}code{font-family:Consolas,"DejaVu Sans Mono",monospace}details{border-top:1px solid var(--line);padding-top:12px;margin:15px 0}summary{color:var(--accent);cursor:pointer;font-weight:bold}details p{margin-top:12px}.key{border-left:4px solid var(--good);padding:10px 16px;background:var(--soft);color:var(--ink)}.back{display:block;text-align:right;font-size:.8em;margin-top:18px}.source-image{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;margin:12px 0}.source-text{font-size:.86em;max-height:500px;overflow:auto}.pill{display:inline-block;border:1px solid var(--line);border-radius:30px;padding:3px 12px;font-size:.8em;margin:3px}.calculator label{display:inline-flex;flex-direction:column;gap:4px;margin:5px 12px 5px 0}.calculator input{max-width:270px}.error{color:#b63535;font-weight:bold}.float-top{position:fixed;right:18px;bottom:16px;background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:8px 16px;text-decoration:none;z-index:12}.skip{position:fixed;left:8px;top:-100px;z-index:30;background:var(--paper);padding:12px}.skip:focus{top:5px}[hidden]{display:none!important}#empty{padding:30px;text-align:center}footer{max-width:1100px;margin:auto;padding:20px 25px;color:var(--muted);font-size:.85em}.stats{display:flex;gap:10px;flex-wrap:wrap}.stats span{background:var(--paper);border:1px solid var(--line);padding:8px 16px;border-radius:8px}.source-nav{display:flex;gap:8px;flex-wrap:wrap}.source-nav a{border:1px solid var(--line);padding:3px 9px;border-radius:4px;text-decoration:none}.progress{width:100%;height:4px;background:var(--line)}.progress div{height:4px;background:#368d71;width:0}body.compact .source-text{max-height:250px}@media(max-width:650px){body{font-size:var(--size)}header{padding:24px 17px}main{padding:0 10px 50px}h1{font-size:1.6em}.card,.slide,.catalog{padding:18px 15px}.toolbar{padding:8px}.tools{gap:6px}.tools select{max-width:100%;min-width:0;flex:1}.tools input[type=search]{width:100%;flex-basis:100%}.chapter-title{padding:17px}.table-scroll{font-size:.9em}th,td{padding:8px}.float-top{right:9px;bottom:9px}.chapter-title .read{float:none;display:block;margin:0 0 10px}html{scroll-padding-top:220px}}@page{size:A4;margin:16mm}@media print{body,body.dark{--paper:#fff;--bg:#fff;--ink:#172238;--muted:#526273;--line:#ccd5dd;--soft:#eef2f7;--accent:#1b456f;font-size:10.5pt;line-height:1.7}.toolbar,.float-top,.back,.read,.catalog,.skip,.no-print{display:none!important}header{padding:0 0 8mm}main{padding:0;max-width:none}.chapter{break-before:page;margin:0}.chapter-title{background:#fff;color:#173959;border-bottom:2px solid #173959;padding:0 0 4mm;border-radius:0}.chapter-title a{color:#173959}.card,.slide{border:0;padding:0;margin:5mm 0 8mm}h2,h3,h4{break-after:avoid}table{font-size:9pt}tr,figure,.key{break-inside:avoid}a{color:inherit;text-decoration:none}pre{font-size:8pt}.source-text{max-height:none;overflow:visible}.source-image{max-height:200mm;object-fit:contain}.chapter[hidden],.card[hidden],.slide[hidden]{display:none!important}details{break-inside:avoid}footer{padding:8mm 0 0}.calculator input{border:0}.source-nav{display:none}p,li{orphans:3;widows:3}}
+</style></head><body id="top"><a class="skip" href="#main">ข้ามไปเนื้อหา</a><header><p class="eyebrow"><a href="index.html">← หน้ารวม 351</a></p><h1>Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย</h1><p><a href="../Network/09122010_Network_Chapter3.pdf">เปิดไฟล์ต้นฉบับ 09122010_Network_Chapter3.pdf</a></p><p class="note">เส้นทางต้นฉบับ: Network/09122010_Network_Chapter3.pdf</p><div class="banner">บทภาษาไทยที่เกี่ยวข้องอยู่ก่อนภาคต้นฉบับ แต่ละหน้า PDF มีภาพครบสำหรับอ่านแผนภาพและตรวจข้อความที่สกัดผิดหรือแตกบรรทัด เนื้อหาไทยเดิมในสไลด์คงไว้ในส่วนต้นฉบับ ส่วนอธิบายเสริมแยกออกมาให้อ่านง่าย</div></header><div class="toolbar"><div class="tools"><button id="answers">เปิดเฉลยทั้งหมด</button><label for="search">ค้นหา</label><input id="search" type="search" placeholder="คำไทย / English / สูตร" autocomplete="off"><button id="reset">ล้างตัวกรอง</button><button id="theme" aria-label="สลับพื้นหลังสว่างหรือมืด">สว่าง/มืด</button><button id="fontDown" aria-label="ลดขนาดตัวอักษร">ก−</button><button id="fontUp" aria-label="เพิ่มขนาดตัวอักษร">ก+</button><button id="print">พิมพ์ / PDF ที่แสดง</button><small id="count" aria-live="polite"></small></div></div><main id="main"><nav class="catalog"><h2>ทางลัด</h2><div class="grid"><a class="tile" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="tile" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="tile" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a><a class="tile" href="#source-section">ต้นฉบับตามหน้า / บล็อกข้อความ</a></div></nav><section class="chapter" id="chapter-01"><div class="chapter-title"><h2>บทนำการสื่อสารข้อมูลและเครือข่าย</h2><p><a href="index.html#chapter-01">เปิดบทนี้ในเล่มรวม</a></p></div><article class="card" data-search id="c-01-source-topics"><h3>แปลหัวข้อย่อยตามต้นฉบับ</h3><p class="note">ลำดับและหมายเลขตามข้อความในไฟล์ แม้ต้นฉบับใช้เลขหัวข้อซ้ำก็เก็บไว้เพื่อเทียบได้</p><div class="table-scroll"><table><thead><tr><th>หัวข้อ</th><th>ภาษาไทย</th><th>ต้นฉบับ</th></tr></thead><tbody><tr><td>1-1</td><td>การสื่อสารข้อมูล</td><td lang="en">DATA COMMUNICATIONS</td></tr><tr><td>1-2</td><td>เครือข่าย</td><td lang="en">NETWORKS</td></tr><tr><td>1-3</td><td>อินเทอร์เน็ต</td><td lang="en">THE INTERNET</td></tr><tr><td>1-4</td><td>โปรโตคอลและมาตรฐาน</td><td lang="en">PROTOCOLS AND STANDARDS</td></tr></tbody></table></div></article><article class="card" data-search id="c-01-1"><h3>แปลและเรียบเรียงแนวคิดหลัก</h3><p>การสื่อสารข้อมูล (Data communications) คือการแลกเปลี่ยนข้อมูลระหว่างอุปกรณ์ผ่านสื่อส่งข้อมูล เช่น สายทองแดง ใยแก้วนำแสง หรือคลื่นวิทยุ คำว่า “ข้อมูล” หมายถึงสิ่งที่ต้องการสื่อ ส่วน “สัญญาณ” คือรูปทางกายภาพที่ใช้ขนข้อมูลนั้น ข้อความเดียวกันอาจส่งด้วยสัญญาณไฟฟ้าบนสาย หรือสัญญาณแสงบนไฟเบอร์ก็ได้</p>
+<p>ระบบสื่อสารมี 5 องค์ประกอบ ได้แก่ Message ข้อมูลที่ส่ง, Sender ผู้ส่ง, Receiver ผู้รับ, Transmission medium สื่อกลาง และ Protocol กติกาที่ทั้งสองฝ่ายเข้าใจร่วมกัน การต่อสายติดเพียงอย่างเดียวยังไม่ทำให้สื่อสารได้ หากรูปแบบข้อความหรือขั้นตอนตอบรับไม่ตรงกัน</p>
+<p>คุณภาพการสื่อสารพิจารณา Delivery ส่งถึงปลายทางที่ถูกต้อง, Accuracy ข้อมูลถูกต้อง, Timeliness ถึงทันเวลา และ Jitter ความแปรปรวนของเวลาหน่วง เสียงสนทนาอาจยอมเสียข้อมูลบางส่วนได้แต่ไวต่อความล่าช้า ต่างจากไฟล์ที่ต้องครบทุกบิต</p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="card" data-search id="c-01-2"><h3>ทิศทางการส่งข้อมูล</h3><div class="table-scroll"><table><thead><tr><th scope="col">แบบ</th><th scope="col">ความหมาย</th><th scope="col">ตัวอย่างสำหรับจำ</th></tr></thead><tbody><tr><td>Simplex</td><td>ข้อมูลไปทิศเดียว</td><td>อุปกรณ์ส่งข้อมูลไปยังจอแสดงผลทางเดียว</td></tr><tr><td>Half-duplex</td><td>ส่งได้สองทิศ แต่ผลัดกัน</td><td>วิทยุสื่อสารกดพูด</td></tr><tr><td>Full-duplex</td><td>ส่งและรับพร้อมกัน</td><td>สาย Ethernet ที่ทำงานแบบ full-duplex</td></tr></tbody></table></div>
+<p>อย่าสับสนทิศทางกับจำนวนสาย: Full-duplex อาจใช้คู่สายคนละคู่ หรือเทคนิคแยกสัญญาณบนสื่อเดียวกันก็ได้ ต้องดูเทคโนโลยี ไม่ใช่นับสายจากรูปแล้วสรุปทันที</p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="card" data-search id="c-01-3"><h3>เครือข่าย โทโพโลยี และการประเมินระบบ</h3><p>Network คือกลุ่มอุปกรณ์หรือโหนดที่เชื่อมกันเพื่อแลกเปลี่ยนข้อมูลและใช้ทรัพยากรร่วมกัน เกณฑ์สำคัญคือ Performance สมรรถนะ, Reliability ความเชื่อถือได้ และ Security ความปลอดภัย เครือข่ายที่เร็วแต่ล่มบ่อยจึงไม่ใช่เครือข่ายที่ดีโดยอัตโนมัติ</p>
+<p>Star ต่อแต่ละเครื่องเข้าศูนย์กลาง ดูแลง่ายและสายเสียมักกระทบเครื่องเดียว แต่ศูนย์กลางเสียกระทบมาก; Bus ใช้สายหลักร่วมกัน; Ring เชื่อมเป็นวง; Full mesh เชื่อมทุกคู่ มีจำนวนลิงก์ n(n−1)/2 ถ้ามี 5 โหนดต้องใช้ 10 ลิงก์และแต่ละโหนดมี 4 จุดเชื่อมต่อ</p>
+<p>LAN เน้นบริเวณจำกัด เช่น อาคาร; WAN เชื่อมบริเวณห่างไกล; Internetwork คือการเชื่อมหลายเครือข่าย ส่วน Internet เป็นระบบเครือข่ายของเครือข่ายที่ใช้ชุดโปรโตคอลอินเทอร์เน็ตร่วมกัน Intranet คือเครือข่ายภายในองค์กร ไม่ได้หมายความว่าต้องตัดขาดจาก Internet เสมอ</p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="card" data-search id="c-01-4"><h3>เสริมติว: Protocol กับ Standard</h3><p>Protocol กำหนด Syntax รูปแบบ, Semantics ความหมาย และ Timing ลำดับหรือจังหวะของการแลกเปลี่ยนข้อมูล ส่วน Standard คือข้อกำหนดที่ตกลงร่วมกันเพื่อให้ผู้ผลิตต่างรายทำงานร่วมกันได้ อย่าตอบว่า protocol คือ “โปรแกรม” เพราะกติกาเดียวกันอาจมีการพัฒนาโปรแกรมได้หลายแบบ</p>
+<details class="quiz"><summary>ลองตอบ: ถ้าเครื่อง 6 เครื่องต่อ full mesh ต้องใช้กี่ลิงก์</summary><p><strong>เฉลยและเหตุผล:</strong> 6×5/2 = 15 ลิงก์ แต่ละเครื่องต่อ 5 ลิงก์ หาร 2 เพราะลิงก์ A–B กับ B–A คือคู่เดียวกัน</p></details>
+<details class="quiz"><summary>ลองตอบ: ทำไมเปิดไฟล์ได้ครบแต่ประชุมเสียงกระตุก</summary><p><strong>เฉลยและเหตุผล:</strong> ไฟล์มักมีการส่งซ้ำเพื่อให้ครบ ส่วนเสียงไวต่อ delay และ jitter แม้ throughput เฉลี่ยพอ ความหน่วงแปรปรวนก็ทำให้เล่นเสียงไม่ต่อเนื่องได้</p></details>
+<p class="key"><strong>จำให้ได้:</strong> จำ 5 องค์ประกอบ / 4 คุณภาพ / 3 ทิศทาง / mesh = n(n−1)/2 และแยก Internet ออกจากเครือข่ายทั่วไป</p><a class="back" href="#top">กลับสารบัญ ↑</a></article></section><section class="chapter" id="chapter-08"><div class="chapter-title"><h2>Switching และการส่งผ่านเครือข่าย</h2><p><a href="index.html#chapter-08">เปิดบทนี้ในเล่มรวม</a></p></div><article class="card" data-search id="c-08-source-topics"><h3>แปลหัวข้อย่อยตามต้นฉบับ</h3><p class="note">ลำดับและหมายเลขตามข้อความในไฟล์ แม้ต้นฉบับใช้เลขหัวข้อซ้ำก็เก็บไว้เพื่อเทียบได้</p><div class="table-scroll"><table><thead><tr><th>หัวข้อ</th><th>ภาษาไทย</th><th>ต้นฉบับ</th></tr></thead><tbody><tr><td>8-1</td><td>เครือข่ายแบบสวิตช์วงจร</td><td lang="en">CIRCUIT-SWITCHED NETWORKS</td></tr><tr><td>8-2</td><td>เครือข่ายดาตาแกรม</td><td lang="en">DATAGRAM NETWORKS</td></tr><tr><td>8-3</td><td>เครือข่ายวงจรเสมือน</td><td lang="en">VIRTUAL-CIRCUIT NETWORKS</td></tr><tr><td>8-4</td><td>โครงสร้างของสวิตช์</td><td lang="en">STRUCTURE OF A SWITCH</td></tr></tbody></table></div></article><article class="card" data-search id="c-08-1"><h3>แปลและเรียบเรียงวิธีสวิตช์</h3><p>Circuit switching จัดสรรทรัพยากรให้การสื่อสารก่อนส่งข้อมูล โดยมีขั้นตั้งวงจร ส่ง และยุติ วงจรอาจเป็น slot หรือย่านความถี่ ไม่จำเป็นต้องเป็นสายโลหะเฉพาะที่เชื่อมตรงทั้งเส้น</p>
+<p>Packet switching แบ่งข้อมูลเป็น packet แล้วใช้ทรัพยากรร่วมกันตามเวลาที่มีข้อมูล Datagram network ตัดสินเส้นทาง packet แต่ละตัว ส่วน Virtual-circuit network มีการตั้งสถานะเส้นทางและใช้ป้ายระบุวงจรเสมือนก่อนส่งข้อมูล</p>
+<p>Message switching เก็บทั้งข้อความก่อนส่งต่อ ทำให้แต่ละโหนดต้องรองรับข้อความขนาดใหญ่ Packet switching แบ่งหน่วยให้เล็กลงจึงส่งแบบ pipeline ได้</p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="card" data-search id="c-08-2"><h3>Store-and-forward และเวลา</h3><p>Store-and-forward ต้องรับ packet ทั้งก้อนก่อนเริ่มส่งก้อนนั้นบนลิงก์ถัดไป สมมติ packet L บิต ผ่าน N ลิงก์อัตรา R เท่ากันและไม่คิด propagation/queue/processing เวลา packet เดียวเท่ากับ NL/R</p>
+<p>ตัวอย่าง L=8,000 บิต, R=1 Mb/s, 3 ลิงก์ ได้ 3×0.008=24 ms ถ้าส่ง P packet ต่อเนื่องบนเส้นที่อัตราเท่ากัน ในแบบจำลอง pipeline เวลาจบทั้งหมด=(N+P−1)L/R ไม่ใช่ NP L/R เพราะ packet คนละตัวอยู่คนละลิงก์พร้อมกันได้</p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="card" data-search id="c-08-3"><h3>ตารางเปรียบเทียบ</h3><div class="table-scroll"><table><thead><tr><th scope="col">คุณสมบัติ</th><th scope="col">Circuit</th><th scope="col">Datagram</th><th scope="col">Virtual circuit</th></tr></thead><tbody><tr><td>ตั้งเส้นทาง/สถานะก่อน</td><td>มี</td><td>ไม่ต้องตั้งวงจรต่อ flow</td><td>มีการตั้งวงจรเสมือน</td></tr><tr><td>ทรัพยากร</td><td>จัดสรรตามวงจร</td><td>ใช้ร่วมตาม packet</td><td>ขึ้นกับระบบ อาจรับรองหรือไม่ก็ได้</td></tr><tr><td>ข้อมูลกำกับ</td><td>บริบทวงจร</td><td>ที่อยู่ปลายทาง</td><td>VC identifier/label</td></tr><tr><td>ความหน่วง</td><td>ตั้งวงจรแล้วส่ง</td><td>อาจคิวและเปลี่ยนเส้น</td><td>มี setup และคิวได้</td></tr></tbody></table></div>
+<p>Virtual circuit ไม่ได้แปลว่ามีการรับรองความเร็วเสมอ การมีเส้นทาง/label ที่ตั้งไว้กับการจอง bandwidth เป็นคนละคุณสมบัติ</p>
+<details class="quiz"><summary>ลองตอบ: สอง packet ผ่านสามลิงก์เท่ากันใช้เวลาเท่าไรโดยไม่มี overhead</summary><p><strong>เฉลยและเหตุผล:</strong> (3+2−1)L/R = 4L/R เพราะส่งซ้อนขั้นตอนได้ หลัง packet แรกส่งต่อ packet ที่สองเริ่มเข้าลิงก์แรกได้</p></details>
+<details class="quiz"><summary>ลองตอบ: Packet switching มี delay คงที่หรือไม่</summary><p><strong>เฉลยและเหตุผล:</strong> ไม่ โดยเฉพาะ queuing delay เปลี่ยนตามโหลดและการจัดตารางส่ง</p></details>
+<p class="key"><strong>จำให้ได้:</strong> แยกการตั้งสถานะ การเลือกเส้นทาง การจองทรัพยากร และวิธี store-and-forward ให้ได้</p><a class="back" href="#top">กลับสารบัญ ↑</a></article></section><section class="chapter" id="chapter-15"><div class="chapter-title"><h2>อุปกรณ์เชื่อม LAN, Backbone และ VLAN</h2><p><a href="index.html#chapter-15">เปิดบทนี้ในเล่มรวม</a></p></div><article class="card" data-search id="c-15-source-topics"><h3>แปลหัวข้อย่อยตามต้นฉบับ</h3><p class="note">ลำดับและหมายเลขตามข้อความในไฟล์ แม้ต้นฉบับใช้เลขหัวข้อซ้ำก็เก็บไว้เพื่อเทียบได้</p><div class="table-scroll"><table><thead><tr><th>หัวข้อ</th><th>ภาษาไทย</th><th>ต้นฉบับ</th></tr></thead><tbody><tr><td>15-1</td><td>อุปกรณ์เชื่อมต่อเครือข่าย</td><td lang="en">CONNECTING DEVICES</td></tr><tr><td>15-2</td><td>โครงข่ายแกนหลัก</td><td lang="en">BACKBONE NETWORKS</td></tr><tr><td>15-3</td><td>เครือข่าย LAN เสมือน VLAN</td><td lang="en">VIRTUAL LANs</td></tr></tbody></table></div></article><article class="card" data-search id="c-15-1"><h3>แปลและเรียบเรียงอุปกรณ์ตามชั้น</h3><p>Repeater ทำสัญญาณใหม่ระดับ physical; Hub เป็น repeater หลายพอร์ต; Bridge/Switch ส่งต่อ frame โดย MAC; Router ส่งต่อ packet ตาม IP และเส้นทาง ส่วน Gateway เป็นคำกว้าง ต้องอ่านบริบทว่าหมายถึง router ประตูออกหรืออุปกรณ์แปลงบริการ</p>
+<p>Ethernet switch เรียนรู้ source MAC จาก frame ที่เข้ามาและผูกกับพอร์ตและ VLAN ถ้ารู้ destination ส่งออกพอร์ตที่เหมาะสม ถ้า destination อยู่พอร์ตเดียวกับขาเข้า filter ไม่ส่งกลับ ถ้าไม่รู้ให้ flood ไปพอร์ตอื่นใน VLAN ตามข้อจำกัด forwarding</p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="card" data-search id="c-15-2"><h3>ตัวอย่าง Self-learning</h3><p>เริ่มตารางว่าง A ส่งถึง B ผ่านพอร์ต 1 สวิตช์จำ A→1 แต่ยังไม่รู้ B จึง flood เมื่อ B ตอบกลับเข้าพอร์ต 3 จะจำ B→3 และรู้ A แล้วจึงส่งตอบไปพอร์ต 1 เท่านั้น การเรียนรู้มาจาก source ไม่ใช่จาก destination ที่ยังไม่รู้</p>
+<p>Broadcast domain คือขอบเขตที่ broadcast ชั้นลิงก์แพร่ไปถึง ส่วน Collision domain เกี่ยวกับการชนใน shared/half-duplex link อย่าตอบ “สวิตช์แยก broadcast ทุกพอร์ต” ถ้าไม่มีการแบ่ง VLAN</p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="card" data-search id="c-15-3"><h3>VLAN และ Trunk</h3><p>VLAN แบ่งเครือข่ายชั้น 2 เชิงตรรกะให้พอร์ตคนละกลุ่มอยู่คนละ broadcast domain แม้ใช้ switch ตัวเดียวกัน การสื่อสารข้าม VLAN ต้องมีการ route ผ่าน router หรืออุปกรณ์ชั้น 3 และใช้ addressing ที่เหมาะสม</p>
+<p>Access port ส่ง traffic ของ VLAN เดียวให้เครื่องปลายทางในรูปแบบปกติ ส่วน trunk ขน traffic หลาย VLAN บนลิงก์เดียวด้วยการระบุ VLAN เช่น 802.1Q ต้องตั้ง VLAN ที่อนุญาตและการตีความ untagged/native ให้สอดคล้องตามระบบ</p>
+<p>Backbone เป็นส่วนเชื่อมเครือข่ายย่อยเข้าด้วยกัน อาจออกแบบเป็น bus, star หรือหลายระดับ การรวมศูนย์ช่วยดูแลแต่ต้องคำนึงจุดล้มเหลวและความจุ uplink</p>
+<details class="quiz"><summary>ลองตอบ: สวิตช์รู้ MAC ปลายทางได้อย่างไร</summary><p><strong>เฉลยและเหตุผล:</strong> เรียนรู้จาก source MAC ของ frame ที่เคยเข้ามา ไม่ได้ถาม DNS และไม่ได้อ่าน routing table เพื่อเรียนรู้ MAC</p></details>
+<details class="quiz"><summary>ลองตอบ: เครื่องต่าง VLAN แต่ IP subnet เดียวกันจะคุยกันได้เองหรือไม่</summary><p><strong>เฉลยและเหตุผล:</strong> โดยทั่วไปไม่ เพราะ ARP broadcast ไม่ข้าม VLAN การกำหนด subnet เดียวกันข้ามโดเมนชั้น 2 ทำให้การเข้าถึงผิดจากสมมติฐานปกติ ต้องออกแบบและ route ให้ถูก</p></details>
+<p class="key"><strong>จำให้ได้:</strong> Switch เรียน source → เลือกด้วย destination; VLAN แยก broadcast, router เชื่อมข้ามเครือข่าย</p><a class="back" href="#top">กลับสารบัญ ↑</a></article></section><section class="source-chapter" id="source-section"><div class="chapter-title"><h2>ต้นฉบับสำหรับตรวจเทียบ</h2><p>เรียงตามหน้า PDF</p></div><nav class="source-nav" aria-label="ข้ามไปต้นฉบับ"><a href="#page-1">1</a><a href="#page-2">2</a><a href="#page-3">3</a><a href="#page-4">4</a><a href="#page-5">5</a><a href="#page-6">6</a><a href="#page-7">7</a><a href="#page-8">8</a><a href="#page-9">9</a><a href="#page-10">10</a><a href="#page-11">11</a><a href="#page-12">12</a><a href="#page-13">13</a><a href="#page-14">14</a><a href="#page-15">15</a><a href="#page-16">16</a><a href="#page-17">17</a><a href="#page-18">18</a><a href="#page-19">19</a><a href="#page-20">20</a><a href="#page-21">21</a><a href="#page-22">22</a><a href="#page-23">23</a><a href="#page-24">24</a><a href="#page-25">25</a><a href="#page-26">26</a><a href="#page-27">27</a><a href="#page-28">28</a><a href="#page-29">29</a><a href="#page-30">30</a><a href="#page-31">31</a><a href="#page-32">32</a><a href="#page-33">33</a><a href="#page-34">34</a><a href="#page-35">35</a><a href="#page-36">36</a><a href="#page-37">37</a><a href="#page-38">38</a><a href="#page-39">39</a><a href="#page-40">40</a><a href="#page-41">41</a><a href="#page-42">42</a><a href="#page-43">43</a><a href="#page-44">44</a><a href="#page-45">45</a><a href="#page-46">46</a><a href="#page-47">47</a><a href="#page-48">48</a><a href="#page-49">49</a><a href="#page-50">50</a><a href="#page-51">51</a><a href="#page-52">52</a><a href="#page-53">53</a><a href="#page-54">54</a><a href="#page-55">55</a></nav><article class="slide" data-search id="page-1"><h2>หน้า 1 — บทที่ 3 องค์ประกอบของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 1</summary><a href="assets/09122010_Network_Chapter3/page-01.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-01.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 1"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">บทที่ 3 องค์ประกอบของเครือข่าย
+ และรูปแบบการเชือ่ มต่อเครือข่าย</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-2"><h2>หน้า 2 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 2</summary><a href="assets/09122010_Network_Chapter3/page-02.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-02.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 2"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+การที่คอมพิวเตอร์จะเชื่อมต่อกันเป็นเครือข่ายได้ ต้องมีองค์ประกอบดังนี้
+1. เครือ่ งศูนย์บริการข้อมูล หรือ เซิรฟ์ เวอร์ (Server)
+    คอมพิวเตอร์ที่ทาหน้าที่บริการทรัพยากรให้กับเครื่องลูกข่าย เช่น บริการไฟล์
+     (File Server) บริการงานพิมพ์ (Print Server)
+    เซิร์ฟเวอร์ถูกออกแบบให้มีสมรรถนะสูง เพื่อทนทานต่อความผิดพลาด และทางาน
+     หนัก รองรับการทางาน 24 ชั่วโมง
+2. เครือ่ งลูกข่าย (Client/Workstation)
+    คอมพิวเตอร์ที่เชื่อมต่อเข้ากับระบบเครือข่าย ไม่จาเป็นต้องมีสมรรถนะสูง ควรมี
+     ประสิทธิภาพเพียงพอที่จะรองรับการทางานของผูใ้ ช้เครื่องได้ ส่วนใหญ่เป็นพีซีทั่วไป
+     ไม่จาเป็นต้องเป็นแพลตฟอร์มเดียวกัน</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-3"><h2>หน้า 3 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 3</summary><a href="assets/09122010_Network_Chapter3/page-03.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-03.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 3"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+3. เน็ตเวิรค์ การ์ด (Network Interface Card : NIC)
+       เป็นแผงวงจรที่ติดตั้งอยู่ภายในคอมพิวเตอร์ โดยเสียบเข้ากับช่องบนเมนบอร์ด
+        ของคอมพิวเตอร์ ทาหน้าที่แปลงข้อมูลเป็นสัญญาณทีส่ ามารถส่งไปตาม
+        สายสัญญาณ เคเบิล หรือสื่อแบบอื่นๆ ได้
+       เป็นส่วนหนึง่ ของการเชื่อมต่อทางกายภาพบนชั้นสื่อสารฟิสิคัล
+       ปัจจุบันคอมพิวเตอร์รนุ่ ใหม่ๆ มีเฉพาะช่อง PCI ใช้บัสขนาด 32 บิต
+       คอมพิวเตอร์รุ่นเก่า จะเป็นการ์ดแบบ ISA 16 บิต โดยจะประมวลผลช้ากว่า
+        PCI
+       อัตราข้อมูลทีส่ ามารถส่งผ่านได้มีหลายระดับ เช่น 10Mbps, 100Mbps
+        หรือ 1000 Mbps</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-4"><h2>หน้า 4 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 4</summary><a href="assets/09122010_Network_Chapter3/page-04.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-04.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 4"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+4. สายเคเบิล (Network Cables)
+       ใช้ในการลาเลียงสัญญาณไฟฟ้าจากคอมพิวเตอร์ต้นทางไปยังคอมพิวเตอร์
+        ปลายทาง
+       ส่วนใหญ่มักใช้สาย UTP เนื่องจากมีราคาถูก แต่จากัดระยะทางได้ไกลสุด
+        เพียง 100 เมตรเท่านัน้
+       หากต้องการเชื่อมโยงระยะไกล โดยไม่ต้องใช้อุปกรณ์ทวนสัญญาณ จะต้องใช้
+        สายไฟเบอร์ออปติก สามารถเชื่อมโยงได้ไกลเป็นกิโลเมตร</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-5"><h2>หน้า 5 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 5</summary><a href="assets/09122010_Network_Chapter3/page-05.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-05.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 5"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+5. อุปกรณ์สาหรับเชือ่ มต่อเครือข่าย (Connecting Devices)
+    อุปกรณ์ที่ใช้ในระบบเครือข่าย เพื่อจัดการเกี่ยวกับการรับส่งข้อมูลในเครือข่าย หรือใช้
+    ทวนสัญญาณเพื่อให้ส่งข้อมูลได้ระยะไกลขึ้น
+    5.1 ฮับ (Hub) หรือ รีพีทเตอร์ (Repeater)
+        เป็นอุปกรณ์ทใี่ ช้เชื่อมต่อกลุ่มของคอมพิวเตอร์ โดยจะทาหน้าที่ รับส่งเฟรม
+         ข้อมูลทุกเฟรมที่ได้รับจากพอร์ตใดพอร์ตหนึ่ง ไปยังทุกๆ พอร์ตที่เหลือ
+        คอมพิวเตอร์ที่เชื่อมต่อเข้ากับฮับจะแชร์แบนด์วิธ หรืออัตราข้อมูลของเครือข่าย
+         ดังนั้น ยิง่ มีคอมพิวเตอร์เชื่อมต่อเข้ากับฮับมากเท่าใด ยิ่งทาให้แบนด์วิธต่อ
+         คอมพิวเตอร์แต่ละเครื่องลดลง</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-6"><h2>หน้า 6 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 6</summary><a href="assets/09122010_Network_Chapter3/page-06.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-06.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 6"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+ฮับ (Hub) สามารถแบ่งออกเป็น 2 ชนิด
+1. ฮับแบบแอกทีฟ (Active Hubs)
+    ฮับที่ติดตั้งใช้งานอยู่บนเครือข่ายทั่วไป เป็นแบบแอกทีฟ ซึ่งมีหน้าที่คือ การทวน
+    สัญญาณ โดยเมื่อได้รับสัญญาณเข้ามา ก็จะทวนสัญญาณเหล่านี้ไปยังพอร์ตทุกพอร์ตที่
+    เชื่อมต่อ
+          นาสัญญาณทีร่ ับเข้ามาจากพอร์ตพอร์ตหนึ่ง
+          กลั่นกรองสัญญาณให้ไม่มสี ัญญาณรบกวน
+          ปรับแต่งสัญญาณข้อมูลด้วยการ regenerate ระดับสัญญาณให้เหมือนกับ
+              สัญญาณต้นฉบับ เพื่อให้มีกาลังในการทวนสัญญาณบนระยะทางที่ไกลขึน้
+          ฮับจะส่งสัญญาณด้วยการกระจายไปยังทุกๆ พอร์ตที่เชื่อมต่อ</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-7"><h2>หน้า 7 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 7</summary><a href="assets/09122010_Network_Chapter3/page-07.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-07.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 7"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+2. ฮับแบบพาสซีฟ (Passive Hubs)
+   ฮับแบบพาสซีฟแตกต่างจากฮับแบบแอกทีฟตรงที่จะไม่มีการปรับแต่งสัญญาณใดๆ ทา
+   หน้าที่เป็นเพียงจุดเชื่อมต่อ (Junction Point) ระหว่างสายสัญญาณสองเส้นมาบรรจบ
+   กันเท่านัน้ ซึ่งการใช้งานไม่จาเป็นต้องใช้กาลังไฟฟ้า (ฮับทั่วไปจะต้องใช้พลังงานไฟฟ้าด้วย
+   การเสียบปลั๊ก)
+   ตัวอย่างเช่น แพตช์พาเนล (Patch Panel)</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-8"><h2>หน้า 8 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 8</summary><a href="assets/09122010_Network_Chapter3/page-08.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-08.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 8"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+การใช้ฮบั เป็นรีพตี เตอร์ (Repeater)
+   ทาหน้าที่ปรับแต่งหรือแก้ไข (Regenerate) สัญญาณข้อมูลส่วนที่สญ    ู เสีย
+    ด้วยการคัดลอกแบบบิตต่อบิตเพื่อปรับสัญญาณให้มีขนาดเท่ากับสัญญาณ
+    ต้นฉบับ รวมถึงกลัน่ กรองสัญญาณรบกวนทีเ่ กิดขึ้นขณะที่ส่งผ่านสายส่ง ให้
+    กลับมาเป็นสัญญาณเดิม เพื่อส่งทอดสัญญาณให้ไกลต่อไปได้อีก</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-9"><h2>หน้า 9 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 9</summary><a href="assets/09122010_Network_Chapter3/page-09.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-09.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 9"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+องค์ประกอบในการพิจารณาว่าควรนาฮับมาใช้เป็นรีพตี เตอร์
+   เพื่อเชื่อมต่อระหว่างเซกเมนต์
+   เพื่อให้ส่งข้อมูลในระยะไกลขึ้น
+   ยอมรับเกี่ยวการการใช้จราจรบนเครือข่ายร่วมกันทัง้ หมด
+    เครือข่ายทีม่ ีการใช้ฮับเพื่อขยายเครือข่าย จะถือว่าทุกเซกเมนต์บนเครือข่าย
+    เป็นกลุ่มเครือข่ายเดียวกัน มีการใช้จราจรร่วมกัน ซึง่ จะส่งผลต่ออัตราการชน
+    กันของกลุ่มข้อมูลที่เพิ่มขึน้ เพราะเครือข่ายทัง้ หมดอยู่บน collision
+    domain เดียวกัน
+   ต้องการเชื่อมต่อระหว่างเซกเมนต์ด้วยต้นทุนต่า หรือมีงบประมาณจากัด</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-10"><h2>หน้า 10 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 10</summary><a href="assets/09122010_Network_Chapter3/page-10.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-10.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 10"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+
+
+
+การเชื่อมต่อเซกเมนต์ด้วยอุปกรณ์ฮับ จะถือว่าเครือข่ายทั้งหมดอยู่บน Collision Domain เดียวกัน</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-11"><h2>หน้า 11 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 11</summary><a href="assets/09122010_Network_Chapter3/page-11.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-11.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 11"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+องค์ประกอบในการพิจารณาว่าไม่ควรนาฮับมาใช้เป็นรีพตี เตอร์
+   การจราจรบนเครือข่ายมีความคับคั่งมาก
+   เครือข่ายในแต่ละเซกเมนต์มีวธิ ีการแอกเซสที่แตกต่างกัน
+   ต้องการกลั่นกรอง (Filter) ข้อมูลบนเครือข่าย</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-12"><h2>หน้า 12 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 12</summary><a href="assets/09122010_Network_Chapter3/page-12.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-12.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 12"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+5.2 บริดจ์ (Bridge)
+   เป็นอุปกรณ์ที่ทางานอยู่บนชัน้ สื่อสารฟิสิคัลและดาต้าลิงค์
+   ทาหน้าที่เสมือนเป็นสะพาน เพื่อเชื่อมต่อระหว่างเครือข่ายที่ใช้โปรโตคอล
+    เดียวกัน เช่น อีเทอร์เน็ตแลนด้วยกัน หรืออาจจะเป็นเครือข่ายทีใ่ ช้ต่าง
+    โปรโตคอลก็ได้ เช่น ระหว่างอีเทอร์เน็ตแลนกับโทเค็นริ่ง
+   บริดจ์สามารถแบ่งเครือข่ายขนาดใหญ่ออกเป็นเครือข่ายย่อย หรือเป็น
+    เซกเมนต์ย่อยๆ ได้ คือ ไม่ได้อยู่บน collision domain เดียวกัน
+   การทางานในชัน้ สื่อสารดาต้าลิงค์ของบริดจ์ ทาให้สามารถเข้าถึงฟิสิคัล
+    แอดเดรสของทุกๆ โหนดบนเครือข่ายได้ โดยเมื่อเฟรมข้อมูลเดินทางมายังบริดจ์
+    บริดจ์จะมีการตรวจแอดเดรสปลายทาง และส่งข้อมูลไปยังเซกเมนต์ที่เกี่ยวข้อง
+    เท่านัน้ จึงช่วยลดความคับคั่งบนเครือข่ายได้</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-13"><h2>หน้า 13 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 13</summary><a href="assets/09122010_Network_Chapter3/page-13.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-13.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 13"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+
+
+
+การทางานของบริดจ์บนแบบจาลอง OSI</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-14"><h2>หน้า 14 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 14</summary><a href="assets/09122010_Network_Chapter3/page-14.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-14.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 14"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+
+
+
+     บริดจ์จะทาหน้าที่เสมือนกับสะพานเพื่อเชื่อมโยงระหว่างเครือข่ายเข้าด้วยกัน
+โดยเครือข่ายแต่ละวงที่เชื่อมต่อด้วยบริดจ์ จะถือว่าอยู่คนละ Collision Domain กัน</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-15"><h2>หน้า 15 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 15</summary><a href="assets/09122010_Network_Chapter3/page-15.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-15.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 15"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+5.3 สวิตซ์ (Switch)
+   เป็นอุปกรณ์ที่ทางานอยู่บนชัน้ สื่อสารดาต้าลิงค์
+   สวิตซ์สามารถส่งข้อมูลที่ได้รับมาจากพอร์ตหนึ่งไปยังเฉพาะพอร์ตที่เป็น
+    ปลายทางเท่านัน้ ทาให้คอมพิวเตอร์ที่เชื่อมต่อกับพอร์ตที่เหลือสามารถส่ง
+    ข้อมูลถึงกันได้ในเวลาเดียวกัน
+   การรับส่งข้อมูลหรือแบนด์วธิ ไม่ขนึ้ อยู่กับจานวนคอมพิวเตอร์ที่เชื่อมต่อกับสวิตซ์
+    โดยคอมพิวเตอร์จะมีแบนด์วิธเท่ากับแบนด์วิธของสวิตซ์</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-16"><h2>หน้า 16 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 16</summary><a href="assets/09122010_Network_Chapter3/page-16.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-16.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 16"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+5.4 เร้าเตอร์ (Router)
+   เป็นอุปกรณ์ทใี่ ช้สาหรับเชื่อมโยงเครือข่ายหลายๆ กลุ่มเข้าด้วยกัน ไม่วา่ จะเป็น
+    เครือข่ายแลนด้วยกัน หรือเครือข่ายแลนกับแวน โดยทางานอยู่บนชั้นสื่อสาร
+    เน็ตเวิร์ค
+   ฟังก์ชันการทางานที่สาคัญของเร้าเตอร์ คือ การเลือกเส้นทาง เพื่อส่งแพ็กเก็ต
+    ข้อมูลไปยังปลายทางได้อย่างถูกต้องและเหมาะสม รวมถึงความสามารถในการ
+    เปลี่ยนเส้นทางเดินของข้อมูล ในกรณีที่เส้นทางเดิมที่ใช้งานเกิดขัดข้อง
+   เร้าเตอร์จะอ่านที่อยูข่ องสถานีปลายทางที่สว่ นหัวของแพ็กเก็ตข้อมูล เพื่อใช้ใน
+    การกาหนดหรือเลือกเส้นทางทีจ่ ะส่งแพ็กเก็ตนั้นต่อไป โดยในเร้าเตอร์จะมีข้อมูล
+    เกี่ยวกับการจัดเส้นทางเรียกว่า routing table หรือตารางการจัดเส้นทางใน
+    การเลือกเส้นทางที่ดีทสี่ ุด</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-17"><h2>หน้า 17 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 17</summary><a href="assets/09122010_Network_Chapter3/page-17.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-17.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 17"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+5.5 เกตเวย์ (Gateway)
+   สามารถทางานได้ในทุกชั้นสื่อสารบนแบบจาลอง OSI
+   เกตเวย์จะอนุญาตให้เครือข่ายที่ต่างแพลตฟอร์มกัน ไม่ว่าจะทางด้านฮาร์ดแวร์
+    หรือซอฟต์แวร์สามารถเชื่อมโยงสื่อสารกันได้ เช่น พีซีคอมพิวเตอร์กับ
+    เมนเฟรมคอมพิวเตอร์</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-18"><h2>หน้า 18 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 18</summary><a href="assets/09122010_Network_Chapter3/page-18.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-18.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 18"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+
+
+
+การทางานของเกตเวย์บนแบบจาลอง OSI</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-19"><h2>หน้า 19 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 19</summary><a href="assets/09122010_Network_Chapter3/page-19.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-19.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 19"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+
+
+
+การนาเมนเฟรมคอมพิวเตอร์มาเชื่อมต่อเข้ากับเครือข่ายอื่นๆ ด้วยอุปกรณ์เกตเวย์</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-20"><h2>หน้า 20 — องค์ประกอบพืน้ ฐานของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 20</summary><a href="assets/09122010_Network_Chapter3/page-20.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-20.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 20"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">องค์ประกอบพืน้ ฐานของเครือข่าย
+
+6. ระบบปฏิบตั กิ ารเครือข่าย (Network Operating System : NOS)
+    ระบบปฎิบัติการ หรือ Operating System (OS) ทาหน้าทีจ่ ัดการเกี่ยวกับ
+     การเข้าใช้ทรัพยากรต่างๆ ของโปรแกรมที่รนั อยู่บนคอมพิวเตอร์
+    สาหรับระบบเครือข่าย จาเป็นต้องมีระบบปฎิบัติการ เพื่อทาหน้าที่จัดการเกี่ยวกับ
+     การสื่อสารข้อมูลผ่านเครือข่าย และการเข้าใช้ทรัพยากรที่มีอยูใ่ นเครือข่าย เช่น
+     เครื่องพิมพ์ ฮาร์ดดิส ฐานข้อมูล
+    คอมพิวเตอร์ที่เชื่อมต่อเข้ากับเครือข่ายจาเป็นต้องมีระบบปฏิบัติการทัง้ สองประเภท
+     เพื่อที่จะทาหน้าทีท่ ั้งจัดการภายในคอมพิวเตอร์ และระบบเครือข่าย
+    ระบบปฏิบัติการที่ออกแบบสาหรับทาหน้าทีเ่ ป็นเซิร์ฟเวอร์ เช่น Windows
+     Server 2003, NetWare 6.5 และ Linux</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-21"><h2>หน้า 21 — การเชือ่ มต่อเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 21</summary><a href="assets/09122010_Network_Chapter3/page-21.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-21.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 21"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">การเชือ่ มต่อเครือข่าย
+
+ ความสัมพันธ์ของอุปกรณ์สื่อสารที่สื่อสารไปตามแนวเส้นทาง หรือเรียกว่า
+ ลิงก์ (Link) หมายถึง เส้นทางการสื่อสารเพื่อถ่ายโอนข้อมูลจากอุปกรณ์
+ หนึ่งไปยังอุปกรณ์หนึ่ง
+ การเชื่อมต่อเครือข่าย จะอยู่บนพื้นฐาน 2 ประการคือ
+ 1. การเชื่อมต่อแบบจุดต่อจุด (Point-to-Point)
+ เป็นการเชื่อมต่อระหว่างอุปกรณ์สองตัว โดยช่องทางการสื่อสารจะถูกจับจองเพื่อการ
+  สื่อสารระหว่างอุปกรณ์ทั้งสองเท่านัน้ มักใช้สายเคเบิลในการเชื่อมโยงระหว่างต้นทาง
+  กับปลายทาง</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-22"><h2>หน้า 22 — การเชือ่ มต่อเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 22</summary><a href="assets/09122010_Network_Chapter3/page-22.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-22.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 22"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">การเชือ่ มต่อเครือข่าย
+
+ 2. การเชือ่ มต่อแบบหลายจุด (Multi-Point)
+ อุปกรณ์มากกว่าหนึ่งอุปกรณ์สามารถใช้ลงิ ก์ร่วมกันเพื่อสื่อสารกันได้ คือ การใช้
+  ช่องทางการสื่อสารร่วมกัน
+ ข้อดี คือ ช่วยให้ประหยัดสายสื่อสาร
+ ข้อเสีย คือ อาจทาให้ข้อมูลที่สื่อสารชนกันได้ เนื่องจากใช้สายส่งข้อมูลร่วมกัน</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-23"><h2>หน้า 23 — โทโพโลยีแบบบัส</h2><details><summary>ดูภาพต้นฉบับหน้า 23</summary><a href="assets/09122010_Network_Chapter3/page-23.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-23.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 23"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบบัส
+
+โทโพโลยี (Topologies) เป็นการเชื่อมต่อเครือข่ายระหว่างโหนดในลักษณะเชิง
+กายภาพ โดยสามารถแบ่งออกเป็น 4 รูปแบบ ดังนี้
+1. โทโพโลยีแบบบัส (Bus Topology)
+    ประกอบด้วยสายเคเบิลเส้นหนึ่งทีน่ ามาใช้เป็นแกนหลัก เปรียบเสมือนกระดูกสัน
+     หลัง (Backbone) โดยทุกๆ โหนดบนเครือข่ายจะต้องเชื่อมต่อเข้ากับสายเคเบิล
+     เส้นนี้</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-24"><h2>หน้า 24 — โทโพโลยีแบบบัส</h2><details><summary>ดูภาพต้นฉบับหน้า 24</summary><a href="assets/09122010_Network_Chapter3/page-24.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-24.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 24"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบบัส</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-25"><h2>หน้า 25 — โทโพโลยีแบบบัส</h2><details><summary>ดูภาพต้นฉบับหน้า 25</summary><a href="assets/09122010_Network_Chapter3/page-25.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-25.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 25"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบบัส
+
+ข้อดีของโทโพโลยีแบบบัส
+1. มีรูปแบบโครงสร้างที่ไม่ซับซ้อน ติดตั้งง่าย
+2. เพิ่มจานวนโหนดได้ง่าย สามารถเชื่อมต่อเข้ากับแกนหลักได้ทันที
+3. ประหยัดสายสื่อสาร เนื่องจากใช้สายแกนหลักเพียงเส้นเดียว
+ข้อเสียของโทโพโลยีแบบบัส
+1. หากสายแกนหลักชารุดหรือขาด เครือข่ายจะหยุดชะงักทันที
+2. หากมีข้อผิดพลาดเกิดบนเครือข่าย จะหาจุดผิดพลาดยาก เนื่องจากอุปกรณ์เชื่อมต่อ
+เข้ากับแกนหลักทั้งหมด
+3. ระหว่างโหนดจะต้องมีระยะห่างตามข้อกาหนด</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-26"><h2>หน้า 26 — โทโพโลยีแบบดาว</h2><details><summary>ดูภาพต้นฉบับหน้า 26</summary><a href="assets/09122010_Network_Chapter3/page-26.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-26.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 26"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบดาว
+
+2. โทโพโลยีแบบดาว (Star Topology)
+    มีจุดเริ่มต้นจากการเชื่อมต่อเทอร์มนิ ลั กับเมนเฟรม โดยเมนเฟรมทาหน้าที่เป็น
+     ศูนย์กลาง และเทอร์มนิ ัลทุกเครื่องเชื่อมต่อเข้ากับเมนเฟรม
+    ปัจจุบันนิยมนา ฮับ (Hub) มาใช้เป็นศูนย์กลางควบคุมของสายสื่อสารทั้งหมด
+     โดยทุกโหนดบนเครือข่ายจะต้องเชื่อมโยงสายสื่อกลางผ่านฮับ ซึ่งฮับจะทาหน้าที่
+     รับข้อมูลจากผู้สง่ เพื่อส่งไปยังโหนดปลายทางที่ต้องการ
+    การนาฮับมาเป็นศูนย์กลางในการรับส่งข้อมูล เพื่อให้เครือข่ายมีความคงทนยิง่ ขึ้น
+     หากสายสื่อสารขาดที่โหนดใดโหนดหนึ่ง จะส่งผลต่อโหนดนั้นเท่านัน้ ไม่ส่งผลต่อ
+     ระบบโดยรวม
+    แต่ถ้าศูนย์กลางฮับเกิดความเสียหาย จะส่งผลกระทบต่อเครือข่ายโดยรวมทั้งหมด</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-27"><h2>หน้า 27 — โทโพโลยีแบบดาว</h2><details><summary>ดูภาพต้นฉบับหน้า 27</summary><a href="assets/09122010_Network_Chapter3/page-27.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-27.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 27"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบดาว</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-28"><h2>หน้า 28 — โทโพโลยีแบบดาว</h2><details><summary>ดูภาพต้นฉบับหน้า 28</summary><a href="assets/09122010_Network_Chapter3/page-28.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-28.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 28"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบดาว
+
+ข้อดีของโทโพโลยีแบบดาว
+1. มีความคงทนสูง หากสายเคเบิลบางโหนดชารุดหรือขาด จะส่งผลต่อโหนดนัน้ เท่านั้น
+2. การจัดการดูแลง่ายและสะดวก เนื่องจากมีจุดศูนย์กลางควบคุมอยูท่ ฮี่ ับ
+ข้อเสียของโทโพโลยีแบบดาว
+1. สื้นเปลืองสายเคเบิล เพราะต้องใช้เท่ากับจานวนเครื่องที่เชื่อมต่อ
+2. หากต้องการเพิ่มโหนด ฮับจะต้องมีพอร์ตว่างให้เชื่อมต่อ และลากสายเคเบิลเชื่อมต่อ
+ระหว่างฮับไปยังโหนดที่ต้องการเพิ่ม
+3. หากฮับชารุดใช้งานไม่ได้ คอมพิวเตอร์ที่เชื่อมต่อจะไม่สามารถใช้งานได้ทั้งหมด</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-29"><h2>หน้า 29 — โทโพโลยีแบบวงแหวน</h2><details><summary>ดูภาพต้นฉบับหน้า 29</summary><a href="assets/09122010_Network_Chapter3/page-29.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-29.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 29"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบวงแหวน
+
+3. โทโพโลยีแบบวงแหวน (Ring Topology)
+   โหนดต่างๆ จะมีการเชื่อมต่อกันด้วยสายสัญญาณจากโหนดหนึ่งไปยังอีกโหนดหนึง่
+    ในลักษณะจุดต่อจุดต่อกันไปเรื่อยๆ จนกระทัง่ โหนดแรกและโหนดสุดท้ายเชื่อมโยงถึง
+    กัน เกิดเป็นลูปวงกลมหรือวงแหวนขึน้ มา
+   แต่ละโหนดในวงแหวนทาหน้าที่คล้ายกับเครื่องทวนสัญญาณไปในตัว หากโหนด
+    ได้รับสัญญาณ ก็จะทวนสัญญาณส่งต่อไปยังโหนดถัดไปเรื่อยๆ
+   การส่งข้อมูลในโทโพโลยีวงแหวน เรียกว่า การส่งต่อโทเคน (Token Passing)
+    โดยโทเคนเป็นข้อมูลพิเศษทีส่ ่งผ่านในเครือข่าย ซึ่งแต่ละเครือข่ายจะมีเพียงโทเคน
+    เดียว</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-30"><h2>หน้า 30 — โทโพโลยีแบบวงแหวน</h2><details><summary>ดูภาพต้นฉบับหน้า 30</summary><a href="assets/09122010_Network_Chapter3/page-30.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-30.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 30"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบวงแหวน
+
+    A    B
+
+
+
+F
+                   C
+
+
+    E
+               D</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-31"><h2>หน้า 31 — โทโพโลยีแบบวงแหวน</h2><details><summary>ดูภาพต้นฉบับหน้า 31</summary><a href="assets/09122010_Network_Chapter3/page-31.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-31.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 31"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบวงแหวน
+
+ข้อดีของโทโพโลยีแบบวงแหวน
+1. แต่ละโหนดในวงแหวนมีโอกาสส่งข้อมูลได้เท่าเทียมกัน
+2. ประหยัดสายสัญญาณ โดยจะใช้สายสัญญาณเท่ากับจานวนโหนดทีเ่ ชื่อมต่อ
+3. ง่ายต่อการติดตั้ง และเพิ่ม/ลบจานวนโหนด
+ข้อเสียของโทโพโลยีแบบวงแหวน
+1. หากวงแหวนชารุดหรือขาด จะส่งผลกระทบต่อระบบทั้งหมด
+2. ตรวจสอบข้อผิดพลาดได้ยาก เนือ่ งจากหากมีโหนดใดเกิดข้อขัดข้อง จะต้องทาการ
+ตรวจสอบทีละจุดว่าขัดข้องอย่างไร</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-32"><h2>หน้า 32 — โทโพโลยีแบบแมซ</h2><details><summary>ดูภาพต้นฉบับหน้า 32</summary><a href="assets/09122010_Network_Chapter3/page-32.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-32.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 32"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบแมซ
+
+4. โทโพโลยีแบบแมซ (Mesh Topology)
+   เป็นการเชื่อมต่อแบบจุดต่อจุดอย่างแท้จริง โดยที่แต่ละโหนดจะเชื่อมต่อถึงกันหมด
+    โดยใช้สายสัญญาณทุกการเชื่อมต่อ
+   เป็นการสารองเส้นทางเดินของข้อมูลได้เป็นอย่างดี หากสายสัญญาณเส้นใดเส้นหนึง่
+    ขาด ก็ยังมีเส้นทางอื่นที่สามารถส่งข้อมูลได้
+   สูตรในการคานวณจุดเชื่อมต่อที่ต้องใช้สายสัญญาณเชื่อมโยง
+                                           2
+                    Connection = (N – N)
+                                    2</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-33"><h2>หน้า 33 — โทโพโลยีแบบดาว</h2><details><summary>ดูภาพต้นฉบับหน้า 33</summary><a href="assets/09122010_Network_Chapter3/page-33.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-33.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 33"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบดาว
+    A
+
+
+
+E          B
+
+
+
+
+D              C</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-34"><h2>หน้า 34 — โทโพโลยีแบบแมซ</h2><details><summary>ดูภาพต้นฉบับหน้า 34</summary><a href="assets/09122010_Network_Chapter3/page-34.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-34.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 34"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">โทโพโลยีแบบแมซ
+
+ข้อดีของโทโพโลยีแบบแมซ
+1. เนื่องจากเป็นการเชื่อมต่อกันโดยตรงระหว่างโหนด ดังนั้นสามารถใช้แบนด์วิธบน
+สายสัญญาณได้อย่างเต็มที่ ไม่มีโหนดอื่นๆ มาแชร์การใช้งาน
+2. มีความปลอดภัย และความเป็นส่วนตัวในข้อมูลทีส่ ื่อสารกันระหว่างโหนด
+3. ระบบมีความทนทานต่อความผิดพลาด (Fault Tolerant) เนื่องจากหากมีลิงค์ใด
+เสียหาย สามารถเลี่ยงไปใช้งานลิงค์อื่นทดแทนได้
+ข้อเสียของโทโพโลยีแบบแมซ
+1. เป็นรูปแบบการเชื่อมต่อที่สนิ้ เปลืองสายสัญญาณมากทีส่ ุด</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-35"><h2>หน้า 35 — การจาแนกประเภทของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 35</summary><a href="assets/09122010_Network_Chapter3/page-35.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-35.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 35"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">การจาแนกประเภทของเครือข่าย
+
+การจาแนกประเภทของเครือข่าย สามารถทาได้หลายวิธี ขึ้นอยู่กบั เกณฑ์ที่ใช้ โดยทัว่ ไปการ
+จาแนกประเภทของเครือข่ายมีอยู่ 3 วิธี คือ
+1. ใช้ลักษณะหน้าทีก่ ารทางานของคอมพิวเตอร์ในเครือข่ายเป็นเกณฑ์
+      - Peer-to-Peer Network
+      - Client-Server Network
+2. ใช้ระดับความปลอดภัยของข้อมูลเป็นเกณฑ์
+      - Intranet
+      - Internet
+      - Extranet
+3. ใช้ขนาดทางกายภาพของเครือข่ายเป็นเกณฑ์
+      - LAN (Local Area Network)
+      - MAN (Metropolitan Area Network)
+      - WAN (Wide Area Network)</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-36"><h2>หน้า 36 — แบ่งตามหน้าที่การทางานของคอมพิวเตอร์ในเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 36</summary><a href="assets/09122010_Network_Chapter3/page-36.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-36.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 36"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามหน้าที่การทางานของคอมพิวเตอร์ในเครือข่าย
+
+1. เครือข่าย Peer-to-Peer
+ คอมพิวเตอร์ทุกเครื่องจะมีสิทธิเท่าเทียมกันในการใช้เครือข่าย ซึ่งเรียกว่า
+     เพียร์ (Peer) โดยคอมพิวเตอร์แต่ละเครื่องจะทาหน้าที่เป็นทั้งไคล
+     เอนท์ และเซิร์ฟเวอร์ แล้วแต่การใช้งานของผู้ใช้
+ ไม่จาเป็นต้องมีผู้ดูแลระบบ โดยผู้ใช้คอมพิวเตอร์แต่ละเครื่องจะเป็นคน
+     กาหนดว่าข้อมูลหรือทรัพยากรใดบ้างที่ต้องการแชร์กับผู้ใช้คนอื่นๆ
+ การใช้งานแบบ Peer-to-Peer บางทีเรียกว่า Workgroup ซึ่ง
+     ส่วนมากจะมีจานวนน้อยกว่า 10 คน</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-37"><h2>หน้า 37 — แบ่งตามหน้าที่การทางานของคอมพิวเตอร์ในเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 37</summary><a href="assets/09122010_Network_Chapter3/page-37.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-37.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 37"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามหน้าที่การทางานของคอมพิวเตอร์ในเครือข่าย
+
+เครือข่าย Peer-to-Peer เหมาะสาหรับสภาพแวดล้อม ดังนี้
+ มีผู้ใช้เครือข่าย 10 คน หรือน้อยกว่า
+ มีทรัพยากรเครือข่ายที่ต้องแชร์กันไม่มากนัก เช่น ไฟล์ เครื่องพิมพ์
+ ไม่มีความจาเป็นในการรักษาความปลอดภัยของข้อมูล
+ ในอนาคตยังมีการขยายตัวของเครือข่ายไม่มากนัก</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-38"><h2>หน้า 38 — แบ่งตามหน้าที่การทางานของคอมพิวเตอร์ในเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 38</summary><a href="assets/09122010_Network_Chapter3/page-38.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-38.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 38"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามหน้าที่การทางานของคอมพิวเตอร์ในเครือข่าย
+
+2. เครือข่าย Client/Server
+ เป็นระบบที่ได้รับการยอมรับให้เป็นมาตรฐานการสร้างเครือข่ายในปัจจุบัน
+ เมื่อเครือข่ายมีขนาดใหญ่ขึ้น จานวนผู้ใช้มากขึ้น การดูแลและจัดการ
+     ระบบซับซ้อนมากยิ่งขึ้น เครือข่ายจาเป็นต้องมีเซิร์ฟเวอร์ในการจัดการ
+     เรื่องต่างๆ และให้บริการอื่นๆ
+ เซิร์ฟเวอร์ควรมีประสิทธิภาพสูง สามารถให้บริการผู้ใช้ได้หลายคนในเวลา
+     เดียวกัน และทาหน้าที่รักษาความปลอดภัยในการเข้ามาใช้บริการและ
+     ทรัพยากรต่างๆ ของผู้ใช้</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-39"><h2>หน้า 39 — แบ่งตามหน้าที่การทางานของคอมพิวเตอร์ในเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 39</summary><a href="assets/09122010_Network_Chapter3/page-39.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-39.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 39"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามหน้าที่การทางานของคอมพิวเตอร์ในเครือข่าย
+
+ มีลักษณะการทางานโดยรวมการดูแลและจัดการเครือข่าย พร้อมทั้งการ
+  เข้าถึงข้อมูล และทรัพยากรที่มีการแชร์ในเครือข่ายไว้เป็นศูนย์กลาง ทาให้
+  ง่ายต่อการค้นหาและจัดการ
+ ในเรื่องความปลอดภัยของข้อมูล ผู้ดูแลระบบสามารถกาหนดนโยบายการ
+  รักษาความปลอดภัยและบังคับใช้กับผู้ใช้ทุกคนในเครือข่ายได้
+ สามารถป้องกันความเสียหายที่อาจจะเกิดขึ้นกับข้อมูล ซึ่งเป็นทรัพยากร
+  ที่สาคัญที่สุดขององค์กร โดยวิธีการสารองข้อมูล
+ เนื่องจากเครื่องเซิร์ฟเวอร์มีโปรแกรมช่วยในการดูแลและจัดการเครือข่าย
+  มากมาย ทาให้สามารถรองรับผู้ใช้ได้หลายพันคน</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-40"><h2>หน้า 40 — แบ่งตามระดับความปลอดภัยของข้อมูลในเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 40</summary><a href="assets/09122010_Network_Chapter3/page-40.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-40.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 40"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามระดับความปลอดภัยของข้อมูลในเครือข่าย
+
+1. เครือข่าย Intranet
+ เป็นเครือข่ายส่วนบุคคล ข้อมูลจะถูกแชร์เฉพาะผู้ใช้ที่อยู่ในเครือข่าย
+     เท่านั้น เช่น เป็นเครือข่ายที่องค์กรสร้างขึ้นสาหรับให้พนักงานใช้เท่านั้น
+     การแชร์ข้อมูลจะอยู่เฉพาะในอินทราเน็ตเท่านั้น
+ ถ้ามีการแลกเปลี่ยนข้อมูลกับโลกภายนอกหรืออินเตอร์เน็ต องค์กร
+     สามารถที่จะกาหนดนโยบายได้ และได้รับการปกป้องโดยไฟร์วอลล์
+     (Firewall) ซึ่งเป็นได้ทั้งฮาร์ดแวร์และซอฟต์แวร์ เพื่อทาหน้าที่กรอง
+     ข้อมูลที่แลกเปลี่ยนกันระหว่างอินเตอร์เน็ตและอินทราเน็ต</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-41"><h2>หน้า 41 — แบ่งตามระดับความปลอดภัยของข้อมูลในเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 41</summary><a href="assets/09122010_Network_Chapter3/page-41.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-41.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 41"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามระดับความปลอดภัยของข้อมูลในเครือข่าย
+
+2. เครือข่าย Internet
+ มีต้นกาหนดมาจากโครงการที่ชื่อว่า ARPANET ของกระทรวงกลาโหม
+     ของสหรัฐ จุดประสงค์เพื่อเชื่อมต่อคอมพิวเตอร์ที่อยู่ห่างไกลกัน
+ เป็นเครือข่ายสาธารณะที่ทุกคนสามารถเชื่อมต่อเข้าไปได้ ไม่มีความ
+     ปลอดภัยของข้อมูลเลย เนื่องจากทุกคนสามารถเข้าถึงข้อมูลทุกอย่างที่
+     แลกเปลี่ยนกันผ่านทางอินเตอร์เน็ต
+ การเชื่อมต่ออินเตอร์เน็ตทาได้โดยการเชื่อมต่อเข้ากับองค์กรให้บริการ ที่
+     เรียกว่า ISP (Internet Service Provider)</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-42"><h2>หน้า 42 — แบ่งตามระดับความปลอดภัยของข้อมูลในเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 42</summary><a href="assets/09122010_Network_Chapter3/page-42.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-42.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 42"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามระดับความปลอดภัยของข้อมูลในเครือข่าย
+
+3. เครือข่าย Extranet
+ เป็นเครือข่ายแบบกึ่งอินเตอร์เน็ตและอินทราเน็ต
+ ส่วนใหญ่เป็นเครือข่ายที่เชื่อมต่อกันระหว่างสององค์กร มีการควบคุมการ
+     แลกเปลี่ยน เพื่อแลกเปลี่ยนเฉพาะข้อมูลบางอย่างซึ่งกันและกัน
+ การสร้างเอ็กส์ทราเน็ตจะเน้นที่ระบบการรักษาความปลอดภัยข้อมูล
+     รวมถึงการติดตั้งไฟร์วอลล์ และนโยบายการรักษาความปลอดภัยข้อมูล
+     และการบังคับใช้</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-43"><h2>หน้า 43 — แบ่งตามขนาดทางกายภาพของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 43</summary><a href="assets/09122010_Network_Chapter3/page-43.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-43.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 43"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามขนาดทางกายภาพของเครือข่าย
+
+1. เครือข่าย LAN (Local Area Network)
+ เครือข่ายท้องถิ่น เป็นระบบการสื่อสารข้อมูลที่อนุญาตให้คอมพิวเตอร์
+     และอุปกรณ์ต่างๆ ที่อิสระต่อกัน มาเชื่อมต่อกันในรูปแบบของเครือข่าย
+     ทาให้สามารถแชร์ทรัพยากรร่วมกันบนเครือข่ายได้
+ การเชื่อมโยงจะครอบคลุมบริเวณค่อนข้างจากัด ไม่เกิน 1 กิโลเมตร เช่น
+     การเชื่อมโยงภายในอาคาร หรือภายในสานักงาน
+ มีหลักการว่า การส่งข้อมูลด้วยความเร็วสูง และมีอัตราความผิดพลาดใน
+     การส่งข้อมูลต่า</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-44"><h2>หน้า 44 — แบ่งตามขนาดทางกายภาพของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 44</summary><a href="assets/09122010_Network_Chapter3/page-44.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-44.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 44"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามขนาดทางกายภาพของเครือข่าย
+
+2. เครือข่าย MAN (Metropolis Area Network)
+ เป็นเครือข่ายความเร็วสูง สนับสนุนระบบเรียลไทม์ การเชื่อมต่อ
+     ประกอบด้วยศูนย์ข้อมูล (Data Center), ISP รวมถึงหน่วยงาน
+     ภาครัฐ เอกชน และสถาบันการศึกษา
+ เป็นเครือข่ายที่ใช้สายสื่อสารชนิดไฟเบอร์ออปติก สามารถรองรับอัตรา
+     ความเร็วในการถ่ายโอนข้อมูลสูงถึงหนึ่งล้านบิตต่อวินาที มีอัตรา
+     ผิดพลาดต่า และมีทรูพุตสูง</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-45"><h2>หน้า 45 — แบ่งตามขนาดทางกายภาพของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 45</summary><a href="assets/09122010_Network_Chapter3/page-45.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-45.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 45"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามขนาดทางกายภาพของเครือข่าย
+
+การพิจารณาคุณสมบัติเพื่อแบ่งแยกเครือข่าย MAN กับเครือข่าย LAN
+1. เครือข่ายระดับเมืองครอบคลุมระยะทางที่ไกลกว่า โดยจะครอบคลุมบริเวณเขต
+     เมืองหรือจังหวัดใหญ่ๆ ส่วนเครือข่ายท้องถิ่นครอบคลุมการใช้งานภายในตึก
+     หรืออาคาร
+2. หากมีข้อบกพร่องเกิดขึ้น จะมีระบบกู้คืนที่รวดเร็ว โดยมีการออกแบบวงจรที่
+     เรียกว่า Redundant Circuits เพื่อรองรับต่อเหตุการณ์ที่อาจเกิดขึ้น โดย
+     เครือข่ายจะสามารถจัดการเส้นทางใหม่ได้อย่างรวดเร็ว
+3. รูปแบบการเชื่อมต่อจะอยู่บนพื้นฐานของเครือข่ายวงแหวน เป็นทั้งแบบลอจิคัล
+     และฟิสิคัลในตัว จึงไม่ได้มีแค่ข้อมูลเท่านั้นที่ส่งผ่านวงแหวน แต่บนเครือข่ายจะ
+     มีอุปกรณ์ เช่น เร้าเตอร์ และสวิตซ์ที่เชื่อมต่อเข้ากับวงแหวน</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-46"><h2>หน้า 46 — แบ่งตามขนาดทางกายภาพของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 46</summary><a href="assets/09122010_Network_Chapter3/page-46.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-46.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 46"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามขนาดทางกายภาพของเครือข่าย
+
+3. เครือข่าย WAN (Wide Area Network)
+ เป็นเครือข่ายที่มีการเชื่อมโยงเครือข่ายต่างๆ เข้าด้วยกัน ครอบคลุมพื้นที่
+     ระดับประเทศหรือข้ามทวีป โดยไม่มีข้อจากัดด้านระยะทาง มักใช้งาน
+     เกี่ยวกับการถ่ายโอนข้อมูลขนาดใหญ่ระหว่างกัน เช่น อีเมล์ ฐานข้อมูล
+ มีสถานีเชื่อมต่อเป็นจานวนมาก และมีรูปแบบการเชื่อมต่อที่แตกต่างกัน
+     จึงจาเป็นต้องมีแอปพลิเคชั่นซอฟต์แวร์ เพื่อให้สามารถใช้เครือข่ายได้ตาม
+     วัตถุประสงค์
+ ภาพรวมของเครือข่ายจะประกอบด้วยเครือข่ายย่อย เรียกว่า ซับเน็ต
+     (Subnet) โดยซับเน็ต คือกลุ่มของโหนดต่างๆ ที่เชื่อมต่อเข้าด้วยกัน</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-47"><h2>หน้า 47 — แบ่งตามขนาดทางกายภาพของเครือข่าย</h2><details><summary>ดูภาพต้นฉบับหน้า 47</summary><a href="assets/09122010_Network_Chapter3/page-47.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-47.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 47"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แบ่งตามขนาดทางกายภาพของเครือข่าย
+
+ เนื่องจากเครือข่ายประกอบด้วยหลายซับเน็ตย่อยๆ และทุกโหนดอาจจะ
+  ไม่มีลิงค์เชื่อมต่อกัน บางโหนดอาจมีลิงค์เชื่อมต่อมากกว่าหนึ่งลิงค์ แต่
+  บางโหนดอาจเชื่อมต่อกับบางโหนดเท่านั้น ดังนั้นในการถ่ายโอนข้อมูล
+  ต้องอาศัยเทคนิคการสวิตช์ไปมาระหว่างโหนดของลิงค์ต่างๆ เพื่อให้ไปถึง
+  ปลายทางได้ เรียกเทคนิคนี้ว่า เครือข่ายสวิตชิ่ง (Switching
+  Network)</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-48"><h2>หน้า 48 — สวิตชิง่ (Switching)</h2><details><summary>ดูภาพต้นฉบับหน้า 48</summary><a href="assets/09122010_Network_Chapter3/page-48.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-48.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 48"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">สวิตชิง่ (Switching)
+
+เทคนิคการสวิตชิง่ มี 3 ประเภท ดังนี้
+1. เซอร์กิตสวิตชิ่ง (Circuit-Switching Networks)
+2. เมสเสจสวิตชิ่ง (Message Switching Networks)
+3. แพ็กเก็ตสวิตชิ่ง (Packet Switching Networks)</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-49"><h2>หน้า 49 — เซอร์กติ สวิตชิง่ (Circuit-Switching Networks)</h2><details><summary>ดูภาพต้นฉบับหน้า 49</summary><a href="assets/09122010_Network_Chapter3/page-49.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-49.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 49"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">เซอร์กติ สวิตชิง่ (Circuit-Switching Networks)
+
+1. เซอร์กติ สวิตชิง่ (Circuit-Switching Networks)
+ หลักการทางาน คือ จะสร้างเส้นทางเพื่อส่งข้อมูล โดยตลอดระยะเวลาที่มีการ
+     สื่อสาร เส้นทางนั้นจะถูกถือครอง (Dedicated Path) ผู้อื่นไม่สามารถใช้
+     งานเส้นทางเหล่านั้นได้ จนกระทั่งยุติการสื่อสาร จึงจะปลดการถือครองออก
+     (Release)
+ ในช่วงแรกจาเป็นต้องมีการรอคอย แต่เมื่อสร้างเส้นทางเพื่อเชื่อมต่อกับ
+     ปลายทางแล้ว การรับส่งข้อมูลจะทาได้ทันทีอย่างรวดเร็ว ผ่านเส้นทางที่
+     เสมือนท่อส่งข้อมูล โดยมีค่าหน่วงเวลาน้อยมาก เช่น ระบบโทรศัพท์
+ อุปกรณ์ในการรับส่งข้อมูล จาเป็นต้องมีอัตราความเร็วในการส่งข้อมูล (Date
+     Rate) เท่ากัน</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-50"><h2>หน้า 50 — เซอร์กติ สวิตชิง่ (Circuit-Switching Networks)</h2><details><summary>ดูภาพต้นฉบับหน้า 50</summary><a href="assets/09122010_Network_Chapter3/page-50.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-50.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 50"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">เซอร์กติ สวิตชิง่ (Circuit-Switching Networks)</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-51"><h2>หน้า 51 — เมสเสจสวิตชิ่ง (Message Switching Networks)</h2><details><summary>ดูภาพต้นฉบับหน้า 51</summary><a href="assets/09122010_Network_Chapter3/page-51.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-51.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 51"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">เมสเสจสวิตชิ่ง (Message Switching Networks)
+
+2. เมสเสจสวิตชิง่ (Message Switching Networks)
+ หลักการทางาน คือ การส่งข้อมูลจะส่งต่อเป็นทอดๆ โดยจะมีการถือ
+     ครองเส้นทางในการลาเลียงข้อมูลในช่วงเวลาหนึ่งเท่านั้น โดยเมื่อโหนด
+     หนึ่งโหนดใดได้จัดเก็บเมสเสจนั้นไว้ชั่วคราวแล้ว เส้นทางก็จะถูกปลดออก
+     เพื่อให้ผู้อื่นใช้งานได้
+ ข้อเสียคือ มีค่าหน่วงเวลาสูง เนื่องจากข้อมูลที่ส่งไประหว่างทางนั้น จะ
+     ถูกจัดเก็บไว้ชั่วคราว ซึ่งอุปกรณ์ในการจัดเก็บนั้นมีการประมวลผลช้า
+ หากข้อมูลที่ส่งมีขนาดใหญ่ มีการแบ่งข้อมูลออกเป็นส่วนๆ ต้องเสียเวลา
+     ในการส่งมาก รวมทั้งหากจานวนโหนดที่ส่งต่อมีจานวนมาก ก็ทาให้เกิด
+     ความล่าช้าขึ้นเช่นกัน</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-52"><h2>หน้า 52 — เมสเสจสวิตชิ่ง (Message Switching Networks)</h2><details><summary>ดูภาพต้นฉบับหน้า 52</summary><a href="assets/09122010_Network_Chapter3/page-52.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-52.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 52"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">เมสเสจสวิตชิ่ง (Message Switching Networks)</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-53"><h2>หน้า 53 — แพ็กเก็ตสวิตชิง่ (Packet Switching Networks)</h2><details><summary>ดูภาพต้นฉบับหน้า 53</summary><a href="assets/09122010_Network_Chapter3/page-53.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-53.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 53"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แพ็กเก็ตสวิตชิง่ (Packet Switching Networks)
+
+3. แพ็กเก็ตสวิตชิง่ (Packet Switching Networks)
+ หลักการทางาน คือ ในการส่งข้อมูลจะทาการแบ่งเมสเสจข้อมูลออกเป็น
+    ชิ้นเล็กๆ เรียกว่า แพ็กเก็ต แต่ละแพ็กเก็ตจะถูกส่งจากต้นทางไปยังปลาย
+    ทางผ่านโหนดต่างๆ โหนดที่รับแพ็กเก็ตจะจัดเก็บแพ็กเก็ตไว้ชั่วคราวบน
+    หน่วยความจา เช่น แรม และทาการส่งต่อไปยังโหนดถัดไปเรื่อยๆ
+    จนกระทั่งถึงปลายทาง
+ ข้อดีคือ มีค่าหน่วงเวลาต่า โดยค่าหน่วงเวลาของแพ็กเก็ตแรกจะเกิดขึ้น
+    เพียงชั่วครู่ขณะที่มีการวิ่งผ่านเส้นทางที่วางไว้ในรอบแรก จากนั้นแพ็กเก็ต
+    ที่ส่งถัดมาจะทยอยส่งตามกันมาอย่างรวดเร็ว และหากใช้สายส่งสัญญาณ
+    ความเร็วสูง จะทาให้ค่าหน่วงเวลาที่เกิดขึ้นมีค่าต่ามาก</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-54"><h2>หน้า 54 — แพ็กเก็ตสวิตชิง่ (Packet Switching Networks)</h2><details><summary>ดูภาพต้นฉบับหน้า 54</summary><a href="assets/09122010_Network_Chapter3/page-54.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-54.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 54"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แพ็กเก็ตสวิตชิง่ (Packet Switching Networks)
+
+การสื่อสารด้วยวิธีแพ็กเก็ตสวิตชิ่งสามารถแบ่งออกได้ 2 ประเภท คือ
+1. เครือข่ายดาต้าแกรม (Datagram Networks)
+ ใช้งานอยู่บนชั้นสื่อสารเน็ตเวิร์ก
+ แต่ละแพ็กเก็ตจะถูกส่งไปตามเส้นทางอย่างอิสระ สามารถใช้เส้นทางแตกต่าง
+      กันได้ถึงแม้ว่าจะมาจากเมสเสจเดียวกัน โดยสวิตช์ในเครือข่าย หรือเร้าเตอร์ทา
+      หน้าที่ส่งผ่านเครือข่ายจากต้นทางไปยังปลายทาง
+ ข้อเสีย คือ แพ็กเก็ตต่างๆ ที่ส่งมายังปลายทางจะถึงที่หมายไม่พร้อมกัน โดย
+      เป็นหน้าที่ของโปรโตคอลในชั้นสื่อสารสูงขึ้นไป ที่จะจัดการเรื่องลาดับของดาต้า
+      แกรม และการสูญหายและซ้าซ้อนของดาต้าแกรม ก่อนที่จะส่งผ่านไปยัง
+      แอปพลิเคชั่น</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article><article class="slide" data-search id="page-55"><h2>หน้า 55 — แพ็กเก็ตสวิตชิง่ (Packet Switching Networks)</h2><details><summary>ดูภาพต้นฉบับหน้า 55</summary><a href="assets/09122010_Network_Chapter3/page-55.jpg" target="_blank" rel="noopener"><img class="source-image" loading="lazy" decoding="async" src="assets/09122010_Network_Chapter3/page-55.jpg" alt="Network บท 3 — องค์ประกอบและโครงสร้างเครือข่าย หน้า 55"></a><p class="note">คลิกภาพเพื่อเปิดขยาย</p></details><details><summary>อ่านข้อความต้นฉบับที่สกัดได้  (ไทย/อังกฤษตามไฟล์)</summary><pre class="source-text">แพ็กเก็ตสวิตชิง่ (Packet Switching Networks)
+
+1. เครือข่ายเวอร์ชวลเซอร์กติ (Virtual-Circuit Networks)
+ เป็นการผสมผสานการทางานระหว่างเครือข่ายเซอร์กิตสวิตชิ่ง (ทางานบนชั้น
+     สื่อสารฟิสิคัล) และเครือข่ายดาต้าแกรม (ทางานบนชั้นสื่อสารเน็ตเวิร์ก) เข้า
+     ด้วยกัน โดยเวอร์ชวลเซอร์กิตจะทางานบนชั้นสื่อสารดาต้าลิงค์
+ ในเชิงตรรกะ จะดูเหมือนว่าเป็นวงจรที่ติดต่อกัน แต่ในเชิงกายภาพ จะเป็น
+     การเชื่อมต่อผ่านเครือข่ายสวิตช์ ซึ่งเป็นการเชื่อมต่อแบบไม่ถาวร โดยจะ
+     ทางานในช่วงเวลาหนึ่งเมื่อมีการส่งผ่านแพ็กเก็ต และช่วงที่ไม่มีการส่งผ่านแพ็ก
+     เก็ตก็จะไม่มีการเชื่อมต่อระหว่างกัน
+ ทาการสร้างวงจรสมมติขึ้นมา เสมือนกับมีเส้นทางจริงที่เชื่อมโยงอย่างต่อเนื่อง
+     จากต้นทางไปยังปลายทาง</pre></details><p class="note">ทบทวนภาษาไทย: <a class="pill" href="#chapter-01">บทนำการสื่อสารข้อมูลและเครือข่าย</a><a class="pill" href="#chapter-08">Switching และการส่งผ่านเครือข่าย</a><a class="pill" href="#chapter-15">อุปกรณ์เชื่อม LAN, Backbone และ VLAN</a></p><a class="back" href="#top">กลับสารบัญ ↑</a></article></section><p id="empty" hidden>ไม่พบหัวข้อที่ตรงกับคำค้น ลองล้างตัวกรองหรือใช้คำสั้นลง</p></main><a class="float-top" href="#top" aria-label="กลับด้านบน">สารบัญ ↑</a><footer>351 · เอกสารภาษาไทยสำหรับอ่านทบทวน · แยกต้นฉบับและคำอธิบายเสริม · เปิดไฟล์นี้อ่านได้แบบออฟไลน์</footer><script>(()=>{'use strict';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const safeStore={get(k){try{return localStorage.getItem(k)}catch{return null}},set(k,v){try{localStorage.setItem(k,v)}catch{}}};
+if(safeStore.get('351-theme')==='dark')document.body.classList.add('dark');
+$('#theme')?.addEventListener('click',()=>{document.body.classList.toggle('dark');safeStore.set('351-theme',document.body.classList.contains('dark')?'dark':'light')});
+let font=Number(safeStore.get('351-font'))||17;const setFont=()=>{document.documentElement.style.setProperty('--size',font+'px');safeStore.set('351-font',String(font))};setFont();
+$('#fontUp')?.addEventListener('click',()=>{font=Math.min(24,font+1);setFont()});$('#fontDown')?.addEventListener('click',()=>{font=Math.max(14,font-1);setFont()});
+const normalize=s=>s.normalize('NFKC').toLocaleLowerCase().replace(/\s+/g,' ').trim();
+const units=$$('.chapter,.source-chapter');const cards=$$('.card[data-search],.slide[data-search]');
+cards.forEach(el=>el._text=normalize(el.textContent));
+function filter(){const q=normalize($('#search')?.value||'');const group=$('#group')?.value||'';const chapter=$('#chapterSelect')?.value||'';let n=0;
+ units.forEach(unit=>{const match=(!group||(unit.dataset.groups||'').split(' ').includes(group))&&(!chapter||unit.id===chapter);let seen=0;unit.querySelectorAll('.card[data-search],.slide[data-search]').forEach(card=>{card.hidden=!(match&&(!q||card._text.includes(q)||normalize(unit.querySelector('h2')?.textContent||'').includes(q)));if(!card.hidden){n++;seen++}});unit.hidden=!seen});
+ if($('#count'))$('#count').textContent=`แสดง ${n.toLocaleString('th-TH')} หัวข้อ${q?' ที่พบคำค้น':''}`;if($('#empty'))$('#empty').hidden=n!==0;
+}
+$('#search')?.addEventListener('input',filter);$('#group')?.addEventListener('change',()=>{if($('#chapterSelect'))$('#chapterSelect').value='';filter()});$('#chapterSelect')?.addEventListener('change',()=>{filter();const id=$('#chapterSelect').value;if(id)document.getElementById(id)?.scrollIntoView()});
+$('#reset')?.addEventListener('click',()=>{for(const id of ['search','group','chapterSelect'])if($('#'+id))$('#'+id).value='';filter()});
+function revealHash(){if(!location.hash)return;let target;try{target=document.getElementById(decodeURIComponent(location.hash.slice(1)))}catch{return}if(!target)return;const unit=target.closest('.chapter,.source-chapter');if(unit?.hidden||target.hidden){for(const id of ['search','group','chapterSelect'])if($('#'+id))$('#'+id).value='';filter()}target.scrollIntoView()};window.addEventListener('hashchange',revealHash);
+$('#print')?.addEventListener('click',()=>window.print());$('#printAll')?.addEventListener('click',()=>{for(const id of ['search','group','chapterSelect'])if($('#'+id))$('#'+id).value='';filter();window.print()});
+$('#answers')?.addEventListener('click',()=>{const qs=$$('details.quiz');const open=qs.some(q=>!q.open);qs.forEach(q=>q.open=open);$('#answers').textContent=open?'ปิดเฉลยทั้งหมด':'เปิดเฉลยทั้งหมด'});
+const readButtons=$$('button.read');function updateRead(){let n=0;readButtons.forEach(b=>{const on=safeStore.get('351-read-'+b.dataset.id)==='1';b.setAttribute('aria-pressed',String(on));b.textContent=on?'✓ อ่านแล้ว':'ทำเครื่องหมายว่าอ่านแล้ว';if(on)n++});if($('#readCount'))$('#readCount').textContent=`อ่านแล้ว ${n}/${readButtons.length} บท`;if($('#readBar'))$('#readBar').style.width=(readButtons.length?n/readButtons.length*100:0)+'%'}
+readButtons.forEach(b=>b.addEventListener('click',()=>{const key='351-read-'+b.dataset.id;safeStore.set(key,safeStore.get(key)==='1'?'0':'1');updateRead()}));updateRead();
+function calc(ip,p,parent){if(!/^\d{1,3}(\.\d{1,3}){3}$/.test(ip))throw Error('กรอก IPv4 ให้ครบ 4 octets เช่น 192.168.10.77');const parts=ip.split('.').map(Number);if(parts.some(n=>n>255))throw Error('แต่ละ octet ต้องอยู่ในช่วง 0–255');if(!Number.isInteger(p)||p<0||p>32)throw Error('Prefix ต้องเป็นจำนวนเต็ม 0–32');const value=parts.reduce((a,n)=>(a<<8n)+BigInt(n),0n);const total=1n<<BigInt(32-p);const net=value/total*total;const last=net+total-1n;const mask=((1n<<32n)-1n)^(total-1n);const fmt=n=>[24n,16n,8n,0n].map(s=>String(n>>s&255n)).join('.');const num=n=>n.toLocaleString('en-US');
+let rows=[['IP / Prefix',`${ip}/${p}`],['Subnet mask',fmt(mask)],['Wildcard mask (inverse)',fmt(total-1n)],['Network / ขอบล่าง',fmt(net)],['Broadcast / ขอบบนบล็อก',fmt(last)],['จำนวน address',num(total)]];
+if(p<=30){rows.push(['ช่วง host IPv4 ปกติ',`${fmt(net+1n)} – ${fmt(last-1n)}`],['จำนวน host ปกติ',num(total-2n)],['สถานะ IP ที่กรอก',value===net?'Network address':value===last?'Broadcast address':'อยู่ในช่วง host ปกติ'])}else if(p===31){rows.push(['กรณี /31','สอง endpoints บน point-to-point ที่รองรับ; ไม่ใช้การกัน network/broadcast แบบ LAN ปกติ'])}else rows.push(['กรณี /32','หนึ่ง address / host route ไม่มีช่วง LAN หรือ broadcast สำหรับกระจาย']);
+if(parent!==''){const q=Number(parent);if(!/^\d{1,2}$/.test(String(parent))||!Number.isInteger(q)||q<0||q>p)throw Error('Parent prefix ต้องเป็นจำนวนเต็ม 0 ถึง prefix ปัจจุบัน');rows.push([`จำนวน subnet /${p} ภายใน parent /${q}`,num(1n<<BigInt(p-q))]);}else rows.push(['จำนวน subnet','ต้องทราบ parent prefix ก่อน จึงยังไม่คำนวณ']);return {rows,network:fmt(net),last:fmt(last),total:String(total),mask:fmt(mask)};}
+window.subnetCalc=calc;
+$('#subnetForm')?.addEventListener('submit',e=>{e.preventDefault();const out=$('#calcResult');try{const ip=$('#ipInput').value.trim(),raw=$('#prefixInput').value.trim();if(raw==='')throw Error('กรอก prefix ก่อนคำนวณ');const result=calc(ip,Number(raw),$('#parentInput').value.trim());out.replaceChildren();const table=document.createElement('table');const body=document.createElement('tbody');for(const [k,v]of result.rows){const tr=document.createElement('tr');const th=document.createElement('th');const td=document.createElement('td');th.textContent=k;td.textContent=v;tr.append(th,td);body.append(tr)}table.append(body);out.append(table);const note=document.createElement('p');note.className='note';note.textContent='ผลเป็นการคำนวณบล็อก IPv4 ไม่ใช่การยืนยันว่า address ทุกตัวใช้บนเครือข่ายจริงได้ ที่อยู่พิเศษและนโยบายจัดสรรต้องพิจารณาแยก';out.append(note)}catch(err){out.textContent=err.message;out.className='error'}});
+$('#subnetForm')?.addEventListener('input',()=>{$('#calcResult').className='table-scroll'});
+filter();if(location.hash)setTimeout(revealHash,80);
+})();
+</script></body></html>

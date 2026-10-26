@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "html_files": 61,
+  "links_and_image_paths_checked": 14619,
+  "broken_links": 0,
+  "duplicate_ids": 0,
+  "study_chapters": 50,
+  "quiz_questions": 99,
+  "pdf_images": 956,
+  "source_files_catalogued": 59,
+  "note": "Static structure and local links checked. Browser visual/interactive preview could not run because the environment denies required Chrome socket operations. Calculator logic separately checked with known subnet examples and invalid inputs."
+}
